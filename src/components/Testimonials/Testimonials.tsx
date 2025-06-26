@@ -1,41 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import tg from '../../assets/testimonials/tg.png';
+import tg1 from '../../assets/testimonials/tg1.png';
+import tg2 from '../../assets/testimonials/tg2.png';
 
 const TestimonialSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const testimonials = [
     {
       id: 1,
-      text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others well.",
-      author: "Shreya",
-      role: "Student Scholar",
+      text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others.",
       image: tg
     },
     {
       id: 2,
       text: "My daughter was about to leave school because I simply couldn't afford it anymore. As a father, it broke my heart but there was nothing I could do. But then Canopy stepped in and helped her stay in school. Now, she's not only in school, she's talking about becoming a banker! She tells me she'll earn enough so I don't have to worry anymore.",
-      author: "Ram Bahadur",
-      role: "Father of Scholar",
-      image: tg
+      image: tg2
     },
     {
       id: 3,
-      text: "The story-based learning approach has transformed how our students engage with education. We've seen remarkable improvements in critical thinking, communication skills, and most importantly, the confidence to express themselves. This program is changing the future of education in Nepal.",
-      author: "Sunita Sharma",
-      role: "Ministry of Social Development",
-      image: tg
+      text: "What stands out the most about Canopy Nepal is the compassion, dedication, and professionalism of every person involved with the organization. We all share the belief that education is the key to empowering children, families, and communities to break free from the cycle of poverty and pursue a brighter future. Thanks to the Canopy team we see stories every day of how this belief is in action.",
+      image: tg1
     }
   ];
 
   useEffect(() => {
+    if (paused) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(timer);
-  }, [testimonials.length]);
+  }, [testimonials.length, paused]);
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -50,7 +47,11 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden h-96 sm:h-[500px] lg:h-[600px] xl:h-[700px]">
+    <section
+      className="relative w-full overflow-hidden h-96 sm:h-[500px] lg:h-[600px] xl:h-[700px]"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       {/* Background Images */}
       {testimonials.map((testimonial, index: number) => (
         <div
@@ -63,26 +64,17 @@ const TestimonialSection = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${testimonial.image})` }}
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
       ))}
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex h-full items-center justify-start px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl text-center text-white">
-          <div className="mb-8">
-            <blockquote className="text-xl font-light text-start ml-20 leading-relaxed sm:text-3xl lg:text-4xl">
+      <div className={`relative z-10 flex h-full items-center justify-start px-4 sm:px-6 lg:px-8`}>
+        <div className={`w-full flex ${currentSlide === 1 ? 'flex-row' : 'flex-row-reverse'}`}>
+          <div className={`w-full max-w-4xl ${currentSlide === 1 ? 'text-left mr-auto pl-0 lg:pl-20' : 'text-right ml-auto pr-0 lg:pr-20'}`}>
+            <blockquote className="text-lg text-white font-light sm:text-2xl lg:text-3xl">
               "{testimonials[currentSlide].text}"
             </blockquote>
-          </div>
-          
-          <div className="space-y-2">
-            <p className="text-xl font-semibold sm:text-2xl">
-              {testimonials[currentSlide].author}
-            </p>
-            <p className="text-lg text-white/80 sm:text-xl">
-              {testimonials[currentSlide].role}
-            </p>
           </div>
         </div>
       </div>

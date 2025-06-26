@@ -1,63 +1,63 @@
-  
- import { useState, useEffect } from 'react';
-  import { motion, AnimatePresence } from 'framer-motion';
-  import { Menu, X, ChevronDown } from 'lucide-react';
-  import { Link, useNavigate, useLocation } from 'react-router-dom';
-  
-  const Navigation = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
-    const navigate = useNavigate();
-    const location = useLocation();
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        setIsScrolled(window.scrollY > 50);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-  
-    // Close mobile menu when route changes
-    useEffect(() => {
-      setIsMobileMenuOpen(false);
-      setActiveDropdown(null);
-    }, [location.pathname]);
-  
-    // FIX 1: Update the navItems to correctly flag routes.
-    const navItems = [
-      {
-        name: 'About Us',
-        href: '#', // Set to '#' to indicate it's not a direct link, only a dropdown trigger
-        submenu: [
-          { name: 'Our Mission', href: '/missions', isRoute: true },
-          { name: 'Our Story', href: '/story', isRoute: true },
-          { name: 'Meet the Team', href: '/meet-the-team', isRoute: true },
-          { name: 'Board of Directors', href: '/board-of-directors', isRoute: true }
-        ]
-      },
-      {
-        name: 'Our Work',
-        href: '/ourwork',
-        isRoute: true, // This was missing. Now it's identified as a route.
-        submenu: [
-          { name: 'CANSHIP', href: '/canship', isRoute: true },
-          { name: 'Katha Bunaun', href: '/katha-bunaun', isRoute: true }
-        ]
-      },
-      { name: 'Our Impact', href: '/ourimpact', isRoute: true },
-      { name: 'Publications', href: '/publications', isRoute: true },
-      {
-        name: 'Chapters',
-        href: '#',
-        submenu: [
-          { name: 'Canopy France', href: '/canopyfrance', isRoute: true },
-          { name: 'Canopy USA', href: '/canopyusa', isRoute: true }
-        ]
-      },
-      { name: 'Get Involved', href: '#involved' }
-    ];
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
+
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  // FIX 1: Update the navItems to correctly flag routes.
+  const navItems = [
+    {
+      name: 'About Us',
+      href: '#', // Set to '#' to indicate it's not a direct link, only a dropdown trigger
+      submenu: [
+        { name: 'Our Mission', href: '/missions', isRoute: true },
+        { name: 'Our Story', href: '/story', isRoute: true },
+        { name: 'Meet the Team', href: '/meet-the-team', isRoute: true },
+        { name: 'Board of Directors', href: '/board-of-directors', isRoute: true }
+      ]
+    },
+    {
+      name: 'Our Work',
+      href: '/ourwork',
+      isRoute: true, // This was missing. Now it's identified as a route.
+      submenu: [
+        { name: 'CANSHIP', href: '/canship', isRoute: true },
+        { name: 'Katha Bunaun', href: '/katha-bunaun', isRoute: true }
+      ]
+    },
+    { name: 'Our Impact', href: '/ourimpact', isRoute: true },
+    { name: 'Publications', href: '/publications', isRoute: true },
+    {
+      name: 'Chapters',
+      href: '#',
+      submenu: [
+        { name: 'Canopy France', href: '/canopyfrance', isRoute: true },
+        { name: 'Canopy USA', href: '/canopyusa', isRoute: true }
+      ]
+    },
+    { name: 'Get Involved', href: '#involved' }
+  ];
 
   const handleNavigation = (href: string, isRoute?: boolean) => {
     if (isRoute) {
@@ -127,7 +127,7 @@
           >
             <Link to="/">
               <img
-                src="src/assets/logo.svg"
+                src={logo}
                 alt="Canopy Nepal Logo"
                 className="h-24 w-auto"
               />
