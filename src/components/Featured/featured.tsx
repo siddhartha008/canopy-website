@@ -84,9 +84,9 @@ const FeaturedInSection = () => {
       </div>
 
       {/* Read More Button */}
-      <div className="max-w-6xl mx-auto px-6 text-center mt-8 mb-4">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center mt-8 mb-4">
         <button 
-          className="inline-flex items-center bg-primary-orange text-white px-8 py-4 text-lg rounded-full font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
+          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
           onClick={() => {/* Your handler here */}}
         >
           Read More
@@ -120,10 +120,6 @@ const FeaturedInSection = () => {
         .animate-infinite-scroll {
           animation: infinite-scroll 40s linear infinite;
           width: max-content;
-        }
-
-        .animate-infinite-scroll:hover {
-          animation-play-state: paused;
         }
 
         /* Ensure smooth performance */

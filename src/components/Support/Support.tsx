@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const SupportUsSection = () => {
   return (
-    <section className="bg-#eeeeee py-20">
+    <section className="bg-#eeeeee py-8">
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Header */}
         <h2 className="text-neutral-900 text-lg font-semibold uppercase tracking-wider mb-8">
@@ -23,7 +23,7 @@ const SupportUsSection = () => {
         </p>
         
         {/* CTA Button */}
-        <button className="group bg-primary-orange hover:bg-primary-red text-white text-xl font-bold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto">
+        <button className="group bg-primary-orange hover:bg-primary-red text-white text-xl font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto">
           Donate Now
           <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
         </button>

@@ -3,7 +3,7 @@ import heroImg from '../../../assets/kbtop.png';
 import secondSection from '../../../assets/kbmiddle.png';
 import kblifecycle from '../../../assets/kblifecycle.png';
 import canshipBottom from '../../../assets/canshipbottom.png';
-import canshipImpact from '../../../assets/canshipImpact.png';
+import kbImpact from '../../../assets/kbImpact.png';
 
 const KathaBunaun = () => {
   return (
@@ -43,7 +43,7 @@ const KathaBunaun = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-12">
             <div className="w-full text-center">
-              <p className="text-primary-red font-semibold text-xl leading-relaxed mb-8">
+              <p className=" text-xl leading-relaxed mb-8">
               Katha Bunaun isn't just about storytelling, it's about building the foundational skills that traditional classrooms often overlook: empathy, communication, collaboration, and voice.
 
               </p>
@@ -69,7 +69,7 @@ const KathaBunaun = () => {
             <img 
               src={kblifecycle}
               alt="Canopy Scholar Lifecycle Flowchart"
-              className="w-full max-w-6xl h-[300px]"
+              className="w-full max-w-6xl h-[250px]"
             />
           </div>
         </div>
@@ -116,9 +116,9 @@ const KathaBunaun = () => {
             </div>
             <div className="lg:w-1/2 flex justify-end items-stretch">
               <img 
-                src={canshipImpact}
+                src={kbImpact}
                 alt="Student and mentor interaction"
-                className="rounded-lg h-auto object-cover"
+                className="rounded-xl h-auto object-cover transform -scale-x-100"
                 style={{  }}
               />
             </div>

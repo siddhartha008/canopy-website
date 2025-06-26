@@ -153,7 +153,7 @@ const PublicationsPage = () => {
                     <img
                       src={magazine.cover}
                       alt={`Buneka Katha Magazine ${magazine.id}`}
-                      className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                      className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                     />
                   </button>
                 </div>
@@ -181,7 +181,7 @@ const PublicationsPage = () => {
                   <img
                     src={Annual2024}
                     alt="2024 Annual Report"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
                 <p className="mt-4 font-semibold text-gray-800">2024</p>
@@ -196,7 +196,7 @@ const PublicationsPage = () => {
                   <img
                     src={Annual2023}
                     alt="2023 Annual Report"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
                 <p className="mt-4 font-semibold text-gray-800">2023</p>
@@ -211,7 +211,7 @@ const PublicationsPage = () => {
                   <img
                     src={Annual2022}
                     alt="2022 Annual Report"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
                 <p className="mt-4 font-semibold text-gray-800">2022</p>
@@ -238,7 +238,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT80_81}
                     alt="Audit Report 2080/81"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -252,7 +252,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT79_80}
                     alt="Audit Report 2079/80"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -266,7 +266,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT78_79}
                     alt="Audit Report 2078/79"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -280,7 +280,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT77_78}
                     alt="Audit Report 2077/78"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -294,7 +294,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT76_77}
                     alt="Audit Report 2076/77"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -308,7 +308,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT75_76}
                     alt="Audit Report 2075/76"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -322,7 +322,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT74_75}
                     alt="Audit Report 2074/75"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
@@ -336,7 +336,7 @@ const PublicationsPage = () => {
                   <img
                     src={AUDIT73_74}
                     alt="Audit Report 2073/74"
-                    className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
                   />
                 </button>
               </div>
