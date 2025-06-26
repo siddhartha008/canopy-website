@@ -1,4 +1,26 @@
 import React, { useState, useEffect } from 'react';
+import Angirash from '../../assets/team/bod/Angirash.png';
+import Mohit from '../../assets/team/bod/Mohit.png';
+import Roshan from '../../assets/team/bod/Roshan.png';
+import Shreya from '../../assets/team/bod/Shreya.png';
+import Srishti from '../../assets/team/bod/Srishti.png';
+import Aditya from '../../assets/team/advisoryboard/Aditya.png';
+import Bijeysh from '../../assets/team/advisoryboard/Bijeysh.png';
+import Niranjan from '../../assets/team/advisoryboard/Niranjan.png';
+import Saugat from '../../assets/team/advisoryboard/Saugat.png';
+import Shristi from '../../assets/team/advisoryboard/Shristi.png';
+import Ashra from '../../assets/team/advisoryboard/Ashra.png';
+import Bhushan from '../../assets/team/advisoryboard/Bhushan.png';
+import Bibek from '../../assets/team/advisoryboard/Bibek.png';
+import Bimla from '../../assets/team/advisoryboard/Bimla.png';
+import Binju from '../../assets/team/advisoryboard/Binju.png';
+import Clement from '../../assets/team/advisoryboard/Clement.png';
+import Heather from '../../assets/team/advisoryboard/Heather.png';
+import Meg from '../../assets/team/advisoryboard/Meg.png';
+import Needhika from '../../assets/team/advisoryboard/Needhika.png';
+import Sanam from '../../assets/team/advisoryboard/Sanam.png';
+import Subha from '../../assets/team/advisoryboard/Subha.png';
+import Swexya from '../../assets/team/advisoryboard/Swexya.png';
 
 const CanopyBoardOfDirectors: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState('BOARD OF DIRECTORS');
@@ -15,7 +37,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Angirash Karki',
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
-      image: 'src/assets/team/bod/Angirash.png',
+      image: Angirash,
       description: 'Angirash is an educator and social impact leader with a decade of experience across education, inclusion, and youth empowerment. He has led country operations for ISLearning, advised U.S. Embassy Youth Council and Rotary initiatives, mentored changemakers globally, and developed inclusive education policies with governments and the National Human Rights Commission.'
     },
     {
@@ -23,7 +45,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Mohit Rauniyar',
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
-      image: 'src/assets/team/bod/Mohit.png',
+      image: Mohit,
       description: 'Mohit is a seasoned education and development leader with experience across Nepal, the U.S., and Europe. Alongside founding Canopy Nepal, he has led grants strategy at Riverside Immigrant Services, supported the launch of the University of Nepal, mentored social entrepreneurs in Ghana, organized climate initiatives in France, and shaped education policy dialogue globally. He holds a Masters in Education from Harvard University.'
     },
     {
@@ -31,7 +53,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Roshan Bhatta',
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
-      image: 'src/assets/team/bod/Roshan.png',
+      image: Roshan,
       description: 'Roshan is a biomedical engineer and researcher with global experience across the U.S., Turkey, and Romania. He previously served as Canopy Nepal\'s Managing Director and has since worked in medical device quality assurance and nanotechnology R&D. Roshan brings a unique lens at the intersection of innovation, science, and education.'
     },
     {
@@ -39,7 +61,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Shreya Upadhyay',
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
-      image: 'src/assets/team/bod/Shreya.png',
+      image: Shreya,
       description: 'Shreya is a social impact strategist and entrepreneur with experience leading volunteer programs, nonprofit operations, and youth initiatives. She co-founded Sweet Fix Nepal and has led international exchanges, board engagement, and cross-cultural programs that bridge purpose, community, and creativity.'
     },
     {
@@ -47,7 +69,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Srishti Vaidya',
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
-      image: 'src/assets/team/bod/Srishti.png',
+      image: Srishti,
       description: 'Srishti is an economist and sustainability advocate with experience at the International Finance Corporation and Cummins Inc. She has led operations at Vaidya Group, advised global climate initiatives, and served as Nepal\'s youth delegate at COP28. She is also a Global Shaper and founder of Kathmandu\'s longest-running book club.'
     },
     
@@ -57,7 +79,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Aditya Todi',
       title: 'Canopy Nepal Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Aditya.png',
+      image: Aditya,
       description: 'Aditya leads the metal manufacturing vertical at MC Group, a century-old business in Nepal. With past roles in consulting and development, he brings a global lens to strategic leadership. He holds degrees from Stanford and dual master\'s from Harvard Kennedy School and Harvard Business School.'
     },
     {
@@ -65,7 +87,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Bijeysh Ranjit',
       title: 'Canopy Nepal Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Bijeysh.png',
+      image: Bijeysh,
       description: 'Bijeysh is a social entrepreneur and founder of Danfe Works, which creates opportunities for marginalized communities through business with purpose. He previously led the nonprofit SAATH and has worked across the U.S., Europe, and Nepal. Passionate about impact, he\'s also a nature lover and lifelong learner.'
     },
     {
@@ -73,7 +95,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Niranjan Kunwar',
       title: 'Canopy Nepal Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Niranjan.png',
+      image: Niranjan,
       description: 'Niranjan is an educator, writer, and translator based in Kathmandu. With an M.S.Ed from CUNY, he bridges education, arts, and culture. He\'s the author of Between Queens and the Cities, and continues to champion inclusive storytelling through his forthcoming translation of Seto Dharti and a children\'s book.'
     },
     {
@@ -81,7 +103,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Saugat Gautam',
       title: 'Canopy Nepal Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Saugat.png',
+      image: Saugat,
       description: 'Saugat is a political science scholar and development leader with a decade of experience. He manages programs at the International Commission of Jurists and teaches at Thames College. As co-founder of Nepal Center for Integrated Development, he blends research, advocacy, and action for lasting social change.'
     },
     {
@@ -89,7 +111,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Shristi Mishra',
       title: 'Canopy Nepal Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Shristi.png',
+      image: Shristi,
       description: 'Shristi is an education researcher, entrepreneur, and Fulbright alum with experience at the World Bank, USAID, and DC\'s education agency. A former teacher in Nepal, she now runs Yak9 Chews, a pet wellness company based in Austin—proving you can love data and dogs equally.'
     },
     
@@ -99,7 +121,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Ashra Acharya',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Ashra.png',
+      image: Ashra,
       description: 'Ashra leads executive operations at Bessemer Venture Partners and previously served as Director of Community for the Great Nepali Diaspora. Born in Nepal and raised in Texas, she brings heart and expertise to her work, always rooting her leadership in connection, equity, and community building.'
     },
     {
@@ -107,7 +129,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Bhushan Dahal',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Bhushan.png',
+      image: Bhushan,
       description: 'Bhushan is a Ph.D. candidate in Educational Leadership at Florida State University and former Executive Director of Kids of Kathmandu. His leadership spans rebuilding schools, implementing digital classrooms, and advancing education policy—connecting academic insight with grassroots action to drive educational change in Nepal and beyond.'
     },
     {
@@ -115,7 +137,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Bibek Raj Kandel',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Bibek.png',
+      image: Bibek,
       description: 'Bibek is a global energy and climate expert advising governments and institutions across Asia and Africa. With a decade of experience in climate finance and policy, he brings systems-level thinking and a commitment to equitable growth. He holds an MPA from Harvard Kennedy School.'
     },
     {
@@ -123,7 +145,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Bimla Siwakoti',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Bimla.png',
+      image: Bimla,
       description: 'Bimla is a Health Informaticist at Deloitte, blending her technical background with lived experience from a refugee camp in Nepal. With degrees from Johns Hopkins and Penn State, she is passionate about improving healthcare systems and championing education equity through technology and data.'
     },
     {
@@ -131,7 +153,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Binju Gaire',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Binju.png',
+      image: Binju,
       description: 'Binju is an IT Audit Manager at Deloitte, currently based in Dublin. With expertise in tech risk and compliance, she is equally committed to mental health, education, and financial literacy. She brings thoughtful insight and global experience to supporting impactful social change.'
     },
     {
@@ -139,7 +161,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Clement V. Gomes',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Clement.png',
+      image: Clement,
       description: 'Clement is a Biology Professor at CUNY Guttman and founder of ISLearning. With decades of experience teaching in both K–12 and higher education, he is passionate about fostering global citizenship and building inclusive learning environments. He holds a Ph.D. from Columbia University.'
     },
     {
@@ -147,7 +169,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Heather Schultz',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Heather.png',
+      image: Heather,
       description: 'Heather helped launch Canopy\'s Katha Bunaun program in 2017 and continues to champion its mission. With years of experience in youth development and literacy, she now lives in Seattle and works as a Senior Onboarding Specialist—always bringing her love for learning to every role.'
     },
     {
@@ -155,7 +177,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Meg Zuttermeister',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Meg.png',
+      image: Meg,
       description: 'Meg is an educator passionate about designing engaging and inclusive learning environments. Her work spans early intervention, parent coaching, and preschool education. She holds an M.Ed from Harvard and brings a deep understanding of human development to Canopy\'s mission of empowering learners at every stage.'
     },
     {
@@ -163,7 +185,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Needika Adhikari',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Needhika.png',
+      image: Needhika,
       description: 'Needika is a Senior Analyst at Excelsior Energy Capital, managing renewable energy assets and advising on sustainability initiatives in the U.S. and Nepal. With an LLM from The Fletcher School, she brings analytical precision and a deep commitment to equitable climate solutions.'
     },
     {
@@ -171,7 +193,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Sanam Karki',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Sanam.png',
+      image: Sanam,
       description: 'Sanam is a project and data management professional with experience in banking and nonprofit operations. With an MBA from the University of Southern Mississippi, she helps organizations improve systems, drive results, and build stronger teams through thoughtful analysis and collaborative leadership.'
     },
     {
@@ -179,7 +201,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Subha Niroula',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Subha.png',
+      image: Subha,
       description: 'Subha is a Software Engineer with a passion for teaching and mathematics. With degrees from St. John\'s College and Wake Forest, he brings global academic experience and a love for lifelong learning—balancing code, books, and his second Master\'s degree while navigating Texas tech.'
     },
     {
@@ -187,7 +209,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       name: 'Swexya Panta',
       title: 'Canopy USA Advisory Board',
       category: 'ADVISORY BOARD',
-      image: 'src/assets/team/advisoryboard/Swexya.png',
+      image: Swexya,
       description: 'Swexya is a Senior Investment Analyst at the Carnegie Corporation of New York. With a strong foundation in financial research and analysis, she previously worked at Stone Forest Capital. She brings analytical clarity, curiosity, and commitment to socially impactful investing and education access.'
     }
   ];

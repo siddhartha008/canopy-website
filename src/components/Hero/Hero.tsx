@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import hero from '../../assets/hero.png';
 
 const Hero: React.FC = () => {
 
@@ -7,7 +8,7 @@ const Hero: React.FC = () => {
     <section id="home" className="relative mt-6 h-screen flex items-center justify-center overflow-hidden">
       {/* add the hero image from assets */}
       <div className="absolute inset-0">
-        <img src="src/assets/hero.png" alt="Hero" className="w-full h-full object-contain" />
+        <img src={hero} alt="Hero" className="w-full h-full object-contain" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

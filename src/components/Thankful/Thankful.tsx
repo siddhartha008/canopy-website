@@ -1,4 +1,5 @@
 import React from 'react';
+import l3 from '../../assets/l3.png';
 
 const ThankfulPartnersSection = () => {
   return (
@@ -14,7 +15,7 @@ const ThankfulPartnersSection = () => {
       
       <div className="w-full overflow-hidden px-16 -mt-20 -mb-20">
         <img 
-          src="/src/assets/l3.png" 
+          src={l3} 
           alt="Canopy Nepal Partners - including Nepal Government, Harvard Kennedy School, hundredED, NCEP, Alaya, International Literacy Learning, Friends of Nepal Adelaide, Milken Penn GSE, International Literacy Association, US Embassy Youth Council, UN Women Asia Pacific, Global Citizen, World Literacy Foundation, Little Big Fund, and YO"
           className="w-full h-auto"
         />

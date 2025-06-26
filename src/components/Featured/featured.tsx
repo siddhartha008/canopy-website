@@ -1,16 +1,24 @@
 import React from 'react';
+import hi from '../../assets/icons/hi.png';
+import hk from '../../assets/icons/hk.png';
+import hun from '../../assets/icons/hun.png';
+import ila from '../../assets/icons/ila.png';
+import ktmp from '../../assets/icons/ktmp.png';
+import mit from '../../assets/icons/mit.png';
+import res from '../../assets/icons/res.png';
+import wef from '../../assets/icons/wef.png';
 
 const FeaturedInSection = () => {
   // Logo data
   const logos = [
-    { src: "src/assets/icons/hi.png", alt: "Harvard Innovation Lab" },
-    { src: "src/assets/icons/hk.png", alt: "Harvard Kennedy School" },
-    { src: "src/assets/icons/hun.png", alt: "HundrED" },
-    { src: "src/assets/icons/ila.png", alt: "International Literacy Association" },
-    { src: "src/assets/icons/ktmp.png", alt: "The Kathmandu Post" },
-    { src: "src/assets/icons/mit.png", alt: "MIT Solve" },
-    { src: "src/assets/icons/res.png", alt: "Resolution Project" },
-    { src: "src/assets/icons/wef.png", alt: "World Economic Forum" }
+    { src: hi, alt: "Harvard Innovation Lab" },
+    { src: hk, alt: "Harvard Kennedy School" },
+    { src: hun, alt: "HundrED" },
+    { src: ila, alt: "International Literacy Association" },
+    { src: ktmp, alt: "The Kathmandu Post" },
+    { src: mit, alt: "MIT Solve" },
+    { src: res, alt: "Resolution Project" },
+    { src: wef, alt: "World Economic Forum" }
   ];
 
   return (
@@ -38,7 +46,7 @@ const FeaturedInSection = () => {
       <div className="w-full overflow-hidden py-8">
         <div className="flex items-center animate-infinite-scroll">
           {/* First set of logos */}
-          {logos.map((logo, index) => (
+          {logos.map((logo, index: number) => (
             <div key={`first-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
               <img 
                 src={logo.src} 
@@ -50,7 +58,7 @@ const FeaturedInSection = () => {
           ))}
           
           {/* Duplicate set for seamless loop */}
-          {logos.map((logo, index) => (
+          {logos.map((logo, index: number) => (
             <div key={`second-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
               <img 
                 src={logo.src} 
@@ -62,7 +70,7 @@ const FeaturedInSection = () => {
           ))}
           
           {/* Third set for extra smoothness */}
-          {logos.map((logo, index) => (
+          {logos.map((logo, index: number) => (
             <div key={`third-${index}`} className="flex-shrink-0 mx-8 md:mx-12">
               <img 
                 src={logo.src} 

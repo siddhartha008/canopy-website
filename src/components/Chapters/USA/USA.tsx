@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import hero from '../../../assets/hero.png';
 
 const CanopyUSASection = () => {
   return (
@@ -6,7 +7,7 @@ const CanopyUSASection = () => {
       {/* Hero Banner */}
       <div className="relative h-[400px] overflow-hidden">
         <img
-          src="src/assets/hero.png"
+          src={hero}
           alt="Canopy USA team"
           className="absolute inset-0 w-full h-full object-cover"
         />

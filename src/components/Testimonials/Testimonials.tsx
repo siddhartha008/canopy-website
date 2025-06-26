@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import tg from '../../assets/testimonials/tg.png';
 
 const TestimonialSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,21 +11,21 @@ const TestimonialSection = () => {
       text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others well.",
       author: "Shreya",
       role: "Student Scholar",
-      image: "src/assets/testimonials/tg.png"
+      image: tg
     },
     {
       id: 2,
       text: "My daughter was about to leave school because I simply couldn't afford it anymore. As a father, it broke my heart but there was nothing I could do. But then Canopy stepped in and helped her stay in school. Now, she's not only in school, she's talking about becoming a banker! She tells me she'll earn enough so I don't have to worry anymore.",
       author: "Ram Bahadur",
       role: "Father of Scholar",
-      image: "src/assets/testimonials/tg.png"
+      image: tg
     },
     {
       id: 3,
       text: "The story-based learning approach has transformed how our students engage with education. We've seen remarkable improvements in critical thinking, communication skills, and most importantly, the confidence to express themselves. This program is changing the future of education in Nepal.",
       author: "Sunita Sharma",
       role: "Ministry of Social Development",
-      image: "src/assets/testimonials/tg.png"
+      image: tg
     }
   ];
 
@@ -36,7 +37,7 @@ const TestimonialSection = () => {
     return () => clearInterval(timer);
   }, [testimonials.length]);
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
@@ -51,7 +52,7 @@ const TestimonialSection = () => {
   return (
     <section className="relative w-full overflow-hidden h-96 sm:h-[500px] lg:h-[600px] xl:h-[700px]">
       {/* Background Images */}
-      {testimonials.map((testimonial, index) => (
+      {testimonials.map((testimonial, index: number) => (
         <div
           key={testimonial.id}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${

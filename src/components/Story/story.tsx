@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import oos from '../../assets/oos.png';
+import os2 from '../../assets/os2.jpg';
 
 const CanopyOurStory: React.FC = () => {
   return (
@@ -7,7 +9,7 @@ const CanopyOurStory: React.FC = () => {
       {/* Top Image - Show on all screen sizes */}
       <div className="mb-0">
         <img
-         src="src/assets/oos.png"
+         src={oos}
           alt="Group of students with balloons"
           className="w-full h-auto object-contain block"
         />
@@ -177,7 +179,7 @@ const CanopyOurStory: React.FC = () => {
       {/* Bottom Image */}
       <div>
         <img
-          src="src/assets/os2.jpg"
+          src={os2}
           alt="Mohit Rauniyar speaking"
           className="w-full h-[70vh] object-cover"
         />

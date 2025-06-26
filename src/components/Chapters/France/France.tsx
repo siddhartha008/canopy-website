@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import hero from '../../../assets/hero.png';
 
 const CanopyFranceSection = () => {
   const [ref, inView] = useInView({
@@ -13,7 +14,7 @@ const CanopyFranceSection = () => {
       {/* Hero Banner */}
       <div className="mt-28 relative h-[400px] overflow-hidden">
         <img
-          src="src/assets/hero.png"
+          src={hero}
           alt="Canopy France team"
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -1,5 +1,51 @@
 import { useState } from 'react';
 import PDFViewer from '../PDFViewer/PDFViewer';
+import Annual2024 from '../../assets/covers/Annual2024.png';
+import Annual2023 from '../../assets/covers/Annual2023.png';
+import Annual2022 from '../../assets/covers/Annual2022.png';
+import AUDIT80_81 from '../../assets/covers/AUDIT80_81.png';
+import AUDIT79_80 from '../../assets/covers/AUDIT79_80.png';
+import AUDIT78_79 from '../../assets/covers/AUDIT78_79.png';
+import AUDIT77_78 from '../../assets/covers/AUDIT77_78.png';
+import AUDIT76_77 from '../../assets/covers/AUDIT76_77.png';
+import AUDIT75_76 from '../../assets/covers/AUDIT75_76.png';
+import AUDIT74_75 from '../../assets/covers/AUDIT74_75.png';
+import AUDIT73_74 from '../../assets/covers/AUDIT73_74.png';
+import Magazine1 from '../../assets/covers/Magazine1.png';
+import Magazine2 from '../../assets/covers/Magazine2.png';
+import Magazine3 from '../../assets/covers/Magazine3.png';
+import Magazine4 from '../../assets/covers/Magazine4.png';
+import Magazine5 from '../../assets/covers/Magazine5.png';
+import Magazine6 from '../../assets/covers/Magazine6.png';
+import Magazine7 from '../../assets/covers/Magazine7.png';
+import Magazine8 from '../../assets/covers/Magazine8.png';
+import Magazine9 from '../../assets/covers/Magazine9.png';
+import Magazine10 from '../../assets/covers/Magazine10.png';
+import Magazine11 from '../../assets/covers/Magazine11.png';
+
+const magazineCovers: Record<number, string> = {
+  1: Magazine1,
+  2: Magazine2,
+  3: Magazine3,
+  4: Magazine4,
+  5: Magazine5,
+  6: Magazine6,
+  7: Magazine7,
+  8: Magazine8,
+  9: Magazine9,
+  10: Magazine10,
+  11: Magazine11,
+};
+const auditCovers = {
+  'AUDIT80_81': AUDIT80_81,
+  'AUDIT79_80': AUDIT79_80,
+  'AUDIT78_79': AUDIT78_79,
+  'AUDIT77_78': AUDIT77_78,
+  'AUDIT76_77': AUDIT76_77,
+  'AUDIT75_76': AUDIT75_76,
+  'AUDIT74_75': AUDIT74_75,
+  'AUDIT73_74': AUDIT73_74,
+};
 
 const PublicationsPage = () => {
   const [activeSection, setActiveSection] = useState('buneka-katha');
@@ -87,17 +133,17 @@ const PublicationsPage = () => {
             {/* Publications Display - 4 per row */}
             <div className="flex flex-wrap justify-center gap-8 py-4">
               {[
-                { id: 11, cover: 'Magazine11.png', pdf: 'magazine-11.pdf' },
-                { id: 10, cover: 'Magazine10.png', pdf: 'magazine-10.pdf' },
-                { id: 9, cover: 'Magazine9.png', pdf: 'magazine-9.pdf' },
-                { id: 8, cover: 'Magazine8.png', pdf: 'magazine-8.pdf' },
-                { id: 7, cover: 'Magazine7.png', pdf: 'magazine-7.pdf' },
-                { id: 6, cover: 'Magazine6.png', pdf: 'magazine-6.pdf' },
-                { id: 5, cover: 'Magazine5.png', pdf: 'magazine-5.pdf' },
-                { id: 4, cover: 'Magazine4.png', pdf: 'magazine-4.pdf' },
-                { id: 3, cover: 'Magazine3.png', pdf: 'magazine-3.pdf' },
-                { id: 2, cover: 'Magazine2.png', pdf: 'magazine-2.pdf' },
-                { id: 1, cover: 'Magazine1.png', pdf: 'magazine-1.pdf' }
+                { id: 11, cover: Magazine11, pdf: 'magazine-11.pdf' },
+                { id: 10, cover: Magazine10, pdf: 'magazine-10.pdf' },
+                { id: 9, cover: Magazine9, pdf: 'magazine-9.pdf' },
+                { id: 8, cover: Magazine8, pdf: 'magazine-8.pdf' },
+                { id: 7, cover: Magazine7, pdf: 'magazine-7.pdf' },
+                { id: 6, cover: Magazine6, pdf: 'magazine-6.pdf' },
+                { id: 5, cover: Magazine5, pdf: 'magazine-5.pdf' },
+                { id: 4, cover: Magazine4, pdf: 'magazine-4.pdf' },
+                { id: 3, cover: Magazine3, pdf: 'magazine-3.pdf' },
+                { id: 2, cover: Magazine2, pdf: 'magazine-2.pdf' },
+                { id: 1, cover: Magazine1, pdf: 'magazine-1.pdf' }
               ].map((magazine) => (
                 <div key={magazine.id} className="flex flex-col items-center">
                   <button 
@@ -105,7 +151,7 @@ const PublicationsPage = () => {
                     className="transition-transform hover:scale-105"
                   >
                     <img
-                      src={`src/assets/covers/${magazine.cover}`}
+                      src={magazine.cover}
                       alt={`Buneka Katha Magazine ${magazine.id}`}
                       className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                     />
@@ -133,7 +179,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/Annual2024.png"
+                    src={Annual2024}
                     alt="2024 Annual Report"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -148,7 +194,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/Annual2023.png"
+                    src={Annual2023}
                     alt="2023 Annual Report"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -163,7 +209,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/Annual2022.png"
+                    src={Annual2022}
                     alt="2022 Annual Report"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -190,7 +236,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT80_81.png"
+                    src={AUDIT80_81}
                     alt="Audit Report 2080/81"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -204,7 +250,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT79_80.png"
+                    src={AUDIT79_80}
                     alt="Audit Report 2079/80"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -218,7 +264,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT78_79.png"
+                    src={AUDIT78_79}
                     alt="Audit Report 2078/79"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -232,7 +278,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT77_78.png"
+                    src={AUDIT77_78}
                     alt="Audit Report 2077/78"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -246,7 +292,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT76_77.png"
+                    src={AUDIT76_77}
                     alt="Audit Report 2076/77"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -260,7 +306,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT75_76.png"
+                    src={AUDIT75_76}
                     alt="Audit Report 2075/76"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -274,7 +320,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT74_75.png"
+                    src={AUDIT74_75}
                     alt="Audit Report 2074/75"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />
@@ -288,7 +334,7 @@ const PublicationsPage = () => {
                   className="transition-transform hover:scale-105"
                 >
                   <img
-                    src="src/assets/covers/AUDIT73_74.png"
+                    src={AUDIT73_74}
                     alt="Audit Report 2073/74"
                     className="w-72 h-96 object-cover shadow-md rounded-lg bg-white"
                   />

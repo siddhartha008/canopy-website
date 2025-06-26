@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import l2 from '../../assets/l2.png';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -34,7 +35,7 @@ const About: React.FC = () => {
         >
           {/* full-width image */}
           <img
-            src="src/assets/l2.png"
+            src={l2}
             alt="what-we-do-image"
             className="w-full md:w-1/2 object-cover"
           />

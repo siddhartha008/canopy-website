@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import mv0 from '../../assets/mv0.png';
+import mv1 from '../../assets/mv1.png';
+import mv2 from '../../assets/mv2.png';
 
 const CanopyAboutUs: React.FC = () => {
   return (
@@ -8,7 +11,7 @@ const CanopyAboutUs: React.FC = () => {
       <div className="relative w-full overflow-hidden">
         <div className="relative">
           <img
-            src="src/assets/mv0.png"
+            src={mv0}
             alt="Smiling student in classroom"
             className="w-full h-80 lg:h-96 object-cover"
           />
@@ -49,7 +52,7 @@ const CanopyAboutUs: React.FC = () => {
         <div className="w-full mt-8">
 
           <img
-            src="src/assets/mv1.png"
+            src={mv1}
             alt="Student studying"
             className="w-full h-96 object-cover"
           />
@@ -110,7 +113,7 @@ const CanopyAboutUs: React.FC = () => {
         {/* Image with Overlay Text */}
         <div className="relative w-full">
           <img
-            src="src/assets/mv2.png"
+            src={mv2}
             alt="Group of happy students"
             className="w-full h-96 lg:h-[500px] object-cover"
           />
