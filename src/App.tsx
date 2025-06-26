@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
@@ -24,9 +24,18 @@ import OurWork from './components/OurWork/OurWork';
 import CanopyScholarshipPage from './components/OurWork/CANSHIP/Canship';
 import KathaBunaun from './components/OurWork/Kathabunaun/KB';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Navigation />
         <AnimatePresence mode="wait">
