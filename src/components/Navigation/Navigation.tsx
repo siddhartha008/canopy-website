@@ -56,7 +56,7 @@ const Navigation = () => {
         { name: 'Canopy USA', href: '/canopyusa', isRoute: true }
       ]
     },
-    { name: 'Get Involved', href: '#involved' }
+    { name: 'Get Involved', href: '/getinvolved', isRoute: true }
   ];
 
   const handleNavigation = (href: string, isRoute?: boolean) => {
@@ -144,7 +144,18 @@ const Navigation = () => {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <motion.button
-                  onClick={() => item.isRoute ? navigate(item.href) : scrollToSection(item.href)}
+                  onClick={() => {
+                    // For items with href '#', only toggle submenu (About Us, Chapters)
+                    if (item.href === '#') {
+                      setActiveDropdown(a => (a === idx ? null : idx));
+                    } else if (item.isRoute) {
+                      // For route items (Our Work), navigate to the page
+                      navigate(item.href);
+                    } else if (item.href && item.href !== '#') {
+                      // For other items with valid href, scroll to section
+                      scrollToSection(item.href);
+                    }
+                  }}
                   className={`
                     flex items-center space-x-1 font-medium
                     transition-colors duration-300 hover:text-primary-cyan
@@ -237,13 +248,18 @@ const Navigation = () => {
             {navItems.map((item, idx) => (
               <div key={item.name}>
                 <button
-                  onClick={() =>
-                    item.submenu
-                      ? setActiveDropdown(a => (a === idx ? null : idx))
-                      : item.isRoute 
-                        ? navigate(item.href)
-                        : scrollToSection(item.href)
-                  }
+                  onClick={() => {
+                    // For items with href '#', only toggle submenu (About Us, Chapters)
+                    if (item.href === '#') {
+                      setActiveDropdown(a => (a === idx ? null : idx));
+                    } else if (item.isRoute) {
+                      // For route items (Our Work), navigate to the page
+                      navigate(item.href);
+                    } else if (item.href && item.href !== '#') {
+                      // For other items with valid href, scroll to section
+                      scrollToSection(item.href);
+                    }
+                  }}
                   className={`
                     flex items-center justify-between w-full px-3 py-2 
                     font-medium hover:text-primary-cyan hover:bg-primary-cyan/10 rounded-md 

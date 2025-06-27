@@ -23,6 +23,7 @@ import MailchimpNewsletter from './components/Newsletter/Newsletter';
 import OurWork from './components/OurWork/OurWork';
 import CanopyScholarshipPage from './components/OurWork/CANSHIP/Canship';
 import KathaBunaun from './components/OurWork/Kathabunaun/KB';
+import GetInvolvedSection from './components/GetInvolved/GetInvolved';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -70,6 +71,7 @@ function App() {
             <Route path="/ourwork" element={<OurWork />} />
             <Route path="/canship" element={<CanopyScholarshipPage />} />
             <Route path="/katha-bunaun" element={<KathaBunaun />} />
+            <Route path="/getinvolved" element={<GetInvolvedSection />} />
           </Routes>
         </AnimatePresence>
         <Footer />
