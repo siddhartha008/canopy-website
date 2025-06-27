@@ -122,13 +122,7 @@ const CanopyUSASection = () => {
         </div>
 
         {/* Newsletter Subscription Section */}
-        <div className="w-full flex justify-center pb-4">
-          <div className="text-center text-xl">
-            <span className="text-gray-700">And don't forget to </span>
-            <a href="#" className="text-primary-cyan hover:underline font-semibold">[Subscribe to the Canopy USA Newsletter]</a>
-            <span className="text-gray-700"> to stay updated on our events, stories, and impact from the ground.</span>
-          </div>
-        </div>
+        
       </div>
 
       <hr/>
