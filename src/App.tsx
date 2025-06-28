@@ -41,7 +41,7 @@ function App() {
         <Navigation />
         <AnimatePresence mode="wait">
           <Routes>
-            <Route path="/" element={
+            <Route path="/canopy-website" element={
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
