@@ -2,8 +2,18 @@
 import React from 'react';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
+const PAYPAL_CLIENT_ID = import.meta.env.VITE_PAYPAL_CLIENT_ID;
+
+// Validate that we have a proper PayPal client ID
+if (!PAYPAL_CLIENT_ID || PAYPAL_CLIENT_ID === "YOUR_PAYPAL_CLIENT_ID") {
+  console.error('PayPal Client ID is not configured. Please set VITE_PAYPAL_CLIENT_ID in your environment variables.');
+}
+
+// Debug: Log the client ID (remove this after confirming it works)
+console.log('PayPal Client ID:', PAYPAL_CLIENT_ID?.substring(0, 10) + '...');
+
 const initialOptions = {
-  clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID || "YOUR_PAYPAL_CLIENT_ID",
+  clientId: PAYPAL_CLIENT_ID || "",
   currency: "USD",
   intent: "capture",
   // The data-client-token is preferred when 3D Secure is enabled
@@ -15,6 +25,12 @@ interface PayPalProviderProps {
 }
 
 const PayPalProvider: React.FC<PayPalProviderProps> = ({ children }) => {
+  // Don't render PayPal provider if client ID is not configured
+  if (!PAYPAL_CLIENT_ID || PAYPAL_CLIENT_ID === "YOUR_PAYPAL_CLIENT_ID") {
+    console.warn('PayPal integration disabled due to missing client ID');
+    return <>{children}</>;
+  }
+
   return (
     <PayPalScriptProvider options={initialOptions}>
       {children}

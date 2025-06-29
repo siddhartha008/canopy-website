@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* add the hero image from assets */}
-      <div className="absolute inset-0 mt-14">
+      <div className="absolute inset-0 mt-14 ">
         <img src={hero} alt="Hero" className="w-full h-full object-contain" />
       </div>
 
