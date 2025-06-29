@@ -39,6 +39,12 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
           description: `One-time donation to Canopy Nepal - $${amount}`,
         },
       ],
+      application_context: {
+        shipping_preference: 'NO_SHIPPING',
+        user_action: 'PAY_NOW',
+        return_url: window.location.origin + '/donate?success=true',
+        cancel_url: window.location.origin + '/donate?cancelled=true'
+      }
     });
   };
 
@@ -48,7 +54,10 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
     return actions.subscription.create({
       plan_id: getPlanIdForAmount(amount), // You'll need to create these plan IDs in PayPal dashboard
       application_context: {
-        shipping_preference: 'NO_SHIPPING'
+        shipping_preference: 'NO_SHIPPING',
+        user_action: 'SUBSCRIBE_NOW',
+        return_url: window.location.origin + '/donate?success=true',
+        cancel_url: window.location.origin + '/donate?cancelled=true'
       }
     });
   };
@@ -115,7 +124,13 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
 
   return (
     <PayPalButtons
-      style={{ layout: "vertical" }}
+      style={{ 
+        layout: "vertical",
+        color: "blue",
+        shape: "rect",
+        label: "pay"
+      }}
+      fundingSource={undefined} // This allows all funding sources including Venmo
       // Use different handlers based on whether it's monthly or one-time
       createOrder={isMonthly ? undefined : createOneTimeOrder}
       createSubscription={isMonthly ? createSubscription : undefined}

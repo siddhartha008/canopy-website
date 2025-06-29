@@ -120,7 +120,7 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
             </p>
             <button
               onClick={handleClose}
-              className="bg-teal-500 text-white px-6 py-2 rounded-lg hover:bg-teal-600 transition-colors"
+              className="bg-primary-blue text-white px-6 py-2 rounded-lg hover:bg-primary-blue transition-colors"
             >
               Close
             </button>
@@ -134,8 +134,8 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setIsMonthly(false)}
                 className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
                   !isMonthly
-                    ? 'bg-white text-teal-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
+                    ? 'bg-white text-primary-blue shadow-sm text-lg font-semibold'
+                    : 'text-gray-600 hover:text-gray-800 text-lg'
                 }`}
               >
                 One-time
@@ -144,8 +144,8 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
                 onClick={() => setIsMonthly(true)}
                 className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
                   isMonthly
-                    ? 'bg-white text-teal-600 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-800'
+                    ? 'bg-white text-primary-blue shadow-sm font-semibold text-lg'
+                    : 'text-gray-600 hover:text-gray-800 text-lg'
                 }`}
               >
                 Monthly
@@ -154,7 +154,7 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
 
             {/* Amount Selection */}
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-3">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Select Amount
               </label>
               <div className="grid grid-cols-3 gap-2 mb-4">
@@ -162,9 +162,9 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
                   <button
                     key={amount}
                     onClick={() => handleAmountSelect(amount)}
-                    className={`py-3 px-4 rounded-lg border-2 text-sm font-medium transition-colors ${
+                    className={`py-3 px-4 rounded-lg border-2 text-lg  transition-colors ${
                       selectedAmount === amount && !customAmount
-                        ? 'border-teal-500 bg-teal-50 text-teal-700'
+                        ? 'border-primary-blue bg-primary-blue/10 text-primary-blue font-semibold'
                         : 'border-gray-200 text-gray-700 hover:border-gray-300'
                     }`}
                   >
@@ -184,12 +184,12 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
                   </span>
                   <input
                     type="number"
-                    value={customAmount}
+                    value={customAmount} // Use customAmount state or else default 5
                     onChange={(e) => handleCustomAmountChange(e.target.value)}
                     placeholder="Enter amount"
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                    min="1"
-                    step="0.01"
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                    min="5"
+                    step="1"
                   />
                 </div>
               </div>
@@ -198,10 +198,10 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
             {/* Selected Amount Display */}
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
               <div className="flex justify-between items-center">
-                <span className="text-gray-600">
+                <span className="text-gray-600 font-bold">
                   {isMonthly ? 'Monthly donation:' : 'One-time donation:'}
                 </span>
-                <span className="text-2xl font-bold text-teal-600">
+                <span className="text-2xl font-bold text-primary-blue">
                   ${selectedAmount}
                 </span>
               </div>
@@ -217,8 +217,8 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
 
             {/* Error Message */}
             {errorMessage && (
-              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-700 text-sm">{errorMessage}</p>
+              <div className="mt-4 p-3 bg-primary-red/30 border border-red-200 rounded-lg">
+                <p className="text-primary-red text-sm">{errorMessage}</p>
               </div>
             )}
 

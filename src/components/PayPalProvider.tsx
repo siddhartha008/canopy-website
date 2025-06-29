@@ -9,13 +9,15 @@ if (!PAYPAL_CLIENT_ID || PAYPAL_CLIENT_ID === "YOUR_PAYPAL_CLIENT_ID") {
   console.error('PayPal Client ID is not configured. Please set VITE_PAYPAL_CLIENT_ID in your environment variables.');
 }
 
-// Debug: Log the client ID (remove this after confirming it works)
-console.log('PayPal Client ID:', PAYPAL_CLIENT_ID?.substring(0, 10) + '...');
 
 const initialOptions = {
   clientId: PAYPAL_CLIENT_ID || "",
   currency: "USD",
   intent: "capture",
+  // Enable Venmo and other funding sources
+  "enable-funding": "venmo,card",
+  // Disable PayPal Credit (PayPal's BNPL product)
+  "disable-funding": "credit",
   // The data-client-token is preferred when 3D Secure is enabled
   // "data-client-token": "YOUR_CLIENT_TOKEN", 
 };
