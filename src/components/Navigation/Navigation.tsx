@@ -212,7 +212,7 @@ const Navigation = () => {
           <div className="flex items-center flex-shrink-0 space-x-4 ml-auto">
             {/* Donate button on md+ */}
             <motion.button
-              onClick={() => scrollToSection('#donate')}
+              onClick={() => navigate('/donate')}
               className="hidden md:inline-block bg-primary-cyan text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-cyan/90 transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -306,7 +306,7 @@ const Navigation = () => {
               </div>
             ))}
             <button
-              onClick={() => scrollToSection('#donate')}
+              onClick={() => navigate('/donate')}
               className="block w-full px-3 py-2 bg-primary-cyan text-white font-medium rounded-md hover:bg-primary-cyan/90 transition-colors duration-300"
             >
               Donate Now

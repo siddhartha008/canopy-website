@@ -12,9 +12,9 @@ import React, { useState, useEffect } from 'react';
 
 const MailchimpNewsletter = () => {
   // Your actual Mailchimp values from the embedded form
-  const MAILCHIMP_URL = 'https://canopynepal.us18.list-manage.com/subscribe/post-json';
-  const MAILCHIMP_U = '458803be3c6c443caf7b7d870'; // Your unique account ID from the form action URL
-  const MAILCHIMP_ID = 'd09382c729'; // Your audience/list ID from the form action URL
+  const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
+  const MAILCHIMP_U = import.meta.env.VITE_MAILCHIMP_U; // Your unique account ID from the form action URL
+  const MAILCHIMP_ID = import.meta.env.VITE_MAILCHIMP_ID; // Your audience/list ID from the form action URL
 
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');

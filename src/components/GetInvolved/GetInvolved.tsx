@@ -3,9 +3,9 @@ import React from 'react';
 import heroImage from '../../assets/getinvolvedhero.png';
 import donateImage from '../../assets/gi1.jpeg';
 import fundraiseImage from '../../assets/gi2.jpg';
-import partnerImage from '../../assets/canship.jpeg';
+import partnerImage from '../../assets/gi3.jpg';
 import volunteerImage from '../../assets/gi4.jpg';
-import chaptersImage from '../../assets/gi6.png';
+import chaptersImage from '../../assets/gi5.png';
 import helpImage from '../../assets/gi6.png';
 
 
