@@ -60,15 +60,15 @@ const RichText: React.FC = () => {
             <p className="text-2xl text-gray-700">
 
              In Nepal, 
-            <span className="text-4xl md:text-4xl font-black text-red-500"> 73% </span>
+            <span className="text-4xl md:text-4xl font-black text-primary-orangered"> 73% </span>
               of students drop out before completing secondary school  due to cost and poor-quality education.
-              <span className="text-3xl md:text-3xl font-black text-red-500">  Canopy Nepal is changing that. </span> 
+              <span className="text-3xl md:text-3xl font-black text-primary-red">  Canopy Nepal is changing that. </span> 
               <br></br>
               <br></br>
               Canopy Nepal empowers students to stay in school and thrive by combining scholarships with creative, story-based learning that builds confidence, critical thinking, and lifelong skills.
               <br></br>
               <br></br>
-              With Canopy, students don’t just stay in school.  <span className="text-4xl md:text-4xl font-black text-red-500">100% </span> remain motivated, supported, and on track to graduate, and with local governments adapting our curriculum, our impact is sustainable and systemic.
+              With Canopy, students don’t just stay in school.  <span className="text-4xl md:text-4xl font-black text-primary-red">100% </span> remain motivated, supported, and on track to graduate, and with local governments adapting our curriculum, our impact is sustainable and systemic.
             </p>
             
           </motion.div>

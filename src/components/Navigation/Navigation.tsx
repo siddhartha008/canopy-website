@@ -125,7 +125,7 @@ const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            <Link to="/canopy-website">
+            <Link to="/">
               <img
                 src={logo}
                 alt="Canopy Nepal Logo"
