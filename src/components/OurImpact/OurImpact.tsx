@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MeetOurStudents from './MeetStudents/MeetStudents';
-import impactHero from '../../assets/impactHero.png';
+import impactHero from '../../assets/impacthero.png';
 import WhereWeWork from './WhereWeWork/WhereWeWork';
 import Sustainable from './Sustainable/Sustainable';
 import Impact from '../Impact/Impact';
