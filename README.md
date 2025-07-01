@@ -1,1 +1,2 @@
-Canopt's website is built with React and Vite. It uses React Router for routing, Framer Motion for animations, and Tailwind CSS for styling.
+Canopt's website is built with React and Vite. It uses React Router for routing,
+Framer Motion for animations, and Tailwind CSS for styling.

@@ -44,7 +44,7 @@ function App() {
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/canopy-website" element={
+              <Route path="/" element={
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -62,6 +62,7 @@ function App() {
                   <MailchimpNewsletter/>
                 </motion.div>
               } />
+
               <Route path="/missions" element={<MissionVisionPage />} />
               <Route path="/story" element={<CanopyOurStory />} />
               <Route path="/meet-the-team" element={<CanopyMeetTeam />} />
