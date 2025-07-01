@@ -3,6 +3,7 @@ import MeetOurStudents from './MeetStudents/MeetStudents';
 import impactHero from '../../assets/impactHero.png';
 import WhereWeWork from './WhereWeWork/WhereWeWork';
 import Sustainable from './Sustainable/Sustainable';
+import Impact from '../Impact/Impact';
 
 // --- Reusable Bar Chart Component (Final Polished Version) ---
 interface BarChartProps {
@@ -209,14 +210,17 @@ const OurImpact: React.FC = () => {
             ))}
           </div>
         </div>
-
+          
+        
         <MeetOurStudents />
         <WhereWeWork />
 
-       
+        <Impact />
 
         {/* Sustainability Section */}
+        
         <Sustainable />
+        
 
         
       </div>
