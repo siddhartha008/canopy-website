@@ -10,6 +10,13 @@ import React, { useState, useEffect } from 'react';
  * 4. Extract the 'u' and 'id' values from the URL and add them below
  */
 
+// Extend the Window interface to allow window.callback
+declare global {
+  interface Window {
+    callback?: (response: any) => void;
+  }
+}
+
 const MailchimpNewsletter = () => {
   // Your actual Mailchimp values from the embedded form
   const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
@@ -34,7 +41,7 @@ const MailchimpNewsletter = () => {
     }
   }, [status]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setLoading(true);
     setStatus('sending');
@@ -64,7 +71,7 @@ const MailchimpNewsletter = () => {
     script.id = 'mailchimp-jsonp';
     
     // Define the callback function
-    window.callback = (response) => {
+    window.callback = (response: any) => {
       delete window.callback;
       document.body.removeChild(script);
       
@@ -97,7 +104,7 @@ const MailchimpNewsletter = () => {
   };
 
   return (
-    <section className="bg-primary-red/5 py-16 px-6 rounded-2xl">
+    <section className="bg-secondary-gray py-16 px-6 rounded-2xl">
       <div className="max-w-4xl mx-auto">
         {/* Newsletter Header */}
         <div className="text-center mb-10">

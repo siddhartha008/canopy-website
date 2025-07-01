@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
+import DonationModal from '../Donate/DonationModal';
 
 const SupportUsSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="bg-#eeeeee py-8">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        {/* Header */}
-        <h2 className="text-neutral-900 text-lg font-semibold uppercase tracking-wider mb-8">
-          SUPPORT US
-        </h2>
-        
         {/* Main Statistic */}
         <div className="mb-12">
           <h3 className="text-neutral-900 text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
@@ -23,10 +21,29 @@ const SupportUsSection = () => {
         </p>
         
         {/* CTA Button */}
-        <button className="group bg-primary-orange hover:bg-primary-red text-white text-xl font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center mt-8 mb-4">
+        <button 
+          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
+          onClick={() => setIsModalOpen(true)}
+        >
           Donate Now
-          <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-1" />
+          <svg 
+            className="w-5 h-5 ml-2" 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M9 5l7 7-7 7" 
+            />
+          </svg>
         </button>
+      </div>
+      <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   );

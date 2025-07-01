@@ -117,7 +117,7 @@ const Navigation = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 mt-3">
-        <div className="flex items-center h-24">
+        <div className="flex items-center">
           
           {/* 1) Logo on the left */}
           <motion.div

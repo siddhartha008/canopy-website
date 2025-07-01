@@ -3,7 +3,7 @@ import l3 from '../../assets/l3.png';
 
 const ThankfulPartnersSection = () => {
   return (
-    <section className="bg-primary-gray/5 py-4 lg:py-8">
+    <section className="bg-secondary-gray py-4 lg:py-8">
       {/* Header - Keep centered with max width */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center">

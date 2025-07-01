@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1 flex flex-col items-center text-center">
             <img src={logo} alt="Canopy Nepal Logo" className="w-40 mb-2 mx-auto" />
             <p className="text-base max-w-xs text-center mx-auto">
-              Canopy empowers marginalized students through storytelling and scholarships, ensuring access to quality education.
+              Canopy empowers marginalized students through scholarships and storytelling, ensuring access to quality education.
             </p>
           </div>
 
@@ -54,6 +54,7 @@ const Footer: React.FC = () => {
                     <li><a href="#" className="hover:underline">FAQs</a></li>
                     <li><a href="#" className="hover:underline">Annual Report</a></li>
                     <li><a href="#" className="hover:underline">Policies and Guidelines</a></li>
+                    <li><a href="#" className="hover:underline">Features</a></li>
                 </ul>
              </div>
           </div>

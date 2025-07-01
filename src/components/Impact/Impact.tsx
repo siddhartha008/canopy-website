@@ -45,7 +45,7 @@ const Impact: React.FC = () => {
     {
       icon: DollarSignIcon,
       title: 'Funds Raised',
-      value: 1200000,
+      value: 1300000,
       color: 'text-primary-orange',
       bgColor: 'bg-secondary-orange',
     },
