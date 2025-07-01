@@ -44,7 +44,7 @@ const donationTiers = [
 const whyGivePoints = [
   'We work directly with students, families, communities, and local governments',
   'Our programs are designed to be long-term, inclusive, and measurable',
-  'Donations support education-focused programs in Nepal, with more than 90% directly going to the students',
+  'Donations support education-focused programs in Nepal, with more than 80% directly going to the students',
   'We keep you updated with real stories and real impact',
   'We treat your donation like tea in a Nepali household: shared generously and used wisely',
 ];

@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Our Office</h3>
                 <div className="text-base space-y-2 text-center">
                     <a
-                      href="https://www.google.com/maps/search/?api=1&query=Thirbam+Sadak,+Baluwatar-04,+Kathmandu+44600,+Nepal"
+                      href="https://www.google.com/maps/place/Canopy+Nepal/@27.7213195,85.3276936,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb18e14638255f:0x173205d784efa912!8m2!3d27.7213148!4d85.3302685!16s%2Fg%2F11f1nc4dhb?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline text-primary-blue"
