@@ -22,7 +22,14 @@ export default {
           700: '#404040',
           800: '#262626',
           900: '#171717',
-        }
+        },
+        secondary: {
+          red: '#E3ACB0',
+          orange: '#F8DFAD',
+          cyan: '#ADD5C5',
+          blue: '#A3C6D8',
+          gray: '#EEEEEE',
+        },
       },
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out',

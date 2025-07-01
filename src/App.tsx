@@ -26,6 +26,7 @@ import KathaBunaun from './components/OurWork/Kathabunaun/KB';
 import GetInvolvedSection from './components/GetInvolved/GetInvolved';
 import Donate from './components/Donate/Donate';
 import PayPalProvider from './components/PayPalProvider';
+import OurImpact from './components/OurImpact/OurImpact';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -71,7 +72,7 @@ function App() {
               <Route path="/canopyfrance" element={<CanopyFranceSection />} />
               <Route path="/canopyusa" element={<CanopyUSASection />} />
               <Route path="/publications" element={<PublicationsPage />} />
-              <Route path="/ourimpact" element={<NepalImpactMap />} />
+              <Route path="/ourimpact" element={<OurImpact />} />
               <Route path="/ourwork" element={<OurWork />} />
               <Route path="/canship" element={<CanopyScholarshipPage />} />
               <Route path="/katha-bunaun" element={<KathaBunaun />} />

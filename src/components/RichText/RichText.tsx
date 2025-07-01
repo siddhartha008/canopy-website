@@ -60,7 +60,7 @@ const RichText: React.FC = () => {
             <p className="text-2xl text-gray-700">
 
              In Nepal, 
-            <span className="text-4xl md:text-4xl font-black text-primary-orangered"> 73% </span>
+            <span className="text-4xl md:text-4xl font-black text-primary-red"> 73% </span>
               of students drop out before completing secondary school  due to cost and poor-quality education.
               <span className="text-3xl md:text-3xl font-black text-primary-red">  Canopy Nepal is changing that. </span> 
               <br></br>
