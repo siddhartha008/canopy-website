@@ -80,7 +80,7 @@ const Impact: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-primary-gray/20 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group hover:-translate-y-2 transform transition-transform"
+              className="bg-primary-gray/20 rounded-xl p-8 shadow-lg hover:shadow-xl duration-300 text-center group hover:-translate-y-2 transform transition-transform"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className={`w-8 h-8 ${stat.color}`} />
