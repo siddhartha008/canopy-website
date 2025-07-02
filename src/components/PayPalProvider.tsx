@@ -14,10 +14,9 @@ const initialOptions = {
   clientId: PAYPAL_CLIENT_ID || "",
   currency: "USD",
   intent: "capture",
-  // Enable Venmo and other funding sources
-  "enable-funding": "venmo,card",
-  // Disable PayPal Credit (PayPal's BNPL product)
-  "disable-funding": "credit",
+  // Only enable card, and explicitly disable Venmo and PayPal Credit
+  "enable-funding": "card",
+  "disable-funding": "venmo,credit",
   // The data-client-token is preferred when 3D Secure is enabled
   // "data-client-token": "YOUR_CLIENT_TOKEN", 
 };

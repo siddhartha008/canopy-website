@@ -5,16 +5,25 @@ import PayPalDonation from './PayPalDonation';
 interface DonationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  prefillAmount?: number;
+  hideCustomAmount?: boolean;
 }
 
-const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
-  const [selectedAmount, setSelectedAmount] = useState<number>(25);
+const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose, prefillAmount, hideCustomAmount }) => {
+  const [selectedAmount, setSelectedAmount] = useState<number>(prefillAmount ?? 25);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [isMonthly, setIsMonthly] = useState<boolean>(false);
   const [showSuccess, setShowSuccess] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   const presetAmounts = [25, 50, 100, 250, 500, 1000];
+
+  React.useEffect(() => {
+    if (isOpen && prefillAmount !== undefined) {
+      setSelectedAmount(prefillAmount);
+      setCustomAmount('');
+    }
+  }, [isOpen, prefillAmount]);
 
   const handleAmountSelect = (amount: number) => {
     setSelectedAmount(amount);
@@ -172,27 +181,28 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose }) => {
                   </button>
                 ))}
               </div>
-              
               {/* Custom Amount */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Or enter a custom amount
-                </label>
-                <div className="relative">
-                  <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
-                    $
-                  </span>
-                  <input
-                    type="number"
-                    value={customAmount} // Use customAmount state or else default 5
-                    onChange={(e) => handleCustomAmountChange(e.target.value)}
-                    placeholder="Enter amount"
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
-                    min="5"
-                    step="1"
-                  />
+              {!hideCustomAmount && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Or enter a custom amount
+                  </label>
+                  <div className="relative">
+                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+                      $
+                    </span>
+                    <input
+                      type="number"
+                      value={customAmount}
+                      onChange={(e) => handleCustomAmountChange(e.target.value)}
+                      placeholder="Enter amount"
+                      className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-blue focus:border-transparent"
+                      min="5"
+                      step="1"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Selected Amount Display */}

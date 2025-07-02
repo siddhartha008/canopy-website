@@ -74,8 +74,8 @@ const Impact: React.FC = () => {
             Our Work in Numbers
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Through dedicated programs and community partnerships, we're creating 
-            lasting change across Nepal's most underserved regions.
+          Through our scholarship and storytelling programs, we're creating lasting change in the education space in Nepal. 
+
           </p>
         </motion.div>
 

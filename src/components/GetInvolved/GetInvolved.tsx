@@ -49,7 +49,7 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Your support fuels scholarships, storytelling sessions, and teacher training. Big or small - every contribution helps us reach more students!
               </p>
-              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="/donate" target="_blank" rel="noopener noreferrer" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Donate Now
                 <svg 
                   className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
@@ -121,7 +121,7 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 We love teaming up with schools, businesses, universities, and community groups. Let's create something meaningful together.
               </p>
-              <a href="mailto:info@canopynepal.org" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="https://mail.google.com/mail/?view=cm&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Email Us
                 <svg 
                   className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
@@ -256,7 +256,7 @@ const GetInvolvedSection = () => {
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-8 bg-white">
               <h2 className="text-3xl font-bold text-primary-red mb-4">Still wondering how to help?</h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Reach out to us at <a href="mailto:info@canopynepal.org" className="text-primary-blue hover:underline font-semibold">info@canopynepal.org</a>. We'd love to hear from you.
+                Reach out to us at <a href="https://mail.google.com/mail/?view=cm&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline font-semibold">info@canopynepal.org</a>. We'd love to hear from you.
               </p>
               <p className="text-xl text-gray-700 leading-relaxed">
                 Because when you support Canopy, you're not just helping a child stay in school—you're helping them rewrite their future.

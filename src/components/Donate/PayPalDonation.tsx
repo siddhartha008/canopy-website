@@ -130,7 +130,7 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
         shape: "rect",
         label: "pay"
       }}
-      fundingSource={undefined} // This allows all funding sources including Venmo
+      // Venmo is now disabled via PayPalProvider
       // Use different handlers based on whether it's monthly or one-time
       createOrder={isMonthly ? undefined : createOneTimeOrder}
       createSubscription={isMonthly ? createSubscription : undefined}

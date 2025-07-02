@@ -51,8 +51,19 @@ const whyGivePoints = [
 
 const Donate = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalPrefillAmount, setModalPrefillAmount] = useState<number | undefined>(undefined);
+  const [hideCustomAmount, setHideCustomAmount] = useState(false);
 
   const handleDonateClick = () => {
+    setModalPrefillAmount(undefined);
+    setHideCustomAmount(false);
+    setIsModalOpen(true);
+  };
+
+  const handleTierClick = (amount: string) => {
+    const numAmount = Number(amount.replace(/[^0-9.]/g, ''));
+    setModalPrefillAmount(numAmount);
+    setHideCustomAmount(true);
     setIsModalOpen(true);
   };
 
@@ -89,10 +100,17 @@ const Donate = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {donationTiers.map((tier) => (
-              <div key={tier.amount} className="border-2 border-gray-200 rounded-lg p-6 text-center flex flex-col items-center">
-                <img 
-                  src={tier.icon} 
-                  alt={tier.description} 
+              <div
+                key={tier.amount}
+                className="border-2 border-primary-orange rounded-lg p-6 text-center flex flex-col items-center cursor-pointer transition-transform hover:scale-105 hover:shadow-2xl hover:border-primary-orange focus:outline-none focus:ring-4 focus:ring-primary-orange/30"
+                onClick={() => handleTierClick(tier.amount)}
+                tabIndex={0}
+                role="button"
+                aria-pressed="false"
+              >
+                <img
+                  src={tier.icon}
+                  alt={tier.description}
                   className="w-24 h-24 object-contain mb-4"
                 />
                 <span className="text-4xl font-bold text-black mb-4">{tier.amount}</span>
@@ -181,6 +199,8 @@ const Donate = () => {
       <DonationModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
+        prefillAmount={modalPrefillAmount}
+        hideCustomAmount={hideCustomAmount}
       />
     </div>
   );
