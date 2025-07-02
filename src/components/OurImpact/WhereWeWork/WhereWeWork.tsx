@@ -5,7 +5,7 @@ const WhereWeWork = () => {
 
     return (
         <div className="w-full overflow-hidden px-16 -mb-24">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-cyan">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-primary-blue">
                 Where We Work
             </h2>
             <img 

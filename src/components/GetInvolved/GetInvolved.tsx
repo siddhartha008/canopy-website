@@ -49,8 +49,22 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Your support fuels scholarships, storytelling sessions, and teacher training. Big or small - every contribution helps us reach more students!
               </p>
-              <a href="#" className="w-max inline-block bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Donate Now
+                <svg 
+                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M9 5l7 7-7 7" 
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -71,8 +85,22 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Run a marathon, host a dinner, celebrate your birthday - turn any moment into impact. We'll support you every step of the way.
               </p>
-              <a href="#" className="w-max inline-block bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Host A Fundraiser
+                <svg 
+                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M9 5l7 7-7 7" 
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -93,8 +121,22 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 We love teaming up with schools, businesses, universities, and community groups. Let's create something meaningful together.
               </p>
-              <a href="mailto:info@canopynepal.org" className="w-max inline-block bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="mailto:info@canopynepal.org" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Email Us
+                <svg 
+                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M9 5l7 7-7 7" 
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -115,8 +157,22 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Got skills? Passion? Curiosity? Join us in Nepal or remotely and help shape the future of education.
               </p>
-              <a href="#" className="w-max inline-block bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
+              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
                 Join the Team
+                <svg 
+                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M9 5l7 7-7 7" 
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -137,9 +193,52 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 If you're based in the U.S. or France, connect with our global community and help take Canopy further.
               </p>
-              <a href="#" className="w-max inline-block bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300">
-                Reach Out
-              </a>
+              <div className="flex gap-4">
+                <a
+                  href="/canopyfrance"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300"
+                >
+                  Canopy France
+                  <svg 
+                    className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M9 5l7 7-7 7" 
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="/canopyusa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-red transition-colors duration-300"
+                >
+                  Canopy USA
+                  <svg 
+                    className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M9 5l7 7-7 7" 
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>

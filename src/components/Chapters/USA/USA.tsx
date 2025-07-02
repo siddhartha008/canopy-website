@@ -75,7 +75,7 @@ const CanopyUSASection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-cyan mb-4">What We Do?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">What We Do?</h2>
               <ul className="list-disc text-gray-700 space-y-6 text-2xl">
                 <li className="text-xl">Lead fundraising campaigns to support Canopy's flagship programs like CANSHIP and Katha Bunaun</li>
                 <li className="text-xl">Build connections with schools, universities, and donors across the U.S.</li>
@@ -112,7 +112,7 @@ const CanopyUSASection = () => {
               </ul>
               <div className="mt-8">
                 <span className="font-bold text-2xl text-gray-800">Reach out to us at:</span><br />
-                <a href="mailto:info@canopyfrance.org" className="text-primary-cyan hover:underline break-all text-xl">canopyusa@canopynepal.org</a>
+                <a href="mailto:info@canopyfrance.org" className="text-primary-red hover:underline break-all text-xl">canopyusa@canopynepal.org</a>
               </div>
               <p className='mt-8 text-gray-700 text-xl'>
               Let’s make quality education possible—across borders, together.
@@ -132,7 +132,7 @@ const CanopyUSASection = () => {
         <p className="text-center text-black text-xl mb-8 w-3/4 mx-auto">
           Canopy USA is run by a lean team of dedicated volunteers and advisors, under the direct leadership of our founder, Mohit, working closely with Canopy Nepal's leadership to ensure transparency, sustainability, and aligned impact.
         </p>
-        <h2 className="text-center text-3xl font-bold text-primary-cyan mb-8">
+        <h2 className="text-center text-3xl font-bold text-primary-red mb-8">
           Meet the Canopy USA Team
         </h2>
         <div className="max-w-7xl mx-auto px-6 pb-4">

@@ -2,7 +2,6 @@ import React from 'react';
 import heroImg from '../../../assets/kbtop.png';
 import secondSection from '../../../assets/kbmiddle.png';
 import kblifecycle from '../../../assets/kblifecycle.png';
-import canshipBottom from '../../../assets/canshipbottom.png';
 import kbImpact from '../../../assets/kbImpact.png';
 
 const KathaBunaun = () => {
@@ -16,7 +15,7 @@ const KathaBunaun = () => {
       />
 
       {/* Heading Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
+      <div className="max-w-4xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-5xl font-bold text-primary-red mb-2">
           Katha Bunaun
         </h1>
@@ -32,14 +31,14 @@ const KathaBunaun = () => {
       </div>
 
       {/* Second Section with Image */}
-      <img
+      {/* <img
         src={secondSection}
         alt="CANSHIP Section Divider"
         className="w-full h-[400px] object-cover object-center"
         style={{ maxHeight: '400px' }}
-      />
+      /> */}
 
-      <div className="bg-white px-6 py-8">
+      <div className="bg-white px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-12">
             <div className="w-full text-center">
@@ -60,7 +59,7 @@ const KathaBunaun = () => {
       </div>
 
       {/* Lifecycle Section - Single Image */}
-      <div className="px-6 py-8">
+      <div className="px-6 py-12 pb-0">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-red text-center">
           Katha Bunaun Incorporation in the System
@@ -127,7 +126,7 @@ const KathaBunaun = () => {
       </div>
 
       {/* Statistics Section */}
-      <div className="bg-white px-6 py-8">
+      <div className="bg-white px-6 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div>
             <h3 className="text-xl md:text-2xl font-bold text-primary-red mb-2">
@@ -146,14 +145,6 @@ const KathaBunaun = () => {
           </div>
         </div>
       </div>
-        
-        <div className="text-center mx-auto max-w-2xl my-4">
-          <p className="text-2xl leading-relaxed">
-            And by 2030, we aim to bring this program to
-            <span className='text-primary-red font-semibold text-2xl'> half a million students, </span>
-            making storytelling not an extra but an essential part of every Nepali classroom.
-          </p>
-        </div>
  
     </div>
     

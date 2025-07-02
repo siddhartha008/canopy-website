@@ -136,7 +136,7 @@ const OurImpact: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-center text-primary-cyan max-w-5xl mx-auto text-2xl leading-relaxed">
+        <p className="text-center text-primary-blue max-w-5xl mx-auto text-2xl leading-relaxed">
           At Canopy Nepal, we measure impact not just in numbers, but in transformed lives, classrooms, and communities. From long-term scholarships to storytelling-powered learning, our programs help students stay in school, build essential life skills, and unlock opportunity.
         </p>
 
@@ -190,6 +190,9 @@ const OurImpact: React.FC = () => {
               </div>
             </div>
           </div>
+          <div className="flex justify-center mt-4">
+            <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students</span>
+          </div>
         </div>
 
         {/* Key Statistics Section - Styled Cards */}
@@ -198,9 +201,9 @@ const OurImpact: React.FC = () => {
             {impactStatsStyled.map((stat, idx) => (
               <div
                 key={idx}
-                className="bg-[#E2F7EE] rounded-2xl p-8 flex flex-col items-center text-center h-full"
+                className="bg-[#C6DCE8] rounded-2xl p-8 flex flex-col items-center text-center h-full"
               >
-                <div className="text-primary-cyan text-3xl sm:text-4xl font-extrabold mb-2 whitespace-pre-line">
+                <div className="text-primary-blue text-3xl sm:text-4xl font-extrabold mb-2 whitespace-pre-line">
                   {stat.headline}
                 </div>
                 <div className=" text-lg sm:text-xl font-normal mt-2">
@@ -210,7 +213,9 @@ const OurImpact: React.FC = () => {
             ))}
           </div>
         </div>
-          
+        <div className="flex justify-center mt-4">
+          <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students</span>
+        </div>
         
         <MeetOurStudents />
         <WhereWeWork />

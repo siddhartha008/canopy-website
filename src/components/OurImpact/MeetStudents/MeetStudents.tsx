@@ -74,7 +74,7 @@ const StudentCard: React.FC<{ student: Student; onClick: () => void }> = ({ stud
                         <p className="text-gray-600 text-sm mb-4">{student.shortBio}</p>
                         <button
                             onClick={e => { e.stopPropagation(); handleFlipAndOpen(); }}
-                            className="mt-1 px-1 py-1 bg-primary-orange text-white text-sm rounded-lg shadow hover:bg-primary-cyan transition-colors"
+                            className="mt-1 px-1 py-1 bg-primary-orange text-white text-sm rounded-lg shadow hover:bg-primary-blue transition-colors"
                         >
                             Read More
                         </button>
@@ -104,7 +104,7 @@ const MeetOurStudents: React.FC = () => {
 
     return (
         <section className="py-16">
-            <h2 className="text-4xl font-bold text-center text-primary-cyan mb-8">Meet Our Students</h2>
+            <h2 className="text-4xl font-bold text-center text-primary-blue mb-8">Stories of Change</h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4">
                 {studentData.map(student => (
                     <StudentCard key={student.name} student={student} onClick={() => handleOpenModal(student)} />

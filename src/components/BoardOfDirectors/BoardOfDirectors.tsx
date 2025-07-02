@@ -77,7 +77,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 6,
       name: 'Aditya Todi',
-      title: 'Canopy Nepal Advisory Board',
+      title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Aditya,
       description: 'Aditya leads the metal manufacturing vertical at MC Group, a century-old business in Nepal. With past roles in consulting and development, he brings a global lens to strategic leadership. He holds degrees from Stanford and dual master\'s from Harvard Kennedy School and Harvard Business School.'
@@ -85,7 +85,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 7,
       name: 'Bijeysh Ranjit',
-      title: 'Canopy Nepal Advisory Board',
+      title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Bijeysh,
       description: 'Bijeysh is a social entrepreneur and founder of Danfe Works, which creates opportunities for marginalized communities through business with purpose. He previously led the nonprofit SAATH and has worked across the U.S., Europe, and Nepal. Passionate about impact, he\'s also a nature lover and lifelong learner.'
@@ -93,7 +93,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 8,
       name: 'Niranjan Kunwar',
-      title: 'Canopy Nepal Advisory Board',
+      title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Niranjan,
       description: 'Niranjan is an educator, writer, and translator based in Kathmandu. With an M.S.Ed from CUNY, he bridges education, arts, and culture. He\'s the author of Between Queens and the Cities, and continues to champion inclusive storytelling through his forthcoming translation of Seto Dharti and a children\'s book.'
@@ -101,7 +101,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 9,
       name: 'Saugat Gautam',
-      title: 'Canopy Nepal Advisory Board',
+      title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Saugat,
       description: 'Saugat is a political science scholar and development leader with a decade of experience. He manages programs at the International Commission of Jurists and teaches at Thames College. As co-founder of Nepal Center for Integrated Development, he blends research, advocacy, and action for lasting social change.'
@@ -109,7 +109,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 10,
       name: 'Shristi Mishra',
-      title: 'Canopy Nepal Advisory Board',
+      title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Shristi,
       description: 'Shristi is an education researcher, entrepreneur, and Fulbright alum with experience at the World Bank, USAID, and DC\'s education agency. A former teacher in Nepal, she now runs Yak9 Chews, a pet wellness company based in Austin—proving you can love data and dogs equally.'
@@ -119,7 +119,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 11,
       name: 'Ashra Acharya',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Ashra,
       description: 'Ashra leads executive operations at Bessemer Venture Partners and previously served as Director of Community for the Great Nepali Diaspora. Born in Nepal and raised in Texas, she brings heart and expertise to her work, always rooting her leadership in connection, equity, and community building.'
@@ -127,7 +127,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 12,
       name: 'Bhushan Dahal',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Bhushan,
       description: 'Bhushan is a Ph.D. candidate in Educational Leadership at Florida State University and former Executive Director of Kids of Kathmandu. His leadership spans rebuilding schools, implementing digital classrooms, and advancing education policy—connecting academic insight with grassroots action to drive educational change in Nepal and beyond.'
@@ -135,7 +135,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 13,
       name: 'Bibek Raj Kandel',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Bibek,
       description: 'Bibek is a global energy and climate expert advising governments and institutions across Asia and Africa. With a decade of experience in climate finance and policy, he brings systems-level thinking and a commitment to equitable growth. He holds an MPA from Harvard Kennedy School.'
@@ -143,7 +143,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 14,
       name: 'Bimla Siwakoti',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Bimla,
       description: 'Bimla is a Health Informaticist at Deloitte, blending her technical background with lived experience from a refugee camp in Nepal. With degrees from Johns Hopkins and Penn State, she is passionate about improving healthcare systems and championing education equity through technology and data.'
@@ -151,7 +151,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 15,
       name: 'Binju Gaire',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Binju,
       description: 'Binju is an IT Audit Manager at Deloitte, currently based in Dublin. With expertise in tech risk and compliance, she is equally committed to mental health, education, and financial literacy. She brings thoughtful insight and global experience to supporting impactful social change.'
@@ -159,7 +159,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 16,
       name: 'Clement V. Gomes',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Clement,
       description: 'Clement is a Biology Professor at CUNY Guttman and founder of ISLearning. With decades of experience teaching in both K–12 and higher education, he is passionate about fostering global citizenship and building inclusive learning environments. He holds a Ph.D. from Columbia University.'
@@ -167,7 +167,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 17,
       name: 'Heather Schultz',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Heather,
       description: 'Heather helped launch Canopy\'s Katha Bunaun program in 2017 and continues to champion its mission. With years of experience in youth development and literacy, she now lives in Seattle and works as a Senior Onboarding Specialist—always bringing her love for learning to every role.'
@@ -175,7 +175,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 18,
       name: 'Meg Zuttermeister',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Meg,
       description: 'Meg is an educator passionate about designing engaging and inclusive learning environments. Her work spans early intervention, parent coaching, and preschool education. She holds an M.Ed from Harvard and brings a deep understanding of human development to Canopy\'s mission of empowering learners at every stage.'
@@ -183,7 +183,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 19,
       name: 'Needika Adhikari',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Needhika,
       description: 'Needika is a Senior Analyst at Excelsior Energy Capital, managing renewable energy assets and advising on sustainability initiatives in the U.S. and Nepal. With an LLM from The Fletcher School, she brings analytical precision and a deep commitment to equitable climate solutions.'
@@ -191,7 +191,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 20,
       name: 'Sanam Karki',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Sanam,
       description: 'Sanam is a project and data management professional with experience in banking and nonprofit operations. With an MBA from the University of Southern Mississippi, she helps organizations improve systems, drive results, and build stronger teams through thoughtful analysis and collaborative leadership.'
@@ -199,7 +199,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 21,
       name: 'Subha Niroula',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Subha,
       description: 'Subha is a Software Engineer with a passion for teaching and mathematics. With degrees from St. John\'s College and Wake Forest, he brings global academic experience and a love for lifelong learning—balancing code, books, and his second Master\'s degree while navigating Texas tech.'
@@ -207,7 +207,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
     {
       id: 22,
       name: 'Swexya Panta',
-      title: 'Canopy USA Advisory Board',
+      title: 'USA',
       category: 'ADVISORY BOARD',
       image: Swexya,
       description: 'Swexya is a Senior Investment Analyst at the Carnegie Corporation of New York. With a strong foundation in financial research and analysis, she previously worked at Stone Forest Capital. She brings analytical clarity, curiosity, and commitment to socially impactful investing and education access.'
@@ -234,7 +234,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
             <React.Fragment key={filter}>
               <button
                 onClick={() => setSelectedFilter(filter)}
-                className={`hover:text-gray-900 transition-colors duration-200 ${
+                className={`hover:text-primary-red transition-colors duration-200 ${
                   selectedFilter === filter ? 'text-gray-900 font-semibold' : ''
                 }`}
               >

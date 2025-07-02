@@ -16,12 +16,12 @@ const CanopyScholarshipPage = () => {
       />
 
       {/* Heading Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-3xl md:text-5xl font-bold text-primary-blue mb-2">
+      <div className="max-w-4xl mx-auto text-center mb-8">
+        <h1 className="text-3xl md:text-5xl font-bold text-primary-blue mb-8">
           Canopy Nepal Scholarship Program
         </h1>
         <div className='mt-4'>
-        <p className="text-gray-700 text-xl leading-relaxed mb-6">
+        <p className="text-gray-700 text-xl leading-relaxed mb-8">
                 CANSHIP, short for Canopy Scholarship Program, is our long-term commitment to supporting 
                 students through their entire educational journey.
               </p>
@@ -35,14 +35,14 @@ const CanopyScholarshipPage = () => {
       </div>
 
       {/* Second Section with Image */}
-      <img
+      {/* <img
         src={secondSection}
         alt="CANSHIP Section Divider"
         className="w-full h-[400px] object-cover object-center"
         style={{ maxHeight: '400px' }}
-      />
+      /> */}
 
-      <div className="bg-white px-6 py-8">
+      <div className="bg-white px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-12">
             <div className="w-full text-center">
@@ -62,7 +62,7 @@ const CanopyScholarshipPage = () => {
       </div>
 
       {/* Lifecycle Section - Single Image */}
-      <div className= "px-6 py-4">
+      <div className= "px-6 py-12 pb-0">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue text-center">
             Canopy Scholar Lifecycle
@@ -133,18 +133,18 @@ const CanopyScholarshipPage = () => {
       <div className="bg-white px-6 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-blue mb-2">
-              100% employed within one year of graduation
+            <h3 className="text-xl md:text-2xl mb-2">
+              <span className='font-bold text-primary-blue'>100% employed</span> within one year of graduation
             </h3>
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-blue mb-2">
-              Avg. increase in family income after student enters workforce
+            <h3 className="text-xl md:text-2xl mb-2">
+            <span className='font-bold text-primary-blue'>Avg X% increase</span> in family income after student enters workforce
             </h3>
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-blue mb-2">
-              X scholars have joined Canopy as mentors for younger scholars
+            <h3 className="text-xl md:text-2xl  mb-2">
+            <span className='font-bold text-primary-blue'>X scholars</span> have joined Canopy as mentors for younger scholars
             </h3>
           </div>
         </div>

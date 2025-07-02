@@ -60,7 +60,7 @@ const CanopyFranceSection = () => {
         {/* Introduction Text */}
         <div className="py-8 text-center">
           <p className="text-2xl text-gray-700 leading-relaxed">
-            Established in 2022, <span className='text-primary-cyan font-bold'>Canopy France is our first international chapter</span>, founded by
+            Established in 2022, <span className='text-primary-red font-bold'>Canopy France is our first international chapter</span>, founded by
             a passionate group of young changemakers from France and Nepal. Registered as
             a legal nonprofit under French law, the chapter supports Canopy Nepal by raising
             awareness, building partnerships, and mobilizing resources across Europe.
@@ -78,7 +78,7 @@ const CanopyFranceSection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-cyan mb-4">What We Do?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">What We Do?</h2>
               <ul className="list-disc text-gray-700 space-y-6 text-2xl">
                 <li className="text-xl">Organize creative fundraising campaigns, cultural events, and storytelling nights across France</li>
                 <li className="text-xl">Strengthen connections between the Nepali diaspora and allies in France</li>
@@ -100,7 +100,7 @@ const CanopyFranceSection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-16 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-cyan mb-4">Want to Get Involved?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">Want to Get Involved?</h2>
               <p className="text-gray-700 text-xl mb-4">If you're based in France and want to help us:</p>
               <ul className="list-disc list-inside text-gray-700 space-y-6 text-2xl">
                 <li className="text-xl">Host a fundraiser or awareness event</li>
@@ -109,7 +109,7 @@ const CanopyFranceSection = () => {
               </ul>
               <div className="mt-8">
                 <span className="font-bold text-2xl text-gray-800">Reach out to us at:</span><br />
-                <a href="mailto:info@canopyfrance.org" className="text-primary-cyan hover:underline break-all text-xl">info@canopyfrance.org</a>
+                <a href="mailto:contact@canopyfrance.fr" className="text-primary-red hover:underline break-all text-xl">contact@canopyfrance.fr</a>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ const CanopyFranceSection = () => {
         <div className="w-full flex justify-center pb-4">
           <div className="text-center text-xl">
             <span className="text-gray-700">And don't forget to </span>
-            <a href="#" className="text-primary-cyan hover:underline font-semibold">[Subscribe to the Canopy France Newsletter]</a>
+            <a href="#" className="text-primary-red hover:underline font-semibold">[Subscribe to the Canopy France Newsletter]</a>
             <span className="text-gray-700"> to stay updated on our events, stories, and impact from the ground.</span>
           </div>
         </div>
@@ -132,7 +132,7 @@ const CanopyFranceSection = () => {
         <p className="text-center text-black text-xl mb-8">
           The chapter is led by a lean team, and together, they bring cross-cultural <br></br>energy and grassroots commitment to the mission.
         </p>
-        <h2 className="text-center text-3xl font-bold text-primary-cyan mb-8">
+        <h2 className="text-center text-3xl font-bold text-primary-red mb-8">
           Meet the Canopy France Team
         </h2>
         <div className="max-w-7xl mx-auto px-6 pb-4">

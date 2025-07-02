@@ -132,8 +132,8 @@ const CanopyMeetTeam: React.FC = () => {
     },
     {
       id: 13,
-      name: 'Yamuna Thapa Didi',
-      title: 'Cook and Cleaner',
+      name: 'Yamuna Thapa',
+      title: 'Kitchen and Care Champion',
       category: 'CORE TEAM',
       image: Yamuna,
       description: 'Ensures a welcoming, hygienic, and well-fed environment by preparing nutritious meals, maintaining cleanliness, and supporting daily office upkeep, helping the team stay energized and focused on their work.',
@@ -345,7 +345,7 @@ const CanopyMeetTeam: React.FC = () => {
             <React.Fragment key={filter}>
               <button
                 onClick={() => setSelectedFilter(filter)}
-                className={`hover:text-gray-900 transition-colors duration-200 ${
+                className={`hover:text-primary-orange transition-colors duration-200 ${
                   selectedFilter === filter ? 'text-gray-900 font-semibold' : ''
                 }`}
               >
