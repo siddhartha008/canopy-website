@@ -1,8 +1,8 @@
 import React from 'react';
 
 import heroImage from '../../assets/getinvolvedhero.png';
-import donateImage from '../../assets/gi1.jpeg';
-import fundraiseImage from '../../assets/gi2.jpg';
+import donateImage from '../../assets/gi1.jpg';
+import fundraiseImage from '../../assets/gi2.png';
 import partnerImage from '../../assets/gi3.jpg';
 import volunteerImage from '../../assets/gi4.jpg';
 import chaptersImage from '../../assets/gi5.png';
@@ -149,7 +149,7 @@ const GetInvolvedSection = () => {
               <img
                 src={volunteerImage}
                 alt="Jobs/ Volunteer/ Intern"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-bottom"
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
@@ -250,7 +250,7 @@ const GetInvolvedSection = () => {
               <img
                 src={helpImage}
                 alt="Child with backpack"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-8 bg-white">

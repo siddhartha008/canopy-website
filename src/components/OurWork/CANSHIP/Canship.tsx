@@ -1,8 +1,7 @@
 import React from 'react';
-import heroImg from '../../../assets/canship.jpeg';
-import secondSection from '../../../assets/ow2.png';
+import heroImg from '../../../assets/canship.jpg';
 import canshipLifecycle from '../../../assets/canshiplifecycle.png';
-import canshipBottom from '../../../assets/canshipbottom.png';
+import canshipBottom from '../../../assets/canshipBottom.jpg';
 import canshipImpact from '../../../assets/canshipImpact.png';
 
 const CanopyScholarshipPage = () => {
@@ -152,8 +151,8 @@ const CanopyScholarshipPage = () => {
       <img
         src={canshipBottom}
         alt="CANSHIP Section Divider"
-        className="w-full h-[400px] object-cover object-center"
-        style={{ maxHeight: '400px' }}
+        className="w-full h-[500px] object-cover object-center"
+        style={{ maxHeight: '500px' }}
       />
     </div>
     

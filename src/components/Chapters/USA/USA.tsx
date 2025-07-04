@@ -1,6 +1,6 @@
 import React from 'react';
 
-import heroImage from '../../../assets/canusaheader.jpeg'; // The top image with two boys
+import heroImage from '../../../assets/canusaheader.png'; // The top image with two boys
 import whatWeDoImage from '../../../assets/canusabody.jpg'; // The image with the girls in uniform
 import getInvolvedImage from '../../../assets/canusa2.jpg'; // The image of the man in front of a building
 import Angirash from '../../../assets/team/all/Angirash.png';

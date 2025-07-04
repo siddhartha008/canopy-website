@@ -5,7 +5,6 @@ import WhereWeWork from './WhereWeWork/WhereWeWork';
 import Sustainable from './Sustainable/Sustainable';
 import Impact from '../Impact/Impact';
 
-
 // --- Reusable Bar Chart Component (Final Polished Version) ---
 interface BarChartProps {
   title: string;

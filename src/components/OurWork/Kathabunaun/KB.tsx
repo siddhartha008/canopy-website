@@ -1,6 +1,5 @@
 import React from 'react';
 import heroImg from '../../../assets/kbtop.png';
-import secondSection from '../../../assets/kbmiddle.png';
 import kblifecycle from '../../../assets/kblifecycle.png';
 import kbImpact from '../../../assets/kbImpact.png';
 
@@ -117,7 +116,7 @@ const KathaBunaun = () => {
               <img 
                 src={kbImpact}
                 alt="Student and mentor interaction"
-                className="rounded-xl h-auto object-cover transform -scale-x-100"
+                className="rounded-xl h-auto object-left object-cover transform -scale-x-100"
                 style={{  }}
               />
             </div>

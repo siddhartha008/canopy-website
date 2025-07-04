@@ -228,7 +228,7 @@ const CanopyAboutUs: React.FC = () => {
           <img
             src={mv2}
             alt="Group of happy students"
-            className="w-full h-96 lg:h-[500px] object-cover"
+            className="w-full h-96 lg:h-[500px] object-cover "
           />
           {/* Simple black overlay like testimonials */}
           <div className="absolute inset-0 bg-black/30"></div>

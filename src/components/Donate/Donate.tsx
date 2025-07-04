@@ -74,9 +74,9 @@ const Donate = () => {
         <img
           src={donateHeroImage}
           alt="Smiling student in Nepal"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        <div className="absolute inset-0 flex items-center justify-center">
         </div>
       </div>
 
