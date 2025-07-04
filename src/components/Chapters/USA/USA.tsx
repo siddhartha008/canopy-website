@@ -3,38 +3,44 @@ import React from 'react';
 import heroImage from '../../../assets/canusaheader.png'; // The top image with two boys
 import whatWeDoImage from '../../../assets/canusabody.jpg'; // The image with the girls in uniform
 import getInvolvedImage from '../../../assets/canusa2.jpg'; // The image of the man in front of a building
-import Angirash from '../../../assets/team/all/Angirash.png';
-import Mohit from '../../../assets/team/all/Mohit.png';
-import Monal from '../../../assets/team/all/Monal.png';
+import Mohit_USA from '../../../assets/team/all/Mohit_USA.png';
+import Siddhartha_USA from '../../../assets/team/all/Siddhartha_USA.png';
+import Diki_USA from '../../../assets/team/all/Diki_USA.png';
+import Eshan_USA from '../../../assets/team/all/Eshan_USA.png';
 
 
 const teamMembers = [
   {
     id: 1,
     name: 'Mohit Rauniyar',
-    title: 'Founder',
     category: 'CORE TEAM',
-    image: Mohit,
+    image: Mohit_USA,
     description: 'Established Canopy Nepal and leads its global vision, actively overseeing international chapters in the USA and France while driving strategic fundraising to expand impact and ensure long-term sustainability.',
     linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
   },
   {
     id: 2,
-    name: 'Monal Bhattarai',
-    title: 'Managing Director',
+    name: 'Siddhartha Mishra',
     category: 'CORE TEAM',
-    image: Monal,
-    description: 'Leads Canopy\'s vision, partnerships, and fundraising strategy—steering growth, building global relationships, and amplifying the organization\'s voice through thought leadership, board support, and international representation.',
-    linkedin: 'http://www.linkedin.com/in/monal-bhattarai-bb3261194'
+    image: Siddhartha_USA,
+    description: 'Dedicated team member contributing to Canopy USA\'s mission of supporting education equity in Nepal through fundraising, awareness campaigns, and community engagement.',
+    linkedin: 'https://www.linkedin.com/in/siddhartha-mishra2020/'
   },
   {
     id: 3,
-    name: 'Angirash Karki',
-    title: 'Executive Director',
+    name: 'Diki Yangzom',
     category: 'CORE TEAM',
-    image: Angirash,
-    description: 'Ensures Canopy operates smoothly by overseeing compliance, HR, finance, and risk management while building strong government partnerships and driving internal systems for staff performance and operational excellence.',
-    linkedin: 'https://www.linkedin.com/in/angirash-karki/'
+    image: Diki_USA,
+    description: 'Passionate team member working to strengthen Canopy USA\'s impact through strategic partnerships, community outreach, and educational initiatives.',
+    linkedin: ''
+  },
+  {
+    id: 4,
+    name: 'Eshan Shrestha',
+    category: 'CORE TEAM',
+    image: Eshan_USA,
+    description: 'Committed team member focused on expanding Canopy USA\'s reach through innovative fundraising strategies and building strong community connections.',
+    linkedin: ''
   },
 ];
 const CanopyUSASection = () => {
@@ -137,11 +143,11 @@ const CanopyUSASection = () => {
         </h2>
         <div className="max-w-7xl mx-auto px-6 pb-4">
           {/* Responsive flex layout with centered last row */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
-                className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden w-full max-w-sm md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                className="bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden w-full max-w-xs md:w-[calc(25%-12px)] lg:w-[calc(25%-12px)]"
               >
                   {/* Square Image Container */}
                   <div className="relative aspect-square overflow-hidden">
@@ -172,9 +178,6 @@ const CanopyUSASection = () => {
                         </a>
                       )}
                     </div>
-                    <p className="text-m uppercase text-gray-600 tracking-wide">
-                      {member.title}
-                    </p>
                     
                     {/* Description */}
                     <p className="mt-4 text-gray-700 text-base leading-relaxed">

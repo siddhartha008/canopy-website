@@ -3,39 +3,37 @@ import React from 'react';
 import heroImage from '../../../assets/canfranhead.png'; // The top image with two boys
 import whatWeDoImage from '../../../assets/canfran.png'; // The image with the girls in uniform
 import getInvolvedImage from '../../../assets/canopyfrance.jpeg'; // The image of the man in front of a building
-import Angirash from '../../../assets/team/all/Angirash.png';
-import Mohit from '../../../assets/team/all/Mohit.png';
-import Monal from '../../../assets/team/all/Monal.png';
+import Mohit_France from '../../../assets/team/all/Mohit_France.png';
+import Olivia_France from '../../../assets/team/all/Olivia_France.png';
+import Ainhoa_France from '../../../assets/team/all/Ainhoa_France.png';
 
 
 const teamMembers = [
   {
     id: 1,
     name: 'Mohit Rauniyar',
-    title: 'Founder',
     category: 'CORE TEAM',
-    image: Mohit,
+    image: Mohit_France,
     description: 'Established Canopy Nepal and leads its global vision, actively overseeing international chapters in the USA and France while driving strategic fundraising to expand impact and ensure long-term sustainability.',
     linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
   },
   {
-    id: 2,
-    name: 'Monal Bhattarai',
-    title: 'Managing Director',
+    id: 3,
+    name: 'Ainhoa Beneitez',
     category: 'CORE TEAM',
-    image: Monal,
-    description: 'Leads Canopy\'s vision, partnerships, and fundraising strategy—steering growth, building global relationships, and amplifying the organization\'s voice through thought leadership, board support, and international representation.',
-    linkedin: 'http://www.linkedin.com/in/monal-bhattarai-bb3261194'
+    image: Ainhoa_France,
+    description: 'Committed team member working to strengthen connections between the Nepali diaspora and allies in France while supporting Canopy\'s educational initiatives.',
+    linkedin: 'https://www.linkedin.com/in/ainhoa-beneitez-343b87170/'
   },
   {
-    id: 3,
-    name: 'Angirash Karki',
-    title: 'Executive Director',
+    id: 2,
+    name: 'Olivia Palermo',
     category: 'CORE TEAM',
-    image: Angirash,
-    description: 'Ensures Canopy operates smoothly by overseeing compliance, HR, finance, and risk management while building strong government partnerships and driving internal systems for staff performance and operational excellence.',
-    linkedin: 'https://www.linkedin.com/in/angirash-karki/'
-  },
+    image: Olivia_France,
+    description: 'Passionate team member dedicated to Canopy France\'s mission of supporting education equity in Nepal through fundraising, cultural events, and community engagement across France.',
+    linkedin: ''
+  }
+  
 ];
 const CanopyFranceSection = () => {
   return (
@@ -172,9 +170,6 @@ const CanopyFranceSection = () => {
                         </a>
                       )}
                     </div>
-                    <p className="text-m uppercase text-gray-600 tracking-wide">
-                      {member.title}
-                    </p>
                     
                     {/* Description */}
                     <p className="mt-4 text-gray-700 text-base leading-relaxed">

@@ -11,6 +11,38 @@ import Wangmo from '../../assets/team/all/Wangmo.png';
 import Yamuna from '../../assets/team/all/Yamuna.png';
 import Raghav from '../../assets/team/all/Raghav.png';
 import Tanisha from '../../assets/team/all/Tanisha.png';
+import Abhisekh from '../../assets/team/all/Abhishek.png';
+
+// Facilitator images
+import Anala from '../../assets/team/facilitators/Anala.png';
+import Avishka from '../../assets/team/facilitators/Avishka.png';
+import Bimala from '../../assets/team/facilitators/Bimala.png';
+import Biraj from '../../assets/team/facilitators/Biraj.png';
+import Deepasha from '../../assets/team/facilitators/Deepasha.png';
+import Himshikha from '../../assets/team/facilitators/Himshikha.png';
+import Janvi from '../../assets/team/facilitators/Janvi.png';
+import Mamta from '../../assets/team/facilitators/Mamta.png';
+import Manila from '../../assets/team/facilitators/Manila.png';
+import Megha from '../../assets/team/facilitators/Megha.png';
+import MohitMuni from '../../assets/team/facilitators/Mohit.png';
+import Nandita from '../../assets/team/facilitators/Nandita.png';
+import Ojaswee from '../../assets/team/facilitators/Ojaswee.png';
+import Prathana from '../../assets/team/facilitators/prathana.png';
+import Prastuti from '../../assets/team/facilitators/Prastuti.png';
+import Pratikshya from '../../assets/team/facilitators/Pratikshya.png';
+import PushpaKala from '../../assets/team/facilitators/PushpaKala.png';
+import Sobhika from '../../assets/team/facilitators/Sobhika.png';
+import SristyKhadka from '../../assets/team/facilitators/Sristy Khadka.png';
+import Sujal from '../../assets/team/facilitators/Sujal.png';
+
+// Volunteer images
+import AbhishekVolunteer from '../../assets/team/volunteers/Abhishek.png';
+import Diki from '../../assets/team/volunteers/Diki.png';
+import Eshan from '../../assets/team/volunteers/Eshan.png';
+import Isabelle from '../../assets/team/volunteers/Isabelle.png';
+import Kathy from '../../assets/team/volunteers/Kathy.png';
+import Margot from '../../assets/team/volunteers/Margot.png';
+import Pouline from '../../assets/team/volunteers/Pouline.png';
 
 const CanopyMeetTeam: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState('CORE TEAM');
@@ -90,7 +122,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Abhishek Pradhan',
       title: 'Monitoring and Evaluation Trainee',
       category: 'CORE TEAM',
-      image: Angirash,
+      image: Abhisekh,
       description: 'Tracks program impact through assessments, reporting, and data tools, ensuring that insights guide decision-making, drive improvement, and reflect the voices of students and communities.',
       linkedin: null
     },
@@ -145,7 +177,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Anala Shrestha',
       title: 'Field Volunteer',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Anala,
       description: '',
       linkedin: 'https://www.linkedin.com/in/analashrestha1830/'
     },
@@ -154,7 +186,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Aviska Upadhyaya',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Avishka,
       description: '',
       linkedin: 'https://np.linkedin.com/in/aaviska-upadhayaya-741755370'
     },
@@ -163,7 +195,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Bimala Dahal',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Bimala,
       description: '',
       linkedin: null
     },
@@ -172,7 +204,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Biraj Poudel',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Biraj,
       description: '',
       linkedin: null
     },
@@ -181,7 +213,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Deepasha Maharjan',
       title: 'Field Volunteer',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Deepasha,
       description: '',
       linkedin: 'https://www.linkedin.com/in/deepasha-maharjan-b30229206/'
     },
@@ -190,7 +222,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Himshikha Dahal',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Himshikha,
       description: '',
       linkedin: null
     },
@@ -199,7 +231,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Janvi Subedi',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Janvi,
       description: '',
       linkedin: null
     },
@@ -208,7 +240,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Mamata Shah',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Mamta,
       description: '',
       linkedin: null
     },
@@ -217,7 +249,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Manila Magar',
       title: 'Field Volunteer & Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Manila,
       description: '',
       linkedin: null
     },
@@ -226,7 +258,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Megha Bhattarai',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Megha,
       description: '',
       linkedin: 'https://www.linkedin.com/in/megha-bhattarai-73350a261/'
     },
@@ -235,7 +267,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Mohit Muni Bajracharya',
       title: 'Field Volunteer & Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: MohitMuni,
       description: '',
       linkedin: null
     },
@@ -244,7 +276,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Nandita Ghimire',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Nandita,
       description: '',
       linkedin: 'https://www.linkedin.com/in/nandita-ghimire/'
     },
@@ -253,7 +285,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Ojashwi Pun',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Ojaswee,
       description: '',
       linkedin: null
     },
@@ -262,7 +294,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Prarthana Sharma',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Prathana,
       description: '',
       linkedin: 'https://www.linkedin.com/in/prarthana-sharma-268a81330/'
     },
@@ -271,7 +303,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Prastuti Chaulagain',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Prastuti,
       description: '',
       linkedin: null
     },
@@ -280,7 +312,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Pratikshya Poudel',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Pratikshya,
       description: '',
       linkedin: null
     },
@@ -289,7 +321,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Puspa kala Rai',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: PushpaKala,
       description: '',
       linkedin: 'https://www.linkedin.com/in/puspa-kala-rai-226090353/'
     },
@@ -298,7 +330,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Sobika Shrestha',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Sobhika,
       description: '',
       linkedin: null
     },
@@ -307,7 +339,7 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Sristy Khadka',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: SristyKhadka,
       description: '',
       linkedin: null
     },
@@ -316,8 +348,72 @@ const CanopyMeetTeam: React.FC = () => {
       name: 'Sujal Adhikari',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
-      image: Angirash, // Using default image
+      image: Sujal,
       description: '',
+      linkedin: null
+    },
+    // Volunteers
+    {
+      id: 34,
+      name: 'Abhishek Pradhan',
+      title: 'Volunteer, Nepal',
+      category: 'VOLUNTEERS',
+      image: AbhishekVolunteer,
+      description: 'Abhishek is a Computer Science and Economics student at Washington and Lee University and a Bonner Scholar. He is an M&E Trainee at Canopy.',
+      linkedin: 'https://www.linkedin.com/in/abhishekpradhannn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    },
+    {
+      id: 39,
+      name: 'Diki Yangzom',
+      title: 'Volunteer, USA',
+      category: 'VOLUNTEERS',
+      image: Diki,
+      description: 'Diki is a biology graduate from UMass Amherst with research and dental assisting experience. At Canopy USA, she manages our instagram page.',
+      linkedin: 'https://www.linkedin.com/in/diki-yangzom-70656b189?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'
+    },
+    {
+      id: 40,
+      name: 'Eshan Shrestha',
+      title: 'Volunteer, USA',
+      category: 'VOLUNTEERS',
+      image: Eshan,
+      description: 'Eshan is a student at Texas Tech University and is working on adding AI compotents to our webiste.',
+      linkedin: null
+    },
+    {
+      id: 38,
+      name: 'Isabelle Hiller',
+      title: 'Volunteer, Germany',
+      category: 'VOLUNTEERS',
+      image: Isabelle,
+      description: 'Isabelle is a student-athlete at Williams College pursuing Art History and Political Science. She\'s also involved with the Clark Art Institute. At Canopy, she worked as a Graphic Design Intern.',
+      linkedin: null
+    },
+    {
+      id: 37,
+      name: 'Katherine Gutierrez',
+      title: 'Volunteer, USA',
+      category: 'VOLUNTEERS',
+      image: Kathy,
+      description: 'Katherine is a Harvard MPA/ID economist and policymaker with public finance and project management experience. At Canopy, she interned as an M&E advisor, enhancing monitoring systems in Nepal.',
+      linkedin: 'https://www.linkedin.com/in/katherine-gutierrez-abanto/'
+    },
+    {
+      id: 36,
+      name: 'Margot Arnaud',
+      title: 'Volunteer, France',
+      category: 'VOLUNTEERS',
+      image: Margot,
+      description: 'Margot is a medical student from Lyon, France, and volunteered with Canopy during her gap year. Passionate about social activism, she brings prior teaching experience and a deep love for the arts.',
+      linkedin: null
+    },
+    {
+      id: 35,
+      name: 'Pauline Dteil',
+      title: 'Volunteer, France',
+      category: 'VOLUNTEERS',
+      image: Pouline,
+      description: 'Pauline Dteil is a French graduate student in social and cultural development. She intered at Canopy through L\'Abeille Asso. She brought experience in climate activism, ethical advocacy, and grassroots organizing.',
       linkedin: null
     }
   ];
@@ -335,7 +431,9 @@ const CanopyMeetTeam: React.FC = () => {
     <div className="bg-primary-orange/5 text-gray-800 mt-28 min-h-screen">
       {/* Header Section */}
       <div className="py-16 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-primary-orange mb-12">
+        <h1 className={`text-5xl md:text-6xl font-bold mb-12 ${
+          selectedFilter === 'VOLUNTEERS' ? 'text-green-600' : 'text-primary-orange'
+        }`}>
           Meet Our Team
         </h1>
         
@@ -370,6 +468,15 @@ const CanopyMeetTeam: React.FC = () => {
           </div>
         )}
         
+        {/* Volunteers section description */}
+        {selectedFilter === 'VOLUNTEERS' && (
+          <div className="mb-12 text-center">
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+              We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.
+            </p>
+          </div>
+        )}
+        
         {/* Responsive flex layout with centered last row */}
         <div className="flex flex-wrap justify-center gap-6">
           {filteredMembers.map((member) => (
@@ -389,7 +496,9 @@ const CanopyMeetTeam: React.FC = () => {
                 {/* Member Info */}
                 <div className={`${cardBgClass} p-6`}>
                   <div className="flex items-center mb-1">
-                    <h3 className="text-2xl font-bold text-primary-orange mr-2">
+                    <h3 className={`text-2xl font-bold mr-2 ${
+                      member.category === 'VOLUNTEERS' ? 'text-green-600' : 'text-primary-orange'
+                    }`}>
                       {member.name}
                     </h3>
                     {/* LinkedIn Link - Next to name */}
