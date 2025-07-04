@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import hero from '../../assets/hero.png';
+import landingherophone from '../../assets/landingherophone.png';
 
 const Hero: React.FC = () => {
   return (
@@ -10,10 +11,17 @@ const Hero: React.FC = () => {
     >
       {/* Responsive hero image background */}
       <div className="absolute inset-0 w-full h-full">
+        {/* Mobile hero image */}
+        <img
+          src={landingherophone}
+          alt="Hero Mobile"
+          className="w-full h-full object-cover md:hidden"
+        />
+        {/* Desktop hero image */}
         <img
           src={hero}
-          alt="Hero"
-          className="w-full h-full object-cover"
+          alt="Hero Desktop"
+          className="w-full h-full object-cover hidden md:block"
         />
       </div>
 

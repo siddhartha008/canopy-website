@@ -11,17 +11,23 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others.",
+      text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others well.",
+      name: "Roshni",
+      position: "Student of Katha Bunaun",
       image: tg
     },
     {
       id: 2,
-      text: "My daughter was about to leave school because I simply couldn't afford it anymore. As a father, it broke my heart but there was nothing I could do. But then Canopy stepped in and helped her stay in school. Now, she's not only in school, she's talking about becoming a banker! She tells me she'll earn enough so I don't have to worry anymore.",
+      text: "Over the years, I've witnessed how Canopy has brought real change to our school. Their programs have helped our students become more confident, expressive, and curious, especially those who once struggled to participate. Their Katha Bunaun program has made a visible difference in how our students think and engage. When Canopy's team is in our school, they listen, adapt, and truly care. Our school has become a more inclusive and dynamic space because of their presence.",
+      name: "Ishwori Ma'am",
+      position: "Principal of Bhanubhakta Memorial School",
       image: tg2
     },
     {
       id: 3,
-      text: "What stands out the most about Canopy Nepal is the compassion, dedication, and professionalism of every person involved with the organization. We all share the belief that education is the key to empowering children, families, and communities to break free from the cycle of poverty and pursue a brighter future. Thanks to the Canopy team we see stories every day of how this belief is in action.",
+      text: "What stands out most about Canopy is the organization's unwavering integrity. We have worked together for fifteen years and it has shown me that this is a team you can trust. Their transparency, professionalism, and accountability are evident in every program, every decision, and every student's success story. Their commitment to education comes from personal experience, professional skill, and genuine love for the sector.",
+      name: "Sandeep",
+      position: "Donor and Founder of NCEP",
       image: tg1
     }
   ];
@@ -70,11 +76,15 @@ const TestimonialSection = () => {
 
       {/* Content Overlay */}
       <div className={`relative z-10 flex h-full items-center justify-start px-4 sm:px-6 lg:px-8`}>
-        <div className={`w-full flex ${currentSlide === 1 ? 'flex-row' : 'flex-row-reverse'}`}>
-          <div className={`w-full max-w-4xl ${currentSlide === 1 ? 'text-left mr-auto pl-0 lg:pl-20' : 'text-right ml-auto pr-0 lg:pr-20'}`}>
-            <blockquote className="text-lg text-white font-light sm:text-2xl lg:text-3xl">
+        <div className={`w-full flex ${currentSlide === 2 ? 'flex-row' : 'flex-row-reverse'}`}>
+          <div className={`w-full max-w-4xl ${currentSlide === 2 ? 'text-left mr-auto pl-0 lg:pl-20' : 'text-right ml-auto pr-0 lg:pr-20'}`}>
+            <blockquote className="text-lg text-white font-light sm:text-2xl lg:text-3xl mb-4">
               "{testimonials[currentSlide].text}"
             </blockquote>
+            <div className="text-white">
+              <p className="font-semibold text-lg sm:text-xl lg:text-2xl">{testimonials[currentSlide].name}</p>
+              <p className="text-sm sm:text-base lg:text-lg opacity-90">{testimonials[currentSlide].position}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const ThankfulPartnersSection = () => {
         </div>
       </div>
       
-      <div className="w-full overflow-hidden px-16 -mt-24 -mb-24">
+      <div className="w-full overflow-hidden px-16 -mt-2 -mb-8">
         <img 
           src={l3} 
           alt="Canopy Nepal Partners - including Nepal Government, Harvard Kennedy School, hundredED, NCEP, Alaya, International Literacy Learning, Friends of Nepal Adelaide, Milken Penn GSE, International Literacy Association, US Embassy Youth Council, UN Women Asia Pacific, Global Citizen, World Literacy Foundation, Little Big Fund, and YO"

@@ -19,6 +19,7 @@ import NepalImpactMap from './components/OurImpact/OurImpact';
 import CanopyFranceSection from './components/Chapters/France/France';
 import CanopyUSASection from './components/Chapters/USA/USA';
 import PublicationsPage from './components/Publications/Publications';
+import PolicyGuidelinesPage from './components/PolicyGuidelines/policyguidelines';
 import MailchimpNewsletter from './components/Newsletter/Newsletter';
 import OurWork from './components/OurWork/OurWork';
 import CanopyScholarshipPage from './components/OurWork/CANSHIP/Canship';
@@ -27,6 +28,7 @@ import GetInvolvedSection from './components/GetInvolved/GetInvolved';
 import Donate from './components/Donate/Donate';
 import PayPalProvider from './components/PayPalProvider';
 import OurImpact from './components/OurImpact/OurImpact';
+import FAQ from './components/FAQ/faq';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -72,12 +74,14 @@ function App() {
               <Route path="/canopyfrance" element={<CanopyFranceSection />} />
               <Route path="/canopyusa" element={<CanopyUSASection />} />
               <Route path="/publications" element={<PublicationsPage />} />
+              <Route path="/canopy-website/canopy-policy" element={<PolicyGuidelinesPage />} />
               <Route path="/ourimpact" element={<OurImpact />} />
               <Route path="/ourwork" element={<OurWork />} />
               <Route path="/canship" element={<CanopyScholarshipPage />} />
               <Route path="/katha-bunaun" element={<KathaBunaun />} />
               <Route path="/getinvolved" element={<GetInvolvedSection />} />
               <Route path="/donate" element={<Donate />} />
+              <Route path="/canopy-website/canopy-faq" element={<FAQ />} />
             </Routes>
           </AnimatePresence>
           <Footer />
