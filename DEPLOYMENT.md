@@ -18,6 +18,25 @@ This project is configured for deployment on Vercel with the main entry point at
 - Removed base path configuration for root domain deployment
 - Optimized for production builds
 
+## Asset Organization
+
+### 📁 Public Directory (`/public/`)
+
+Use for assets that need direct URL access:
+
+- **PDF files**: `/public/pdfs/` (annual reports, magazines, audit reports)
+- **Favicon**: `/public/favicon.png`
+- **Static files**: robots.txt, sitemap.xml, etc.
+
+### 📁 Src Assets (`/src/assets/`)
+
+Use for assets processed by Vite:
+
+- **Component images**: Imported directly in components
+- **Icons and graphics**: SVGs, PNGs, JPGs used in UI
+- **Team photos**: Member images and profiles
+- **Cover images**: Publication covers and thumbnails
+
 ## Deployment Steps
 
 1. **Connect to Vercel**
@@ -54,3 +73,4 @@ All navigation links have been updated to work with the root domain:
   configured
 - Ensure all internal links use relative paths (they already do)
 - PDF files should be in the `public/pdfs/` directory
+- Component assets should be in `src/assets/` and imported directly
