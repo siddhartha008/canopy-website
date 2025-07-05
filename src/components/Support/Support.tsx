@@ -23,7 +23,7 @@ const SupportUsSection = () => {
         {/* CTA Button */}
         <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center mt-8 mb-4">
         <button 
-          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
+          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-cyan transition-all duration-300 hover:shadow-lg"
           onClick={() => setIsModalOpen(true)}
         >
           Donate Now

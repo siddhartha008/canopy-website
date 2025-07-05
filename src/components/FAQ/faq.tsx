@@ -238,14 +238,14 @@ const FAQ: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              className="bg-primary-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-red transition-colors duration-300"
+              className="bg-primary-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-cyan transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Contact Us
             </motion.button>
             <motion.button
-              className="border-2 border-primary-orange text-primary-orange px-8 py-3 rounded-lg font-semibold hover:bg-primary-orange hover:text-white transition-colors duration-300"
+              className="border-2 border-primary-orange text-primary-orange px-8 py-3 rounded-lg font-semibold hover:bg-primary-cyan hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

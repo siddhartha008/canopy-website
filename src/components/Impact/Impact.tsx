@@ -70,7 +70,7 @@ const Impact: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-red mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-red mb-4 pt-4">
             Our Work in Numbers
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -74,7 +74,7 @@ const StudentCard: React.FC<{ student: Student; onClick: () => void }> = ({ stud
                         <p className="text-gray-600 text-sm mb-4">{student.shortBio}</p>
                         <button
                             onClick={e => { e.stopPropagation(); handleFlipAndOpen(); }}
-                            className="mt-1 px-1 py-1 bg-primary-orange text-white text-sm rounded-lg shadow hover:bg-primary-blue transition-colors"
+                            className="mt-1 px-1 py-1 bg-primary-orange text-white text-sm rounded-lg shadow hover:bg-primary-cyan transition-colors"
                         >
                             Read More
                         </button>

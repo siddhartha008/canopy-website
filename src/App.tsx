@@ -29,6 +29,7 @@ import Donate from './components/Donate/Donate';
 import PayPalProvider from './components/PayPalProvider';
 import OurImpact from './components/OurImpact/OurImpact';
 import FAQ from './components/FAQ/faq';
+import FeaturedPage from './components/Featured/FeaturedPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,7 +48,7 @@ function App() {
           <Navigation />
           <AnimatePresence mode="wait">
             <Routes>
-              <Route path="/canopy-website" element={
+              <Route path="/" element={
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -74,14 +75,15 @@ function App() {
               <Route path="/canopyfrance" element={<CanopyFranceSection />} />
               <Route path="/canopyusa" element={<CanopyUSASection />} />
               <Route path="/publications" element={<PublicationsPage />} />
-              <Route path="/canopy-website/canopy-policy" element={<PolicyGuidelinesPage />} />
+              <Route path="/canopy-policy" element={<PolicyGuidelinesPage />} />
               <Route path="/ourimpact" element={<OurImpact />} />
               <Route path="/ourwork" element={<OurWork />} />
               <Route path="/canship" element={<CanopyScholarshipPage />} />
               <Route path="/katha-bunaun" element={<KathaBunaun />} />
               <Route path="/getinvolved" element={<GetInvolvedSection />} />
               <Route path="/donate" element={<Donate />} />
-              <Route path="/canopy-website/canopy-faq" element={<FAQ />} />
+              <Route path="/canopy-faq" element={<FAQ />} />
+              <Route path="/featured" element={<FeaturedPage />} />
             </Routes>
           </AnimatePresence>
           <Footer />

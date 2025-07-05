@@ -129,7 +129,7 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose, prefillA
             </p>
             <button
               onClick={handleClose}
-              className="bg-primary-blue text-white px-6 py-2 rounded-lg hover:bg-primary-blue transition-colors"
+              className="bg-primary-blue text-white px-6 py-2 rounded-lg hover:bg-primary-cyan/80 transition-colors"
             >
               Close
             </button>

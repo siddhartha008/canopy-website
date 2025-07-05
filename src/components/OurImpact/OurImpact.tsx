@@ -218,7 +218,7 @@ const OurImpact: React.FC = () => {
         </div>
         
         <MeetOurStudents />
-        <WhereWeWork />
+        {/* <WhereWeWork /> */}
 
         <Impact />
 

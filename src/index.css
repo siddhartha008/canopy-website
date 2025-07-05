@@ -1,7 +1,3 @@
-/* React PDF Styles */
-@import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-@import 'react-pdf/dist/esm/Page/TextLayer.css';
-
 @import './assets/fonts/fonts.css';
 @tailwind base;
 @tailwind components;

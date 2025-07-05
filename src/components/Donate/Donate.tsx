@@ -124,7 +124,7 @@ const Donate = () => {
         <div className="text-center space-x-4 mb-8">
             <button 
               onClick={handleDonateClick}
-              className="bg-primary-blue text-white text-xl font-bold py-2 px-4 rounded-lg hover:bg-primary-cyan transition-colors"
+              className="bg-primary-blue text-white text-xl font-bold py-2 px-4 rounded-lg hover:bg-primary-cyan/80 transition-colors"
             >
               Donate Now
             </button>

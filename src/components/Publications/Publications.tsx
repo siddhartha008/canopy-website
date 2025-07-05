@@ -171,7 +171,7 @@ const PublicationsPage = () => {
             </p>
 
             {/* Annual Reports Display */}
-            <div className="flex justify-center space-x-8 py-4">
+            <div className="flex flex-wrap justify-center gap-8 py-4">
               {/* 2024 Report */}
               <div className="flex flex-col items-center">
                 <button 

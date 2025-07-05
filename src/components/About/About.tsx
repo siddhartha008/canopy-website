@@ -38,7 +38,7 @@ const About: React.FC = () => {
             </p>
            <div className="mt-4 mb-4">
         <button 
-          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
+          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-cyan transition-all duration-300 hover:shadow-lg"
           onClick={() => navigate('/ourwork')}
         >
           Read More

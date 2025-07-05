@@ -156,7 +156,7 @@ const MailchimpNewsletter = () => {
               className={`px-8 py-3 rounded-lg font-medium text-white transition-colors duration-300 ${
                 loading 
                 ? 'bg-gray-400 cursor-not-allowed' 
-                : 'bg-red-600 hover:bg-red-700 hover:shadow-md'
+                : 'bg-red-600 hover:bg-primary-cyan hover:shadow-md'
               }`}
             >
               {loading ? (

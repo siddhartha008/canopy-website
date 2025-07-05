@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import icon1 from '../../assets/icons/1.svg';
 import icon2 from '../../assets/icons/2.svg';
 import icon3 from '../../assets/icons/3.svg';
@@ -13,6 +14,8 @@ import icon11 from '../../assets/icons/11.svg';
 import icon12 from '../../assets/icons/12.svg';
 
 const FeaturedInSection = () => {
+  const navigate = useNavigate();
+  
   // Logo data
   const logos = [
     { src: icon1, alt: "Featured Organization 1" },
@@ -94,8 +97,8 @@ const FeaturedInSection = () => {
       {/* Read More Button */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center mb-4">
         <button 
-          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-red transition-all duration-300 hover:shadow-lg"
-          onClick={() => {/* Your handler here */}}
+          className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-cyan transition-all duration-300 hover:shadow-lg"
+          onClick={() => navigate('/featured')}
         >
           Read More
           <svg 
