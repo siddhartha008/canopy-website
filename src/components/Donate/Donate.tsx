@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 // NOTE: Replace these with the actual paths to your images.
@@ -54,6 +54,19 @@ const Donate = () => {
   const [modalPrefillAmount, setModalPrefillAmount] = useState<number | undefined>(undefined);
   const [hideCustomAmount, setHideCustomAmount] = useState(false);
 
+  // Auto-scroll to donation supports section on page load
+  useEffect(() => {
+    const donationSupportsSection = document.getElementById('heading-section');
+    if (donationSupportsSection) {
+      const elementTop = donationSupportsSection.offsetTop;
+      const navbarHeight = 80; // Adjust this value based on your navbar height
+      window.scrollTo({
+        top: elementTop - navbarHeight,
+        behavior: 'smooth'
+      });
+    }
+  }, []);
+
   const handleDonateClick = () => {
     setModalPrefillAmount(undefined);
     setHideCustomAmount(false);
@@ -79,12 +92,11 @@ const Donate = () => {
         <div className="absolute inset-0 flex items-center justify-center">
         </div>
       </div>
-
       {/* Main Content Area */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8" id="heading-section">
         
         {/* Introduction Text */}
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto" >
           <h2 className="text-2xl font-bold text-primary-blue mb-8">
             Your gift helps students stay in school, grow with confidence, and dream without limits.
           </h2>
@@ -94,7 +106,7 @@ const Donate = () => {
         </div>
 
         {/* What Your Donation Supports Section */}
-        <div className="py-8">
+        <div id="donation-supports" className="py-8">
           <h3 className="text-center text-3xl font-bold text-primary-blue mb-8">
             What Your Donation Supports
           </h3>
