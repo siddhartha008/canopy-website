@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import map from '../../assets/map.svg';
 import { Instagram, Facebook, Linkedin, Link, Youtube } from 'lucide-react';
@@ -11,6 +12,8 @@ declare global {
 }
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+  
   // Mailchimp configuration
   const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
   const MAILCHIMP_U = import.meta.env.VITE_MAILCHIMP_U;
@@ -127,9 +130,9 @@ const Footer: React.FC = () => {
             <div className="text-left text-center">
               <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Take Action</h3>
               <ul className="space-y-2 text-base text-center">
-                <li><a href="#" className="hover:underline">Donate Now</a></li>
-                <li><a href="#" className="hover:underline">Get Involved</a></li>
-                <li><a href="#" className="hover:underline">Join the Team</a></li>
+                <li><a href="/donate" onClick={(e) => { e.preventDefault(); navigate('/donate'); }} className="hover:underline cursor-pointer">Donate Now</a></li>
+                <li><a href="/getinvolved" onClick={(e) => { e.preventDefault(); navigate('/getinvolved'); }} className="hover:underline cursor-pointer">Get Involved</a></li>
+                <li><a href="/meet-the-team" onClick={(e) => { e.preventDefault(); navigate('/meet-the-team'); }} className="hover:underline cursor-pointer">Join the Team</a></li>
               </ul>
             </div>
             {/* Stay Updated - Hidden on md and sm, shown on lg+ */}
@@ -186,10 +189,10 @@ const Footer: React.FC = () => {
              <div className="text-left">
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Resources</h3>
                 <ul className="space-y-2 text-base text-center">
-                    <li><a href="/canopy-faq/" className="hover:underline">FAQs</a></li>
-                    <li><a href="#" className="hover:underline">Annual Report</a></li>
-                    <li><a href="/canopy-policy/" className="hover:underline">Policies and Guidelines</a></li>
-                    <li><a href="#" className="hover:underline">Features</a></li>
+                    <li><a href="/canopy-faq" onClick={(e) => { e.preventDefault(); navigate('/canopy-faq'); }} className="hover:underline cursor-pointer">FAQs</a></li>
+                    <li><a href="/publications" onClick={(e) => { e.preventDefault(); navigate('/publications'); }} className="hover:underline cursor-pointer">Annual Report</a></li>
+                    <li><a href="/canopy-policy" onClick={(e) => { e.preventDefault(); navigate('/canopy-policy'); }} className="hover:underline cursor-pointer">Policies and Guidelines</a></li>
+                    <li><a href="/featured" onClick={(e) => { e.preventDefault(); navigate('/featured'); }} className="hover:underline cursor-pointer">Features</a></li>
                 </ul>
              </div>
           </div>
@@ -263,16 +266,16 @@ const Footer: React.FC = () => {
             <div className="mt-8 text-left w-full">
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center lg:text-left">Follow Us</h3>
                 <div className="flex items-center gap-3 text-lg justify-center lg:justify-start">
-                    <a href="#" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.instagram.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Instagram size={20} />
                     </a>
-                    <a href="#" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.facebook.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Facebook size={20} />
                     </a>
-                    <a href="#" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.linkedin.com/company/canopy-nepal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Linkedin size={20} />
                     </a>
-                    <a href="#" aria-label="Website" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.youtube.com/@canopynepal" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Youtube size={20} />
                     </a>
                 </div>
