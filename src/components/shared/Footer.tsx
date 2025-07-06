@@ -266,16 +266,16 @@ const Footer: React.FC = () => {
             <div className="mt-8 text-left w-full">
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center lg:text-left">Follow Us</h3>
                 <div className="flex items-center gap-3 text-lg justify-center lg:justify-start">
-                    <a href="https://www.instagram.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.instagram.com/canopy_nepal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Instagram size={20} />
                     </a>
                     <a href="https://www.facebook.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Facebook size={20} />
                     </a>
-                    <a href="https://www.linkedin.com/company/canopy-nepal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.linkedin.com/company/canopynepal1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Linkedin size={20} />
                     </a>
-                    <a href="https://www.youtube.com/@canopynepal" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://www.youtube.com/channel/UC4jweDrtADma6nEnclqbb4w" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Youtube size={20} />
                     </a>
                 </div>

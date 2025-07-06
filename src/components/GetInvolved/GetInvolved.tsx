@@ -85,7 +85,10 @@ const GetInvolvedSection = () => {
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
                 Run a marathon, host a dinner, celebrate your birthday - turn any moment into impact. We'll support you every step of the way.
               </p>
-              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300">
+              <a 
+                href="javascript:void( window.open( 'https://form.jotform.com/251855341854058', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) )"
+                className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300"
+              >
                 Host A Fundraiser
                 <svg 
                   className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
