@@ -51,32 +51,47 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
   // Handle subscription creation
   const createSubscription = (data: any, actions: any) => {
     console.log("Creating PayPal subscription for amount:", amount);
-    return actions.subscription.create({
-      plan_id: getPlanIdForAmount(amount), // You'll need to create these plan IDs in PayPal dashboard
-      application_context: {
-        shipping_preference: 'NO_SHIPPING',
-        user_action: 'SUBSCRIBE_NOW',
-        return_url: window.location.origin + '/donate?success=true',
-        cancel_url: window.location.origin + '/donate?cancelled=true'
-      }
-    });
+    
+    try {
+      const planId = getPlanIdForAmount(amount);
+      console.log("Using plan ID:", planId);
+      
+      return actions.subscription.create({
+        plan_id: planId,
+        application_context: {
+          shipping_preference: 'NO_SHIPPING',
+          user_action: 'SUBSCRIBE_NOW',
+          return_url: window.location.origin + '/donate?success=true',
+          cancel_url: window.location.origin + '/donate?cancelled=true'
+        }
+      });
+    } catch (error) {
+      console.error("Error creating subscription:", error);
+      throw error;
+    }
   };
 
   // This function would map your donation amounts to subscription plan IDs
   // You need to create these plans in the PayPal Developer Dashboard first
   const getPlanIdForAmount = (amount: number): string => {
     // Replace these with your actual plan IDs from PayPal dashboard
+    // Each amount needs its own subscription plan created in PayPal
     const planMap: {[key: number]: string} = {
-      25: 'P-4PT524692G063664UNBWIADA',
-      50: 'P-3SY00478F2584513HNBWH7JA', 
-      100: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $100/month
-      250: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $250/month
-      500: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $500/month
-      1000: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $1000/month
+      25: 'P-4PT524692G063664UNBWIADA',  // $25/month plan
+      50: 'P-3SY00478F2584513HNBWH7JA',  // $50/month plan
+      100: 'P-5AB1234567890123456789A',  // $100/month plan - replace with actual ID
+      250: 'P-6CD2345678901234567890B',  // $250/month plan - replace with actual ID
+      500: 'P-7EF3456789012345678901C',  // $500/month plan - replace with actual ID
+      1000: 'P-8GH4567890123456789012D', // $1000/month plan - replace with actual ID
     };
     
-    // Return the corresponding plan ID or a default one
-    return planMap[amount] || planMap[25]; // Default to $25 plan if no match
+    const planId = planMap[amount];
+    if (!planId) {
+      console.error(`No plan ID found for amount: $${amount}`);
+      throw new Error(`No subscription plan available for $${amount}/month`);
+    }
+    
+    return planId;
   };
 
   // Handle one-time payment approval
