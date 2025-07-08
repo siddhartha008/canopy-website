@@ -69,10 +69,10 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
     const planMap: {[key: number]: string} = {
       25: 'P-4PT524692G063664UNBWIADA',
       50: 'P-3SY00478F2584513HNBWH7JA', 
-      100: 'P-ABCDEFGHIJKLMNOPQ123456', // Example plan ID for $100/month
-      250: 'P-RSTUVWXYZ1234567890ABCD', // Example plan ID for $250/month
-      500: 'P-EFGHIJKLMNOPQRST1234567', // Example plan ID for $500/month
-      1000: 'P-UVWXYZ1234567ABCDEFGHI', // Example plan ID for $1000/month
+      100: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $100/month
+      250: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $250/month
+      500: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $500/month
+      1000: 'P-4PT524692G063664UNBWIADA', // Example plan ID for $1000/month
     };
     
     // Return the corresponding plan ID or a default one
