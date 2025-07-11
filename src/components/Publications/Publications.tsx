@@ -107,7 +107,7 @@ const PublicationsPage = () => {
             >
               Annual Report
             </button>
-            <button
+            {/* <button
               onClick={() => setActiveSection('financial-report')}
               className={`text-lg pb-2 transition-colors uppercase ${
                 activeSection === 'financial-report'
@@ -116,7 +116,7 @@ const PublicationsPage = () => {
               }`}
             >
               Financial Report
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -220,16 +220,15 @@ const PublicationsPage = () => {
           </div>
         )}
 
-        {/* Financial Reports Section */}
+        {/* Financial Reports Section - Temporarily Hidden */}
+        {/* 
         {activeSection === 'financial-report' && (
           <div className="mb-24 animate-in fade-in duration-500">
             <p className="text-center text-lg mb-8 max-w-4xl mx-auto">
               Our comprehensive financial statements and audit reports ensuring transparency and accountability in our operations.
             </p>
 
-            {/* Financial Reports Display */}
             <div className="flex flex-wrap justify-center gap-8 py-4">
-              {/* Audit Report 2080/81 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2080-81.pdf', 'Audit Report 2080/81')}
@@ -243,7 +242,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2079/80 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2079-80.pdf', 'Audit Report 2079/80')}
@@ -257,7 +255,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2078/79 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2078-79.pdf', 'Audit Report 2078/79')}
@@ -271,7 +268,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2077/78 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2077-78.pdf', 'Audit Report 2077/78')}
@@ -285,7 +281,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2076/77 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2076-77.pdf', 'Audit Report 2076/77')}
@@ -299,7 +294,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2075/76 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2075-76.pdf', 'Audit Report 2075/76')}
@@ -313,7 +307,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2074/75 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2074-75.pdf', 'Audit Report 2074/75')}
@@ -327,7 +320,6 @@ const PublicationsPage = () => {
                 </button>
               </div>
 
-              {/* Audit Report 2073/74 */}
               <div className="flex flex-col items-center">
                 <button
                   onClick={() => openPDF('/pdfs/audit-report-2073-74.pdf', 'Audit Report 2073/74')}
@@ -343,6 +335,7 @@ const PublicationsPage = () => {
             </div>
           </div>
         )}
+        */}
       </div>
 
       {/* PDF Viewer Modal */}
