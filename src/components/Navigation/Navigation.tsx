@@ -190,7 +190,7 @@ const Navigation = () => {
                           key={sub.name}
                           onClick={() => handleNavigation(sub.href, sub.isRoute)}
                           className={`
-                            w-full text-left px-4 py-2 text-sm 
+                            w-full text-left px-4 py-2 font-medium
                             hover:bg-gray-50 hover:text-primary-cyan transition-colors duration-200
                             ${location.pathname === sub.href ? 'text-primary-cyan bg-gray-50' : 'text-black'}
                           `}
@@ -292,7 +292,7 @@ const Navigation = () => {
                           key={sub.name}
                           onClick={() => handleNavigation(sub.href, sub.isRoute)}
                           className={`
-                            block w-full px-3 py-2 text-sm 
+                            block w-full px-3 py-2 font-medium
                             hover:text-primary-cyan rounded-md transition-colors duration-300
                             ${location.pathname === sub.href ? 'text-primary-cyan bg-gray-50' : 'text-gray-600'}
                           `}
