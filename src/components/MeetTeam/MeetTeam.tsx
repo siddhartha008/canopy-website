@@ -318,7 +318,7 @@ const CanopyMeetTeam: React.FC = () => {
     },
     {
       id: 30,
-      name: 'Puspa kala Rai',
+      name: 'Puspa Kala Rai',
       title: 'Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
       image: PushpaKala,
