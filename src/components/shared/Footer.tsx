@@ -190,7 +190,7 @@ const Footer: React.FC = () => {
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Resources</h3>
                 <ul className="space-y-2 text-base text-center">
                     <li><a href="/canopy-faq" onClick={(e) => { e.preventDefault(); navigate('/canopy-faq'); }} className="hover:underline cursor-pointer">FAQs</a></li>
-                    <li><a href="/publications" onClick={(e) => { e.preventDefault(); navigate('/publications'); }} className="hover:underline cursor-pointer">Annual Report</a></li>
+                    <li><a href="/publications?section=annual-report" onClick={(e) => { e.preventDefault(); navigate('/publications?section=annual-report'); }} className="hover:underline cursor-pointer">Annual Report</a></li>
                     <li><a href="/canopy-policy" onClick={(e) => { e.preventDefault(); navigate('/canopy-policy'); }} className="hover:underline cursor-pointer">Policies and Guidelines</a></li>
                     <li><a href="/featured" onClick={(e) => { e.preventDefault(); navigate('/featured'); }} className="hover:underline cursor-pointer">Features</a></li>
                 </ul>

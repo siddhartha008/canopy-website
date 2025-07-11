@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import PDFViewer from '../PDFViewer/PDFViewer';
 import Annual2024 from '../../assets/covers/Annual2024.png';
 import Annual2023 from '../../assets/covers/Annual2023.png';
@@ -48,9 +49,18 @@ const auditCovers = {
 };
 
 const PublicationsPage = () => {
+  const [searchParams] = useSearchParams();
   const [activeSection, setActiveSection] = useState('buneka-katha');
   const [selectedPDF, setSelectedPDF] = useState<{ path: string; title: string } | null>(null);
   const [isPDFOpen, setIsPDFOpen] = useState(false);
+
+  // Set initial active section based on URL parameter
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section && ['buneka-katha', 'annual-report', 'financial-report'].includes(section)) {
+      setActiveSection(section);
+    }
+  }, [searchParams]);
 
   // Function to get title based on active section
   const getTitle = () => {
