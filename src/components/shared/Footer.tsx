@@ -212,8 +212,8 @@ const Footer: React.FC = () => {
                       Thirbam Sadak, Baluwatar-04<br />
                       Kathmandu 44600, Nepal
                     </a>
-                    <p>Contact Number: +977-01-4541478</p>
-                    <p>Email: info@canopynepal.org</p>
+                    <p>Contact Number: <a href="tel:+977-01-4541478" className="hover:underline text-primary-blue">+977-01-4541478</a></p>
+                    <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary-blue">info@canopynepal.org</a></p>
                 </div>
             </div>
             {/* Stay Updated - Visible on md and sm, hidden on lg+ */}

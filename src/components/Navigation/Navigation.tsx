@@ -159,7 +159,7 @@ const Navigation = () => {
                   className={`
                     flex items-center space-x-1 font-medium
                     transition-colors duration-300 hover:text-primary-cyan
-                    ${isScrolled ? 'text-primary-gray' : 'text-primary-gray drop-shadow-lg'}
+                    ${isScrolled ? 'text-black' : 'text-black drop-shadow-lg'}
                     ${location.pathname === item.href ? 'text-primary-cyan' : ''}
                   `}
                   whileHover={{ scale: 1.05 }}
@@ -225,7 +225,7 @@ const Navigation = () => {
               onClick={() => setIsMobileMenuOpen(open => !open)}
               className={`
                 md:hidden p-2 rounded-md transition-colors duration-300
-                ${isScrolled ? 'text-primary-gray' : 'text-primary-gray'}
+                ${isScrolled ? 'text-black' : 'text-black'}
               `}
               whileTap={{ scale: 0.95 }}
             >
@@ -264,7 +264,7 @@ const Navigation = () => {
                     flex items-center justify-between w-full px-3 py-2 
                     font-medium hover:text-primary-cyan hover:bg-primary-cyan/10 rounded-md 
                     transition-colors duration-300
-                    ${location.pathname === item.href ? 'text-primary-cyan bg-primary-cyan/10' : 'text-primary-gray'}
+                    ${location.pathname === item.href ? 'text-primary-cyan bg-primary-cyan/10' : 'text-black'}
                   `}
                 >
                   <span>{item.name}</span>

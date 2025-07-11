@@ -49,6 +49,19 @@ const OurWork: React.FC = () => {
         </h2>
       </div>
 
+
+
+      {/* Interactive Ecosystem SVG */}
+      <div className="w-full hidden md:block">
+        <div className="w-1/2 mx-auto px-4 sm:px-6 lg:px-8">
+          <img
+            src={ecosystem}
+            alt="Our Ecosystem"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
+
       {/* Our Programs */}
       <div className="w-full text-center mb-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[#2386B6] mb-8">Our Programs</h2>
@@ -86,22 +99,6 @@ const OurWork: React.FC = () => {
               </button>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Our Ecosystem */}
-      <div className="w-full text-center mt-4 mb-8 hidden md:block">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#2386B6] mb-4">Our Ecosystem</h2>
-      </div>
-
-      {/* Interactive Ecosystem SVG */}
-      <div className="w-full hidden md:block">
-        <div className="w-3/4 mx-auto px-4 sm:px-6 lg:px-8">
-          <img
-            src={ecosystem}
-            alt="Our Ecosystem"
-            className="w-full h-auto"
-          />
         </div>
       </div>
       
