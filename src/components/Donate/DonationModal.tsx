@@ -52,6 +52,17 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose, prefillA
   const handleError = (error: any) => {
     console.error('Donation error:', error);
     
+    // Check if this is a fallback error for monthly subscriptions
+    if (error.fallbackToOnetime) {
+      setErrorMessage(error.message);
+      // Automatically switch to one-time donation after a short delay
+      setTimeout(() => {
+        setIsMonthly(false);
+        setErrorMessage('');
+      }, 3000);
+      return;
+    }
+    
     // Provide user-friendly error messages
     let userMessage = 'An error occurred during payment. Please try again.';
     
@@ -73,6 +84,8 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose, prefillA
         userMessage = 'Insufficient funds. Please check your payment method and try again.';
       } else if (error.message.includes('card declined')) {
         userMessage = 'Card was declined. Please try a different payment method.';
+      } else if (error.message.includes('subscription') || error.message.includes('plan')) {
+        userMessage = 'Monthly subscription is not available for this amount. Please try a one-time donation.';
       }
     }
     

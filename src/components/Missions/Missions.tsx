@@ -1,9 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import mv1 from '../../assets/mv1.png';
 import mv2 from '../../assets/mv2.png';
+import toC from '../../assets/toc.svg';
+import icon1 from '../../assets/val1.svg';
+import icon2 from '../../assets/val2.svg';
+import icon3 from '../../assets/val3.svg';
+import icon4 from '../../assets/val4.svg';
+import icon5 from '../../assets/val5.svg';
 
 const CanopyAboutUs: React.FC = () => {
+  const [hoveredValue, setHoveredValue] = useState<number | null>(null);
+  const [anyHovered, setAnyHovered] = useState(false);
   return (
     <div className="text-gray-800 mt-24">
      
@@ -223,32 +231,140 @@ const CanopyAboutUs: React.FC = () => {
           </p>
         </div>
 
-        {/* Image with Overlay Text */}
-        <div className="relative w-full">
-          <img
-            src={mv2}
-            alt="Group of happy students"
-            className="w-full h-96 lg:h-[500px] object-cover "
-          />
-          {/* Simple black overlay like testimonials */}
-          <div className="absolute inset-0 bg-black/30"></div>
-
-          {/* Overlay Text */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full">
-              <div className="max-w-5xl mx-auto px-6 text-center">
-                <p className="text-2xl md:text-4xl font-semibold leading-relaxed text-white">
-                  By 2030, we aim to reach over half a million students and integrate
-                  story-based learning into classrooms across Nepal, making storytelling
-                  a foundational part of how children learn, grow, and connect.
-                </p>
-              </div>
+        {/* Our Theory of Change Section */}
+        <div className="relative w-full py-4 overflow-hidden">
+          <div className="relative max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-red">Our Theory Of Change</h2>
+          </div>
+          <div className="relative w-full px-6 md:px-0">
+            {/* Subtle floating bubbles for Theory of Change section */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <motion.div
+                animate={{ y: [-6, 6, -6] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute top-10 left-1/4 w-4 h-4 bg-blue-200 rounded-full opacity-10"
+              ></motion.div>
+            </div>
+            <div className="mx-auto">
+              <img
+                src={toC}
+                alt="Theory of Change Diagram"
+                className="w-full max-w-full h-auto lg:h-[650px] object-contain mx-auto"
+              />
             </div>
           </div>
         </div>
-      </div>
 
-      
+        {/* Our Values Section */}
+        <div className="relative w-full pb-0 scroll -mt-4 overflow-hidden">
+          <div className="relative max-w-6xl mx-auto px-6">
+            {/* Floating elements for this section */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <motion.div
+                animate={{ y: [-8, 8, -8] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-10 right-24 w-3 h-3 bg-orange-400 rounded-full opacity-10"
+              ></motion.div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red text-center">Our Values</h2>
+            <div className="flex flex-col items-center">
+              <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-12 lg:gap-20 mb-8">
+                {/* Value Items */}
+                {[
+                  {
+                    icon: icon1,
+                    label: 'Deep Purpose',
+                    desc: 'We believe education is the most powerful path to equity. Every program we create is rooted in a long-term vision to transform lives and communities.'
+                  },
+                  {
+                    icon: icon2,
+                    label: 'Child-Centered',
+                    desc: 'Children are at the core of our mission. We create spaces where they feel seen, heard, and supported to learn, express themselves, and lead with confidence.'
+                  },
+                  {
+                    icon: icon3,
+                    label: 'Space for Growth',
+                    nowrap: true,
+                    desc: 'We nurture a culture where learning is lifelong. Whether student, team member, or partner, everyone is encouraged to take risks, reflect, and keep growing.'
+                  },
+                  {
+                    icon: icon4,
+                    label: 'Collaboration',
+                    desc: 'Our work is built through strong relationships. We partner with students, families, and communities to design programs together, grounded in trust and mutual ownership.'
+                  },
+                  {
+                    icon: icon5,
+                    label: 'Transparency',
+                    desc: 'We believe trust is earned through clarity and openness. We share our successes, learn from our failures, and keep our stakeholders informed and engaged every step of the way.'
+                  }
+                ].map((val, idx) => (
+                  <div
+                    key={val.label}
+                    className="group flex flex-col items-center cursor-pointer relative w-40 md:w-48 lg:w-56"
+                    onMouseEnter={() => { setHoveredValue(idx); setAnyHovered(true); }}
+                    onMouseLeave={() => { setHoveredValue(null); setAnyHovered(false); }}
+                    onFocus={() => { setHoveredValue(idx); setAnyHovered(true); }}
+                    onBlur={() => { setHoveredValue(null); setAnyHovered(false); }}
+                    tabIndex={0}
+                  >
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center mb-3">
+                      <img src={val.icon} alt={val.label} className="w-full h-full object-contain z-10 rounded-xl" />
+                    </div>
+                    <motion.div 
+                      className={`text-xl md:text-xl font-extrabold text-center text-yellow-500 mb-2 select-none${val.label === 'Space for Growth' ? ' whitespace-nowrap' : ''}`}
+                      animate={hoveredValue === idx ? { scale: 1.05, color: "#fbbf24" } : { scale: 1, color: "#fbbf24" }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {val.label}
+                    </motion.div>
+                    <AnimatePresence>
+                      {hoveredValue === idx && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 20 }}
+                          transition={{ duration: 0.4, ease: 'easeInOut' }}
+                          className=" text-base md:text-lg text-center mt-2 min-h-[2.5rem] w-full flex justify-center"
+                          style={{ minHeight: '2.5rem' }}
+                        >
+                          <span className="block w-full max-w-xl mx-auto text-center">{val.desc}</span>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* Image with Overlay Text */}
+          <motion.div 
+            className="relative w-full"
+            animate={{ y: anyHovered ? 30 : 0 }}
+            transition={{ type: 'spring', stiffness: 30, damping: 30, }}
+          >
+            <img
+              src={mv2}
+              alt="Group of happy students"
+              className="w-full h-96 lg:h-[500px] object-cover "
+            />
+            {/* Simple black overlay like testimonials */}
+            <div className="absolute inset-0 bg-black/30"></div>
+
+            {/* Overlay Text */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full">
+                <div className="max-w-5xl mx-auto px-6 text-center">
+                  <p className="text-2xl md:text-4xl font-semibold leading-relaxed text-white">
+                    By 2030, we aim to reach over half a million students and integrate
+                    story-based learning into classrooms across Nepal, making storytelling
+                    a foundational part of how children learn, grow, and connect.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };

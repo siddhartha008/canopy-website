@@ -48,13 +48,17 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
     });
   };
 
-  // Handle subscription creation
+  // Handle subscription creation with improved error handling
   const createSubscription = (data: any, actions: any) => {
     console.log("Creating PayPal subscription for amount:", amount);
     
     try {
       const planId = getPlanIdForAmount(amount);
       console.log("Using plan ID:", planId);
+      
+      if (!planId) {
+        throw new Error(`No subscription plan available for $${amount}/month. Please contact support or try a one-time donation.`);
+      }
       
       return actions.subscription.create({
         plan_id: planId,
@@ -67,13 +71,21 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
       });
     } catch (error) {
       console.error("Error creating subscription:", error);
+      // If subscription creation fails, we can fall back to one-time payment
+      if (onError) {
+        onError({
+          ...error,
+          message: `Monthly subscription not available for $${amount}. Please try a one-time donation or contact support.`,
+          fallbackToOnetime: true
+        });
+      }
       throw error;
     }
   };
 
-  // This function would map your donation amounts to subscription plan IDs
-  // You need to create these plans in the PayPal Developer Dashboard first
-  const getPlanIdForAmount = (amount: number): string => {
+  // This function maps donation amounts to subscription plan IDs
+  // IMPORTANT: You need to create these plans in the PayPal Developer Dashboard
+  const getPlanIdForAmount = (amount: number): string | null => {
     // Replace these with your actual plan IDs from PayPal dashboard
     // Each amount needs its own subscription plan created in PayPal
     const planMap: {[key: number]: string} = {
@@ -88,7 +100,13 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
     const planId = planMap[amount];
     if (!planId) {
       console.error(`No plan ID found for amount: $${amount}`);
-      throw new Error(`No subscription plan available for $${amount}/month`);
+      return null;
+    }
+    
+    // Check if the plan ID looks like a placeholder (contains generic patterns)
+    if (planId.includes('123456789') || planId.includes('ABCDEFGH')) {
+      console.warn(`Plan ID for $${amount} appears to be a placeholder. Please replace with actual PayPal plan ID.`);
+      return null;
     }
     
     return planId;
@@ -114,12 +132,10 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
   // Handle subscription approval
   const handleSubscriptionApproval = async (data: any) => {
     console.log("Subscription approved:", data);
-    // For subscriptions, we get different data than one-time payments
     try {
       // data.subscriptionID contains the subscription ID
       console.log("Subscription created successfully with ID:", data.subscriptionID);
       
-      // We don't need to capture anything for subscriptions
       if (onSuccess) {
         onSuccess({
           id: data.subscriptionID,
@@ -137,6 +153,39 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
     }
   };
 
+  // Check if monthly subscription is available for the current amount
+  const isMonthlyAvailable = () => {
+    const planId = getPlanIdForAmount(amount);
+    return planId !== null;
+  };
+
+  // If monthly is selected but not available, show a message
+  if (isMonthly && !isMonthlyAvailable()) {
+    return (
+      <div className="text-center p-4">
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+          <p className="text-yellow-800 text-sm">
+            Monthly subscription for ${amount} is not currently available. 
+            Please try a one-time donation or contact us for monthly giving options.
+          </p>
+        </div>
+        <button
+          onClick={() => {
+            if (onError) {
+              onError({
+                message: `Monthly subscription not available for $${amount}. Please try a one-time donation.`,
+                fallbackToOnetime: true
+              });
+            }
+          }}
+          className="bg-primary-blue text-white px-6 py-2 rounded-lg hover:bg-primary-cyan/80 transition-colors"
+        >
+          Try One-Time Donation
+        </button>
+      </div>
+    );
+  }
+
   return (
     <PayPalButtons
       style={{ 
@@ -145,8 +194,6 @@ const PayPalDonation: React.FC<PayPalDonationProps> = ({
         shape: "rect",
         label: "pay"
       }}
-      // Venmo is now disabled via PayPalProvider
-      // Use different handlers based on whether it's monthly or one-time
       createOrder={isMonthly ? undefined : createOneTimeOrder}
       createSubscription={isMonthly ? createSubscription : undefined}
       onApprove={isMonthly 

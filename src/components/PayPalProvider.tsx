@@ -26,9 +26,11 @@ const initialOptions = {
   intent: "capture",
   // Force production environment - this ensures live PayPal is used
   "data-sdk-integration-source": "button-factory",
-  // Only enable card, and explicitly disable Venmo and PayPal Credit
-  "enable-funding": "card",
+  // Enable both card and PayPal for better user experience
+  "enable-funding": "card,paypal",
   "disable-funding": "venmo,credit",
+  // Add components for subscriptions
+  components: "buttons,funding-eligibility",
   // The data-client-token is preferred when 3D Secure is enabled
   // "data-client-token": "YOUR_CLIENT_TOKEN", 
 };
