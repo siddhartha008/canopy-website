@@ -193,6 +193,9 @@ const OurImpact: React.FC = () => {
           <div className="flex justify-center mt-4">
             <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
           </div>
+          <div className="flex justify-center mt-1">
+            <span className="italic text-gray-500 text-base text-center w-full">Our percentage of possible growth is calculated through our meticulous monitoring and evaluation through interaction, observation, and long term impact. Our priority is not the score students get but rather the growth they achieve during our program.</span>
+          </div>
         </div>
 
         {/* Key Statistics Section - Styled Cards */}
