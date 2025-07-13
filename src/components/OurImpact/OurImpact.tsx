@@ -97,7 +97,7 @@ const OurImpact: React.FC = () => {
   // For styled stats cards, split headline and subtext
   const impactStatsStyled = [
     {
-      headline: '10 IN 10\nSCHOLARS',
+      headline: '100% \nSCHOLARS',
       subtext: "are employed after graduation"
     },
     {
@@ -109,7 +109,7 @@ const OurImpact: React.FC = () => {
       subtext: "in school attendance after Canopy's support"
     },
     {
-      headline: '9 IN 10\nSCHOLARS',
+      headline: '90% \nSCHOLARS',
       subtext: "feel mentally stronger and less overwhelmed at school after Canopy's support"
     },
   ];
@@ -191,7 +191,7 @@ const OurImpact: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center mt-4">
-            <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students</span>
+            <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
           </div>
         </div>
 
@@ -214,7 +214,7 @@ const OurImpact: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center mt-4">
-          <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students</span>
+          <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
         </div>
         
         <MeetOurStudents />
