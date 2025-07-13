@@ -79,13 +79,13 @@ const BarChart: React.FC<BarChartProps> = ({ title, preValue, postValue, growth,
 const OurImpact: React.FC = () => {
   // All chart data consolidated into one array
   const allChartData = [
-    { title: "Creativity", preValue: 1.3, postValue: 3.0, growth: "57%" },
-    { title: "Self Expression", preValue: 1.1, postValue: 2.6, growth: "60%" },
-    { title: "Critical Thinking", preValue: 1.0, postValue: 2.1, growth: "51%" },
-    { title: "Attendance", preValue: 3.0, postValue: 3.9, growth: "77%" },
-    { title: "Academic Results", preValue: 1.8, postValue: 4.7, growth: "62.3%" },
-    { title: "Extracurricular Activities Participation", preValue: 2.0, postValue: 4.0, growth: "50%" },
-    { title: "Academic Support by Family", preValue: 3.0, postValue: 5.0, growth: "66.7%" },
+    { title: "Creativity", preValue: 1.3, postValue: 3.5, growth: "59%" },
+    { title: "Self-expression", preValue: 1.1, postValue: 3.2, growth: "54%" },
+    { title: "Critical Thinking", preValue: 1, postValue: 3, growth: "50%" },
+    { title: "Attendance", preValue: 3, postValue: 3.9, growth: "45%" },
+    { title: "Academic Results", preValue: 1.8, postValue: 4.7, growth: "91%" },
+    { title: "Extracurricular Activities Participation", preValue: 2, postValue: 4, growth: "67%" },
+    { title: "Academic Support by Family", preValue: 2.7, postValue: 4.8, growth: "91%" },
   ];
   
   // Split data for the two rows
