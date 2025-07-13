@@ -54,7 +54,7 @@ const TestimonialSection = () => {
 
   return (
     <section
-      className="relative w-full overflow-hidden h-96 sm:h-[500px] lg:h-[600px] xl:h-[700px]"
+      className="relative w-full overflow-hidden h-96 sm:h-[500px] lg:h-[600px] xl:h-[700px] mt-12"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

@@ -4,6 +4,7 @@ import impactHero from '../../assets/impacthero.png';
 import WhereWeWork from './WhereWeWork/WhereWeWork';
 import Sustainable from './Sustainable/Sustainable';
 import Impact from '../Impact/Impact';
+import ecosystem from '../../assets/ecosystem.svg';
 
 // --- Reusable Bar Chart Component (Final Polished Version) ---
 interface BarChartProps {
@@ -54,13 +55,13 @@ const BarChart: React.FC<BarChartProps> = ({ title, preValue, postValue, growth,
                 {/* Post-value Bar with Tooltip and Growth Label */}
                 <div className="relative group flex justify-center">
                     {/* Growth label above After Canopy bar */}
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-center text-xs font-bold text-primary-orange">
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-center text-xs font-bold text-primary-cyan">
                         {growth}
                         <br />
                         growth
                     </div>
                     <div
-                        className="bg-primary-orange rounded-t-sm transition-all duration-300 ease-in-out hover:opacity-80"
+                        className="bg-secondary-cyan rounded-t-sm transition-all duration-300 ease-in-out hover:opacity-80"
                         style={{ width: barWidth, height: `${postHeight}px` }}
                     ></div>
                     <div className="absolute bottom-full z-10 mb-2 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
@@ -70,7 +71,7 @@ const BarChart: React.FC<BarChartProps> = ({ title, preValue, postValue, growth,
             </div>
         </div>
       </div>
-      <p className="text-base font-semibold text-gray-700 mt-1 px-1 h-12 flex items-center justify-center text-center">{title}</p>
+      <p className="text-base font-semibold  mt-1 px-1 h-12 flex items-center justify-center text-center">{title}</p>
     </div>
   );
 };
@@ -136,7 +137,7 @@ const OurImpact: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <p className="text-center text-primary-blue max-w-5xl mx-auto text-2xl leading-relaxed">
+        <p className="text-center  max-w-5xl mx-auto text-2xl leading-relaxed">
           At Canopy Nepal, we measure impact not just in numbers, but in transformed lives, classrooms, and communities. From long-term scholarships to storytelling-powered learning, our programs help students stay in school, build essential life skills, and unlock opportunity.
         </p>
 
@@ -185,7 +186,7 @@ const OurImpact: React.FC = () => {
                 <span className="text-sm text-gray-600 font-medium">Before Canopy</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-4 h-4 rounded-sm bg-primary-orange"></div>
+                <div className="w-4 h-4 rounded-sm bg-secondary-cyan"></div>
                 <span className="text-sm text-gray-600 font-medium">After Canopy</span>
               </div>
             </div>
@@ -194,7 +195,7 @@ const OurImpact: React.FC = () => {
             <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
           </div>
           <div className="flex justify-center mt-1">
-            <span className="italic text-gray-500 text-base text-center w-full">Our percentage of possible growth is calculated through our meticulous monitoring and evaluation through interaction, observation, and long term impact. Our priority is not the score students get but rather the growth they achieve during our program.</span>
+            <span className="italic text-gray-500 text-base text-center max-w-5xl">Our percentage of possible growth is calculated through our meticulous monitoring and evaluation through interaction, observation, and long term impact. Our priority is not the score students get but rather the growth they achieve during our program.</span>
           </div>
         </div>
 
@@ -219,11 +220,27 @@ const OurImpact: React.FC = () => {
         <div className="flex justify-center mt-4">
           <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
         </div>
+
+    
         
         <MeetOurStudents />
         {/* <WhereWeWork /> */}
+        
+          {/* Interactive Ecosystem SVG */}
+          <div className="text-primary-blue text-3xl sm:text-4xl font-extrabold mb-4 whitespace-pre-line text-center">
+                  Our Ecosystem
+                </div>
+      <div className="flex justify-center w-full mt-8 mb-8">
+        <div className="w-3/4 px-4 sm:px-6 lg:px-8">
+          <img
+            src={ecosystem}
+            alt="Our Ecosystem"
+            className="w-full h-auto"
+          />
+        </div>
+      </div>
 
-        <Impact />
+        <Impact variant="our-impact" />
 
         {/* Sustainability Section */}
         

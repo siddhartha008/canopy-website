@@ -58,8 +58,10 @@ function App() {
                   <Hero />
                   <RichText />
                   <About />
-                  <Impact />
-                  <Testimonials />
+                  <div className="bg-gray-50">
+                    <Impact />
+                    <Testimonials />
+                  </div>
                   <SupportUsSection />
                   <ThankfulPartnersSection/>
                   <FeaturedInSection/>

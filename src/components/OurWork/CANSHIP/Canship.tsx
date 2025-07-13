@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImg from '../../../assets/canship.jpg';
-import canshipLifecycle from '../../../assets/canshiplifecycle.png';
+import canshipLifecycle from '../../../assets/canImpact.svg';
 import canshipBottom from '../../../assets/canshipBottom.jpg';
 import canshipImpact from '../../../assets/canshipImpact.png';
 
@@ -61,19 +61,16 @@ const CanopyScholarshipPage = () => {
       </div>
 
       {/* Lifecycle Section - Single Image */}
-      <div className= "px-6 py-12 pb-0">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue text-center">
-            Canopy Scholar Lifecycle
-          </h2>
-          
-          <div className="flex justify-center">
-            <img 
-              src={canshipLifecycle}
-              alt="Canopy Scholar Lifecycle Flowchart"
-              className="w-full max-w-6xl h-auto"
-            />
-          </div>
+      <div className="px-0 py-12 pb-0">
+        <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue text-center">
+          Canopy Scholar Lifecycle
+        </h2>
+        <div className="flex justify-center">
+          <img 
+            src={canshipLifecycle}
+            alt="Canopy Scholar Lifecycle Flowchart"
+            className="w-11/12 max-w-none h-auto mt-8 mb-8 mx-auto"
+          />
         </div>
       </div>
 

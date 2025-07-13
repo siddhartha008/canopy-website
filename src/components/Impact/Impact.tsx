@@ -4,7 +4,11 @@ import { useInView } from 'react-intersection-observer';
 import { Heart, BookOpen, Home, Users, Star, Award, DollarSignIcon, Group } from 'lucide-react';
 import CountUp from '../shared/CountUp';
 
-const Impact: React.FC = () => {
+interface ImpactProps {
+  variant?: 'home' | 'our-impact';
+}
+
+const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true,
@@ -58,10 +62,12 @@ const Impact: React.FC = () => {
     },
   ];
 
-  
+  // Different styling based on variant
+  const containerClass = variant === 'our-impact' ? 'bg-white' : 'bg-gray-50';
+  const titleClass = variant === 'our-impact' ? 'text-primary-blue' : 'text-primary-red';
 
   return (
-    <section id="impact" className="bg-gray-50">
+    <section id="impact" className={containerClass}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -70,7 +76,7 @@ const Impact: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-red mb-4 pt-4">
+          <h2 className={`${variant === 'our-impact' ? 'text-3xl sm:text-4xl' : 'text-5xl'} font-extrabold ${titleClass} mb-4 pt-4`}>
             Our Work in Numbers
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -80,7 +86,7 @@ const Impact: React.FC = () => {
         </motion.div>
 
         {/* Impact Statistics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4">
           {impactStats.map((stat, index) => (
             <motion.div
               key={stat.title}

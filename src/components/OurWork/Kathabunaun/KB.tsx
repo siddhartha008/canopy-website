@@ -1,6 +1,6 @@
 import React from 'react';
 import heroImg from '../../../assets/kbtop.png';
-import kblifecycle from '../../../assets/kblifecycle.png';
+import kblifecycle from '../../../assets/kbImpact.svg';
 import kbImpact from '../../../assets/kbImpact.png';
 
 const KathaBunaun = () => {
@@ -58,18 +58,16 @@ const KathaBunaun = () => {
       </div>
 
       {/* Lifecycle Section - Single Image */}
-      <div className="px-6 py-12 pb-0">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-red text-center">
+      <div className="px-0 py-12 pb-0">
+        <h2 className="text-3xl lg:text-4xl font-bold text-primary-red text-center">
           Katha Bunaun Incorporation in the System
-          </h2>
-          <div className="flex justify-center">
-            <img 
-              src={kblifecycle}
-              alt="Canopy Scholar Lifecycle Flowchart"
-              className="w-full max-w-6xl h-[250px]"
-            />
-          </div>
+        </h2>
+        <div className="flex justify-center">
+          <img 
+            src={kblifecycle}
+            alt="Canopy Scholar Lifecycle Flowchart"
+            className="w-screen max-w-none h-auto mt-8 mb-8 mx-auto"
+          />
         </div>
       </div>
 
@@ -128,18 +126,18 @@ const KathaBunaun = () => {
       <div className="bg-white px-6 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-red mb-2">
-              Local governments have increased their budget by XX on average to incorporate storytelling into their curriculum.
+            <h3 className="text-xl md:text-2xl mb-2">
+              <span className="font-bold text-primary-red">0.025% budget increase</span> by local governments to incorporate storytelling into their curriculum.
             </h3>
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-red mb-2">
-              XXX schools have adapted interactive learning and child-centered learning values.
+            <h3 className="text-xl md:text-2xl mb-2">
+              <span className="font-bold text-primary-red">245 schools</span> have adopted interactive and child-centered learning approaches
             </h3>
           </div>
           <div>
-            <h3 className="text-xl md:text-2xl font-bold text-primary-red mb-2">
-              Students have increased engagement in school activities by XXX%.
+            <h3 className="text-xl md:text-2xl mb-2">
+              <span className="font-bold text-primary-red">67% increase</span> in student engagement in school activities.
             </h3>
           </div>
         </div>
