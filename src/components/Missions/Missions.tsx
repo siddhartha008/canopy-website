@@ -245,7 +245,7 @@ const CanopyAboutUs: React.FC = () => {
                 className="absolute top-10 left-1/4 w-4 h-4 bg-blue-200 rounded-full opacity-10"
               ></motion.div>
             </div>
-            <div className="mx-auto">
+            <div className="mx-auto -mt-16">
               <img
                 src={toC}
                 alt="Theory of Change Diagram"
