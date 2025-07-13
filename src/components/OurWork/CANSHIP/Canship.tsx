@@ -138,12 +138,12 @@ const CanopyScholarshipPage = () => {
           </div>
           <div>
             <h3 className="text-xl md:text-2xl mb-2">
-            <span className='font-bold text-primary-blue'>Avg X% increase</span> in family income after student enters workforce
+            <span className='font-bold text-primary-blue'>Avg 35% increase</span> in family income after student enters workforce
             </h3>
           </div>
           <div>
             <h3 className="text-xl md:text-2xl  mb-2">
-            <span className='font-bold text-primary-blue'>X scholars</span> have joined Canopy as mentors for younger scholars
+            <span className='font-bold text-primary-blue'>10 scholars</span> have joined Canopy as mentors for younger scholars
             </h3>
           </div>
         </div>
