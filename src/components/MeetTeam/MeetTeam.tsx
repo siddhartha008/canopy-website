@@ -72,15 +72,15 @@ const CanopyMeetTeam: React.FC = () => {
       description: 'Leads Canopy\'s vision, partnerships, and fundraising strategy—steering growth, building global relationships, and amplifying the organization\'s voice through thought leadership, board support, and international representation.',
       linkedin: 'http://www.linkedin.com/in/monal-bhattarai-bb3261194'
     },
-    {
-      id: 3,
-      name: 'Angirash Karki',
-      title: 'Executive Director',
-      category: 'CORE TEAM',
-      image: Angirash,
-      description: 'Ensures Canopy operates smoothly by overseeing compliance, HR, finance, and risk management while building strong government partnerships and driving internal systems for staff performance and operational excellence.',
-      linkedin: 'https://www.linkedin.com/in/angirash-karki/'
-    },
+    // {
+    //   id: 3,
+    //   name: 'Angirash Karki',
+    //   title: 'Executive Director',
+    //   category: 'CORE TEAM',
+    //   image: Angirash,
+    //   description: 'Ensures Canopy operates smoothly by overseeing compliance, HR, finance, and risk management while building strong government partnerships and driving internal systems for staff performance and operational excellence.',
+    //   linkedin: 'https://www.linkedin.com/in/angirash-karki/'
+    // },
     {
       id: 4,
       name: 'Pratima Wosti',
