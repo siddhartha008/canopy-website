@@ -46,7 +46,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
       image: Mohit,
-      description: 'Mohit is a seasoned education and development leader with experience across Nepal, the U.S., and Europe. Alongside founding Canopy Nepal, he has led grants strategy at Riverside Immigrant Services, supported the launch of the University of Nepal, mentored social entrepreneurs in Ghana, organized climate initiatives in France, and shaped education policy dialogue globally. He holds a Masters in Education from Harvard University.'
+      description: 'Mohit is the founder of Canopy and a nonprofit leader dedicated to equity in education. A Harvard graduate, he has worked with over 20,000 students across Nepal. Through Global Shapers, Bloom Nepal Foundation, University of Nepal, and UWS USA, he drives systems change by bridging grassroots impact and global collaboration.'
     },
     {
       id: 3,
@@ -70,7 +70,7 @@ const CanopyBoardOfDirectors: React.FC = () => {
       title: 'Board of Director',
       category: 'BOARD OF DIRECTORS',
       image: Srishti,
-      description: 'Srishti is an economist and sustainability advocate with experience at the International Finance Corporation and Cummins Inc. She has led operations at Vaidya Group, advised global climate initiatives, and served as Nepal\'s youth delegate at COP28. She is also a Global Shaper and founder of Kathmandu\'s longest-running book club.'
+      description: "Srishti is an Finance professional and sustainability advocate, with experience at the International Finance Corporation , Nepal and Cummins Inc. , USA. She has led operations at Vaidya Group, advised global climate initiatives, and served as Nepal's youth delegate at COP28. She is also a Global Shaper and founder of Kathmandu\'s longest-running book club."
     },
     
     // Advisory Board - Nepal
