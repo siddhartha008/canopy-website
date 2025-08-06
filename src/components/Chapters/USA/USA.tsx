@@ -15,7 +15,7 @@ const teamMembers = [
     name: 'Mohit Rauniyar',
     category: 'CORE TEAM',
     image: Mohit_USA,
-    description: 'Established Canopy Nepal and leads its global vision, actively overseeing international chapters in the USA and France while driving strategic fundraising to expand impact and ensure long-term sustainability.',
+    description: 'Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy USA, he leads partnerships and fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.',
     linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
   },
   {
@@ -23,7 +23,7 @@ const teamMembers = [
     name: 'Siddhartha Mishra',
     category: 'CORE TEAM',
     image: Siddhartha_USA,
-    description: 'Dedicated team member contributing to Canopy USA\'s mission of supporting education equity in Nepal through fundraising, awareness campaigns, and community engagement.',
+    description: "Siddhartha is a full-stack developer and digital problem-solver with expertise in Flutter, cloud infrastructure, and intuitive UI/UX.  At Canopy USA, he leads digital presence and website creation, ensuring our story shines online.",
     linkedin: 'https://www.linkedin.com/in/siddhartha-mishra2020/'
   },
   {
@@ -31,7 +31,7 @@ const teamMembers = [
     name: 'Diki Yangzom',
     category: 'CORE TEAM',
     image: Diki_USA,
-    description: 'Passionate team member working to strengthen Canopy USA\'s impact through strategic partnerships, community outreach, and educational initiatives.',
+    description: "Diki is a biology graduate from UMass Amherst with experience in research, scientific writing, and dental assisting. At Canopy USA, she leads our social media strategy, bringing precision, creativity, and consistency to our digital outreach.",
     linkedin: ''
   },
   {

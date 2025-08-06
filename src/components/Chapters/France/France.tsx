@@ -14,7 +14,7 @@ const teamMembers = [
     name: 'Mohit Rauniyar',
     category: 'CORE TEAM',
     image: Mohit_France,
-    description: 'Established Canopy Nepal and leads its global vision, actively overseeing international chapters in the USA and France while driving strategic fundraising to expand impact and ensure long-term sustainability.',
+    description: 'Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy France, he leads fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.',
     linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
   },
   {
@@ -22,7 +22,7 @@ const teamMembers = [
     name: 'Ainhoa Beneitez',
     category: 'CORE TEAM',
     image: Ainhoa_France,
-    description: 'Committed team member working to strengthen connections between the Nepali diaspora and allies in France while supporting Canopy\'s educational initiatives.',
+    description: 'Ainhoa Beneitez is an Admin, Finance & Transit specialist at Médecins Sans Frontières France and a Business & Organizational Strategy Consultant with a background in humanitarian and development aid. She encouraged us to launch Canopy France and continues to support vital partnerships and strategy.',
     linkedin: 'https://www.linkedin.com/in/ainhoa-beneitez-343b87170/'
   },
   {
@@ -30,7 +30,7 @@ const teamMembers = [
     name: 'Olivia Palermo',
     category: 'CORE TEAM',
     image: Olivia_France,
-    description: 'Passionate team member dedicated to Canopy France\'s mission of supporting education equity in Nepal through fundraising, cultural events, and community engagement across France.',
+    description: 'Olivia is a Master’s student in Social and Cultural Anthropology at the University of Strasbourg, with research focused on temporalities and agroecology. With a background in education and multilingual engagement, she contributes to Canopy France’s communications with care and cultural insight.',
     linkedin: ''
   }
   
