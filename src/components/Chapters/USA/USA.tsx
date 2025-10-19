@@ -142,7 +142,7 @@ const CanopyUSASection = () => {
         {/* Donate to Canopy USA - Bank Details (DITTO donate page style) */}
         <div className="mt-4 mb-10 rounded-lg text-center">
           <h2 className="text-3xl font-bold text-primary-red mb-4">Donate to Canopy USA</h2>
-          <div className="text-left inline-block max-w-md mx-auto">
+          <div className="text-left inline-block max-w-md lg:max-w-2xl mx-auto">
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-lg">
               <span className="font-semibold text-gray-800 text-right pr-4">Account number:</span>
               <span className="text-gray-600">112787178</span>
@@ -154,9 +154,9 @@ const CanopyUSASection = () => {
               <span className="text-gray-600">Checking</span>
 
               <span className="font-semibold text-gray-800 text-right pr-4">Name:</span>
-              <span className="text-gray-600">INTERNATIONAL STUDENT LEARNING, INC.</span>
+              <span className="text-gray-600 lg:whitespace-nowrap">INTERNATIONAL STUDENT LEARNING, INC.</span>
 
-              <div className="col-span-2 text-gray-500 italic mt-2 text-sm text-center">(This is Canopy USA’s legal name)</div>
+              <div className="col-span-2 text-gray-500 italic text-sm text-right">(This is Canopy USA’s legal name)</div>
             </div>
           </div>
         </div>
