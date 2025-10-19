@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
-import map from '../../assets/map.svg';
-import { Instagram, Facebook, Linkedin, Link, Youtube } from 'lucide-react';
+import { Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
 
 // Extend the Window interface to allow window.callback
 declare global {
@@ -127,7 +126,7 @@ const Footer: React.FC = () => {
 
           {/* Column 2: Take Action & Stay Updated */}
           <div className="lg:col-span-1 flex flex-col items-center lg:items-start lg:pl-16">
-            <div className="text-left text-center">
+            <div className="text-center lg:text-left">
               <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Take Action</h3>
               <ul className="space-y-2 text-base text-center">
                 <li><a href="/donate" onClick={(e) => { e.preventDefault(); navigate('/donate'); }} className="hover:underline cursor-pointer">Donate Now</a></li>
@@ -191,8 +190,8 @@ const Footer: React.FC = () => {
                 <ul className="space-y-2 text-base text-center">
                     <li><a href="/canopy-faq" onClick={(e) => { e.preventDefault(); navigate('/canopy-faq'); }} className="hover:underline cursor-pointer">FAQs</a></li>
                     <li><a href="/publications?section=annual-report" onClick={(e) => { e.preventDefault(); navigate('/publications?section=annual-report'); }} className="hover:underline cursor-pointer">Annual Report</a></li>
-                    <li><a href="/canopy-policy" onClick={(e) => { e.preventDefault(); navigate('/canopy-policy'); }} className="hover:underline cursor-pointer">Policies and Guidelines</a></li>
                     <li><a href="/featured" onClick={(e) => { e.preventDefault(); navigate('/featured'); }} className="hover:underline cursor-pointer">Features</a></li>
+                    <li><a href="/blogs" onClick={(e) => { e.preventDefault(); navigate('/blogs'); }} className="hover:underline cursor-pointer">Blogs</a></li>
                 </ul>
              </div>
           </div>

@@ -30,6 +30,7 @@ import PayPalProvider from './components/PayPalProvider';
 import OurImpact from './components/OurImpact/OurImpact';
 import FAQ from './components/FAQ/faq';
 import FeaturedPage from './components/Featured/FeaturedPage';
+import BlogsPage from './components/Blogs/BlogsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -86,6 +87,7 @@ function App() {
               <Route path="/donate" element={<Donate />} />
               <Route path="/canopy-faq" element={<FAQ />} />
               <Route path="/featured" element={<FeaturedPage />} />
+              <Route path="/blogs" element={<BlogsPage />} />
             </Routes>
           </AnimatePresence>
           <Footer />
