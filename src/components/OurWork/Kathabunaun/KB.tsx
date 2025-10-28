@@ -1,7 +1,111 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import heroImg from '../../../assets/kbtop.png';
 import kblifecycle from '../../../assets/kbImpact.svg';
 import kbImpact from '../../../assets/kbImpact.png';
+import mtoc1 from '../../../assets/mtoc/MTOC1.png';
+import mtoc2 from '../../../assets/mtoc/MTOC2.png';
+import mtoc3 from '../../../assets/mtoc/MTOC3.png';
+import mtoc4 from '../../../assets/mtoc/MTOC4.png';
+import mtoc5 from '../../../assets/mtoc/MTOC5.png';
+import mtoc6 from '../../../assets/mtoc/MTOC6.png';
+
+const mtocImages = [
+  { src: mtoc1, alt: 'MTOC step 1' },
+  { src: mtoc2, alt: 'MTOC step 2' },
+  { src: mtoc3, alt: 'MTOC step 3' },
+  { src: mtoc4, alt: 'MTOC step 4' },
+  { src: mtoc5, alt: 'MTOC step 5' },
+  { src: mtoc6, alt: 'MTOC step 6' },
+];
+
+const MobileMTOCCarousel: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const onScroll = () => {
+      const children = Array.from(container.children) as HTMLElement[];
+      if (children.length === 0) return;
+      // Find the closest slide by comparing scrollLeft with each child's offsetLeft
+      let closestIndex = 0;
+      let minDist = Number.POSITIVE_INFINITY;
+      const currentLeft = container.scrollLeft;
+      for (let i = 0; i < children.length; i++) {
+        const childLeft = children[i].offsetLeft - (children[0]?.offsetLeft || 0);
+        const dist = Math.abs(currentLeft - childLeft);
+        if (dist < minDist) {
+          minDist = dist;
+          closestIndex = i;
+        }
+      }
+      setActiveIndex(closestIndex);
+    };
+
+    container.addEventListener('scroll', onScroll, { passive: true });
+    return () => container.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToIndex = (index: number) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const children = Array.from(container.children) as HTMLElement[];
+    const clamped = Math.min(Math.max(index, 0), children.length - 1);
+    const firstLeft = children[0]?.offsetLeft || 0;
+    const targetLeft = (children[clamped]?.offsetLeft || 0) - firstLeft;
+    container.scrollTo({ left: targetLeft, behavior: 'smooth' });
+  };
+
+  // Autoscroll removed per request; users can tap left/right areas or dots
+
+  const handleClickAdvance = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect();
+    const clickX = e.clientX;
+    const leftThreshold = rect.left + rect.width * 0.4; // left ~40% goes back
+    const rightThreshold = rect.left + rect.width * 0.6; // right ~40% advances
+    if (clickX >= rightThreshold) scrollToIndex(activeIndex + 1);
+    else if (clickX <= leftThreshold) scrollToIndex(activeIndex - 1);
+  };
+
+  return (
+    <div className="md:hidden mt-8 mb-10" onClick={handleClickAdvance}>
+      <div
+        ref={containerRef}
+        className="w-full overflow-x-auto snap-x snap-mandatory flex gap-4 px-4"
+        style={{ scrollBehavior: 'smooth' }}
+      >
+        {mtocImages.map((img, idx) => (
+          <div key={idx} className="flex-shrink-0 w-full snap-center">
+            <img
+              src={img.src}
+              alt={img.alt}
+              className="w-full h-auto rounded-xl object-contain"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-center gap-2 mt-4">
+        {mtocImages.map((_, i) => (
+          <button
+            key={i}
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={(ev) => {
+              ev.stopPropagation();
+              scrollToIndex(i);
+            }}
+            className={
+              'h-2 w-2 rounded-full transition-colors ' +
+              (i === activeIndex ? 'bg-primary-red' : 'bg-gray-300')
+            }
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const KathaBunaun = () => {
   return (
@@ -57,18 +161,23 @@ const KathaBunaun = () => {
         </div>
       </div>
 
-      {/* Lifecycle Section - Single Image */}
+      {/* Lifecycle Section - Desktop image + Mobile carousel */}
       <div className="px-0 py-12 pb-0">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-red text-center">
           Katha Bunaun Incorporation in the System
         </h2>
-        <div className="flex justify-center">
-          <img 
+
+        {/* Desktop/Tablet: keep existing landscape image */}
+        <div className="hidden md:flex justify-center">
+          <img
             src={kblifecycle}
             alt="Canopy Scholar Lifecycle Flowchart"
             className="w-screen max-w-none h-auto mt-8 mb-8 mx-auto"
           />
         </div>
+
+        {/* Mobile: swipeable carousel using MTOC images */}
+        <MobileMTOCCarousel />
       </div>
 
       {/* Impact Section */}
