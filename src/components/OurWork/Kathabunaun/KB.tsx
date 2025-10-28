@@ -58,6 +58,17 @@ const MobileMTOCCarousel: React.FC = () => {
     container.scrollTo({ left: targetLeft, behavior: 'smooth' });
   };
 
+  // Ensure we always start from the first slide on mount
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    container.scrollTo({ left: 0, behavior: 'auto' });
+    // After layout settles, ensure index 0
+    requestAnimationFrame(() => scrollToIndex(0));
+    const timeout = window.setTimeout(() => scrollToIndex(0), 100);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
   // Autoscroll removed per request; users can tap left/right areas or dots
 
   const handleClickAdvance = (e: React.MouseEvent<HTMLDivElement>) => {
