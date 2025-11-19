@@ -12,9 +12,27 @@ import icon5 from '../../assets/val5.svg';
 const CanopyAboutUs: React.FC = () => {
   const [hoveredValue, setHoveredValue] = useState<number | null>(null);
   const [anyHovered, setAnyHovered] = useState(false);
+  const [currentTocSlide, setCurrentTocSlide] = useState(0);
+
+  // Import MTOC images
+  const mtocImages = [
+    new URL('../../assets/mtoc/MTOC1.png', import.meta.url).href,
+    new URL('../../assets/mtoc/MTOC2.png', import.meta.url).href,
+    new URL('../../assets/mtoc/MTOC3.png', import.meta.url).href,
+    new URL('../../assets/mtoc/MTOC4.png', import.meta.url).href,
+    new URL('../../assets/mtoc/MTOC5.png', import.meta.url).href,
+    new URL('../../assets/mtoc/MTOC6.png', import.meta.url).href,
+  ];
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTocSlide((prev) => (prev + 1) % mtocImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [mtocImages.length]);
   return (
     <div className="text-gray-800 mt-24">
-     
+
       {/* Why Education Section */}
       <div className="relative w-full overflow-hidden">
         {/* Full Width Image */}
@@ -232,7 +250,7 @@ const CanopyAboutUs: React.FC = () => {
         </div>
 
         {/* Our Theory of Change Section */}
-        <div className="relative w-full py-4 overflow-hidden">
+        <div className="relative w-full py-2 overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-red">Our Theory Of Change</h2>
           </div>
@@ -245,12 +263,31 @@ const CanopyAboutUs: React.FC = () => {
                 className="absolute top-10 left-1/4 w-4 h-4 bg-blue-200 rounded-full opacity-10"
               ></motion.div>
             </div>
-            <div className="mx-auto -mt-16">
-              <img
-                src={toC}
-                alt="Theory of Change Diagram"
-                className="w-full max-w-full h-auto lg:h-[650px] object-contain mx-auto"
-              />
+            <div className="mx-auto mt-4 md:-mt-16">
+              {/* Desktop View */}
+              <div className="hidden md:block">
+                <img
+                  src={toC}
+                  alt="Theory of Change Diagram"
+                  className="w-full max-w-full h-auto lg:h-[650px] object-contain mx-auto"
+                />
+              </div>
+
+              {/* Mobile View - Carousel */}
+              <div className="block md:hidden relative h-[500px] w-full overflow-hidden my-8 mx-auto">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentTocSlide}
+                    src={mtocImages[currentTocSlide]}
+                    alt={`Theory of Change step ${currentTocSlide + 1}`}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -50 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute inset-0 w-full h-full object-contain object-center p-4"
+                  />
+                </AnimatePresence>
+              </div>
             </div>
           </div>
         </div>
@@ -307,10 +344,10 @@ const CanopyAboutUs: React.FC = () => {
                     onBlur={() => { setHoveredValue(null); setAnyHovered(false); }}
                     tabIndex={0}
                   >
-                    <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center mb-3">
+                    <div className="relative w-32 h-32 md:w-24 md:h-24 lg:w-28 lg:h-28 flex items-center justify-center mb-3">
                       <img src={val.icon} alt={val.label} className="w-full h-full object-contain z-10 rounded-xl" />
                     </div>
-                    <motion.div 
+                    <motion.div
                       className={`text-xl md:text-xl font-extrabold text-center text-yellow-500 mb-2 select-none${val.label === 'Space for Growth' ? ' whitespace-nowrap' : ''}`}
                       animate={hoveredValue === idx ? { scale: 1.05, color: "#fbbf24" } : { scale: 1, color: "#fbbf24" }}
                       transition={{ duration: 0.3 }}
@@ -337,7 +374,7 @@ const CanopyAboutUs: React.FC = () => {
             </div>
           </div>
           {/* Image with Overlay Text */}
-          <motion.div 
+          <motion.div
             className="relative w-full"
             animate={{ y: anyHovered ? 30 : 0 }}
             transition={{ type: 'spring', stiffness: 30, damping: 30, }}

@@ -31,44 +31,44 @@ const BarChart: React.FC<BarChartProps> = ({ title, preValue, postValue, growth,
       {/* Added justify-center here to center the chart graphic */}
       <div className="flex w-full items-end justify-center">
         <div className="flex items-end border-b-2 border-l-2 border-gray-300 relative pl-4 pr-2" style={{ height: chartHeight + 10, width }}>
-            {yAxisLabels.map(label => (
-                <div 
-                    key={label} 
-                    className="absolute text-right w-6 -left-8 text-xs text-gray-500"
-                    style={{ bottom: `${(label * scale) - 4}px` }}
-                >
-                    {label}
-                </div>
-            ))}
-            
-            <div className="h-full flex justify-center items-end relative" style={{ width: width - 40, gap: barGap }}>
-                {/* Before-value Bar with Tooltip */}
-                <div className="relative group flex justify-center">
-                    <div
-                        className="bg-primary-orange/20 rounded-t-sm"
-                        style={{ width: barWidth, height: `${preHeight}px` }}
-                    ></div>
-                    <div className="absolute bottom-full z-10 mb-2 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        Before Canopy: {preValue.toFixed(1)}
-                    </div>
-                </div>
-                {/* Post-value Bar with Tooltip and Growth Label */}
-                <div className="relative group flex justify-center">
-                    {/* Growth label above After Canopy bar */}
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-center text-xs font-bold text-primary-cyan">
-                        {growth}
-                        <br />
-                        growth
-                    </div>
-                    <div
-                        className="bg-secondary-cyan rounded-t-sm transition-all duration-300 ease-in-out hover:opacity-80"
-                        style={{ width: barWidth, height: `${postHeight}px` }}
-                    ></div>
-                    <div className="absolute bottom-full z-10 mb-2 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                        After Canopy: {postValue.toFixed(1)}
-                    </div>
-                </div>
+          {yAxisLabels.map(label => (
+            <div
+              key={label}
+              className="absolute text-right w-6 -left-8 text-xs text-gray-500"
+              style={{ bottom: `${(label * scale) - 4}px` }}
+            >
+              {label}
             </div>
+          ))}
+
+          <div className="h-full flex justify-center items-end relative" style={{ width: width - 40, gap: barGap }}>
+            {/* Before-value Bar with Tooltip */}
+            <div className="relative group flex justify-center">
+              <div
+                className="bg-primary-orange/20 rounded-t-sm"
+                style={{ width: barWidth, height: `${preHeight}px` }}
+              ></div>
+              <div className="absolute bottom-full z-10 mb-2 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                Before Canopy: {preValue.toFixed(1)}
+              </div>
+            </div>
+            {/* Post-value Bar with Tooltip and Growth Label */}
+            <div className="relative group flex justify-center">
+              {/* Growth label above After Canopy bar */}
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 text-center text-xs font-bold text-primary-cyan">
+                {growth}
+                <br />
+                growth
+              </div>
+              <div
+                className="bg-secondary-cyan rounded-t-sm transition-all duration-300 ease-in-out hover:opacity-80"
+                style={{ width: barWidth, height: `${postHeight}px` }}
+              ></div>
+              <div className="absolute bottom-full z-10 mb-2 w-max px-2 py-1 bg-gray-800 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                After Canopy: {postValue.toFixed(1)}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <p className="text-base font-semibold  mt-1 px-1 h-12 flex items-center justify-center text-center">{title}</p>
@@ -88,11 +88,11 @@ const OurImpact: React.FC = () => {
     { title: "Extracurricular Activities Participation", preValue: 2, postValue: 4, growth: "67%" },
     { title: "Academic Support by Family", preValue: 2.7, postValue: 4.8, growth: "91%" },
   ];
-  
+
   // Split data for the two rows
   const rowOneData = allChartData.slice(0, 4);
   const rowTwoData = allChartData.slice(4, 7);
-  
+
   const maxValue = Math.max(...allChartData.map(d => d.postValue), 5.0);
 
   // For styled stats cards, split headline and subtext
@@ -114,7 +114,7 @@ const OurImpact: React.FC = () => {
       subtext: "feel mentally stronger and less overwhelmed at school after Canopy's support"
     },
   ];
-  
+
   // Carousel state for small/medium screens
   const [currentChart, setCurrentChart] = useState(0);
   useEffect(() => {
@@ -127,10 +127,10 @@ const OurImpact: React.FC = () => {
   return (
     <section className="bg-white mt-28">
       <div className="relative h-[400px] w-full flex items-center justify-center text-white">
-        <img 
-          src={impactHero} 
-          alt="Students supported by Canopy Nepal" 
-          className="absolute inset-0 w-full h-[400px] object-cover" 
+        <img
+          src={impactHero}
+          alt="Students supported by Canopy Nepal"
+          className="absolute inset-0 w-full h-[400px] object-cover"
         />
         <div className="absolute inset-0 "></div>
         <h1 className="relative text-5xl sm:text-7xl font-bold z-10 ">Our Impact</h1>
@@ -221,33 +221,33 @@ const OurImpact: React.FC = () => {
           <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
         </div>
 
-    
-        
+
+
         <MeetOurStudents />
-        {/* <WhereWeWork /> */}
-        
-          {/* Interactive Ecosystem SVG */}
-          <div className="text-primary-blue text-3xl sm:text-4xl font-extrabold mb-4 whitespace-pre-line text-center">
-                  Our Ecosystem
-                </div>
-      <div className="flex justify-center w-full mt-8 mb-8">
-        <div className="w-3/4 px-4 sm:px-6 lg:px-8">
-          <img
-            src={ecosystem}
-            alt="Our Ecosystem"
-            className="w-full h-auto"
-          />
+        <WhereWeWork />
+
+        {/* Interactive Ecosystem SVG */}
+        <div className="text-primary-blue text-3xl sm:text-4xl font-extrabold mb-4 whitespace-pre-line text-center">
+          Our Ecosystem
         </div>
-      </div>
+        <div className="flex justify-center w-full mt-8 mb-8">
+          <div className="w-3/4 px-4 sm:px-6 lg:px-8">
+            <img
+              src={ecosystem}
+              alt="Our Ecosystem"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
 
         <Impact variant="our-impact" />
 
         {/* Sustainability Section */}
-        
-        <Sustainable />
-        
 
-        
+        <Sustainable />
+
+
+
       </div>
     </section>
   );
