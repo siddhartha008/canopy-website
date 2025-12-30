@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import PDFViewer from '../PDFViewer/PDFViewer';
+import Annual2025 from '../../assets/covers/Annual2025.png';
 import Annual2024 from '../../assets/covers/Annual2024.png';
 import Annual2023 from '../../assets/covers/Annual2023.png';
 import Annual2022 from '../../assets/covers/Annual2022.png';
@@ -99,21 +100,19 @@ const PublicationsPage = () => {
           <div className="flex justify-center space-x-8">
             <button
               onClick={() => setActiveSection('buneka-katha')}
-              className={`text-lg pb-2 transition-colors uppercase ${
-                activeSection === 'buneka-katha'
-                  ? 'text-primary-cyan border-b-2 border-primary-cyan font-bold'
-                  : 'text-gray-600 hover:text-primary-cyan font-medium'
-              }`}
+              className={`text-lg pb-2 transition-colors uppercase ${activeSection === 'buneka-katha'
+                ? 'text-primary-cyan border-b-2 border-primary-cyan font-bold'
+                : 'text-gray-600 hover:text-primary-cyan font-medium'
+                }`}
             >
               Buneka Katha
             </button>
             <button
               onClick={() => setActiveSection('annual-report')}
-              className={`text-lg pb-2 transition-colors uppercase ${
-                activeSection === 'annual-report'
-                  ? 'text-primary-cyan border-b-2 border-primary-cyan font-bold'
-                  : 'text-gray-600 hover:text-primary-cyan font-medium'
-              }`}
+              className={`text-lg pb-2 transition-colors uppercase ${activeSection === 'annual-report'
+                ? 'text-primary-cyan border-b-2 border-primary-cyan font-bold'
+                : 'text-gray-600 hover:text-primary-cyan font-medium'
+                }`}
             >
               Annual Report
             </button>
@@ -156,7 +155,7 @@ const PublicationsPage = () => {
                 { id: 1, cover: Magazine1, pdf: 'magazine-1.pdf' }
               ].map((magazine) => (
                 <div key={magazine.id} className="flex flex-col items-center">
-                  <button 
+                  <button
                     onClick={() => openPDF(`/pdfs/${magazine.pdf}`, `Buneka Katha Magazine ${magazine.id}`)}
                     className="transition-transform hover:scale-105"
                   >
@@ -182,9 +181,24 @@ const PublicationsPage = () => {
 
             {/* Annual Reports Display */}
             <div className="flex flex-wrap justify-center gap-8 py-4">
+              {/* 2025 Report */}
+              <div className="flex flex-col items-center">
+                <button
+                  onClick={() => openPDF('/pdfs/annual-report-2025.pdf', 'Annual Report 2025')}
+                  className="transition-transform hover:scale-105"
+                >
+                  <img
+                    src={Annual2025}
+                    alt="2025 Annual Report"
+                    className="w-80 h-[28rem] object-cover object-center shadow-md rounded-lg bg-white"
+                  />
+                </button>
+                <p className="mt-4 font-semibold text-gray-800">2025</p>
+              </div>
+
               {/* 2024 Report */}
               <div className="flex flex-col items-center">
-                <button 
+                <button
                   onClick={() => openPDF('/pdfs/annualreport2024.pdf', 'Annual Report 2024')}
                   className="transition-transform hover:scale-105"
                 >
@@ -199,7 +213,7 @@ const PublicationsPage = () => {
 
               {/* 2023 Report */}
               <div className="flex flex-col items-center">
-                <button 
+                <button
                   onClick={() => openPDF('/pdfs/annualreport2023.pdf', 'Annual Report 2023')}
                   className="transition-transform hover:scale-105"
                 >
@@ -214,7 +228,7 @@ const PublicationsPage = () => {
 
               {/* 2022 Report */}
               <div className="flex flex-col items-center">
-                <button 
+                <button
                   onClick={() => openPDF('/pdfs/annualreport2022.pdf', 'Annual Report 2022')}
                   className="transition-transform hover:scale-105"
                 >
