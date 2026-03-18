@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import Siddhartha from '../../assets/team/all/Siddhartha.png';
-import Anusuya from '../../assets/team/all/Anusuya.png';
-import Pratima from '../../assets/team/all/Pratima.png';
 import Mohit from '../../assets/team/all/Mohit.png';
 import Monal from '../../assets/team/all/Monal.png';
-import Angirash from '../../assets/team/all/Angirash.png';
 import Anjula from '../../assets/team/all/Anjula.png';
-import Monika from '../../assets/team/all/Monika.png';
-import Wangmo from '../../assets/team/all/Wangmo.png';
-import Yamuna from '../../assets/team/all/Yamuna.png';
+import Usha from '../../assets/team/all/Usha.png';
+import Amisha from '../../assets/team/all/Amisha.png';
+import Prinsha from '../../assets/team/all/Prinsha.png';
+import Shreeya from '../../assets/team/all/Shreeya.png';
+import Dakshita from '../../assets/team/all/Dakshita.png';
 import Raghav from '../../assets/team/all/Raghav.png';
-import Tanisha from '../../assets/team/all/Tanisha.png';
-import Abhisekh from '../../assets/team/all/Abhishek.png';
+import SobikaGautam from '../../assets/team/all/Sobhika.png';
+import Yamuna from '../../assets/team/all/Yamuna.png';
 
 // Facilitator images
 import Anala from '../../assets/team/facilitators/Anala.png';
@@ -72,26 +70,8 @@ const CanopyMeetTeam: React.FC = () => {
       description: 'Leads Canopy\'s vision, partnerships, and fundraising strategy—steering growth, building global relationships, and amplifying the organization\'s voice through thought leadership, board support, and international representation.',
       linkedin: 'http://www.linkedin.com/in/monal-bhattarai-bb3261194'
     },
-    // {
-    //   id: 3,
-    //   name: 'Angirash Karki',
-    //   title: 'Executive Director',
-    //   category: 'CORE TEAM',
-    //   image: Angirash,
-    //   description: 'Ensures Canopy operates smoothly by overseeing compliance, HR, finance, and risk management while building strong government partnerships and driving internal systems for staff performance and operational excellence.',
-    //   linkedin: 'https://www.linkedin.com/in/angirash-karki/'
-    // },
     {
-      id: 4,
-      name: 'Pratima Wosti',
-      title: 'Finance & Legal Officer',
-      category: 'CORE TEAM',
-      image: Pratima,
-      description: 'Manages budgets, payments, and reports, ensuring Canopy\'s financial integrity with timely reconciliations, audit readiness, and clear communication of budget performance across all departments and proposals.',
-      linkedin: 'https://www.linkedin.com/in/pratima-wosti-005b72239/'
-    },
-    {
-      id: 5,
+      id: 3,
       name: 'Anjula Joshi',
       title: 'Program Coordinator',
       category: 'CORE TEAM',
@@ -100,72 +80,72 @@ const CanopyMeetTeam: React.FC = () => {
       linkedin: 'https://www.linkedin.com/in/anjula-joshi-she-her-352974217/'
     },
     {
-      id: 6,
-      name: 'Tanisha Agarwal',
-      title: 'Development Assistant',
+      id: 4,
+      name: 'Usha Malla',
+      title: 'Finance, Legal & Admin Officer',
       category: 'CORE TEAM',
-      image: Tanisha,
-      description: 'Drives fundraising efforts by writing grant proposals, managing donor communications, organizing campaigns, and aligning program and finance teams to secure funding and report impact.',
-      linkedin: 'https://www.linkedin.com/in/tanisha-agarwal-a65585240/'
+      image: Usha,
+      description: 'Manages budgets, payments, and reports, ensuring Canopy\'s financial integrity with timely reconciliations, audit readiness, and clear communication of budget performance across all departments and proposals.',
+      linkedin: 'https://www.linkedin.com/in/usha-malla-906b41150/'
+    },
+    {
+      id: 5,
+      name: 'Amisha Adhikari',
+      title: 'Program Field Officer',
+      category: 'CORE TEAM',
+      image: Amisha,
+      description: 'Leads implementation and government partnerships outside Kathmandu Valley, coordinating with local offices and schools to ensure smooth execution, strong relationships, and high-quality delivery of Canopy\'s programs across districts.',
+      linkedin: 'https://www.linkedin.com/in/amisha-adhikari-4621a7291/'
+    },
+    {
+      id: 6,
+      name: 'Prinsha Katuwal',
+      title: 'Facilitator Officer',
+      category: 'CORE TEAM',
+      image: Prinsha,
+      description: 'Supports and trains facilitators, ensures quality program delivery, manages performance reviews, and maintains a strong support system to foster facilitator growth and retention.',
+      linkedin: 'https://www.linkedin.com/in/prinsha-katwal?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
     },
     {
       id: 7,
-      name: 'Wangmo Lama',
-      title: 'Communication Officer',
+      name: 'Shreeya Aryal',
+      title: 'School Liaison Associate',
       category: 'CORE TEAM',
-      image: Wangmo,
-      description: 'Leads Canopy\'s digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.',
-      linkedin: 'https://www.linkedin.com/in/wangmo-lama-b08688273/'
+      image: Shreeya,
+      description: 'Builds strong relationships with schools, conduct regular visits, coordinate events, monitor student well-being, and ensure timely feedback and collaboration with parents and teachers to support scholars holistically.',
+      linkedin: 'https://www.linkedin.com/in/shreeya-aryal-01b6ba269?trk=contact-info'
     },
     {
       id: 8,
-      name: 'Abhishek Pradhan',
-      title: 'Monitoring and Evaluation Trainee',
+      name: 'Dakshita Karki',
+      title: 'Communication Officer',
       category: 'CORE TEAM',
-      image: Abhisekh,
-      description: 'Tracks program impact through assessments, reporting, and data tools, ensuring that insights guide decision-making, drive improvement, and reflect the voices of students and communities.',
-      linkedin: null
+      image: Dakshita,
+      description: 'Leads Canopy\'s digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.',
+      linkedin: 'https://www.linkedin.com/in/dakshita-karki-a9591136b/'
     },
     {
       id: 9,
-      name: 'Anusuya Dahal',
-      title: 'Facilitator Officer',
-      category: 'CORE TEAM',
-      image: Anusuya,
-      description: 'Supports and trains facilitators, ensures quality program delivery, manages performance reviews, and maintains a strong support system to foster facilitator growth and retention.',
-      linkedin: 'https://www.linkedin.com/in/anusuya-dahal-3b5884223/'
-    },
-    {
-      id: 10,
-      name: 'Siddhartha Guvaju',
-      title: 'Facilitator Officer',
-      category: 'CORE TEAM',
-      image: Siddhartha,
-      description: 'Supports and trains facilitators, ensures quality program delivery, manages performance reviews, and maintains a strong support system to foster facilitator growth and retention.',
-      linkedin: null
-    },
-    {
-      id: 11,
-      name: 'Monika Limbu',
-      title: 'School Liaison Officer',
-      category: 'CORE TEAM',
-      image: Monika,
-      description: 'Builds strong relationships with schools, conduct regular visits, coordinate events, monitor student well-being, and ensure timely feedback and collaboration with parents and teachers to support scholars holistically.',
-      linkedin: 'https://www.linkedin.com/in/monika-limbu-43119723r/'
-    },
-    {
-      id: 12,
       name: 'Raghav Devkota',
       title: 'Finance Intern',
       category: 'CORE TEAM',
       image: Raghav,
       description: 'Supports day-to-day accounting tasks, helps maintain organized records, assists with budget tracking, and learns nonprofit finance systems.',
-      linkedin: null
+      linkedin: 'https://www.linkedin.com/in/raghav-devkota-3386a3360?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     },
     {
-      id: 13,
+      id: 10,
+      name: 'Sobika Shrestha',
+      title: 'Finance Intern',
+      category: 'CORE TEAM',
+      image: SobikaGautam,
+      description: 'Supports day-to-day accounting tasks, helps maintain organized records, assists with budget tracking, and learns nonprofit finance systems.',
+      linkedin: 'https://www.linkedin.com/in/sobika-shrestha/'
+    },
+    {
+      id: 11,
       name: 'Yamuna Thapa',
-      title: 'Kitchen and Care Champion',
+      title: 'Cook and Cleaner',
       category: 'CORE TEAM',
       image: Yamuna,
       description: 'Ensures a welcoming, hygienic, and well-fed environment by preparing nutritious meals, maintaining cleanliness, and supporting daily office upkeep, helping the team stay energized and focused on their work.',

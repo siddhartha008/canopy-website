@@ -21,6 +21,10 @@ import Needhika from '../../assets/team/advisoryboard/Needhika.png';
 import Sanam from '../../assets/team/advisoryboard/Sanam.png';
 import Subha from '../../assets/team/advisoryboard/Subha.png';
 import Swexya from '../../assets/team/advisoryboard/Swexya.png';
+import Foteini from '../../assets/team/advisoryboard/Foteini.png';
+import Yashna from '../../assets/team/advisoryboard/Yashna.png';
+import MeghaPoddar from '../../assets/team/advisoryboard/Megha.png';
+import Yukta from '../../assets/team/advisoryboard/Yukta.png';
 
 const CanopyBoardOfDirectors: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState('BOARD OF DIRECTORS');
@@ -91,6 +95,14 @@ const CanopyBoardOfDirectors: React.FC = () => {
       description: 'Bijeysh is a social entrepreneur and founder of Danfe Works, which creates opportunities for marginalized communities through business with purpose. He previously led the nonprofit SAATH and has worked across the U.S., Europe, and Nepal. Passionate about impact, he\'s also a nature lover and lifelong learner.'
     },
     {
+      id: 25,
+      name: 'Megha Poddar',
+      title: 'Nepal',
+      category: 'ADVISORY BOARD',
+      image: MeghaPoddar,
+      description: 'Megha is a strategy and growth leader with experience across consulting, electric mobility, and enterprise services in India and Nepal. She currently serves as Strategy Lead and Director at Gogoro Nepal and Blackbox Records Management, focusing on market expansion, partnerships, and operational growth.'
+    },
+    {
       id: 8,
       name: 'Niranjan Kunwar',
       title: 'Nepal',
@@ -112,7 +124,15 @@ const CanopyBoardOfDirectors: React.FC = () => {
       title: 'Nepal',
       category: 'ADVISORY BOARD',
       image: Shristi,
-      description: 'Shristi is an education researcher, entrepreneur, and Fulbright alum with experience at the World Bank, USAID, and DC\'s education agency. A former teacher in Nepal, she now runs Yak9 Chews, a pet wellness company based in Austin—proving you can love data and dogs equally.'
+      description: 'Shristi is an education professional and entrepreneur focused on expanding access to quality education. A Fulbright Scholar with a Master\'s from the University of Pennsylvania, she manages Yak9 Chews and was recognized in Inc.\'s 2026 Female Founders 500.'
+    },
+    {
+      id: 26,
+      name: 'Yukta Bajracharya',
+      title: 'Nepal',
+      category: 'ADVISORY BOARD',
+      image: Yukta,
+      description: 'Yukta works at the intersection of arts, culture, and inclusion as Arts Programme Manager at the British Council. A writer and facilitator, she co-founded the spoken word collective Word Warriors and holds an Erasmus Mundus Master\'s in Children\'s Literature and Culture from the University of Glasgow.'
     },
     
     // USA Advisory Board
@@ -165,6 +185,14 @@ const CanopyBoardOfDirectors: React.FC = () => {
       description: 'Clement is a Biology Professor at CUNY Guttman and founder of ISLearning. With decades of experience teaching in both K–12 and higher education, he is passionate about fostering global citizenship and building inclusive learning environments. He holds a Ph.D. from Columbia University.'
     },
     {
+      id: 23,
+      name: 'Foteini Giannopoulou',
+      title: 'USA',
+      category: 'ADVISORY BOARD',
+      image: Foteini,
+      description: 'Foteini is a Learning Experience Designer at Harvard Business School Foundry. She holds an Ed.M. from Harvard and works on technology-enabled learning with social enterprises and NGOs to expand inclusive education.'
+    },
+    {
       id: 17,
       name: 'Heather Schultz',
       title: 'USA',
@@ -211,6 +239,14 @@ const CanopyBoardOfDirectors: React.FC = () => {
       category: 'ADVISORY BOARD',
       image: Swexya,
       description: 'Swexya is a Senior Investment Analyst at the Carnegie Corporation of New York. With a strong foundation in financial research and analysis, she previously worked at Stone Forest Capital. She brings analytical clarity, curiosity, and commitment to socially impactful investing and education access.'
+    },
+    {
+      id: 24,
+      name: 'Yashna Jhaveri',
+      title: 'USA',
+      category: 'ADVISORY BOARD',
+      image: Yashna,
+      description: 'Yashna works at the Overdeck Family Foundation supporting K-8 grantmaking in instructional materials and education technology. She previously worked at Teach For India and holds an Ed.M. from the Harvard Graduate School of Education.'
     }
   ];
 
