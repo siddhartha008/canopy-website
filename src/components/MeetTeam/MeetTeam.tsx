@@ -366,7 +366,7 @@ const CanopyMeetTeam: React.FC = () => {
     {
       id: 43,
       name: 'Christian Skalshøi',
-      title: 'Volunteer, Nepal',
+      title: 'Volunteer, Denmark',
       category: 'VOLUNTEERS',
       image: Christian,
       description: 'Christian is a pedagogical assistant in Copenhagen who conducted control and experimental group research evaluating Canopy\'s storytelling-based classes.',
