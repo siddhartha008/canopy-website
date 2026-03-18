@@ -32,6 +32,8 @@ import PushpaKala from '../../assets/team/facilitators/PushpaKala.png';
 import Sobhika from '../../assets/team/facilitators/Sobhika.png';
 import SristyKhadka from '../../assets/team/facilitators/Sristy Khadka.png';
 import Sujal from '../../assets/team/facilitators/Sujal.png';
+import Jenisha from '../../assets/team/facilitators/Jenisha.png';
+import Muna from '../../assets/team/facilitators/Muna.png';
 
 // Volunteer images
 import AbhishekVolunteer from '../../assets/team/volunteers/Abhishek.png';
@@ -41,6 +43,7 @@ import Isabelle from '../../assets/team/volunteers/Isabelle.png';
 import Kathy from '../../assets/team/volunteers/Kathy.png';
 import Margot from '../../assets/team/volunteers/Margot.png';
 import Pouline from '../../assets/team/volunteers/Pouline.png';
+import Christian from '../../assets/team/volunteers/Christian.png';
 
 const CanopyMeetTeam: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState('CORE TEAM');
@@ -216,6 +219,15 @@ const CanopyMeetTeam: React.FC = () => {
       linkedin: null
     },
     {
+      id: 41,
+      name: 'Jenisha Joshi',
+      title: 'Field Volunteer & Facilitator',
+      category: 'FACILATORS AND FIELD VOLUNTEERS',
+      image: Jenisha,
+      description: '',
+      linkedin: 'https://www.linkedin.com/in/jenisha-joshi-80505a364/'
+    },
+    {
       id: 21,
       name: 'Mamata Shah',
       title: 'Facilitator',
@@ -248,6 +260,15 @@ const CanopyMeetTeam: React.FC = () => {
       title: 'Field Volunteer & Facilitator',
       category: 'FACILATORS AND FIELD VOLUNTEERS',
       image: MohitMuni,
+      description: '',
+      linkedin: null
+    },
+    {
+      id: 42,
+      name: 'Muna Gautam',
+      title: 'Facilitator',
+      category: 'FACILATORS AND FIELD VOLUNTEERS',
+      image: Muna,
       description: '',
       linkedin: null
     },
@@ -341,6 +362,15 @@ const CanopyMeetTeam: React.FC = () => {
       image: AbhishekVolunteer,
       description: 'Abhishek is a Computer Science and Economics student at Washington and Lee University and a Bonner Scholar. He is an M&E Trainee at Canopy.',
       linkedin: 'https://www.linkedin.com/in/abhishekpradhannn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+    },
+    {
+      id: 43,
+      name: 'Christian Skalshøi',
+      title: 'Volunteer, Nepal',
+      category: 'VOLUNTEERS',
+      image: Christian,
+      description: 'Christian is a pedagogical assistant in Copenhagen who conducted control and experimental group research evaluating Canopy\'s storytelling-based classes.',
+      linkedin: 'https://www.linkedin.com/in/christian-skalshøi-951a1a214/'
     },
     {
       id: 39,
