@@ -271,7 +271,7 @@ const Footer: React.FC = () => {
                     <a href="https://www.facebook.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Facebook size={20} />
                     </a>
-                    <a href="https://www.linkedin.com/company/canopynepal1/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href="https://np.linkedin.com/company/canopynepal1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Linkedin size={20} />
                     </a>
                     <a href="https://www.youtube.com/channel/UC4jweDrtADma6nEnclqbb4w" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">

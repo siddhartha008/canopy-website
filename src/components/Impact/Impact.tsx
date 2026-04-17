@@ -40,8 +40,8 @@ const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
     },
     {
       icon: Heart,
-      title: 'Sessions Conducted',
-      value: 2500,
+      title: 'Community Members Impacted',
+      value: 250000,
       suffix: '+',
       color: 'text-primary-red',
       bgColor: 'bg-secondary-red',
