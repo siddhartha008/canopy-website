@@ -18,7 +18,7 @@ const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
     
     {
       icon: Users,
-      title: 'scholars',
+      title: 'Scholarships Awarded',
       value: 785,
       color: 'text-primary-cyan',
       bgColor: 'bg-secondary-cyan',
@@ -27,13 +27,13 @@ const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
       icon: BookOpen,
       value: 27000,
       suffix: '+',
-      title: 'students',
+      title: 'Students Worked With',
       color: 'text-primary-blue',
       bgColor: 'bg-secondary-blue',
     },
     {
       icon: Home,
-      title: 'schools',
+      title: 'Schools Reached',
       value: 251,
       color: 'text-primary-orange',
       bgColor: 'bg-secondary-orange',
