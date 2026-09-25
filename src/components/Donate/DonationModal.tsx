@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Check } from 'lucide-react';
 import PayPalDonation from './PayPalDonation';
+import { useSite } from '../../cms/ContentContext';
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -16,7 +17,7 @@ const DonationModal: React.FC<DonationModalProps> = ({ isOpen, onClose, prefillA
   const [showSuccess, setShowSuccess] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
-  const presetAmounts = [25, 50, 100, 250, 500, 1000];
+  const presetAmounts = useSite().donate.presetAmounts;
 
   React.useEffect(() => {
     if (isOpen && prefillAmount !== undefined) {

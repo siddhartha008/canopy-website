@@ -1,49 +1,15 @@
 import React from 'react';
-
-import heroImage from '../../../assets/canusaheader.png'; // The top image with two boys
-import whatWeDoImage from '../../../assets/canusabody.jpg'; // The image with the girls in uniform
-import getInvolvedImage from '../../../assets/canusa2.jpg'; // The image of the man in front of a building
-import Mohit_USA from '../../../assets/team/all/Mohit_USA.png';
-import Siddhartha_USA from '../../../assets/team/all/Siddhartha_USA.png';
-import Diki_USA from '../../../assets/team/all/Diki_USA.png';
-import Eshan_USA from '../../../assets/team/all/Eshan_USA.png';
+import { useSite } from '../../../cms/ContentContext';
+import { mediaUrl } from '../../../cms/media';
 
 
-const teamMembers = [
-  {
-    id: 1,
-    name: 'Mohit Rauniyar',
-    category: 'CORE TEAM',
-    image: Mohit_USA,
-    description: 'Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy USA, he leads partnerships and fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.',
-    linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
-  },
-  {
-    id: 2,
-    name: 'Siddhartha Mishra',
-    category: 'CORE TEAM',
-    image: Siddhartha_USA,
-    description: "Siddhartha is a full-stack developer and digital problem-solver with expertise in Flutter, cloud infrastructure, and intuitive UI/UX.  At Canopy USA, he leads digital presence and website creation, ensuring our story shines online.",
-    linkedin: 'https://www.linkedin.com/in/siddhartha-mishra2020/'
-  },
-  {
-    id: 3,
-    name: 'Diki Yangzom',
-    category: 'CORE TEAM',
-    image: Diki_USA,
-    description: "Diki is a biology graduate from UMass Amherst with experience in research, scientific writing, and dental assisting. At Canopy USA, she leads our social media strategy, bringing precision, creativity, and consistency to our digital outreach.",
-    linkedin: ''
-  },
-  {
-    id: 4,
-    name: 'Eshan Shrestha',
-    category: 'CORE TEAM',
-    image: Eshan_USA,
-    description: 'Committed team member focused on expanding Canopy USA\'s reach through innovative fundraising strategies and building strong community connections.',
-    linkedin: ''
-  },
-];
 const CanopyUSASection = () => {
+  const page = useSite().usa;
+  const teamMembers = page.members.map((member) => ({ ...member, image: mediaUrl(member.image) }));
+  const heroImage = mediaUrl(page.heroImage);
+  const whatWeDoImage = mediaUrl(page.whatWeDoImage);
+  const getInvolvedImage = mediaUrl(page.involvedImage);
+
   return (
     <div className="bg-white font-sans mt-28">
       {/* Hero Section */}
@@ -55,7 +21,7 @@ const CanopyUSASection = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
           <h1 className="text-white text-6xl font-bold">
-            Canopy USA
+            {page.title}
           </h1>
         </div>
       </div>
@@ -66,7 +32,7 @@ const CanopyUSASection = () => {
         {/* Introduction Text */}
         <div className="py-8 text-center">
           <p className="text-2xl text-gray-700 leading-relaxed">
-          Established in 2024, Canopy USA is a registered 501(c)(3) nonprofit committed to supporting the mission of Canopy Nepal from across the world. Based in the United States, the chapter focuses on building partnerships, fundraising, and spreading awareness about education equity in Nepal.
+          {page.intro}
           </p>
         </div>
 
@@ -81,19 +47,16 @@ const CanopyUSASection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">What We Do?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">{page.whatWeDoTitle}</h2>
               <ul className="list-disc text-gray-700 space-y-6 text-2xl">
-                <li className="text-xl">Lead fundraising campaigns to support Canopy's flagship programs like CANSHIP and Katha Bunaun</li>
-                <li className="text-xl">Build connections with schools, universities, and donors across the U.S.</li>
-                <li className="text-xl">Represent Canopy Nepal at global forums, education events, and diaspora gatherings</li>
-                <li className="text-xl">Share stories and impact through digital campaigns and in-person events</li>
+                {page.whatWeDoPoints.map((point) => <li key={point} className="text-xl">{point}</li>)}
               </ul>
             </div>
           </div>
         </div>
 
         <div className="text-center text-xl my-8 ">
-            <span className="text-black font-semibold">Canopy USA is a legally registered 501(c)(3) nonprofit. All donations are tax-deductible to the extent allowed by law.</span>
+            <span className="text-black font-semibold">{page.extraNote}</span>
           </div>
 
 
@@ -108,20 +71,16 @@ const CanopyUSASection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-16 py-16 bg-white">
-              <p className=" text-2xl mb-4 font-semibold">If you're based in USA and want to:</p>
+              <p className=" text-2xl mb-4 font-semibold">{page.involvedIntro}</p>
               <ul className="list-disc list-inside text-gray-700 space-y-6 text-2xl">
-                <li className="text-xl">Host a fundraiser or awareness event</li>
-                <li className="text-xl">Collaborate with us on educational outreach or events
-                </li>
-                <li className="text-xl">Support through donations or in-kind resources
-                </li>
+                {page.involvedPoints.map((point) => <li key={point} className="text-xl">{point}</li>)}
               </ul>
               <div className="mt-8">
-                <span className="font-bold text-2xl text-gray-800">Reach out to us at:</span><br />
-                <a href="mailto:info@canopyfrance.org" className="text-primary-red hover:underline break-all text-xl">canopyusa@canopynepal.org</a>
+                <span className="font-bold text-2xl text-gray-800">{page.emailLabel}</span><br />
+                <a href={`mailto:${page.email}`} className="text-primary-red hover:underline break-all text-xl">{page.email}</a>
               </div>
               <p className='mt-8 text-gray-700 text-xl'>
-              Let’s make quality education possible—across borders, together.
+              {page.closing}
               </p>
             </div>
           </div>
@@ -136,32 +95,26 @@ const CanopyUSASection = () => {
       {/* Meet the Team Section */}
       <div className="py-8 ">
         <p className="text-center text-black text-xl mb-8 w-3/4 mx-auto">
-          Canopy USA is run by a lean team of dedicated volunteers and advisors, under the direct leadership of our founder, Mohit, working closely with Canopy Nepal's leadership to ensure transparency, sustainability, and aligned impact.
+          {page.teamIntro}
         </p>
 
         {/* Donate to Canopy USA - Bank Details (DITTO donate page style) */}
         <div className="mt-4 mb-10 rounded-lg text-center">
-          <h2 className="text-3xl font-bold text-primary-red mb-4">Donate to Canopy USA</h2>
+          {page.bankTitle ? <h2 className="text-3xl font-bold text-primary-red mb-4">{page.bankTitle}</h2> : null}
           <div className="text-left inline-block max-w-md lg:max-w-2xl mx-auto">
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-lg">
-              <span className="font-semibold text-gray-800 text-right pr-4">Account number:</span>
-              <span className="text-gray-600">112787178</span>
-
-              <span className="font-semibold text-gray-800 text-right pr-4">Routing number:</span>
-              <span className="text-gray-600">21000021</span>
-
-              <span className="font-semibold text-gray-800 text-right pr-4">Account:</span>
-              <span className="text-gray-600">Checking</span>
-
-              <span className="font-semibold text-gray-800 text-right pr-4">Name:</span>
-              <span className="text-gray-600 lg:whitespace-nowrap">INTERNATIONAL STUDENT LEARNING, INC.</span>
-
-              <div className="col-span-2 text-gray-500 italic text-sm text-right">(This is Canopy USA’s legal name)</div>
+              {page.bank.map((row) => (
+                <React.Fragment key={row.id}>
+                  <span className="font-semibold text-gray-800 text-right pr-4">{row.label}:</span>
+                  <span className="text-gray-600">{row.value}</span>
+                </React.Fragment>
+              ))}
+              {page.bankNote ? <div className="col-span-2 text-gray-500 italic text-sm text-right">({page.bankNote})</div> : null}
             </div>
           </div>
         </div>
         <h2 className="text-center text-3xl font-bold text-primary-red mb-8">
-          Meet the Canopy USA Team
+          {page.teamTitle}
         </h2>
         <div className="max-w-7xl mx-auto px-6 pb-4">
           {/* Responsive flex layout with centered last row */}

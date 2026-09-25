@@ -1,34 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ReactSVG } from 'react-svg';
-import heroImg from '../../assets/ourwork.png';
-import canshipImg from '../../assets/ourworkcanopy.jpg';
-import kbImg from '../../assets/ourworkkb.jpg';
-import ecosystem from '../../assets/ecosystem.svg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const OurWork: React.FC = () => {
   const navigate = useNavigate();
-  const [hoveredPath, setHoveredPath] = useState<string | null>(null);
-
-  const programData = [
-    {
-      name: 'CANSHIP',
-      imageSrc: canshipImg,
-      route: '/canship'
-    },
-    {
-      name: 'Katha Bunaun',
-      imageSrc: kbImg,
-      route: '/katha-bunaun'
-    }
-  ];
+  const page = useSite().ourWork;
+  const programData = page.programs.map((program) => ({
+    name: program.name,
+    imageSrc: mediaUrl(program.image),
+    route: program.route,
+  }));
 
 
   return (
     <div className="bg-white min-h-screen w-full flex flex-col items-center mt-28 font-sans">
       {/* Full-width top image */}
       <img
-        src={heroImg}
+        src={mediaUrl(page.heroImage)}
         alt="Our Work Hero"
         className="w-full h-auto object-cover object-center mb-4"
         style={{ maxHeight: '500px' }}
@@ -40,12 +29,12 @@ const OurWork: React.FC = () => {
       {/* Main Heading */}
       <div className="w-full max-w-5xl mx-auto text-center px-4 mt-4">
         <h2 className="text-2xl md:text-2xl lg:text-2x leading-snug mb-8">
-          We directly solve the two major issues for the alarming dropout rate in Nepal
-          <span className="font-bold text-primary-blue"> cost</span> and
-          <span className="font-bold text-primary-blue"> poor-quality education. </span>
-           Every year, millions of students in Nepal face a tough choice—drop out of school or keep showing up to classrooms that fail to engage or support them. 
-          <span className="text-primary-red font-bold"> At Canopy Nepal, we're doing something about both. </span>
-           Through CANSHIP and Katha Bunaun, our two flagship programs, we remove financial barriers and reimagine how education feels in the classroom.
+          {page.introBefore}
+          <span className="font-bold text-primary-blue"> {page.cost}</span> {page.and}
+          <span className="font-bold text-primary-blue"> {page.quality} </span>
+           {page.middle}
+          <span className="text-primary-red font-bold"> {page.emphasis} </span>
+           {page.after}
         </h2>
       </div>
 
@@ -55,7 +44,7 @@ const OurWork: React.FC = () => {
       <div className="w-full hidden md:block">
         <div className="w-1/2 mx-auto px-4 sm:px-6 lg:px-8">
           <img
-            src={ecosystem}
+            src={mediaUrl(page.ecosystemImage)}
             alt="Our Ecosystem"
             className="w-full h-auto"
           />
@@ -64,7 +53,7 @@ const OurWork: React.FC = () => {
 
       {/* Our Programs */}
       <div className="w-full text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#2386B6] mb-8">Our Programs</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-[#2386B6] mb-8">{page.programsTitle}</h2>
         <div className="flex flex-col md:flex-row justify-center gap-8 px-4 max-w-6xl mx-auto">
           {programData.map((program) => (
             <div

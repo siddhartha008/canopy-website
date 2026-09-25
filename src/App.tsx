@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation/Navigation';
@@ -31,6 +31,8 @@ import OurImpact from './components/OurImpact/OurImpact';
 import FAQ from './components/FAQ/faq';
 import FeaturedPage from './components/Featured/FeaturedPage';
 import BlogsPage from './components/Blogs/BlogsPage';
+import { ContentProvider } from './cms/ContentContext';
+import AdminApp from './admin/AdminApp';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,15 +42,14 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function SiteShell() {
+  const location = useLocation();
+  if (location.pathname === '/can0p4adm1n' || location.pathname.startsWith('/can0p4adm1n/')) return <AdminApp />;
   return (
-    <PayPalProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <AnimatePresence mode="wait">
-            <Routes>
+    <div className="min-h-screen bg-white">
+      <Navigation />
+      <AnimatePresence mode="wait">
+        <Routes>
               <Route path="/" element={
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -88,11 +89,22 @@ function App() {
               <Route path="/canopy-faq" element={<FAQ />} />
               <Route path="/featured" element={<FeaturedPage />} />
               <Route path="/blogs" element={<BlogsPage />} />
-            </Routes>
-          </AnimatePresence>
-          <Footer />
-        </div>
-      </Router>
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <PayPalProvider>
+      <ContentProvider>
+        <Router>
+          <ScrollToTop />
+          <SiteShell />
+        </Router>
+      </ContentProvider>
     </PayPalProvider>
   );
 }

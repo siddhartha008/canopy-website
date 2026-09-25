@@ -1,24 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import heroImg from '../../../assets/kbtop.png';
-import kblifecycle from '../../../assets/kbImpact.svg';
-import kbImpact from '../../../assets/kbImpact.png';
-import mtoc1 from '../../../assets/mtoc/MTOC1.png';
-import mtoc2 from '../../../assets/mtoc/MTOC2.png';
-import mtoc3 from '../../../assets/mtoc/MTOC3.png';
-import mtoc4 from '../../../assets/mtoc/MTOC4.png';
-import mtoc5 from '../../../assets/mtoc/MTOC5.png';
-import mtoc6 from '../../../assets/mtoc/MTOC6.png';
+import { useSite } from '../../../cms/ContentContext';
+import { mediaUrl } from '../../../cms/media';
 
-const mtocImages = [
-  { src: mtoc1, alt: 'MTOC step 1' },
-  { src: mtoc2, alt: 'MTOC step 2' },
-  { src: mtoc3, alt: 'MTOC step 3' },
-  { src: mtoc4, alt: 'MTOC step 4' },
-  { src: mtoc5, alt: 'MTOC step 5' },
-  { src: mtoc6, alt: 'MTOC step 6' },
-];
-
-const MobileMTOCCarousel: React.FC = () => {
+const MobileMTOCCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
+  const mtocImages = slides.map((src, index) => ({ src: mediaUrl(src), alt: `MTOC step ${index + 1}` }));
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -119,11 +104,12 @@ const MobileMTOCCarousel: React.FC = () => {
 };
 
 const KathaBunaun = () => {
+  const page = useSite().katha;
   return (
     <div className="min-h-screen bg-white mt-28">
       {/* Hero Image at the very top */}
       <img
-        src={heroImg}
+        src={mediaUrl(page.heroImage)}
         alt="Canopy Nepal Scholarship Hero"
         className="w-full h-[500px] object-cover object-bottom mb-8"
       />
@@ -131,16 +117,12 @@ const KathaBunaun = () => {
       {/* Heading Section */}
       <div className="max-w-4xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-5xl font-bold text-primary-red mb-2">
-          Katha Bunaun
+          {page.title}
         </h1>
         <div className='mt-4'>
-        <p className="text-gray-700 text-xl leading-relaxed mb-4">
-        Katha Bunaun, which translates to "Weaving Stories," is <span className='text-primary-red font-semibold'>Canopy Nepal's signature story-based learning program</span> that brings classrooms to life.
-
-              </p>
-              <p className="text-gray-700 text-xl leading-relaxed">
-              Through interactive sessions, students explore language, identity, values, creativity, self-expression and critical thinking by crafting and sharing stories. Whether it's a tale about their village, a dream for the future, or a social issue they care about, students learn to express themselves with confidence and curiosity.
-              </p>
+        {page.paragraphs.slice(0, 2).map((paragraph) => (
+          <p key={paragraph} className="text-gray-700 text-xl leading-relaxed mb-4">{paragraph}</p>
+        ))}
               </div>
       </div>
 
@@ -156,17 +138,9 @@ const KathaBunaun = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-12">
             <div className="w-full text-center">
-              <p className=" text-xl leading-relaxed mb-8">
-              Katha Bunaun isn't just about storytelling, it's about building the foundational skills that traditional classrooms often overlook: empathy, communication, collaboration, and voice.
-
-              </p>
-              <p className=" text-xl leading-relaxed">Designed to align with local curriculum and 
-                <span className='text-primary-red font-semibold text-xl'> delivered in partnership with teachers and local governments, Katha Bunaun is Nepal's only storytelling program 
-              </span> that creates a new kind of classroom, one where every child has the space to imagine, reflect, and speak up.
-              </p>
-              <p className='mt-4 text-xl leading-relaxed'>
-              Because when students tell their own stories, they start to believe in their own power.
-              </p>
+              {page.paragraphs.slice(2).map((paragraph) => (
+                <p key={paragraph} className="text-xl leading-relaxed mb-8">{paragraph}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -175,20 +149,20 @@ const KathaBunaun = () => {
       {/* Lifecycle Section - Desktop image + Mobile carousel */}
       <div className="px-0 py-12 pb-0">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-red text-center">
-          Katha Bunaun Incorporation in the System
+          {page.lifecycleTitle}
         </h2>
 
         {/* Desktop/Tablet: keep existing landscape image */}
         <div className="hidden md:flex justify-center">
           <img
-            src={kblifecycle}
+            src={mediaUrl(page.lifecycleImage)}
             alt="Canopy Scholar Lifecycle Flowchart"
             className="w-screen max-w-none h-auto mt-8 mb-8 mx-auto"
           />
         </div>
 
         {/* Mobile: swipeable carousel using MTOC images */}
-        <MobileMTOCCarousel />
+        <MobileMTOCCarousel slides={page.slides} />
       </div>
 
       {/* Impact Section */}
@@ -196,70 +170,37 @@ const KathaBunaun = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-stretch gap-12">
             <div className="lg:w-1/2 flex flex-col justify-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary-red mb-8">Impact</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary-red mb-8">{page.impactTitle}</h2>
               <ul className="space-y-6 text-gray-700 text-xl">
-                <li className="flex items-start">
-                  <span className="text-primary-red mr-3 mt-1">•</span>
-                  <div>
-                    <span className="font-semibold">Engagement & Expression:</span> Students who were once shy or disengaged now speak up, participate actively, and take pride in their ideas and identities.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-red mr-3 mt-1">•</span>
-                  <div>
-                    <span className="font-semibold">Foundational Skills:</span> Improvements in communication, empathy, creativity, and critical thinking, skills rarely prioritized in traditional classrooms.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-red mr-3 mt-1">•</span>
-                  <div>
-                    <span className="font-semibold">Academic Improvement:</span> Increased classroom participation, engagement in extracurricular activities, comprehension, and retention by connecting curriculum with personal experiences and imagination.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-red mr-3 mt-1">•</span>
-                  <div>
-                    <span className="font-semibold">Wellbeing & Confidence:</span> Students report feeling more confident, seen, and heard. Teachers observe better peer relationships and expression.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-red mr-3 mt-1">•</span>
-                  <div>
-                    <span className="font-semibold">Leadership & Collaboration:</span> Students learn to listen and collaborate while leading group discussions and projects, often guiding their friends in shared storytelling activities.
-                  </div>
-                </li>
+                {page.points.map((point) => (
+                  <li key={point.id} className="flex items-start">
+                    <span className="text-primary-red mr-3 mt-1">•</span>
+                    <div>
+                      <span className="font-semibold">{point.label}:</span> {point.text}
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="lg:w-1/2 flex justify-end items-stretch">
               <img 
-                src={kbImpact}
+                src={mediaUrl(page.impactImage)}
                 alt="Student and mentor interaction"
                 className="rounded-xl h-auto object-left object-cover transform -scale-x-100"
-                style={{  }}
               />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Statistics Section */}
       <div className="bg-white px-6 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div>
-            <h3 className="text-xl md:text-2xl mb-2">
-              <span className="font-bold text-primary-red">0.025% budget increase</span> by local governments to incorporate storytelling into their curriculum.
-            </h3>
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl mb-2">
-              <span className="font-bold text-primary-red">245 schools</span> have adopted interactive and child-centered learning approaches
-            </h3>
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl mb-2">
-              <span className="font-bold text-primary-red">67% increase</span> in student engagement in school activities.
-            </h3>
-          </div>
+          {page.stats.map((stat) => (
+            <div key={stat.id}>
+              <h3 className="text-xl md:text-2xl mb-2">
+                <span className="font-bold text-primary-red">{stat.emphasis}</span> {stat.text}
+              </h3>
+            </div>
+          ))}
         </div>
       </div>
  

@@ -1,36 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import tg from '../../assets/testimonials/tg.png';
-import tg1 from '../../assets/testimonials/tg1.png';
-import tg2 from '../../assets/testimonials/tg2.png';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const TestimonialSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [paused, setPaused] = useState(false);
-
-  const testimonials = [
-    {
-      id: 1,
-      text: "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others well.",
-      name: "Roshni",
-      position: "Student of Katha Bunaun",
-      image: tg
-    },
-    {
-      id: 2,
-      text: "Over the years, I've witnessed how Canopy has brought real change to our school. Their programs have helped our students become more confident, expressive, and curious, especially those who once struggled to participate. Their Katha Bunaun program has made a visible difference in how our students think and engage. When Canopy's team is in our school, they listen, adapt, and truly care. Our school has become a more inclusive and dynamic space because of their presence.",
-      name: "Ishwori Ma'am",
-      position: "Principal of Bhanubhakta Memorial School",
-      image: tg2
-    },
-    {
-      id: 3,
-      text: "What stands out most about Canopy is the organization's unwavering integrity. We have worked together for fifteen years and it has shown me that this is a team you can trust. Their transparency, professionalism, and accountability are evident in every program, every decision, and every student's success story. Their commitment to education comes from personal experience, professional skill, and genuine love for the sector.",
-      name: "Sandeep",
-      position: "Donor and Founder of NCEP",
-      image: tg1
-    }
-  ];
+  const testimonials = useSite().home.testimonials.map((item) => ({ ...item, image: mediaUrl(item.image) }));
 
   useEffect(() => {
     if (paused) return;

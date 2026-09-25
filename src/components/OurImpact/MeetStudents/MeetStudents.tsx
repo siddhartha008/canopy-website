@@ -1,57 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import anmol from '../../../assets/anmolimpact.png';
-import rekha from '../../../assets/rekhaImpact.png';
-
-const studentData = [
-    {
-        name: 'Anmol Pun Magar',
-        imageSrc: anmol, // Placeholder Image
-        shortBio: 'From the serene green hills of Lukum in Rukum, a remote village inhabited by the Magar community, comes a boy whose journey reflects resilience.....',
-        fullStory: `From the serene green hills of Lukum in Rukum, a remote village inhabited by the Magar community, comes a boy whose journey reflects resilience and a relentless pursuit of education. Meet Anmol Pun Magar, a 15-year-old ninth grader at Bloom Nepal School.
-
-Anmol's early life in Lukum was filled with laughter, freedom, and a deep connection to nature. He fondly remembers his childhood games like guccha, hide and seek and the camaraderie with his village friends. “Life was simple, and the hills were home,” he says. The peace and greenery of Lukum are things he still misses while living in the fast-paced Kathmandu Valley.
-
-But Anmol has always known that dreams demand effort and sometimes, sacrifice. He dreams of joining the British Army, like the Gurkhas before him, and understands that strength without education is not enough. “I have to be smart and strong,” he says with unwavering clarity. His resolve is what brought him back to Bloom Nepal School after an unexpected detour.
-
-During the COVID-19 pandemic, Anmol had to leave Kathmandu and return to his village. It was a happy return in many ways with reunions with old friends, the fresh air of the hills but it came with a cost. Online education was nearly impossible in Lukum due to weak electricity and poor network access. Still determined, Anmol enrolled in the local school to continue learning, even if the resources were limited. But deep down, he knew he belonged in Bloom.
-
-Once the pandemic restrictions loosened, Anmol began convincing his parents to return to Kathmandu. His village friends were puzzled as to why he wanted to leave the fun and comfort of home for more homework and strict routines. But Anmol never wavered. His persistence paid off: his parents agreed to move back, and Bloom Nepal School welcomed him once again. Soon after, he became a proud CANSHIP scholar.
-
-Since returning, Anmol has shown remarkable progress in his academics, growing by 31% growth over the past years. His teachers speak highly of his discipline and focus, noting how he makes the most of every learning opportunity.
-
-But his growth hasn’t been limited to the classroom. Anmol has also become more active in extracurricular activities, showing a 12% improvement. He plays football passionately, trains regularly, and was recently selected for his school’s upcoming football tournament. His agility and commitment make him a natural athlete and a step closer to his British Army dream.
-
-He also participates in other school programs like dance and drawing competitions and has earned a reputation for being cheerful, confident, and inclusive. Living in a hostel hasn’t been easy. He misses his family and his village but his goal keeps him grounded. “I’ll visit home one day as someone my village can be proud of,” he says.
-
-Anmol is also proud of his identity. He continues to speak his native Magar language, something many children are beginning to lose in urban schools. “It’s who I am,” he says. And who he is, a determined, humble, and future-focused young boy is exactly why Canopy believes in him.
-
-Through the CANSHIP scholarship, Anmol’s path is clearer, his steps are stronger, and his dream is one step closer. He reminds us that potential exists in every village, waiting to be nurtured not just with books, but with belief.`
-    },
-    {
-        name: 'Rekha Bhujel',
-        imageSrc: rekha, // Placeholder Image
-        shortBio: 'For Rekha Bhujel, the Nepali language is not just a school subject. It is a lifeline to her roots, a thread connecting her to her home in the highlands of.....',
-        fullStory: `For Rekha Bhujel, the Nepali language is not just a school subject. It is a lifeline to her roots, a thread connecting her to her home in the highlands of Okhaldhunga. Now a tenth grader at Shree Janakalyan School in Kathmandu, Rekha carries a mission that’s bigger than her textbooks: to redefine what education looks like in her village and to become the teacher she wished she had.
-
-Rekha’s day begins long before most of her peers have even opened their eyes. She wakes up early, studies for an hour, and then prepares breakfast for her entire family. This quiet discipline speaks volumes about her values. While many teenagers are still hitting the snooze button, Rekha is already investing in her future and in the well-being of those around her.
-
-Her family moved from Okhaldhunga to Kathmandu with one goal in mind: access to quality education. That decision, led by her parents, gave Rekha the opportunity to observe two very different worlds. In Kathmandu, she found more resources, better-trained teachers, and a broader perspective. In contrast, she still remembers how schools back home would close during planting season, how qualified teachers were scarce, and how some families saw education as optional.
-
-That contrast sparked a fire in Rekha. She began to think critically about not just what she was learning, but why. She often talks about the importance of understanding the cultural and economic barriers that keep children from learning. For Rekha, true reform means more than new buildings or new books, it means making education relevant, accessible, and rooted in community understanding.
-
-Her dream is to become a Nepali teacher. Not just any teacher, but the kind who uplifts communities, inspires students, and stands as a voice of reason in a world still influenced by superstitions and limiting traditions. Rekha sees teachers as quiet revolutionaries who work in the background but change everything. She wants to be that kind of leader.
-
-Since becoming a CANSHIP scholar, Rekha has shown significant growth in both her academic performance by 21% and extracurricular involvement by 17%. She participates actively in school programs, contributes thoughtfully in class discussions, and brings a level of maturity far beyond her age.
-
-Rekha also has a unique ability to reflect on her own culture with both love and critical thought. She is respectful of traditions but not afraid to question practices that prevent progress. She dreams of starting programs in Okhaldhunga that will keep schools running year-round, bring in qualified teachers, and support children who face financial hardship. She wants every child in her hometown to see education not as a privilege, but as a right.
-
-“I aspire to be one of those people known for their contribution to society and as the go-to person for educational assistance,” she says. “Along with that, I also want to be a support system for those facing financial challenges.”
-
-Rekha Bhujel is a powerful example of what happens when determination meets opportunity. Her dream of becoming a teacher is not just a career choice but a commitment to her community. With the support of Canopy, Rekha is transforming from a student into a changemaker.`
-
-    }
-];
+import { useSite } from '../../../cms/ContentContext';
+import { mediaUrl } from '../../../cms/media';
 
 interface Student {
     name: string;
@@ -124,6 +74,8 @@ const StudentCard: React.FC<{ student: Student; onClick: () => void }> = ({ stud
 };
 
 const MeetOurStudents: React.FC = () => {
+    const page = useSite().impactPage;
+    const studentData = page.students.map((student) => ({ ...student, imageSrc: mediaUrl(student.image) }));
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
 
@@ -139,7 +91,7 @@ const MeetOurStudents: React.FC = () => {
 
     return (
         <section className="py-16">
-            <h2 className="text-4xl font-bold text-center text-primary-blue mb-8">Stories of Change</h2>
+            <h2 className="text-4xl font-bold text-center text-primary-blue mb-8">{page.studentsTitle}</h2>
             <div className="flex flex-col md:flex-row justify-center items-center gap-12 px-4">
                 {studentData.map(student => (
                     <StudentCard key={student.name} student={student} onClick={() => handleOpenModal(student)} />

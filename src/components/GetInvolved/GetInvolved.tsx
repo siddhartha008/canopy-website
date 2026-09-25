@@ -1,269 +1,68 @@
-import React from 'react';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
-import heroImage from '../../assets/getinvolvedhero.png';
-import donateImage from '../../assets/gi1.jpg';
-import fundraiseImage from '../../assets/gi2.png';
-import partnerImage from '../../assets/gi3.jpg';
-import volunteerImage from '../../assets/gi4.jpg';
-import chaptersImage from '../../assets/gi5.png';
-import helpImage from '../../assets/gi6.png';
-
+const Arrow = () => (
+  <svg className="w-5 h-5 ml-2 align-middle relative top-[1px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  </svg>
+);
 
 const GetInvolvedSection = () => {
+  const page = useSite().getInvolved;
   return (
     <div className="bg-white font-sans mt-28">
-      {/* Hero Section */}
       <div className="relative h-96">
-        <img
-          src={heroImage}
-          alt="Happy students"
-          className="w-full h-full object-cover"
-        />
+        <img src={mediaUrl(page.heroImage)} alt={page.title} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white p-4">
-          <h1 className="text-6xl md:text-6xl font-bold mb-4">Get Involved</h1>
+          <h1 className="text-6xl md:text-6xl font-bold mb-4">{page.title}</h1>
         </div>
       </div>
-
-      {/* Main Content Area */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Introduction Text */}
         <div className="py-8 text-center">
-          <p className="text-2xl leading-relaxed">
-            At Canopy Nepal, we believe everyone has something to give - whether it's time, skills, resources, or simply a belief in the power of education. <br/><br/>Here's how you can be part of our mission to help every child stay in school, find their voice, and thrive.
-          </p>
+          <p className="text-2xl leading-relaxed whitespace-pre-line">{page.intro}</p>
         </div>
-
-        {/* 1. Donate Section - Full Width */}
-        <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
-          <div className="flex flex-col md:flex-row-reverse items-stretch h-full">
-            <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={donateImage}
-                alt="Donate"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">1. Donate</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Your support fuels scholarships, storytelling sessions, and teacher training. Big or small - every contribution helps us reach more students!
-              </p>
-              <a href="/donate" target="_blank" rel="noopener noreferrer" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300">
-                Donate Now
-                <svg 
-                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* 2. Fundraise With Us Section - Full Width */}
-        <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
-          <div className="flex flex-col md:flex-row items-stretch h-full">
-            <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={fundraiseImage}
-                alt="Fundraise With Us"
-                className="w-full h-full object-cover object-center transform -scale-x-100"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">2. Fundraise With Us</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Run a marathon, host a dinner, celebrate your birthday - turn any moment into impact. We'll support you every step of the way.
-              </p>
-              <a 
-                href="javascript:void( window.open( 'https://form.jotform.com/251855341854058', 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500' ) )"
-                className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300"
-              >
-                Host A Fundraiser
-                <svg 
-                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* 3. Partner With Us Section - Full Width */}
-        <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
-          <div className="flex flex-col md:flex-row-reverse items-stretch h-full">
-            <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={partnerImage}
-                alt="Partner With Us"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">3. Partner With Us</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                We love teaming up with schools, businesses, universities, and community groups. Let's create something meaningful together.
-              </p>
-              <a href="https://mail.google.com/mail/?view=cm&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300">
-                Email Us
-                <svg 
-                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* 4. Jobs/ Volunteer/ Intern Section - Full Width */}
-        <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
-          <div className="flex flex-col md:flex-row items-stretch h-full">
-            <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={volunteerImage}
-                alt="Jobs/ Volunteer/ Intern"
-                className="w-full h-full object-cover object-bottom"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">4. Jobs/ Volunteer/ Intern</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Got skills? Passion? Curiosity? Join us in Nepal or remotely and help shape the future of education.
-              </p>
-              <a href="#" className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300">
-                Join the Team
-                <svg 
-                  className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* 5. Join Our Chapters Section - Full Width */}
-        <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
-          <div className="flex flex-col md:flex-row-reverse items-stretch h-full">
-            <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={chaptersImage}
-                alt="Join Our Chapters"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">5. Join Our Chapters</h2>
-              <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                If you're based in the U.S. or France, connect with our global community and help take Canopy further.
-              </p>
-              <div className="flex gap-4">
-                <a
-                  href="/canopyfrance"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300"
-                >
-                  Canopy France
-                  <svg 
-                    className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M9 5l7 7-7 7" 
-                    />
-                  </svg>
-                </a>
-                <a
-                  href="/canopyusa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300"
-                >
-                  Canopy USA
-                  <svg 
-                    className="w-5 h-5 ml-2 align-middle relative top-[1px]" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke="currentColor"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M9 5l7 7-7 7" 
-                    />
-                  </svg>
-                </a>
+        {page.ways.map((way) => (
+          <div key={way.id} className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
+            <div className={`flex flex-col ${way.imageSide === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'} items-stretch h-full`}>
+              <div className="w-full md:w-1/2 h-[400px]">
+                <img src={mediaUrl(way.image)} alt={way.title} className={`w-full h-full object-cover object-center ${way.flipImage ? 'transform -scale-x-100' : ''}`} />
+              </div>
+              <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
+                <h2 className="text-3xl font-bold text-primary-red mb-4">{way.title}</h2>
+                <p className="text-xl text-gray-700 mb-6 leading-relaxed">{way.body}</p>
+                <div className="flex gap-4 flex-wrap">
+                  {way.buttons.map((button) => (
+                    <a
+                      key={button.id}
+                      href={button.href}
+                      target={button.newTab ? '_blank' : undefined}
+                      rel={button.newTab ? 'noopener noreferrer' : undefined}
+                      onClick={button.popup ? (event) => {
+                        event.preventDefault();
+                        window.open(button.href, 'blank', 'scrollbars=yes, toolbar=no, width=700, height=500');
+                      } : undefined}
+                      className="w-max inline-flex items-center bg-primary-orange text-white font-semibold py-2 px-4 rounded-lg text-lg hover:bg-primary-cyan transition-colors duration-300"
+                    >
+                      {button.label}
+                      <Arrow />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Still wondering how to help? Section - Full Width */}
+        ))}
         <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
           <div className="flex flex-col md:flex-row items-stretch h-full">
             <div className="w-full md:w-1/2 h-[400px]">
-              <img
-                src={helpImage}
-                alt="Child with backpack"
-                className="w-full h-full object-cover object-top"
-              />
+              <img src={mediaUrl(page.helpImage)} alt={page.helpTitle} className="w-full h-full object-cover object-top" />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-8 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">Still wondering how to help?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">{page.helpTitle}</h2>
               <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-                Reach out to us at <a href="https://mail.google.com/mail/?view=cm&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="text-primary-blue hover:underline font-semibold">info@canopynepal.org</a>. We'd love to hear from you.
+                {page.helpBody} <a href={`mailto:${page.helpEmail}`} className="text-primary-blue hover:underline font-semibold">{page.helpEmail}</a>. We'd love to hear from you.
               </p>
-              <p className="text-xl text-gray-700 leading-relaxed">
-                Because when you support Canopy, you're not just helping a child stay in school—you're helping them rewrite their future.
-              </p>
+              <p className="text-xl text-gray-700 leading-relaxed">{page.helpClosing}</p>
             </div>
           </div>
         </div>

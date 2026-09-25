@@ -1,28 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import mv1 from '../../assets/mv1.png';
-import mv2 from '../../assets/mv2.png';
-import toC from '../../assets/toc.svg';
-import icon1 from '../../assets/val1.svg';
-import icon2 from '../../assets/val2.svg';
-import icon3 from '../../assets/val3.svg';
-import icon4 from '../../assets/val4.svg';
-import icon5 from '../../assets/val5.svg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const CanopyAboutUs: React.FC = () => {
+  const mission = useSite().mission;
   const [hoveredValue, setHoveredValue] = useState<number | null>(null);
   const [anyHovered, setAnyHovered] = useState(false);
   const [currentTocSlide, setCurrentTocSlide] = useState(0);
 
   // Import MTOC images
-  const mtocImages = [
-    new URL('../../assets/mtoc/MTOC1.png', import.meta.url).href,
-    new URL('../../assets/mtoc/MTOC2.png', import.meta.url).href,
-    new URL('../../assets/mtoc/MTOC3.png', import.meta.url).href,
-    new URL('../../assets/mtoc/MTOC4.png', import.meta.url).href,
-    new URL('../../assets/mtoc/MTOC5.png', import.meta.url).href,
-    new URL('../../assets/mtoc/MTOC6.png', import.meta.url).href,
-  ];
+  const mtocImages = mission.theorySlides.map((slide) => mediaUrl(slide));
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -38,7 +26,7 @@ const CanopyAboutUs: React.FC = () => {
         {/* Full Width Image */}
         <div className="w-full mt-8">
           <img
-            src={mv1}
+            src={mediaUrl(mission.whyImage)}
             alt="Student studying"
             className="w-full h-96 object-cover"
           />
@@ -110,13 +98,9 @@ const CanopyAboutUs: React.FC = () => {
             ></motion.div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">Why Education?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">{mission.whyTitle}</h2>
           <p className="text-2xl leading-relaxed text-gray-700 max-w-4xl mx-auto">
-            In Nepal, only 27% of students complete the upper secondary level, and the rest 73%
-            drop out before their final year because of affordability and poor-quality schooling
-            (UNICEF, 2022). The students impacted are disproportionately low-income, perpetuating
-            the cycle of poverty by hindering their opportunities to become financially and
-            socially independent (Devkota & Bagale, 2015).
+            {mission.whyBody}
           </p>
         </div>
       </div>
@@ -183,13 +167,9 @@ const CanopyAboutUs: React.FC = () => {
             ></motion.div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">Our Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">{mission.missionTitle}</h2>
           <p className="text-2xl leading-relaxed text-gray-700 mb-8">
-            Canopy Nepal empowers underserved students to stay in school and thrive by combining
-            scholarships with story-based learning that nurtures confidence, critical thinking, and
-            lifelong skills. Through inclusive education and strategic government partnerships, we
-            reduce dropout rates, break cycles of generational poverty, and build a future shaped
-            by empowered thinkers and doers.
+            {mission.missionBody}
           </p>
         </div>
       </div>
@@ -242,17 +222,16 @@ const CanopyAboutUs: React.FC = () => {
             ></motion.div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">Our Vision</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red">{mission.visionTitle}</h2>
           <p className="text-2xl leading-relaxed text-gray-700">
-            We envision a Nepal where every child, regardless of background, has access to quality
-            education, the freedom to express themselves, and the tools to shape their own future.
+            {mission.visionBody}
           </p>
         </div>
 
         {/* Our Theory of Change Section */}
         <div className="relative w-full py-2 overflow-hidden">
           <div className="relative max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-red">Our Theory Of Change</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-red">{mission.theoryTitle}</h2>
           </div>
           <div className="relative w-full px-6 md:px-0">
             {/* Subtle floating bubbles for Theory of Change section */}
@@ -267,7 +246,7 @@ const CanopyAboutUs: React.FC = () => {
               {/* Desktop View */}
               <div className="hidden md:block">
                 <img
-                  src={toC}
+                  src={mediaUrl(mission.theoryImage)}
                   alt="Theory of Change Diagram"
                   className="w-full max-w-full h-auto lg:h-[650px] object-contain mx-auto"
                 />
@@ -303,38 +282,13 @@ const CanopyAboutUs: React.FC = () => {
                 className="absolute top-10 right-24 w-3 h-3 bg-orange-400 rounded-full opacity-10"
               ></motion.div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red text-center">Our Values</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary-red text-center">{mission.valuesTitle}</h2>
             <div className="flex flex-col items-center">
               <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-12 lg:gap-20 mb-8">
                 {/* Value Items */}
-                {[
-                  {
-                    icon: icon1,
-                    label: 'Deep Purpose',
-                    desc: 'We believe education is the most powerful path to equity. Every program we create is rooted in a long-term vision to transform lives and communities.'
-                  },
-                  {
-                    icon: icon2,
-                    label: 'Child-Centered',
-                    desc: 'Children are at the core of our mission. We create spaces where they feel seen, heard, and supported to learn, express themselves, and lead with confidence.'
-                  },
-                  {
-                    icon: icon3,
-                    label: 'Space for Growth',
-                    nowrap: true,
-                    desc: 'We nurture a culture where learning is lifelong. Whether student, team member, or partner, everyone is encouraged to take risks, reflect, and keep growing.'
-                  },
-                  {
-                    icon: icon4,
-                    label: 'Collaboration',
-                    desc: 'Our work is built through strong relationships. We partner with students, families, and communities to design programs together, grounded in trust and mutual ownership.'
-                  },
-                  {
-                    icon: icon5,
-                    label: 'Transparency',
-                    desc: 'We believe trust is earned through clarity and openness. We share our successes, learn from our failures, and keep our stakeholders informed and engaged every step of the way.'
-                  }
-                ].map((val, idx) => (
+                {mission.values.map((value, idx) => {
+                  const val = { icon: mediaUrl(value.icon), label: value.label, desc: value.description };
+                  return (
                   <div
                     key={val.label}
                     className="group flex flex-col items-center cursor-pointer relative w-40 md:w-48 lg:w-56"
@@ -369,7 +323,7 @@ const CanopyAboutUs: React.FC = () => {
                       )}
                     </AnimatePresence>
                   </div>
-                ))}
+                );})}
               </div>
             </div>
           </div>
@@ -380,7 +334,7 @@ const CanopyAboutUs: React.FC = () => {
             transition={{ type: 'spring', stiffness: 30, damping: 30, }}
           >
             <img
-              src={mv2}
+              src={mediaUrl(mission.closingImage)}
               alt="Group of happy students"
               className="w-full h-96 lg:h-[500px] object-cover "
             />
@@ -392,9 +346,7 @@ const CanopyAboutUs: React.FC = () => {
               <div className="w-full">
                 <div className="max-w-5xl mx-auto px-6 text-center">
                   <p className="text-2xl md:text-4xl font-semibold leading-relaxed text-white">
-                    By 2030, we aim to reach over half a million students and integrate
-                    story-based learning into classrooms across Nepal, making storytelling
-                    a foundational part of how children learn, grow, and connect.
+                    {mission.closingText}
                   </p>
                 </div>
               </div>

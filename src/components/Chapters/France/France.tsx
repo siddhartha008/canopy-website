@@ -1,41 +1,14 @@
-import React from 'react';
-
-import heroImage from '../../../assets/canfranhead.png'; // The top image with two boys
-import whatWeDoImage from '../../../assets/canfran.png'; // The image with the girls in uniform
-import getInvolvedImage from '../../../assets/canopyfrance.jpeg'; // The image of the man in front of a building
-import Mohit_France from '../../../assets/team/all/Mohit_France.png';
-import Olivia_France from '../../../assets/team/all/Olivia_France.png';
-import Ainhoa_France from '../../../assets/team/all/Ainhoa_France.png';
+import { useSite } from '../../../cms/ContentContext';
+import { mediaUrl } from '../../../cms/media';
 
 
-const teamMembers = [
-  {
-    id: 1,
-    name: 'Mohit Rauniyar',
-    category: 'CORE TEAM',
-    image: Mohit_France,
-    description: 'Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy France, he leads fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.',
-    linkedin: 'https://www.linkedin.com/in/mohitrauniyar/'
-  },
-  {
-    id: 3,
-    name: 'Ainhoa Beneitez',
-    category: 'CORE TEAM',
-    image: Ainhoa_France,
-    description: 'Ainhoa Beneitez is an Admin, Finance & Transit specialist at Médecins Sans Frontières France and a Business & Organizational Strategy Consultant with a background in humanitarian and development aid. She encouraged us to launch Canopy France and continues to support vital partnerships and strategy.',
-    linkedin: 'https://www.linkedin.com/in/ainhoa-beneitez-343b87170/'
-  },
-  {
-    id: 2,
-    name: 'Olivia Palermo',
-    category: 'CORE TEAM',
-    image: Olivia_France,
-    description: 'Olivia is a Master’s student in Social and Cultural Anthropology at the University of Strasbourg, with research focused on temporalities and agroecology. With a background in education and multilingual engagement, she contributes to Canopy France’s communications with care and cultural insight.',
-    linkedin: ''
-  }
-  
-];
 const CanopyFranceSection = () => {
+  const page = useSite().france;
+  const teamMembers = page.members.map((member) => ({ ...member, image: mediaUrl(member.image) }));
+  const heroImage = mediaUrl(page.heroImage);
+  const whatWeDoImage = mediaUrl(page.whatWeDoImage);
+  const getInvolvedImage = mediaUrl(page.involvedImage);
+
   return (
     <div className="bg-white font-sans mt-28">
       {/* Hero Section */}
@@ -47,7 +20,7 @@ const CanopyFranceSection = () => {
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
           <h1 className="text-white text-6xl font-bold">
-            Canopy France
+            {page.title}
           </h1>
         </div>
       </div>
@@ -58,10 +31,7 @@ const CanopyFranceSection = () => {
         {/* Introduction Text */}
         <div className="py-8 text-center">
           <p className="text-2xl text-gray-700 leading-relaxed">
-            Established in 2022, <span className='text-primary-red font-bold'>Canopy France is our first international chapter</span>, founded by
-            a passionate group of young changemakers from France and Nepal. Registered as
-            a legal nonprofit under French law, the chapter supports Canopy Nepal by raising
-            awareness, building partnerships, and mobilizing resources across Europe.
+            {page.intro}
           </p>
         </div>
 
@@ -76,12 +46,9 @@ const CanopyFranceSection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">What We Do?</h2>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">{page.whatWeDoTitle}</h2>
               <ul className="list-disc text-gray-700 space-y-6 text-2xl">
-                <li className="text-xl">Organize creative fundraising campaigns, cultural events, and storytelling nights across France</li>
-                <li className="text-xl">Strengthen connections between the Nepali diaspora and allies in France</li>
-                <li className="text-xl">Raise awareness around education equity through exhibitions, university partnerships, and youth networks</li>
-                <li className="text-xl">Directly support core programs like CANSHIP and Katha Bunaun with financial and advocacy support</li>
+                {page.whatWeDoPoints.map((point) => <li key={point} className="text-xl">{point}</li>)}
               </ul>
             </div>
           </div>
@@ -98,16 +65,14 @@ const CanopyFranceSection = () => {
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-center px-16 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-red mb-4">Want to Get Involved?</h2>
-              <p className="text-gray-700 text-xl mb-4">If you're based in France and want to help us:</p>
+              <h2 className="text-3xl font-bold text-primary-red mb-4">{page.involvedTitle}</h2>
+              <p className="text-gray-700 text-xl mb-4">{page.involvedIntro}</p>
               <ul className="list-disc list-inside text-gray-700 space-y-6 text-2xl">
-                <li className="text-xl">Host a fundraiser or awareness event</li>
-                <li className="text-xl">Partner with us for an academic or youth engagement initiative</li>
-                <li className="text-xl">Volunteer your time or skills</li>
+                {page.involvedPoints.map((point) => <li key={point} className="text-xl">{point}</li>)}
               </ul>
               <div className="mt-8">
-                <span className="font-bold text-2xl text-gray-800">Reach out to us at:</span><br />
-                <a href="mailto:contact@canopyfrance.fr" className="text-primary-red hover:underline break-all text-xl">contact@canopyfrance.fr</a>
+                <span className="font-bold text-2xl text-gray-800">{page.emailLabel}</span><br />
+                <a href={`mailto:${page.email}`} className="text-primary-red hover:underline break-all text-xl">{page.email}</a>
               </div>
             </div>
           </div>
@@ -116,9 +81,9 @@ const CanopyFranceSection = () => {
         {/* Newsletter Subscription Section */}
         <div className="w-full flex justify-center pb-4">
           <div className="text-center text-xl">
-            <span className="text-gray-700">And don't forget to </span>
-            <a href="#" className="text-primary-red hover:underline font-semibold">[Subscribe to the Canopy France Newsletter]</a>
-            <span className="text-gray-700"> to stay updated on our events, stories, and impact from the ground.</span>
+            <span className="text-gray-700">{page.newsletterBefore}</span>
+            <a href={page.newsletterHref || '#'} className="text-primary-red hover:underline font-semibold">{page.newsletterLabel}</a>
+            <span className="text-gray-700">{page.newsletterAfter}</span>
           </div>
         </div>
       </div>
@@ -128,10 +93,10 @@ const CanopyFranceSection = () => {
       {/* Meet the Team Section */}
       <div className="py-8">
         <p className="text-center text-black text-xl mb-8">
-          The chapter is led by a lean team, and together, they bring cross-cultural <br></br>energy and grassroots commitment to the mission.
+          {page.teamIntro}
         </p>
         <h2 className="text-center text-3xl font-bold text-primary-red mb-8">
-          Meet the Canopy France Team
+          {page.teamTitle}
         </h2>
         <div className="max-w-7xl mx-auto px-6 pb-4">
           {/* Responsive flex layout with centered last row */}

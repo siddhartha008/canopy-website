@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 import DonationModal from '../Donate/DonationModal';
 
+import { useSite } from '../../cms/ContentContext';
+
 const SupportUsSection = () => {
+  const support = useSite().home.support;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -11,13 +13,13 @@ const SupportUsSection = () => {
         {/* Main Statistic */}
         <div className="mb-12">
           <h3 className="text-neutral-900 text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-            <span className="text-primary-red">73%</span> of students are out of school and stuck in cycles of <span className="text-primary-orange">generational poverty</span>
+            <span className="text-primary-red">{support.stat}</span> {support.beforeHighlight} <span className="text-primary-orange">{support.highlight}</span>
           </h3>
         </div>
         
         {/* Description */}
         <p className="text-neutral-900 text-xl md:text-2xl font-medium mb-12 leading-relaxed">
-          Our work to reduce the drop out rate needs your support. You can help by providing support to child's education, school sessions, or operational cost.
+          {support.body}
         </p>
         
         {/* CTA Button */}
@@ -26,7 +28,7 @@ const SupportUsSection = () => {
           className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-cyan transition-all duration-300 hover:shadow-lg"
           onClick={() => setIsModalOpen(true)}
         >
-          Donate Now
+          {support.button}
           <svg 
             className="w-5 h-5 ml-2" 
             xmlns="http://www.w3.org/2000/svg" 

@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,6 +11,7 @@ const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const site = useSite();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,38 +28,7 @@ const Navigation = () => {
   }, [location.pathname]);
 
   // FIX 1: Update the navItems to correctly flag routes.
-  const navItems = [
-    {
-      name: 'About Us',
-      href: '#', // Set to '#' to indicate it's not a direct link, only a dropdown trigger
-      submenu: [
-        { name: 'Our Mission', href: '/missions', isRoute: true },
-        { name: 'Our Story', href: '/story', isRoute: true },
-        { name: 'Meet the Team', href: '/meet-the-team', isRoute: true },
-        { name: 'Board of Directors', href: '/board-of-directors', isRoute: true }
-      ]
-    },
-    {
-      name: 'Our Work',
-      href: '/ourwork',
-      isRoute: true, // This was missing. Now it's identified as a route.
-      submenu: [
-        { name: 'CANSHIP', href: '/canship', isRoute: true },
-        { name: 'Katha Bunaun', href: '/katha-bunaun', isRoute: true }
-      ]
-    },
-    { name: 'Our Impact', href: '/ourimpact', isRoute: true },
-    { name: 'Publications', href: '/publications', isRoute: true },
-    {
-      name: 'Chapters',
-      href: '#',
-      submenu: [
-        { name: 'Canopy France', href: '/canopyfrance', isRoute: true },
-        { name: 'Canopy USA', href: '/canopyusa', isRoute: true }
-      ]
-    },
-    { name: 'Get Involved', href: '/getinvolved', isRoute: true }
-  ];
+  const navItems = site.navigation.items;
 
   const handleNavigation = (href: string, isRoute?: boolean) => {
     if (isRoute) {
@@ -79,14 +50,6 @@ const Navigation = () => {
     }
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
-  };
-
-  const handleMenuItemClick = (item: any) => {
-    if (item.isRoute) {
-      navigate(item.href);
-    } else {
-      scrollToSection(item.href);
-    }
   };
 
   const scrollToSection = (href: string) => {
@@ -127,7 +90,7 @@ const Navigation = () => {
           >
             <Link to="/">
               <img
-                src={logo}
+                src={mediaUrl(site.site.logo)}
                 alt="Canopy Nepal Logo"
                 className="h-24 w-auto"
               />
@@ -140,7 +103,7 @@ const Navigation = () => {
               <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.submenu && setActiveDropdown(idx)}
+                onMouseEnter={() => item.submenu.length > 0 && setActiveDropdown(idx)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <motion.button
@@ -166,7 +129,7 @@ const Navigation = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <span>{item.name}</span>
-                  {item.submenu && (
+                  {item.submenu.length > 0 && (
                     <motion.div
                       animate={{ rotate: activeDropdown === idx ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
@@ -177,7 +140,7 @@ const Navigation = () => {
                 </motion.button>
 
                 <AnimatePresence>
-                  {item.submenu && activeDropdown === idx && (
+                  {item.submenu.length > 0 && activeDropdown === idx && (
                     <motion.div
                       className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden"
                       initial={{ opacity: 0, y: -10 }}
@@ -217,7 +180,7 @@ const Navigation = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Donate Now
+              {site.site.donateLabel}
             </motion.button>
 
             {/* Mobile menu toggle on sm */}
@@ -268,7 +231,7 @@ const Navigation = () => {
                   `}
                 >
                   <span>{item.name}</span>
-                  {item.submenu && (
+                  {item.submenu.length > 0 && (
                     <motion.div
                       animate={{ rotate: activeDropdown === idx ? 180 : 0 }}
                       transition={{ duration: 0.2 }}
@@ -279,7 +242,7 @@ const Navigation = () => {
                 </button>
 
                 <AnimatePresence>
-                  {item.submenu && activeDropdown === idx && (
+                  {item.submenu.length > 0 && activeDropdown === idx && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
@@ -309,7 +272,7 @@ const Navigation = () => {
               onClick={() => navigate('/donate')}
               className="block w-full px-3 py-2 bg-primary-cyan text-white font-medium rounded-md hover:bg-primary-cyan/90 transition-colors duration-300"
             >
-              Donate Now
+              {site.site.donateLabel}
             </button>
           </div>
         </motion.div>

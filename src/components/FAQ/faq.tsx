@@ -10,93 +10,32 @@ interface FAQItem {
   icon: React.ReactNode;
 }
 
+import { useSite } from '../../cms/ContentContext';
+
+const iconMap = {
+  help: HelpCircle,
+  book: BookOpen,
+  heart: Heart,
+  award: Award,
+  users: Users,
+  globe: Globe,
+  mail: Mail,
+};
+
 const FAQ: React.FC = () => {
+  const page = useSite().faq;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const faqData: FAQItem[] = [
-    {
-      id: 1,
-      question: "What is Canopy Nepal and what do you do?",
-      answer: "Canopy Nepal is a non-profit organization dedicated to improving access to quality education for underserved students across Nepal. We provide long-term scholarships and deliver story-based learning in public schools to reduce dropout rates and break cycles of poverty. By combining academic support with creativity, mentorship, and collaboration with local governments, we help students stay in school, build critical life skills, and shape their own futures.",
-      category: "general",
-      icon: <BookOpen className="w-6 h-6" />
-    },
-    {
-      id: 2,
-      question: "How can I donate to Canopy Nepal?",
-      answer: "You can donate to Canopy Nepal through our secure online donation platform. We accept various payment methods including credit cards, PayPal, and bank transfers. Your donation directly supports our scholarship programs and educational initiatives. Visit our donate page for more information and to make a contribution.",
-      category: "donations",
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      id: 3,
-      question: "How do you select students for scholarships?",
-      answer: "Our scholarship selection process is based on several criteria including financial need, academic potential, and commitment to education. We work closely with local schools and communities to identify students who would benefit most from our support. The process includes interviews, family visits, and ongoing assessment to ensure we're supporting the right students.",
-      category: "scholarships",
-      icon: <Award className="w-6 h-6" />
-    },
-    {
-      id: 4,
-      question: "What is the Katha Bunaun program?",
-      answer: "Katha Bunaun is our innovative story-based learning program that helps students develop creativity, critical thinking, and communication skills. Through interactive storytelling sessions, students learn to express themselves, build confidence, and develop a love for learning. The program has shown remarkable results in improving student engagement and academic performance.",
-      category: "programs",
-      icon: <BookOpen className="w-6 h-6" />
-    },
-    {
-      id: 5,
-      question: "How can I volunteer with Canopy Nepal?",
-      answer: "We welcome volunteers from all backgrounds! Whether you're interested in teaching, mentoring, administrative support, or fundraising, there are many ways to get involved. We have both local and international volunteer opportunities. Contact us through our website or email us directly to learn more about current volunteer positions.",
-      category: "volunteering",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      id: 6,
-      question: "Where does Canopy Nepal operate?",
-      answer: "Canopy Nepal primarily operates in Nepal, with our main office located in Kathmandu. We work in various regions across the country, partnering with local schools and communities. We also have international chapters and partnerships to support our global mission of educational empowerment.",
-      category: "general",
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      id: 7,
-      question: "How can I stay updated with Canopy Nepal's work?",
-      answer: "You can stay connected with us through our newsletter, social media channels, and website. We regularly share updates about our programs, student success stories, and upcoming events. Subscribe to our newsletter or follow us on social media to receive the latest news and impact stories.",
-      category: "general",
-      icon: <Mail className="w-6 h-6" />
-    },
-    {
-      id: 8,
-      question: "What percentage of donations goes directly to programs?",
-      answer: "We are committed to transparency and efficiency. Approximately 85% of all donations go directly to our programs, including scholarships, educational materials, and program delivery. The remaining 15% covers essential administrative costs, fundraising, and organizational development to ensure sustainable impact.",
-      category: "donations",
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      id: 9,
-      question: "Do you provide support beyond financial scholarships?",
-      answer: "Yes! Our support goes far beyond financial assistance. We provide mentorship, academic guidance, life skills training, and emotional support to our students. Our holistic approach ensures that students have the tools, confidence, and support network they need to succeed both academically and personally.",
-      category: "scholarships",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      id: 10,
-      question: "How can schools partner with Canopy Nepal?",
-      answer: "We actively seek partnerships with schools that share our vision for quality education. If your school is interested in partnering with us, please reach out through our contact form or email us directly. We'll discuss potential collaboration opportunities and how we can work together to support students.",
-      category: "partnerships",
-      icon: <Globe className="w-6 h-6" />
-    }
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Questions', icon: <HelpCircle className="w-5 h-5" /> },
-    { id: 'general', name: 'General', icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'donations', name: 'Donations', icon: <Heart className="w-5 h-5" /> },
-    { id: 'scholarships', name: 'Scholarships', icon: <Award className="w-5 h-5" /> },
-    { id: 'programs', name: 'Programs', icon: <BookOpen className="w-5 h-5" /> },
-    { id: 'volunteering', name: 'Volunteering', icon: <Users className="w-5 h-5" /> },
-    { id: 'partnerships', name: 'Partnerships', icon: <Globe className="w-5 h-5" /> }
-  ];
-
+  const Icon = (name: string) => {
+    const Glyph = iconMap[name as keyof typeof iconMap] || HelpCircle;
+    return <Glyph className="w-5 h-5" />;
+  };
+  const faqData: FAQItem[] = page.items.map((item) => ({
+    ...item,
+    id: Number(item.id.replace(/\D/g, '')) || 0,
+    icon: Icon(item.icon),
+  }));
+  const categories = page.categories.map((category) => ({ ...category, icon: Icon(category.icon) }));
   const filteredFAQs = selectedCategory === 'all' 
     ? faqData 
     : faqData.filter(faq => faq.category === selectedCategory);
@@ -121,7 +60,7 @@ const FAQ: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Frequently Asked Questions
+            {page.title}
           </motion.h1>
           <motion.p
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
@@ -129,7 +68,7 @@ const FAQ: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Find answers to common questions about Canopy Nepal, our programs, and how you can get involved in our mission to reshape education.
+            {page.intro}
           </motion.p>
         </motion.div>
 
@@ -231,25 +170,27 @@ const FAQ: React.FC = () => {
           className="mt-16 text-center bg-[#FFFBF2] rounded-2xl p-8 md:p-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-primary-red mb-4">
-            Still Have Questions?
+            {page.stillTitle}
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? We're here to help! Reach out to us and we'll get back to you as soon as possible.
+            {page.stillBody}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
               className="bg-primary-orange text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-cyan transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => { window.location.href = page.contactHref; }}
             >
-              Contact Us
+              {page.contactLabel}
             </motion.button>
             <motion.button
               className="border-2 border-primary-orange text-primary-orange px-8 py-3 rounded-lg font-semibold hover:bg-primary-cyan hover:text-white transition-colors duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => { window.location.href = page.emailHref; }}
             >
-              Send Email
+              {page.emailLabel}
             </motion.button>
           </div>
         </motion.div>

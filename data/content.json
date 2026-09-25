@@ -1,0 +1,2314 @@
+{
+  "updatedAt": "2026-09-25T05:42:04.831Z",
+  "content": {
+    "site": {
+      "logo": "logo.svg",
+      "donateLabel": "Donate Now",
+      "copyright": "© 2025 Canopy Nepal. All rights reserved."
+    },
+    "navigation": {
+      "items": [
+        {
+          "id": "about",
+          "name": "About Us",
+          "href": "#",
+          "isRoute": false,
+          "submenu": [
+            {
+              "id": "mission",
+              "name": "Our Mission",
+              "href": "/missions",
+              "isRoute": true
+            },
+            {
+              "id": "story",
+              "name": "Our Story",
+              "href": "/story",
+              "isRoute": true
+            },
+            {
+              "id": "team",
+              "name": "Meet the Team",
+              "href": "/meet-the-team",
+              "isRoute": true
+            },
+            {
+              "id": "board",
+              "name": "Board of Directors",
+              "href": "/board-of-directors",
+              "isRoute": true
+            }
+          ]
+        },
+        {
+          "id": "work",
+          "name": "Our Work",
+          "href": "/ourwork",
+          "isRoute": true,
+          "submenu": [
+            {
+              "id": "canship",
+              "name": "CANSHIP",
+              "href": "/canship",
+              "isRoute": true
+            },
+            {
+              "id": "kb",
+              "name": "Katha Bunaun",
+              "href": "/katha-bunaun",
+              "isRoute": true
+            }
+          ]
+        },
+        {
+          "id": "impact",
+          "name": "Our Impact",
+          "href": "/ourimpact",
+          "isRoute": true,
+          "submenu": []
+        },
+        {
+          "id": "pubs",
+          "name": "Publications",
+          "href": "/publications",
+          "isRoute": true,
+          "submenu": []
+        },
+        {
+          "id": "chapters",
+          "name": "Chapters",
+          "href": "#",
+          "isRoute": false,
+          "submenu": [
+            {
+              "id": "france",
+              "name": "Canopy France",
+              "href": "/canopyfrance",
+              "isRoute": true
+            },
+            {
+              "id": "usa",
+              "name": "Canopy USA",
+              "href": "/canopyusa",
+              "isRoute": true
+            }
+          ]
+        },
+        {
+          "id": "involved",
+          "name": "Get Involved",
+          "href": "/getinvolved",
+          "isRoute": true,
+          "submenu": []
+        }
+      ]
+    },
+    "footer": {
+      "mission": "Canopy empowers marginalized students through scholarships and storytelling, ensuring access to quality education.",
+      "takeActionTitle": "Take Action",
+      "takeAction": [
+        {
+          "id": "d",
+          "label": "Donate Now",
+          "href": "/donate"
+        },
+        {
+          "id": "g",
+          "label": "Get Involved",
+          "href": "/getinvolved"
+        },
+        {
+          "id": "j",
+          "label": "Join the Team",
+          "href": "/meet-the-team"
+        }
+      ],
+      "resourcesTitle": "Resources",
+      "resources": [
+        {
+          "id": "f",
+          "label": "FAQs",
+          "href": "/canopy-faq"
+        },
+        {
+          "id": "a",
+          "label": "Annual Report",
+          "href": "/publications?section=annual-report"
+        },
+        {
+          "id": "ft",
+          "label": "Features",
+          "href": "/featured"
+        },
+        {
+          "id": "b",
+          "label": "Blogs",
+          "href": "/blogs"
+        }
+      ],
+      "officeTitle": "Our Office",
+      "officeLines": [
+        "Canopy Nepal",
+        "Thirbam Sadak, Baluwatar-04",
+        "Kathmandu 44600, Nepal"
+      ],
+      "mapUrl": "https://www.google.com/maps/place/Canopy+Nepal/@27.7213195,85.3276936,17z",
+      "phoneLabel": "Contact Number:",
+      "phone": "+977-01-4541478",
+      "emailLabel": "Email:",
+      "email": "info@canopynepal.org",
+      "followTitle": "Follow Us",
+      "instagram": "https://www.instagram.com/canopy_nepal/",
+      "facebook": "https://www.facebook.com/canopynepal",
+      "linkedin": "https://np.linkedin.com/company/canopynepal1",
+      "youtube": "https://www.youtube.com/channel/UC4jweDrtADma6nEnclqbb4w",
+      "newsletterTitle": "Stay Updated"
+    },
+    "home": {
+      "hero": {
+        "desktopImage": "hero.png",
+        "mobileImage": "landingherophone.png",
+        "highlight": "Reshaping",
+        "rest": "Education"
+      },
+      "intro": {
+        "beforePercent": "In Nepal,",
+        "percent": "73%",
+        "dropoutPhrase": "of students drop out",
+        "afterDropout": "before completing secondary school due to cost and poor-quality education.",
+        "changing": "Canopy Nepal is changing that.",
+        "middle": "Canopy Nepal empowers students to stay in school and thrive by combining scholarships with creative, story-based learning that builds confidence, critical thinking, and lifelong skills.",
+        "beforeHundred": "With Canopy, students don't just stay in school.",
+        "hundred": "100%",
+        "afterHundred": "remain motivated, supported, and on track to graduate",
+        "ending": ", and with local governments adapting our curriculum, our impact is sustainable and systemic."
+      },
+      "about": {
+        "image": "l2.png",
+        "title": "What We Do",
+        "paragraphs": [
+          "Canopy Nepal is working to improve access to quality education for underserved students across Nepal. We provide long-term scholarships and deliver story-based learning in public schools to reduce drop out rates and break cycles of poverty.",
+          "By combining academic support with creativity, mentorship, and collaboration with local governments, we help students stay in school, build critical life skills, and shape their own futures."
+        ],
+        "button": "Read More",
+        "href": "/ourwork"
+      },
+      "impact": {
+        "title": "Our Work in Numbers",
+        "intro": "Through our scholarship and storytelling programs, we're creating lasting change in the education space in Nepal.",
+        "stats": [
+          {
+            "id": "s1",
+            "icon": "users",
+            "title": "Scholarships Awarded",
+            "value": 785,
+            "suffix": ""
+          },
+          {
+            "id": "s2",
+            "icon": "book",
+            "title": "Students Worked With",
+            "value": 27000,
+            "suffix": "+"
+          },
+          {
+            "id": "s3",
+            "icon": "home",
+            "title": "Schools Reached",
+            "value": 251,
+            "suffix": ""
+          },
+          {
+            "id": "s4",
+            "icon": "heart",
+            "title": "Community Members Impacted",
+            "value": 250000,
+            "suffix": "+"
+          },
+          {
+            "id": "s5",
+            "icon": "dollar",
+            "title": "Funds Raised",
+            "value": 1300000,
+            "suffix": ""
+          },
+          {
+            "id": "s6",
+            "icon": "group",
+            "title": "Local Government Adaptation",
+            "value": 7,
+            "suffix": ""
+          }
+        ]
+      },
+      "testimonials": [
+        {
+          "id": "t1",
+          "text": "I never knew imagining my own story with new characters and plot of my choice would be possible before Canopy's session. I always had a difficult time expressing myself to my teachers and in exams. But, after Katha Bunaun, not only have I learned how to write my own story but also communicate with others well.",
+          "name": "Roshni",
+          "position": "Student of Katha Bunaun",
+          "image": "testimonials/tg.png"
+        },
+        {
+          "id": "t2",
+          "text": "Over the years, I've witnessed how Canopy has brought real change to our school. Their programs have helped our students become more confident, expressive, and curious, especially those who once struggled to participate. Their Katha Bunaun program has made a visible difference in how our students think and engage. When Canopy's team is in our school, they listen, adapt, and truly care. Our school has become a more inclusive and dynamic space because of their presence.",
+          "name": "Ishwori Ma'am",
+          "position": "Principal of Bhanubhakta Memorial School",
+          "image": "testimonials/tg2.png"
+        },
+        {
+          "id": "t3",
+          "text": "What stands out most about Canopy is the organization's unwavering integrity. We have worked together for fifteen years and it has shown me that this is a team you can trust. Their transparency, professionalism, and accountability are evident in every program, every decision, and every student's success story. Their commitment to education comes from personal experience, professional skill, and genuine love for the sector.",
+          "name": "Sandeep",
+          "position": "Donor and Founder of NCEP",
+          "image": "testimonials/tg1.png"
+        }
+      ],
+      "support": {
+        "stat": "73%",
+        "beforeHighlight": "of students are out of school and stuck in cycles of",
+        "highlight": "generational poverty",
+        "body": "Our work to reduce the drop out rate needs your support. You can help by providing support to child's education, school sessions, or operational cost.",
+        "button": "Donate Now"
+      },
+      "partners": {
+        "title": "We Are Thankful To",
+        "image": "l3.png"
+      },
+      "featured": {
+        "title": "Featured In",
+        "button": "Read More",
+        "href": "/featured",
+        "logos": [
+          {
+            "id": "logo-1",
+            "image": "icons/1.svg",
+            "alt": "Featured Organization 1"
+          },
+          {
+            "id": "logo-2",
+            "image": "icons/2.svg",
+            "alt": "Featured Organization 2"
+          },
+          {
+            "id": "logo-3",
+            "image": "icons/3.svg",
+            "alt": "Featured Organization 3"
+          },
+          {
+            "id": "logo-4",
+            "image": "icons/4.svg",
+            "alt": "Featured Organization 4"
+          },
+          {
+            "id": "logo-5",
+            "image": "icons/5.svg",
+            "alt": "Featured Organization 5"
+          },
+          {
+            "id": "logo-6",
+            "image": "icons/6.svg",
+            "alt": "Featured Organization 6"
+          },
+          {
+            "id": "logo-7",
+            "image": "icons/7.svg",
+            "alt": "Featured Organization 7"
+          },
+          {
+            "id": "logo-8",
+            "image": "icons/8.svg",
+            "alt": "Featured Organization 8"
+          },
+          {
+            "id": "logo-9",
+            "image": "icons/9.svg",
+            "alt": "Featured Organization 9"
+          },
+          {
+            "id": "logo-10",
+            "image": "icons/10.svg",
+            "alt": "Featured Organization 10"
+          },
+          {
+            "id": "logo-11",
+            "image": "icons/11.svg",
+            "alt": "Featured Organization 11"
+          },
+          {
+            "id": "logo-12",
+            "image": "icons/12.svg",
+            "alt": "Featured Organization 12"
+          }
+        ]
+      },
+      "newsletter": {
+        "title": "Join Our Community",
+        "description": "Subscribe to our newsletter for updates on student stories, impact reports, and opportunities to support education in Nepal.",
+        "privacy": "We respect your privacy. Your information will never be shared with third parties.",
+        "button": "Subscribe"
+      }
+    },
+    "mission": {
+      "whyImage": "mv1.png",
+      "whyTitle": "Why Education?",
+      "whyBody": "In Nepal, only 27% of students complete the upper secondary level, and the rest 73% drop out before their final year because of affordability and poor-quality schooling (UNICEF, 2022). The students impacted are disproportionately low-income, perpetuating the cycle of poverty by hindering their opportunities to become financially and socially independent (Devkota & Bagale, 2015).",
+      "missionTitle": "Our Mission",
+      "missionBody": "Canopy Nepal empowers underserved students to stay in school and thrive by combining scholarships with story-based learning that nurtures confidence, critical thinking, and lifelong skills. Through inclusive education and strategic government partnerships, we reduce dropout rates, break cycles of generational poverty, and build a future shaped by empowered thinkers and doers.",
+      "visionTitle": "Our Vision",
+      "visionBody": "We envision a Nepal where every child, regardless of background, has access to quality education, the freedom to express themselves, and the tools to shape their own future.",
+      "theoryTitle": "Our Theory Of Change",
+      "theoryImage": "toc.svg",
+      "theorySlides": [
+        "mtoc/MTOC1.png",
+        "mtoc/MTOC2.png",
+        "mtoc/MTOC3.png",
+        "mtoc/MTOC4.png",
+        "mtoc/MTOC5.png",
+        "mtoc/MTOC6.png"
+      ],
+      "valuesTitle": "Our Values",
+      "values": [
+        {
+          "id": "v1",
+          "icon": "val1.svg",
+          "label": "Deep Purpose",
+          "description": "We believe education is the most powerful path to equity. Every program we create is rooted in a long-term vision to transform lives and communities."
+        },
+        {
+          "id": "v2",
+          "icon": "val2.svg",
+          "label": "Child-Centered",
+          "description": "Children are at the core of our mission. We create spaces where they feel seen, heard, and supported to learn, express themselves, and lead with confidence."
+        },
+        {
+          "id": "v3",
+          "icon": "val3.svg",
+          "label": "Space for Growth",
+          "description": "We nurture a culture where learning is lifelong. Whether student, team member, or partner, everyone is encouraged to take risks, reflect, and keep growing."
+        },
+        {
+          "id": "v4",
+          "icon": "val4.svg",
+          "label": "Collaboration",
+          "description": "Our work is built through strong relationships. We partner with students, families, and communities to design programs together, grounded in trust and mutual ownership."
+        },
+        {
+          "id": "v5",
+          "icon": "val5.svg",
+          "label": "Transparency",
+          "description": "We believe trust is earned through clarity and openness. We share our successes, learn from our failures, and keep our stakeholders informed and engaged every step of the way."
+        }
+      ],
+      "closingImage": "mv2.png",
+      "closingText": "By 2030, we aim to reach over half a million students and integrate story-based learning into classrooms across Nepal, making storytelling a foundational part of how children learn, grow, and connect."
+    },
+    "story": {
+      "topImage": "oos.png",
+      "bottomImage": "os2.jpg",
+      "paragraphs": [
+        {
+          "id": "p1",
+          "style": "lead",
+          "text": "Canopy Nepal didn't begin with a perfect plan. It began with frustration!"
+        },
+        {
+          "id": "p2",
+          "style": "body",
+          "text": "Our founder, Mohit Rauniyar, grew up in a school system that didn't allow him to question, create, or think critically. Classrooms were rigid and memorization was rewarded. Creativity was treated like a distraction. That frustration stayed with him, not as resentment, but as fuel."
+        },
+        {
+          "id": "p3",
+          "style": "body",
+          "text": "In 2010, while working with the Nepal Children's Education Project (NCEP), Mohit saw firsthand how deep the crisis went. Public schools were overcrowded, under-resourced, and often inaccessible to the very children who needed them most. He began to understand the scale of the challenge, how access was only half the battle."
+        },
+        {
+          "id": "p4",
+          "style": "body",
+          "text": "By 2012, he joined the Bloom Nepal School as a teacher, working to build a school where learning was joyful and curiosity led the way. Those five years taught him something critical: even the best schools couldn't fix the system alone. If Nepal's education system was to change, it had to be done from the ground up and from the top down."
+        },
+        {
+          "id": "p5",
+          "style": "body",
+          "text": "So in 2015, Canopy Nepal was born, built on the belief that true educational equity means giving every child not just a seat in the classroom, but a reason to stay. Canopy combined scholarships to increase access with a bold idea: story-based learning that brings education to life and puts students at the center of their narrative. Education platforms, NCEP and Bloom, where Mohit started his educator journey from, are now some of Canopy's biggest partners."
+        },
+        {
+          "id": "p6",
+          "style": "emphasis",
+          "text": "For Mohit, it was never just about fixing the system; it was about building the kind of education he wished he had."
+        }
+      ]
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "filters": [
+        "CORE TEAM",
+        "FACILATORS AND FIELD VOLUNTEERS",
+        "VOLUNTEERS"
+      ],
+      "facilitatorNote": "Facilitators and Field Volunteers run engaging storytelling sessions, mentor students, track progress, and provide on-the-ground support—ensuring students thrive both inside and outside the classroom.",
+      "volunteerNote": "We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.",
+      "members": [
+        {
+          "id": "1",
+          "name": "Mohit Rauniyar",
+          "title": "Founder",
+          "category": "CORE TEAM",
+          "image": "team/all/Mohit.png",
+          "description": "Established Canopy Nepal and leads its global vision, actively overseeing international chapters in the USA and France while driving strategic fundraising to expand impact and ensure long-term sustainability.",
+          "linkedin": "https://www.linkedin.com/in/mohitrauniyar/"
+        },
+        {
+          "id": "2",
+          "name": "Monal Bhattarai",
+          "title": "Managing Director",
+          "category": "CORE TEAM",
+          "image": "team/all/Monal.png",
+          "description": "Leads Canopy's vision, partnerships, and fundraising strategy—steering growth, building global relationships, and amplifying the organization's voice through thought leadership, board support, and international representation.",
+          "linkedin": "http://www.linkedin.com/in/monal-bhattarai-bb3261194"
+        },
+        {
+          "id": "3",
+          "name": "Anjula Joshi",
+          "title": "Program Coordinator",
+          "category": "CORE TEAM",
+          "image": "team/all/Anjula.png",
+          "description": "Oversees the execution of Katha Bunaun and CANSHIP programs, ensuring sessions run smoothly, logistics are managed, and participants' feedback and program data are regularly reviewed and reported.",
+          "linkedin": "https://www.linkedin.com/in/anjula-joshi-she-her-352974217/"
+        },
+        {
+          "id": "4",
+          "name": "Usha Malla",
+          "title": "Finance, Legal & Admin Officer",
+          "category": "CORE TEAM",
+          "image": "team/all/Usha.png",
+          "description": "Manages budgets, payments, and reports, ensuring Canopy's financial integrity with timely reconciliations, audit readiness, and clear communication of budget performance across all departments and proposals.",
+          "linkedin": "https://www.linkedin.com/in/usha-malla-906b41150/"
+        },
+        {
+          "id": "5",
+          "name": "Amisha Adhikari",
+          "title": "Program Field Officer",
+          "category": "CORE TEAM",
+          "image": "team/all/Amisha.png",
+          "description": "Leads implementation and government partnerships outside Kathmandu Valley, coordinating with local offices and schools to ensure smooth execution, strong relationships, and high-quality delivery of Canopy's programs across districts.",
+          "linkedin": "https://www.linkedin.com/in/amisha-adhikari-4621a7291/"
+        },
+        {
+          "id": "6",
+          "name": "Prinsha Katuwal",
+          "title": "Facilitator Officer",
+          "category": "CORE TEAM",
+          "image": "team/all/Prinsha.png",
+          "description": "Supports and trains facilitators, ensures quality program delivery, manages performance reviews, and maintains a strong support system to foster facilitator growth and retention.",
+          "linkedin": "https://www.linkedin.com/in/prinsha-katwal"
+        },
+        {
+          "id": "7",
+          "name": "Shreeya Aryal",
+          "title": "School Liaison Associate",
+          "category": "CORE TEAM",
+          "image": "team/all/Shreeya.png",
+          "description": "Builds strong relationships with schools, conduct regular visits, coordinate events, monitor student well-being, and ensure timely feedback and collaboration with parents and teachers to support scholars holistically.",
+          "linkedin": "https://www.linkedin.com/in/shreeya-aryal-01b6ba269"
+        },
+        {
+          "id": "8",
+          "name": "Dakshita Karki",
+          "title": "Communication Officer",
+          "category": "CORE TEAM",
+          "image": "team/all/Dakshita.png",
+          "description": "Leads Canopy's digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.",
+          "linkedin": "https://www.linkedin.com/in/dakshita-karki-a9591136b/"
+        },
+        {
+          "id": "9",
+          "name": "Raghav Devkota",
+          "title": "Finance Intern",
+          "category": "CORE TEAM",
+          "image": "team/all/Raghav.png",
+          "description": "Supports day-to-day accounting tasks, helps maintain organized records, assists with budget tracking, and learns nonprofit finance systems.",
+          "linkedin": "https://www.linkedin.com/in/raghav-devkota-3386a3360"
+        },
+        {
+          "id": "10",
+          "name": "Sobika Shrestha",
+          "title": "Finance Intern",
+          "category": "CORE TEAM",
+          "image": "team/all/Sobhika.png",
+          "description": "Supports day-to-day accounting tasks, helps maintain organized records, assists with budget tracking, and learns nonprofit finance systems.",
+          "linkedin": "https://www.linkedin.com/in/sobika-shrestha/"
+        },
+        {
+          "id": "11",
+          "name": "Yamuna Thapa",
+          "title": "Cook and Cleaner",
+          "category": "CORE TEAM",
+          "image": "team/all/Yamuna.png",
+          "description": "Ensures a welcoming, hygienic, and well-fed environment by preparing nutritious meals, maintaining cleanliness, and supporting daily office upkeep, helping the team stay energized and focused on their work.",
+          "linkedin": ""
+        },
+        {
+          "id": "14",
+          "name": "Anala Shrestha",
+          "title": "Field Volunteer",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Anala.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/analashrestha1830/"
+        },
+        {
+          "id": "15",
+          "name": "Aviska Upadhyaya",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Avishka.png",
+          "description": "",
+          "linkedin": "https://np.linkedin.com/in/aaviska-upadhayaya-741755370"
+        },
+        {
+          "id": "16",
+          "name": "Bimala Dahal",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Bimala.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "17",
+          "name": "Biraj Poudel",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Biraj.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "18",
+          "name": "Deepasha Maharjan",
+          "title": "Field Volunteer",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Deepasha.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/deepasha-maharjan-b30229206/"
+        },
+        {
+          "id": "19",
+          "name": "Himshikha Dahal",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Himshikha.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "20",
+          "name": "Janvi Subedi",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Janvi.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "41",
+          "name": "Jenisha Joshi",
+          "title": "Field Volunteer & Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Jenisha.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/jenisha-joshi-80505a364/"
+        },
+        {
+          "id": "21",
+          "name": "Mamata Shah",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Mamta.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "22",
+          "name": "Manila Magar",
+          "title": "Field Volunteer & Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Manila.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "23",
+          "name": "Megha Bhattarai",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Megha.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/megha-bhattarai-73350a261/"
+        },
+        {
+          "id": "24",
+          "name": "Mohit Muni Bajracharya",
+          "title": "Field Volunteer & Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Mohit.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "42",
+          "name": "Muna Gautam",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Muna.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "25",
+          "name": "Nandita Ghimire",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Nandita.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/nandita-ghimire/"
+        },
+        {
+          "id": "26",
+          "name": "Ojashwi Pun",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Ojaswee.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "27",
+          "name": "Prarthana Sharma",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/prathana.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/prarthana-sharma-268a81330/"
+        },
+        {
+          "id": "28",
+          "name": "Prastuti Chaulagain",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Prastuti.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "29",
+          "name": "Pratikshya Poudel",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Pratikshya.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "30",
+          "name": "Puspa Kala Rai",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/PushpaKala.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/puspa-kala-rai-226090353/"
+        },
+        {
+          "id": "31",
+          "name": "Sobika Shrestha",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Sobhika.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "32",
+          "name": "Sristy Khadka",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Sristy Khadka.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "33",
+          "name": "Sujal Adhikari",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "team/facilitators/Sujal.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "34",
+          "name": "Abhishek Pradhan",
+          "title": "Volunteer, Nepal",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Abhishek.png",
+          "description": "Abhishek is a Computer Science and Economics student at Washington and Lee University and a Bonner Scholar. He is an M&E Trainee at Canopy.",
+          "linkedin": "https://www.linkedin.com/in/abhishekpradhannn"
+        },
+        {
+          "id": "43",
+          "name": "Christian Skalshøi",
+          "title": "Volunteer, Denmark",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Christian.png",
+          "description": "Christian is a pedagogical assistant in Copenhagen who conducted control and experimental group research evaluating Canopy's storytelling-based classes.",
+          "linkedin": "https://www.linkedin.com/in/christian-skalshøi-951a1a214/"
+        },
+        {
+          "id": "39",
+          "name": "Diki Yangzom",
+          "title": "Volunteer, USA",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Diki.png",
+          "description": "Diki is a biology graduate from UMass Amherst with research and dental assisting experience. At Canopy USA, she manages our instagram page.",
+          "linkedin": "https://www.linkedin.com/in/diki-yangzom-70656b189"
+        },
+        {
+          "id": "40",
+          "name": "Eshan Shrestha",
+          "title": "Volunteer, USA",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Eshan.png",
+          "description": "Eshan is a student at Texas Tech University and is working on adding AI compotents to our webiste.",
+          "linkedin": ""
+        },
+        {
+          "id": "38",
+          "name": "Isabelle Hiller",
+          "title": "Volunteer, Germany",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Isabelle.png",
+          "description": "Isabelle is a student-athlete at Williams College pursuing Art History and Political Science. She's also involved with the Clark Art Institute. At Canopy, she worked as a Graphic Design Intern.",
+          "linkedin": ""
+        },
+        {
+          "id": "37",
+          "name": "Katherine Gutierrez",
+          "title": "Volunteer, USA",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Kathy.png",
+          "description": "Katherine is a Harvard MPA/ID economist and policymaker with public finance and project management experience. At Canopy, she interned as an M&E advisor, enhancing monitoring systems in Nepal.",
+          "linkedin": "https://www.linkedin.com/in/katherine-gutierrez-abanto/"
+        },
+        {
+          "id": "36",
+          "name": "Margot Arnaud",
+          "title": "Volunteer, France",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Margot.png",
+          "description": "Margot is a medical student from Lyon, France, and volunteered with Canopy during her gap year. Passionate about social activism, she brings prior teaching experience and a deep love for the arts.",
+          "linkedin": ""
+        },
+        {
+          "id": "35",
+          "name": "Pauline Dteil",
+          "title": "Volunteer, France",
+          "category": "VOLUNTEERS",
+          "image": "team/volunteers/Pouline.png",
+          "description": "Pauline Dteil is a French graduate student in social and cultural development. She intered at Canopy through L'Abeille Asso. She brought experience in climate activism, ethical advocacy, and grassroots organizing.",
+          "linkedin": ""
+        }
+      ]
+    },
+    "board": {
+      "title": "Meet Our Board",
+      "filters": [
+        "BOARD OF DIRECTORS",
+        "ADVISORY BOARD"
+      ],
+      "members": [
+        {
+          "id": "b1",
+          "name": "Angirash Karki",
+          "title": "Board of Director",
+          "category": "BOARD OF DIRECTORS",
+          "image": "team/bod/Angirash.png",
+          "description": "Angirash is an educator and social impact leader with a decade of experience across education, inclusion, and youth empowerment. He has led country operations for ISLearning, advised U.S. Embassy Youth Council and Rotary initiatives, mentored changemakers globally, and developed inclusive education policies with governments and the National Human Rights Commission.",
+          "linkedin": ""
+        },
+        {
+          "id": "b2",
+          "name": "Mohit Rauniyar",
+          "title": "Board of Director",
+          "category": "BOARD OF DIRECTORS",
+          "image": "team/bod/Mohit.png",
+          "description": "Mohit is the founder of Canopy and a nonprofit leader dedicated to equity in education. A Harvard graduate, he has worked with over 20,000 students across Nepal. Through Global Shapers, Bloom Nepal Foundation, University of Nepal, and UWS USA, he drives systems change by bridging grassroots impact and global collaboration.",
+          "linkedin": ""
+        },
+        {
+          "id": "b3",
+          "name": "Roshan Bhatta",
+          "title": "Board of Director",
+          "category": "BOARD OF DIRECTORS",
+          "image": "team/bod/Roshan.png",
+          "description": "Roshan is a biomedical engineer and researcher with global experience across the U.S., Turkey, and Romania. He previously served as Canopy Nepal's Managing Director and has since worked in medical device quality assurance and nanotechnology R&D. Roshan brings a unique lens at the intersection of innovation, science, and education.",
+          "linkedin": ""
+        },
+        {
+          "id": "b4",
+          "name": "Shreya Upadhyay",
+          "title": "Board of Director",
+          "category": "BOARD OF DIRECTORS",
+          "image": "team/bod/Shreya.png",
+          "description": "Shreya is a social impact strategist and entrepreneur with experience leading volunteer programs, nonprofit operations, and youth initiatives. She co-founded Sweet Fix Nepal and has led international exchanges, board engagement, and cross-cultural programs that bridge purpose, community, and creativity.",
+          "linkedin": ""
+        },
+        {
+          "id": "b5",
+          "name": "Srishti Vaidya",
+          "title": "Board of Director",
+          "category": "BOARD OF DIRECTORS",
+          "image": "team/bod/Srishti.png",
+          "description": "Srishti is an Finance professional and sustainability advocate, with experience at the International Finance Corporation, Nepal and Cummins Inc., USA. She has led operations at Vaidya Group, advised global climate initiatives, and served as Nepal's youth delegate at COP28. She is also a Global Shaper and founder of Kathmandu's longest-running book club.",
+          "linkedin": ""
+        },
+        {
+          "id": "b6",
+          "name": "Aditya Todi",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Aditya.png",
+          "description": "Aditya leads the metal manufacturing vertical at MC Group, a century-old business in Nepal. With past roles in consulting and development, he brings a global lens to strategic leadership. He holds degrees from Stanford and dual master's from Harvard Kennedy School and Harvard Business School.",
+          "linkedin": ""
+        },
+        {
+          "id": "b7",
+          "name": "Bijeysh Ranjit",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Bijeysh.png",
+          "description": "Bijeysh is a social entrepreneur and founder of Danfe Works, which creates opportunities for marginalized communities through business with purpose. He previously led the nonprofit SAATH and has worked across the U.S., Europe, and Nepal.",
+          "linkedin": ""
+        },
+        {
+          "id": "b25",
+          "name": "Megha Poddar",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Megha.png",
+          "description": "Megha is a strategy and growth leader with experience across consulting, electric mobility, and enterprise services in India and Nepal. She currently serves as Strategy Lead and Director at Gogoro Nepal and Blackbox Records Management.",
+          "linkedin": ""
+        },
+        {
+          "id": "b8",
+          "name": "Niranjan Kunwar",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Niranjan.png",
+          "description": "Niranjan is an educator, writer, and translator based in Kathmandu. With an M.S.Ed from CUNY, he bridges education, arts, and culture. He's the author of Between Queens and the Cities.",
+          "linkedin": ""
+        },
+        {
+          "id": "b9",
+          "name": "Saugat Gautam",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Saugat.png",
+          "description": "Saugat is a political science scholar and development leader with a decade of experience. He manages programs at the International Commission of Jurists and teaches at Thames College.",
+          "linkedin": ""
+        },
+        {
+          "id": "b10",
+          "name": "Shristi Mishra",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Shristi.png",
+          "description": "Shristi is an education professional and entrepreneur focused on expanding access to quality education. A Fulbright Scholar with a Master's from the University of Pennsylvania, she manages Yak9 Chews and was recognized in Inc.'s 2026 Female Founders 500.",
+          "linkedin": ""
+        },
+        {
+          "id": "b26",
+          "name": "Yukta Bajracharya",
+          "title": "Nepal",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Yukta.png",
+          "description": "Yukta works at the intersection of arts, culture, and inclusion as Arts Programme Manager at the British Council. A writer and facilitator, she co-founded the spoken word collective Word Warriors.",
+          "linkedin": ""
+        },
+        {
+          "id": "b11",
+          "name": "Ashra Acharya",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Ashra.png",
+          "description": "Ashra leads executive operations at Bessemer Venture Partners and previously served as Director of Community for the Great Nepali Diaspora. Born in Nepal and raised in Texas, she brings heart and expertise to her work.",
+          "linkedin": ""
+        },
+        {
+          "id": "b12",
+          "name": "Bhushan Dahal",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Bhushan.png",
+          "description": "Bhushan is a Ph.D. candidate in Educational Leadership at Florida State University and former Executive Director of Kids of Kathmandu. His leadership spans rebuilding schools, implementing digital classrooms, and advancing education policy.",
+          "linkedin": ""
+        },
+        {
+          "id": "b13",
+          "name": "Bibek Raj Kandel",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Bibek.png",
+          "description": "Bibek is a global energy and climate expert advising governments and institutions across Asia and Africa. With a decade of experience in climate finance and policy, he holds an MPA from Harvard Kennedy School.",
+          "linkedin": ""
+        },
+        {
+          "id": "b14",
+          "name": "Bimla Siwakoti",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Bimla.png",
+          "description": "Bimla is a Health Informaticist at Deloitte, blending her technical background with lived experience from a refugee camp in Nepal. With degrees from Johns Hopkins and Penn State, she is passionate about improving healthcare systems and championing education equity.",
+          "linkedin": ""
+        },
+        {
+          "id": "b15",
+          "name": "Binju Gaire",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Binju.png",
+          "description": "Binju is an IT Audit Manager at Deloitte, currently based in Dublin. With expertise in tech risk and compliance, she is equally committed to mental health, education, and financial literacy.",
+          "linkedin": ""
+        },
+        {
+          "id": "b16",
+          "name": "Clement V. Gomes",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Clement.png",
+          "description": "Clement is a Biology Professor at CUNY Guttman and founder of ISLearning. With decades of experience teaching in both K–12 and higher education, he holds a Ph.D. from Columbia University.",
+          "linkedin": ""
+        },
+        {
+          "id": "b23",
+          "name": "Foteini Giannopoulou",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Foteini.png",
+          "description": "Foteini is a Learning Experience Designer at Harvard Business School Foundry. She holds an Ed.M. from Harvard and works on technology-enabled learning with social enterprises and NGOs.",
+          "linkedin": ""
+        },
+        {
+          "id": "b17",
+          "name": "Heather Schultz",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Heather.png",
+          "description": "Heather helped launch Canopy's Katha Bunaun program in 2017 and continues to champion its mission. With years of experience in youth development and literacy, she now lives in Seattle and works as a Senior Onboarding Specialist.",
+          "linkedin": ""
+        },
+        {
+          "id": "b18",
+          "name": "Meg Zuttermeister",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Meg.png",
+          "description": "Meg is an educator passionate about designing engaging and inclusive learning environments. Her work spans early intervention, parent coaching, and preschool education. She holds an M.Ed from Harvard.",
+          "linkedin": ""
+        },
+        {
+          "id": "b19",
+          "name": "Needika Adhikari",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Needhika.png",
+          "description": "Needika is a Senior Analyst at Excelsior Energy Capital, managing renewable energy assets and advising on sustainability initiatives in the U.S. and Nepal. With an LLM from The Fletcher School, she brings analytical precision and a deep commitment to equitable climate solutions.",
+          "linkedin": ""
+        },
+        {
+          "id": "b20",
+          "name": "Sanam Karki",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Sanam.png",
+          "description": "Sanam is a project and data management professional with experience in banking and nonprofit operations. With an MBA from the University of Southern Mississippi, she helps organizations improve systems, drive results, and build stronger teams.",
+          "linkedin": ""
+        },
+        {
+          "id": "b21",
+          "name": "Subha Niroula",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Subha.png",
+          "description": "Subha is a Software Engineer with a passion for teaching and mathematics. With degrees from St. John's College and Wake Forest, he brings global academic experience and a love for lifelong learning.",
+          "linkedin": ""
+        },
+        {
+          "id": "b22",
+          "name": "Swexya Panta",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Swexya.png",
+          "description": "Swexya is a Senior Investment Analyst at the Carnegie Corporation of New York. With a strong foundation in financial research and analysis, she previously worked at Stone Forest Capital.",
+          "linkedin": ""
+        },
+        {
+          "id": "b24",
+          "name": "Yashna Jhaveri",
+          "title": "USA",
+          "category": "ADVISORY BOARD",
+          "image": "team/advisoryboard/Yashna.png",
+          "description": "Yashna works at the Overdeck Family Foundation supporting K-8 grantmaking in instructional materials and education technology. She previously worked at Teach For India and holds an Ed.M. from the Harvard Graduate School of Education.",
+          "linkedin": ""
+        }
+      ]
+    },
+    "ourWork": {
+      "heroImage": "ourwork.png",
+      "introBefore": "We directly solve the two major issues for the alarming dropout rate in Nepal",
+      "cost": "cost",
+      "and": "and",
+      "quality": "poor-quality education.",
+      "middle": "Every year, millions of students in Nepal face a tough choice—drop out of school or keep showing up to classrooms that fail to engage or support them.",
+      "emphasis": "At Canopy Nepal, we're doing something about both.",
+      "after": "Through CANSHIP and Katha Bunaun, our two flagship programs, we remove financial barriers and reimagine how education feels in the classroom.",
+      "ecosystemImage": "ecosystem.svg",
+      "programsTitle": "Our Programs",
+      "programs": [
+        {
+          "id": "canship",
+          "name": "CANSHIP",
+          "image": "ourworkcanopy.jpg",
+          "route": "/canship"
+        },
+        {
+          "id": "kb",
+          "name": "Katha Bunaun",
+          "image": "ourworkkb.jpg",
+          "route": "/katha-bunaun"
+        }
+      ]
+    },
+    "canship": {
+      "heroImage": "canship.jpg",
+      "title": "Canopy Nepal Scholarship Program",
+      "paragraphs": [
+        "CANSHIP, short for Canopy Scholarship Program, is our long-term commitment to supporting students through their entire educational journey.",
+        "At Canopy, we believe scholarships should do more than cover fees. That's why CANSHIP offers holistic support: school materials, nutritious meals, mentorship, psychosocial care, and hands-on learning opportunities. It's a program built not just to help students stay in school, but to help them grow, lead, and thrive.",
+        "With our long-term support and mentorship, CANSHIP helps break the cycle of poverty, empowering young people with the skills, confidence, and choices they need to shape their futures.",
+        "And it doesn't end at graduation. Many of our scholars go on to pursue higher education, launch careers, and land jobs that allow them to support themselves and their families, creating real change in their lives and communities."
+      ],
+      "lifecycleTitle": "Canopy Scholar Lifecycle",
+      "lifecycleImage": "canImpact.svg",
+      "impactTitle": "Impact",
+      "impactImage": "canshipImpact.png",
+      "points": [
+        {
+          "id": "c1",
+          "label": "Retention and Completion",
+          "text": "Scholars stay in school year after year, even when many of their peers drop out."
+        },
+        {
+          "id": "c2",
+          "label": "Academic Progress",
+          "text": "Improved test scores, grade promotions, and graduation rates."
+        },
+        {
+          "id": "c3",
+          "label": "Wellbeing",
+          "text": "Increased confidence, better mental health, improved attendance due to meals and psychosocial support."
+        },
+        {
+          "id": "c4",
+          "label": "Skills Development",
+          "text": "Public speaking, critical thinking, digital literacy, storytelling, leadership, etc."
+        },
+        {
+          "id": "c5",
+          "label": "Post-Program Outcomes",
+          "text": "Scholars pursuing higher education, vocational training, or entering the job market with readiness."
+        }
+      ],
+      "stats": [
+        {
+          "id": "cs1",
+          "emphasis": "100% employed",
+          "text": "within one year of graduation"
+        },
+        {
+          "id": "cs2",
+          "emphasis": "Avg 35% increase",
+          "text": "in family income after student enters workforce"
+        },
+        {
+          "id": "cs3",
+          "emphasis": "10 scholars",
+          "text": "have joined Canopy as mentors for younger scholars"
+        }
+      ],
+      "bottomImage": "canshipBottom.jpg"
+    },
+    "katha": {
+      "heroImage": "kbtop.png",
+      "title": "Katha Bunaun",
+      "paragraphs": [
+        "Katha Bunaun, which translates to \"Weaving Stories,\" is Canopy Nepal's signature story-based learning program that brings classrooms to life.",
+        "Through interactive sessions, students explore language, identity, values, creativity, self-expression and critical thinking by crafting and sharing stories. Whether it's a tale about their village, a dream for the future, or a social issue they care about, students learn to express themselves with confidence and curiosity.",
+        "Katha Bunaun isn't just about storytelling, it's about building the foundational skills that traditional classrooms often overlook: empathy, communication, collaboration, and voice.",
+        "Designed to align with local curriculum and delivered in partnership with teachers and local governments, Katha Bunaun is Nepal's only storytelling program that creates a new kind of classroom, one where every child has the space to imagine, reflect, and speak up.",
+        "Because when students tell their own stories, they start to believe in their own power."
+      ],
+      "lifecycleTitle": "Katha Bunaun Incorporation in the System",
+      "lifecycleImage": "kbImpact.svg",
+      "slides": [
+        "mtoc/MTOC1.png",
+        "mtoc/MTOC2.png",
+        "mtoc/MTOC3.png",
+        "mtoc/MTOC4.png",
+        "mtoc/MTOC5.png",
+        "mtoc/MTOC6.png"
+      ],
+      "impactTitle": "Impact",
+      "impactImage": "kbImpact.png",
+      "points": [
+        {
+          "id": "k1",
+          "label": "Engagement & Expression",
+          "text": "Students who were once shy or disengaged now speak up, participate actively, and take pride in their ideas and identities."
+        },
+        {
+          "id": "k2",
+          "label": "Foundational Skills",
+          "text": "Improvements in communication, empathy, creativity, and critical thinking, skills rarely prioritized in traditional classrooms."
+        },
+        {
+          "id": "k3",
+          "label": "Academic Improvement",
+          "text": "Increased classroom participation, engagement in extracurricular activities, comprehension, and retention by connecting curriculum with personal experiences and imagination."
+        },
+        {
+          "id": "k4",
+          "label": "Wellbeing & Confidence",
+          "text": "Students report feeling more confident, seen, and heard. Teachers observe better peer relationships and expression."
+        },
+        {
+          "id": "k5",
+          "label": "Leadership & Collaboration",
+          "text": "Students learn to listen and collaborate while leading group discussions and projects, often guiding their friends in shared storytelling activities."
+        }
+      ],
+      "stats": [
+        {
+          "id": "ks1",
+          "emphasis": "0.025% budget increase",
+          "text": "by local governments to incorporate storytelling into their curriculum."
+        },
+        {
+          "id": "ks2",
+          "emphasis": "245 schools",
+          "text": "have adopted interactive and child-centered learning approaches"
+        },
+        {
+          "id": "ks3",
+          "emphasis": "67% increase",
+          "text": "in student engagement in school activities."
+        }
+      ]
+    },
+    "impactPage": {
+      "heroImage": "impacthero.png",
+      "title": "Our Impact",
+      "intro": "At Canopy Nepal, we measure impact not just in numbers, but in transformed lives, classrooms, and communities. From long-term scholarships to storytelling-powered learning, our programs help students stay in school, build essential life skills, and unlock opportunity.",
+      "charts": [
+        {
+          "id": "ch1",
+          "title": "Creativity",
+          "preValue": 1.3,
+          "postValue": 3.5,
+          "growth": "59%"
+        },
+        {
+          "id": "ch2",
+          "title": "Self-expression",
+          "preValue": 1.1,
+          "postValue": 3.2,
+          "growth": "54%"
+        },
+        {
+          "id": "ch3",
+          "title": "Critical Thinking",
+          "preValue": 1,
+          "postValue": 3,
+          "growth": "50%"
+        },
+        {
+          "id": "ch4",
+          "title": "Attendance",
+          "preValue": 3,
+          "postValue": 3.9,
+          "growth": "45%"
+        },
+        {
+          "id": "ch5",
+          "title": "Academic Results",
+          "preValue": 1.8,
+          "postValue": 4.7,
+          "growth": "91%"
+        },
+        {
+          "id": "ch6",
+          "title": "Extracurricular Activities Participation",
+          "preValue": 2,
+          "postValue": 4,
+          "growth": "67%"
+        },
+        {
+          "id": "ch7",
+          "title": "Academic Support by Family",
+          "preValue": 2.7,
+          "postValue": 4.8,
+          "growth": "91%"
+        }
+      ],
+      "beforeLabel": "Before Canopy",
+      "afterLabel": "After Canopy",
+      "footnote": "*based on survey of 15,000+ students and 150+ scholars",
+      "methodNote": "Our percentage of possible growth is calculated through our meticulous monitoring and evaluation through interaction, observation, and long term impact. Our priority is not the score students get but rather the growth they achieve during our program.",
+      "headlines": [
+        {
+          "id": "h1",
+          "headline": "100% \nSCHOLARS",
+          "subtext": "are employed after graduation"
+        },
+        {
+          "id": "h2",
+          "headline": "54%\nINCREASE",
+          "subtext": "in students' reading, writing, and critical thinking skills"
+        },
+        {
+          "id": "h3",
+          "headline": "77%\nINCREASE",
+          "subtext": "in school attendance after Canopy's support"
+        },
+        {
+          "id": "h4",
+          "headline": "90% \nSCHOLARS",
+          "subtext": "feel mentally stronger and less overwhelmed at school after Canopy's support"
+        }
+      ],
+      "studentsTitle": "Stories of Change",
+      "students": [
+        {
+          "id": "1",
+          "name": "Anmol Pun Magar",
+          "image": "anmolimpact.png",
+          "shortBio": "From the serene green hills of Lukum in Rukum, a remote village inhabited by the Magar community, comes a boy whose journey reflects resilience.....",
+          "fullStory": "From the serene green hills of Lukum in Rukum, a remote village inhabited by the Magar community, comes a boy whose journey reflects resilience and a relentless pursuit of education. Meet Anmol Pun Magar, a 15-year-old ninth grader at Bloom Nepal School.\n\nAnmol's early life in Lukum was filled with laughter, freedom, and a deep connection to nature. He fondly remembers his childhood games like guccha, hide and seek and the camaraderie with his village friends. “Life was simple, and the hills were home,” he says. The peace and greenery of Lukum are things he still misses while living in the fast-paced Kathmandu Valley.\n\nBut Anmol has always known that dreams demand effort and sometimes, sacrifice. He dreams of joining the British Army, like the Gurkhas before him, and understands that strength without education is not enough. “I have to be smart and strong,” he says with unwavering clarity. His resolve is what brought him back to Bloom Nepal School after an unexpected detour.\n\nDuring the COVID-19 pandemic, Anmol had to leave Kathmandu and return to his village. It was a happy return in many ways with reunions with old friends, the fresh air of the hills but it came with a cost. Online education was nearly impossible in Lukum due to weak electricity and poor network access. Still determined, Anmol enrolled in the local school to continue learning, even if the resources were limited. But deep down, he knew he belonged in Bloom.\n\nOnce the pandemic restrictions loosened, Anmol began convincing his parents to return to Kathmandu. His village friends were puzzled as to why he wanted to leave the fun and comfort of home for more homework and strict routines. But Anmol never wavered. His persistence paid off: his parents agreed to move back, and Bloom Nepal School welcomed him once again. Soon after, he became a proud CANSHIP scholar.\n\nSince returning, Anmol has shown remarkable progress in his academics, growing by 31% growth over the past years. His teachers speak highly of his discipline and focus, noting how he makes the most of every learning opportunity.\n\nBut his growth hasn’t been limited to the classroom. Anmol has also become more active in extracurricular activities, showing a 12% improvement. He plays football passionately, trains regularly, and was recently selected for his school’s upcoming football tournament. His agility and commitment make him a natural athlete and a step closer to his British Army dream.\n\nHe also participates in other school programs like dance and drawing competitions and has earned a reputation for being cheerful, confident, and inclusive. Living in a hostel hasn’t been easy. He misses his family and his village but his goal keeps him grounded. “I’ll visit home one day as someone my village can be proud of,” he says.\n\nAnmol is also proud of his identity. He continues to speak his native Magar language, something many children are beginning to lose in urban schools. “It’s who I am,” he says. And who he is, a determined, humble, and future-focused young boy is exactly why Canopy believes in him.\n\nThrough the CANSHIP scholarship, Anmol’s path is clearer, his steps are stronger, and his dream is one step closer. He reminds us that potential exists in every village, waiting to be nurtured not just with books, but with belief."
+        },
+        {
+          "id": "2",
+          "name": "Rekha Bhujel",
+          "image": "rekhaImpact.png",
+          "shortBio": "For Rekha Bhujel, the Nepali language is not just a school subject. It is a lifeline to her roots, a thread connecting her to her home in the highlands of.....",
+          "fullStory": "For Rekha Bhujel, the Nepali language is not just a school subject. It is a lifeline to her roots, a thread connecting her to her home in the highlands of Okhaldhunga. Now a tenth grader at Shree Janakalyan School in Kathmandu, Rekha carries a mission that’s bigger than her textbooks: to redefine what education looks like in her village and to become the teacher she wished she had.\n\nRekha’s day begins long before most of her peers have even opened their eyes. She wakes up early, studies for an hour, and then prepares breakfast for her entire family. This quiet discipline speaks volumes about her values. While many teenagers are still hitting the snooze button, Rekha is already investing in her future and in the well-being of those around her.\n\nHer family moved from Okhaldhunga to Kathmandu with one goal in mind: access to quality education. That decision, led by her parents, gave Rekha the opportunity to observe two very different worlds. In Kathmandu, she found more resources, better-trained teachers, and a broader perspective. In contrast, she still remembers how schools back home would close during planting season, how qualified teachers were scarce, and how some families saw education as optional.\n\nThat contrast sparked a fire in Rekha. She began to think critically about not just what she was learning, but why. She often talks about the importance of understanding the cultural and economic barriers that keep children from learning. For Rekha, true reform means more than new buildings or new books, it means making education relevant, accessible, and rooted in community understanding.\n\nHer dream is to become a Nepali teacher. Not just any teacher, but the kind who uplifts communities, inspires students, and stands as a voice of reason in a world still influenced by superstitions and limiting traditions. Rekha sees teachers as quiet revolutionaries who work in the background but change everything. She wants to be that kind of leader.\n\nSince becoming a CANSHIP scholar, Rekha has shown significant growth in both her academic performance by 21% and extracurricular involvement by 17%. She participates actively in school programs, contributes thoughtfully in class discussions, and brings a level of maturity far beyond her age.\n\nRekha also has a unique ability to reflect on her own culture with both love and critical thought. She is respectful of traditions but not afraid to question practices that prevent progress. She dreams of starting programs in Okhaldhunga that will keep schools running year-round, bring in qualified teachers, and support children who face financial hardship. She wants every child in her hometown to see education not as a privilege, but as a right.\n\n“I aspire to be one of those people known for their contribution to society and as the go-to person for educational assistance,” she says. “Along with that, I also want to be a support system for those facing financial challenges.”\n\nRekha Bhujel is a powerful example of what happens when determination meets opportunity. Her dream of becoming a teacher is not just a career choice but a commitment to her community. With the support of Canopy, Rekha is transforming from a student into a changemaker."
+        }
+      ],
+      "mapTitle": "Where We Work",
+      "mapIntro": "Explore our impact across Nepal. Hover over the districts to see the number of schools and students we support.",
+      "districts": [
+        {
+          "id": "d1",
+          "name": "Bhaktapur",
+          "schools": 2,
+          "students": "60",
+          "mapIndex": 52
+        },
+        {
+          "id": "d2",
+          "name": "Dhading",
+          "schools": 4,
+          "students": "171",
+          "mapIndex": 35
+        },
+        {
+          "id": "d3",
+          "name": "Dhanusa",
+          "schools": 1,
+          "students": "50",
+          "mapIndex": 68
+        },
+        {
+          "id": "d4",
+          "name": "Gulmi",
+          "schools": 3,
+          "students": "150",
+          "mapIndex": 1
+        },
+        {
+          "id": "d5",
+          "name": "Jhapa",
+          "schools": 1,
+          "students": "20",
+          "mapIndex": 72
+        },
+        {
+          "id": "d6",
+          "name": "Kanchanpur",
+          "schools": 2,
+          "students": "2",
+          "mapIndex": 17
+        },
+        {
+          "id": "d7",
+          "name": "Kaski",
+          "schools": 4,
+          "students": "27",
+          "mapIndex": null
+        },
+        {
+          "id": "d8",
+          "name": "Kathmandu",
+          "schools": 45,
+          "students": "20,000",
+          "mapIndex": 48
+        },
+        {
+          "id": "d9",
+          "name": "Khotang",
+          "schools": 3,
+          "students": "15",
+          "mapIndex": 58
+        },
+        {
+          "id": "d10",
+          "name": "Lalitpur",
+          "schools": 5,
+          "students": "200",
+          "mapIndex": 54
+        },
+        {
+          "id": "d11",
+          "name": "Makwanpur",
+          "schools": 3,
+          "students": "101",
+          "mapIndex": 53
+        },
+        {
+          "id": "d12",
+          "name": "Nawalpur",
+          "schools": 5,
+          "students": "25",
+          "mapIndex": 46
+        },
+        {
+          "id": "d13",
+          "name": "Nuwakot",
+          "schools": 1,
+          "students": "56",
+          "mapIndex": 41
+        },
+        {
+          "id": "d14",
+          "name": "Parbat",
+          "schools": 4,
+          "students": "27",
+          "mapIndex": 31
+        },
+        {
+          "id": "d15",
+          "name": "Sankhuwasabha",
+          "schools": 3,
+          "students": "150",
+          "mapIndex": 43
+        },
+        {
+          "id": "d16",
+          "name": "Solukhumbu",
+          "schools": 8,
+          "students": "22",
+          "mapIndex": 39
+        },
+        {
+          "id": "d17",
+          "name": "Sunsari",
+          "schools": 1,
+          "students": "140",
+          "mapIndex": 71
+        }
+      ],
+      "ecosystemTitle": "Our Ecosystem",
+      "ecosystemImage": "ecosystem.svg",
+      "sdgTitle": "Contributing to the SDGs",
+      "sdgs": [
+        {
+          "id": "sdg-1",
+          "image": "sdg/1.png",
+          "alt": "SDG 1"
+        },
+        {
+          "id": "sdg-2",
+          "image": "sdg/2.png",
+          "alt": "SDG 2"
+        },
+        {
+          "id": "sdg-3",
+          "image": "sdg/3.png",
+          "alt": "SDG 3"
+        },
+        {
+          "id": "sdg-4",
+          "image": "sdg/4.png",
+          "alt": "SDG 4"
+        },
+        {
+          "id": "sdg-5",
+          "image": "sdg/5.png",
+          "alt": "SDG 5"
+        },
+        {
+          "id": "sdg-8",
+          "image": "sdg/8.png",
+          "alt": "SDG 8"
+        },
+        {
+          "id": "sdg-10",
+          "image": "sdg/10.png",
+          "alt": "SDG 10"
+        },
+        {
+          "id": "sdg-17",
+          "image": "sdg/17.png",
+          "alt": "SDG 17"
+        }
+      ]
+    },
+    "france": {
+      "title": "Canopy France",
+      "heroImage": "canfranhead.png",
+      "intro": "Established in 2022, Canopy France is our first international chapter, founded by a passionate group of young changemakers from France and Nepal. Registered as a legal nonprofit under French law, the chapter supports Canopy Nepal by raising awareness, building partnerships, and mobilizing resources across Europe.",
+      "whatWeDoTitle": "What We Do?",
+      "whatWeDoImage": "canfran.png",
+      "whatWeDoPoints": [
+        "Organize creative fundraising campaigns, cultural events, and storytelling nights across France",
+        "Strengthen connections between the Nepali diaspora and allies in France",
+        "Raise awareness around education equity through exhibitions, university partnerships, and youth networks",
+        "Directly support core programs like CANSHIP and Katha Bunaun with financial and advocacy support"
+      ],
+      "involvedTitle": "Want to Get Involved?",
+      "involvedIntro": "If you're based in France and want to help us:",
+      "involvedImage": "canopyfrance.jpeg",
+      "involvedPoints": [
+        "Host a fundraiser or awareness event",
+        "Partner with us for an academic or youth engagement initiative",
+        "Volunteer your time or skills"
+      ],
+      "emailLabel": "Reach out to us at:",
+      "email": "contact@canopyfrance.fr",
+      "extraNote": "",
+      "closing": "",
+      "newsletterBefore": "And don't forget to ",
+      "newsletterLabel": "[Subscribe to the Canopy France Newsletter]",
+      "newsletterHref": "#",
+      "newsletterAfter": " to stay updated on our events, stories, and impact from the ground.",
+      "teamIntro": "The chapter is led by a lean team, and together, they bring cross-cultural energy and grassroots commitment to the mission.",
+      "teamTitle": "Meet the Canopy France Team",
+      "members": [
+        {
+          "id": "fr1",
+          "name": "Mohit Rauniyar",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Mohit_France.png",
+          "description": "Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy France, he leads fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.",
+          "linkedin": "https://www.linkedin.com/in/mohitrauniyar/"
+        },
+        {
+          "id": "fr2",
+          "name": "Ainhoa Beneitez",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Ainhoa_France.png",
+          "description": "Ainhoa Beneitez is an Admin, Finance & Transit specialist at Médecins Sans Frontières France and a Business & Organizational Strategy Consultant with a background in humanitarian and development aid. She encouraged us to launch Canopy France and continues to support vital partnerships and strategy.",
+          "linkedin": "https://www.linkedin.com/in/ainhoa-beneitez-343b87170/"
+        },
+        {
+          "id": "fr3",
+          "name": "Olivia Palermo",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Olivia_France.png",
+          "description": "Olivia is a Master’s student in Social and Cultural Anthropology at the University of Strasbourg, with research focused on temporalities and agroecology. With a background in education and multilingual engagement, she contributes to Canopy France’s communications with care and cultural insight.",
+          "linkedin": ""
+        }
+      ],
+      "bankTitle": "",
+      "bankNote": "",
+      "bank": []
+    },
+    "usa": {
+      "title": "Canopy USA",
+      "heroImage": "canusaheader.png",
+      "intro": "Established in 2024, Canopy USA is a registered 501(c)(3) nonprofit committed to supporting the mission of Canopy Nepal from across the world. Based in the United States, the chapter focuses on building partnerships, fundraising, and spreading awareness about education equity in Nepal.",
+      "whatWeDoTitle": "What We Do?",
+      "whatWeDoImage": "canusabody.jpg",
+      "whatWeDoPoints": [
+        "Lead fundraising campaigns to support Canopy's flagship programs like CANSHIP and Katha Bunaun",
+        "Build connections with schools, universities, and donors across the U.S.",
+        "Represent Canopy Nepal at global forums, education events, and diaspora gatherings",
+        "Share stories and impact through digital campaigns and in-person events"
+      ],
+      "involvedTitle": "",
+      "involvedIntro": "If you're based in USA and want to:",
+      "involvedImage": "canusa2.jpg",
+      "involvedPoints": [
+        "Host a fundraiser or awareness event",
+        "Collaborate with us on educational outreach or events",
+        "Support through donations or in-kind resources"
+      ],
+      "emailLabel": "Reach out to us at:",
+      "email": "canopyusa@canopynepal.org",
+      "extraNote": "Canopy USA is a legally registered 501(c)(3) nonprofit. All donations are tax-deductible to the extent allowed by law.",
+      "closing": "Let’s make quality education possible—across borders, together.",
+      "newsletterBefore": "",
+      "newsletterLabel": "",
+      "newsletterHref": "",
+      "newsletterAfter": "",
+      "teamIntro": "Canopy USA is run by a lean team of dedicated volunteers and advisors, under the direct leadership of our founder, Mohit, working closely with Canopy Nepal's leadership to ensure transparency, sustainability, and aligned impact.",
+      "teamTitle": "Meet the Canopy USA Team",
+      "members": [
+        {
+          "id": "us1",
+          "name": "Mohit Rauniyar",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Mohit_USA.png",
+          "description": "Mohit is the founder of Canopy and a Harvard-educated nonprofit leader. He has worked with over 20,000 students across Nepal. At Canopy USA, he leads partnerships and fundraising to scale Canopy Nepal’s impact through storytelling and scholarships.",
+          "linkedin": "https://www.linkedin.com/in/mohitrauniyar/"
+        },
+        {
+          "id": "us2",
+          "name": "Siddhartha Mishra",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Siddhartha_USA.png",
+          "description": "Siddhartha is a full-stack developer and digital problem-solver with expertise in Flutter, cloud infrastructure, and intuitive UI/UX. At Canopy USA, he leads digital presence and website creation, ensuring our story shines online.",
+          "linkedin": "https://www.linkedin.com/in/siddhartha-mishra2020/"
+        },
+        {
+          "id": "us3",
+          "name": "Diki Yangzom",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Diki_USA.png",
+          "description": "Diki is a biology graduate from UMass Amherst with experience in research, scientific writing, and dental assisting. At Canopy USA, she leads our social media strategy, bringing precision, creativity, and consistency to our digital outreach.",
+          "linkedin": ""
+        },
+        {
+          "id": "us4",
+          "name": "Eshan Shrestha",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "team/all/Eshan_USA.png",
+          "description": "Committed team member focused on expanding Canopy USA's reach through innovative fundraising strategies and building strong community connections.",
+          "linkedin": ""
+        }
+      ],
+      "bankTitle": "Donate to Canopy USA",
+      "bankNote": "This is Canopy USA’s legal name",
+      "bank": [
+        {
+          "id": "u1",
+          "label": "Account number",
+          "value": "112787178"
+        },
+        {
+          "id": "u2",
+          "label": "Routing number",
+          "value": "21000021"
+        },
+        {
+          "id": "u3",
+          "label": "Account",
+          "value": "Checking"
+        },
+        {
+          "id": "u4",
+          "label": "Name",
+          "value": "INTERNATIONAL STUDENT LEARNING, INC."
+        }
+      ]
+    },
+    "publications": {
+      "sections": [
+        {
+          "id": "buneka-katha",
+          "label": "Buneka Katha",
+          "visible": true,
+          "intro": "Our magazine publications featuring stories, insights, and updates from our work in education and community development.",
+          "items": [
+            {
+              "id": "mag-11",
+              "title": "Buneka Katha Magazine 11",
+              "cover": "covers/Magazine11.png",
+              "file": "/pdfs/magazine-11.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-10",
+              "title": "Buneka Katha Magazine 10",
+              "cover": "covers/Magazine10.png",
+              "file": "/pdfs/magazine-10.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-9",
+              "title": "Buneka Katha Magazine 9",
+              "cover": "covers/Magazine9.png",
+              "file": "/pdfs/magazine-9.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-8",
+              "title": "Buneka Katha Magazine 8",
+              "cover": "covers/Magazine8.png",
+              "file": "/pdfs/magazine-8.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-7",
+              "title": "Buneka Katha Magazine 7",
+              "cover": "covers/Magazine7.png",
+              "file": "/pdfs/magazine-7.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-6",
+              "title": "Buneka Katha Magazine 6",
+              "cover": "covers/Magazine6.png",
+              "file": "/pdfs/magazine-6.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-5",
+              "title": "Buneka Katha Magazine 5",
+              "cover": "covers/Magazine5.png",
+              "file": "/pdfs/magazine-5.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-4",
+              "title": "Buneka Katha Magazine 4",
+              "cover": "covers/Magazine4.png",
+              "file": "/pdfs/magazine-4.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-3",
+              "title": "Buneka Katha Magazine 3",
+              "cover": "covers/Magazine3.png",
+              "file": "/pdfs/magazine-3.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-2",
+              "title": "Buneka Katha Magazine 2",
+              "cover": "covers/Magazine2.png",
+              "file": "/pdfs/magazine-2.pdf",
+              "label": ""
+            },
+            {
+              "id": "mag-1",
+              "title": "Buneka Katha Magazine 1",
+              "cover": "covers/Magazine1.png",
+              "file": "/pdfs/magazine-1.pdf",
+              "label": ""
+            }
+          ]
+        },
+        {
+          "id": "annual-report",
+          "label": "Annual Report",
+          "visible": true,
+          "intro": "Every year, we highlight our work and achievements to share with our supporters – individuals, multinational corporations, international organizations, and local allies – who make our work possible.",
+          "items": [
+            {
+              "id": "ar25",
+              "title": "Annual Report 2025",
+              "cover": "covers/Annual2025.png",
+              "file": "/pdfs/annual-report-2025.pdf",
+              "label": "2025"
+            },
+            {
+              "id": "ar24",
+              "title": "Annual Report 2024",
+              "cover": "covers/Annual2024.png",
+              "file": "/pdfs/annualreport2024.pdf",
+              "label": "2024"
+            },
+            {
+              "id": "ar23",
+              "title": "Annual Report 2023",
+              "cover": "covers/Annual2023.png",
+              "file": "/pdfs/annualreport2023.pdf",
+              "label": "2023"
+            },
+            {
+              "id": "ar22",
+              "title": "Annual Report 2022",
+              "cover": "covers/Annual2022.png",
+              "file": "/pdfs/annualreport2022.pdf",
+              "label": "2022"
+            }
+          ]
+        },
+        {
+          "id": "financial-report",
+          "label": "Financial Report",
+          "visible": false,
+          "intro": "Our comprehensive financial statements and audit reports ensuring transparency and accountability in our operations.",
+          "items": [
+            {
+              "id": "audit-2080/81",
+              "title": "Audit Report 2080/81",
+              "cover": "covers/AUDIT80_81.png",
+              "file": "/pdfs/audit-report-2080-81.pdf",
+              "label": "2080/81"
+            },
+            {
+              "id": "audit-2079/80",
+              "title": "Audit Report 2079/80",
+              "cover": "covers/AUDIT79_80.png",
+              "file": "/pdfs/audit-report-2079-80.pdf",
+              "label": "2079/80"
+            },
+            {
+              "id": "audit-2078/79",
+              "title": "Audit Report 2078/79",
+              "cover": "covers/AUDIT78_79.png",
+              "file": "/pdfs/audit-report-2078-79.pdf",
+              "label": "2078/79"
+            },
+            {
+              "id": "audit-2077/78",
+              "title": "Audit Report 2077/78",
+              "cover": "covers/AUDIT77_78.png",
+              "file": "/pdfs/audit-report-2077-78.pdf",
+              "label": "2077/78"
+            },
+            {
+              "id": "audit-2076/77",
+              "title": "Audit Report 2076/77",
+              "cover": "covers/AUDIT76_77.png",
+              "file": "/pdfs/audit-report-2076-77.pdf",
+              "label": "2076/77"
+            },
+            {
+              "id": "audit-2075/76",
+              "title": "Audit Report 2075/76",
+              "cover": "covers/AUDIT75_76.png",
+              "file": "/pdfs/audit-report-2075-76.pdf",
+              "label": "2075/76"
+            },
+            {
+              "id": "audit-2074/75",
+              "title": "Audit Report 2074/75",
+              "cover": "covers/AUDIT74_75.png",
+              "file": "/pdfs/audit-report-2074-75.pdf",
+              "label": "2074/75"
+            },
+            {
+              "id": "audit-2073/74",
+              "title": "Audit Report 2073/74",
+              "cover": "covers/AUDIT73_74.png",
+              "file": "/pdfs/audit-report-2073-74.pdf",
+              "label": "2073/74"
+            }
+          ]
+        }
+      ]
+    },
+    "policies": {
+      "title": "Policy Guidelines",
+      "intro": "Our comprehensive policy guidelines and frameworks that guide our work in education and community development.",
+      "items": [
+        {
+          "id": "pol-1",
+          "title": "Policy Guideline 1",
+          "cover": "covers/Annual2024.png",
+          "file": "/pdfs/policy-guideline-1.pdf",
+          "label": ""
+        },
+        {
+          "id": "pol-2",
+          "title": "Policy Guideline 2",
+          "cover": "covers/Annual2023.png",
+          "file": "/pdfs/policy-guideline-2.pdf",
+          "label": ""
+        },
+        {
+          "id": "pol-3",
+          "title": "Policy Guideline 3",
+          "cover": "covers/Annual2022.png",
+          "file": "/pdfs/policy-guideline-3.pdf",
+          "label": ""
+        },
+        {
+          "id": "pol-4",
+          "title": "Policy Guideline 4",
+          "cover": "covers/AUDIT80_81.png",
+          "file": "/pdfs/policy-guideline-4.pdf",
+          "label": ""
+        },
+        {
+          "id": "pol-5",
+          "title": "Policy Guideline 5",
+          "cover": "covers/AUDIT79_80.png",
+          "file": "/pdfs/policy-guideline-5.pdf",
+          "label": ""
+        },
+        {
+          "id": "pol-6",
+          "title": "Policy Guideline 6",
+          "cover": "covers/AUDIT78_79.png",
+          "file": "/pdfs/policy-guideline-6.pdf",
+          "label": ""
+        }
+      ]
+    },
+    "blogs": {
+      "title": "Blogs",
+      "posts": [
+        {
+          "id": "1",
+          "title": "Exploring the Horizon",
+          "excerpt": "2021",
+          "image": "blogpic/exploring.png",
+          "content": "Nepal’s Education system is but a blurred line that distinguishes knowledge from understanding. Students study because they feel obliged to. They aim to excel due to the fear of failure and not a love for learning. The system is flawed because the learning aspect is based upon a mechanism, “rote learning”. A technique that is used to instil fundamentals of mathematics and sciences, languages and arts, any and every other subject from elementary level. Students groom themselves under the shadows of society’s expectation and it gallops their true yearning for knowledge. Young students are naturally inquisitive and imaginative, but our education system limits their horizon of creativity with this mechanism of rote learning. Not only does the system have such loopholes in its delivery, but the majority of the public, as well as private schools in Nepal, also aren’t even well-facilitated infrastructure wise.\n\nOprah Winfrey rightly said, “The biggest adventure you can ever take is to live the life of your dreams”. Do schools in our country make this adventure seem achievable? This question reverberated around the meeting hall at the office of Canopy Nepal. The Canopy team was long aware of this real face of the education system in Nepal and this was the root of frustration in the team. Hence, the idea of introducing interactive learning to expand critical thinking skills and boost creativity in students came forth in the year 2015.\n\nThe first session of this interactive learning program was taken in Shanti Nikunja School located in Basantapur. To make things different from a usual classroom learning environment,  students were arranged in a circular seminar system. It all started with the idea of discussing a book. For the first session, under the facilitation of Ms Roni Lama, Roald Dahl’s Matilda was chosen as the book for discussion. Students were given free space and were allowed to explore their creativity. This was the initial motive of these sessions, to expand free and critical thinking capacity in students to embolden their learning experience. Along with the development in their thinking skills, another major observation was also an improvement in their quality of English i.e. basic aspects like reading, writing, comprehending, listening, speaking and creativity among others. Thus, these sessions were named, “English Improvement Classes”.\n\nOver time, as this intensive one-month long program got initiated in many different schools, including public as well as private schools, a different dimension was added to this program. It now turned into a program that aimed to develop multifaceted skills such as reading, writing, listening, speaking, creative thinking and critical thinking while strengthening their overall learning abilities so that they can transform everyday knowledge into lifelong learning. The curriculum is enriched with unique and interactive methods of imparting skills to help students immerse themselves in the idea that “learning is fun”.\n\nWhen introduced to schools as “English Improvement Classes”, it feels as if the essence of this program is not given justice as the English language is merely a medium of delivery of this learning technique. It does improve the fundamentals of the English Language as observed after completion of many EIC sessions but it isn’t the primary objective. The main motive under the hood is Skill Enhancement in students. It is about promoting skills in students to make education less monotonous and more likeable for students, to spark in them a passion for learning, a love for knowledge and a hunger for understanding.\n\nCurrently, EIC is one of the flagship programs of Canopy Nepal. With a tangible curriculum, EIC has come a long way and it has led the team to create more programs focusing on other students’ skills. What started with a piece of paper to plan and design ideas for sessions has become one of the most powerful programs in schools. The month-long session is broken down into week-wise activities. Starting from the most important step which is building rapport and bonding with the students, the activities gradually start focusing on the skill enhancements based on pre evaluations and then pushing learners to newer focus areas. Finally, the facilitators conduct the post-evaluation session and assess the learners’ growth. The facilitators take note of their growth in areas of meta-cognitive awareness, articulation, grammar, sentence structure, self-expression, punctuation, critical analysis and creativity.\n\nGetting started and redesigning EIC was not as easy as it may sound. Getting and training facilitators, convincing schools, at least, during the initial phase and also working on the curriculum were challenging. But today, when students respond with commendable growth in their learning abilities, it all seems worth the wear. We can say that EIC has been the backbone of the learners’ hub programs and it has given confidence to the team and gained its share of love from the students. This story doesn’t end here, with every student that can unfold their calibre and enhance their skills, this story continues to explore its horizon."
+        },
+        {
+          "id": "2",
+          "title": "Small Things Matter A Lot",
+          "excerpt": "2021",
+          "image": "blogpic/small.png",
+          "content": "Things to bring- A water bottle, Notebook, Pen, and positive energy :)\n\nOn the 25th of January 2021, I got an invitation from Mr Angirash Karki (referred to as Angirash Dada later) to an event organized by Canopy Nepal. It was the Katha Bunaun program in Unique Nepal Academy, a school in Lokanthali. On the 26th of January, with a backpack containing a water bottle, a notebook, and a pen, I left home and reached Lokanthali with the littlest idea of what it was all about. As soon as I entered the gates of the school, I greeted Ms Monal Bhattarai (or Monal Didi with love), with a stupid grin on my face. She then introduced me to two of the Learners’ Hub facilitators- Briksha and Keith. I was already overwhelmed by the warmth in their smiles and the hint of friendliness I sensed around them.\n\nAbout 10 mins passed by, Monal di had just been briefed about the Katha Bunaun program and what was expected of me in the sessions. “It is really to allow students to find self-expression”, her words were reverberating in the back of my mind as I climbed up the stairs to the classes. I had almost reached in front of the class when I saw a student join his hands and said, “Good morning ma’am.” with a slightly shy smile on his face. I snapped back to reality, so to speak,  but that moment was too surreal for me, I couldn’t react or respond to it. Hence, I stood still and ended up staring foolishly at that child as if  I didn’t understand what “Good morning ma’am” meant. I was still trying to process what exactly just happened when suddenly, students started switching rooms to fit the arrangement that was designed for them by the facilitators.\n\nIt was the second day of the Katha Bunaun session and the facilitators had completed a part of pre evaluating the students. They had been introduced to the basic steps of story writing and it was now time for them to start weaving their stories. I was thrilled by the energy of these students as they jumped around switching rooms. Eventually, as they settled down, the facilitators started engaging these students in many ways. It was awe-inspiring to see how the facilitators were able to empathize with the students so well. They were making the teaching-learning environment welcoming and interactive. I realized how the students called them, “ma’am” and “sir” but treated them as one of them. It was very interesting to witness this bond of friendship the facilitators had established with the students. They were taking sessions based on a specific to-do list but the energy they shared knew no bounds.\n\nAs I switched from one room to another observing both the groups of students, I noticed how these children were making the best of the present. While seeing these kids interact in class, I had a euphoric moment where I realized that while there is always so much to complain about, there are more things to cherish about life. My younger self was never able to express herself with no reluctance but these children were doing so with ease. They were learning something new, knowing each other better, working with their friends, playing games, and sharing stories. Frankly speaking, these were little things but it seemed to matter a lot to them because the joy reflected in their eyes was simply ineffable. After these classroom interactions, the day ended with quite a lot of physical activities including energizers, audio-visual stories and their enactments, and many more.\n\nThe following day I was the first to arrive and unsurprisingly the children were keenly anticipating the arrival of their dear sir and ma’am. They glanced at me with looks of expectations and excitement and asked me so many questions about when sessions would start when the facilitators would arrive, and many other inquisitive questions. I replied that their facilitators would be coming soon. Then, they chuckled and went to grab lunch. This day was filled with relatively more indoor activities. The students were all working on their individual stories. Despite the fundamental loopholes in grammatical understanding and the English language in general, these students seemed to apply what had been taught to them about character detailing in story writing pretty well. The best part about this day was that they seemed to enjoy writing stories and working with their friends. It was most heartwarming to see one friend teaching another full of zest. By the end of this day, most students had a well-crafted story and the facilitators were to assess their growth.\n\nThe next day was the presentation day where all the students presented their stories in speech. There were unique stories from each student and hearing all of them made the day an eventful one. Of course, the story which remains imprinted on my mind is the one that partially revolved around me. I must say the student who wrote that story did grasp a solid understanding of the character description because he mentioned minute details about me like the pimples on my face rather than just broadly describing me as a “girl” or a “teacher” in this case. Despite how shocking it sounded to my ears, it still brought my heart immense joy to be mentioned in a story written with the energy that the student devoted to it. This day came to an end after all these children presented their stories.\n\nI prepared to leave my house on the 29th of January and the next thing I realized it was the last day of the program already. The children were full of energy that day too as usual. Ms Nikita, one of the facilitators, had also joined us on this day as the emcee and the day before to help students prepare some performances. The children had prepared some dances under her guidance and they performed them one by one on this day. Seeing them dance under those little hours of preparations managed to bring a wide smile to my face again. I can't stress enough how there were countless times I had a huge smile on my face because of these young students. Thereafter, there were speeches from the principal and teachers and a few students. Certificates for the best stories and the best storytellers were distributed and then the students were flocking back to their classes exchanging smiles and flying kisses.\n\nTrust me, I’d been a nerd all along which was a limiting factor for my interpersonal growth. I didn’t want to be enriched with bookish knowledge while not being able to implicate it in practice. While most people believe that emerging out of one's comfort zones is important, I like to differ. I feel like I’m mostly in my  “uncomfortable” zone when I’m sitting on a sofa trying to chill or when I know I lack social skills but opt to reject a social gathering, or when I turn down a hangout with my friends and instead sit at home cluelessly staring at the ceiling. Rather, I like to explore my comfort zones, the ones that get me overwhelmed and overworked, the ones that push me to work under pressure and the ones that bring me real smiles to my face and not merely an instant gratification. Through Katha Bunaun, I learned the skill of appreciation and gratefulness from these students and the team so subtly. It brought innocent and genuine smiles to my face and gave me an eccentric feeling of joy from within.\n\nI’m not sure whether I entered the gates of Unique Nepal with the “positive energy” that was expected from me however there's no denying the fact that I left the gates of Unique Nepal with immeasurable positivity."
+        },
+        {
+          "id": "3",
+          "title": "Weaving Stories of Growth: Katha Bunaun Sessions with UWS",
+          "excerpt": "2021",
+          "image": "blogpic/weaving.png",
+          "content": "The Learners’ Hub team from Canopy Nepal headed towards the Sankhuwasabha district to hold the Katha Bunaun sessions in collaboration with the United World Schools (UWS), Nepal in late January.\n\nLocated in the high and mid-mountainous belt of the Koshi zone in Eastern Nepal, Sankhuwasabha is a district, rich in topography. In the district, the Learners’ Hub team had to conduct sessions in three different schools of UWS in the Nundhaki, Khamare, and Heluwabesi regions. As they prepared to leave for the 19 days long sessions, a spark of joy could be reflected in their eyes and with immense excitement, the team departed.\n\nNundhaki is situated in an elevated region and it has striking environmental characteristics. Despite being the remotest area among the ones that the team had attended, it was enriched with natural beauty. The session at UWS school, Nundhaki had begun with the pre-evaluation period. During this period, the team had realized the differences in this remote community of people than the urban community. A harsh reality faced by the students unfolded to the team and they tried to adapt to these differences and improvise accordingly. The geographical complexity of the region itself invited a lot of struggle for the students as they had to travel long routes to reach the school and had daily chores to complete.\n\nWhen the facilitators were first introduced to the students, they were almost like statues. They wouldn’t interact or respond and they displayed maturity rather than childlike traits. In their writing as well as presentation skills, there were some under nourishments. They seemed stiff and reserved during their presentations and there were no crosstalks that the facilitators could observe. It was quite shocking for the facilitators to witness this but as they carved their way to reach out to the students, they too carved themselves out of their reluctance.\n\nWhen it came to story writing and the learning process, they displayed self-discipline and obedience. They seemed to be good learners and were attentive to every detail that was given to them. Remarkably enough, they had the eagerness and the willingness to learn. Unfortunately, a political strike was announced in the country so chances were that the school would remain closed. However, despite the adversities, almost all the students showed up on the day they were to write the final draft. At this point, it was clear to the facilitators that these young minds had an intriguing willingness to attend the session. By this time, most of the students had become more familiar and less hesitant to bond with the facilitators and weave diverse stories. Their stories got more elaborative and their presentations more expressive. Many students personified characters and also wrote creative pieces of monologues.\n\nRegardless of the unease the students previously displayed, at the end of the day, they were able to seek comfort with the facilitators and come out of the bubble of apprehensiveness they were trapped in. They came up with many personal stories and presented them confidently and the ideas that the stories were based upon were jaw-dropping. On graduation day, these students presented their drama better than ever before given that they hadn’t ever performed to a huge crowd as such. It was a poignant and proud moment for the facilitators. When they were covered with tika all over their faces and draped in khadas and garlands made of flowers.\n\nFor the facilitators, the greatest challenge was to form a bond with the students so that they could resonate more with their stories.  There were UWS volunteers in the UWS school, Nundhaki around whom the students weren’t as uncomfortable as they were around the teachers. During the reenactment activity, the students were growing more interactive and the facilitators learned that making the students not view them as “teachers” was the most important to bring out the best in them. The sessions at Nundhaki were an immense success for the team and the students portrayed a gradual but significant growth holistically. With these learnings, the team then moved down to Khamare.\n\nAt Khamare, the environment was much different compared to that at Nundhaki. It was at a lower height than Nundhaki and the weather was more humid since the movement of air was blocked by the hills that surrounded the region. As it wasn’t at as elevated a region, it meant that it was also less conservative in its beliefs and lesser remote. The nature of students differed accordingly. As the sessions began, the facilitators realized that the students were not as introverted as they were in Nundhaki.\n\nThe school in this region was better privileged in terms of facilitation in comparison to the one at Nundhaki because it was geographically less complex. The students were hence more proactive. The community here was also very diverse in comparison to the previously visited region. They were more open-minded and fairly exposed to urban lifestyles. Students were not as much burdened with household and livestock chores and they were much more energetic than the facilitators had imagined.\n\nSince the nature of the students was so drastically different here than in Nundhaki, the facilitators almost felt a mismatch in the energy level. The stories received from these students during the pre-evaluation were short and common ones. So, the facilitators decided to give them prompts to write stories and almost magically the stories got so much better. The accomplishment of the objective of the program to improve the story writing skills and presentation skills was being reflected in their stories.\n\nAlthough the facilitators were caught off-guard during the pre-evaluation, it took no time for them to change that and by the time it was the graduation ceremony, most students had woven detailed stories. Therefore, the facilitators had to adapt and improvise to overcome the challenges they were faced with during these sessions. There was a huge number of students here so bonding with them on a personal level was a little challenging. However, the students here showed gestures of affection towards the facilitators which was an overwhelming realization for the facilitators. They left this region with the learning that pre-preparedness was very important as things might not turn out as expected.\n\nWith two drastically different experiences, the team then moved further down to Heluwabesi. The school in this region was very close to the hub that the team was temporarily residing in. This region comparatively the most developed hence the school was well facilitated. During the pre-evaluation session in this school, the students seemed less interested in indoor activities that dealt with writing but were greatly enthusiastic about the outdoor activities. But they eventually made improvements under the guidance of the facilitators. The written drafts were enhanced but the students had to be pushed more for burnishing their presentation skills. However, some students were exceptionally able to present interactively.\n\nIt was more difficult to bond with the students in this school but the facilitators found ways to reach out to the students beyond the sessions and that helped students get out of their comfort zones. However, the facilitators realized the eagerness of the students to participate was reflected when most of the students showed up for the sessions despite having an occasion of Lhosar which was their local festival. Moreover, the sessions got extended for an additional 2 hours but the students weren’t in a hurry to go back home. The final drafts and presentations were much more demonstrative and they developed the confidence to present to a larger audience. Identifying which activities are best for the students and improvising the activities as per their nature proved to be the most challenging for the facilitators but they could overcome it with informal interaction with the students.\n\nIn a nutshell, the 19 days long program left a significant impression on the facilitators as they learned a lot during the process and experienced distinct scenarios. This Katha Bunaun session hence came to a fruitful end on both the students’ and the team’s end. These learnings will be cherished and these memories safe in the hearts and minds of the entire team."
+        }
+      ]
+    },
+    "featuredPage": {
+      "title": "Featured In",
+      "items": [
+        {
+          "id": "f1",
+          "title": "Harvard i-lab Social Impact Fellowship Fund Recipient",
+          "url": "https://innovationlabs.harvard.edu/venture/canopy-nepal",
+          "image": "featured/1.png"
+        },
+        {
+          "id": "f2",
+          "title": "Social Innovation + Change Initiative Fellow at Harvard Kennedy School",
+          "url": "https://sici.hks.harvard.edu/person/mohit-rauniyar/",
+          "image": "featured/2.png"
+        },
+        {
+          "id": "f3",
+          "title": "Canopy Nepal Selected as One of HundrED's Global Innovations in Education",
+          "url": "https://hundred.org/en/innovations/8-canopy-nepal",
+          "image": "featured/3.png"
+        },
+        {
+          "id": "f10",
+          "title": "Angirash Karki Interview in Education Plus",
+          "url": "https://www.youtube.com/watch?v=xJXyXH60QmI",
+          "image": "featured/10.png"
+        },
+        {
+          "id": "f11",
+          "title": "Mohit Rauniyar Interview in Chiya Guff",
+          "url": "https://www.youtube.com/watch?v=AAjvEer1VP4",
+          "image": "featured/11.png"
+        },
+        {
+          "id": "f12",
+          "title": "Monal Bhattarai Interview in Education Dialogue",
+          "url": "https://www.youtube.com/watch?v=we30kvNKrvc&t=1702s",
+          "image": "featured/12.png"
+        },
+        {
+          "id": "f7",
+          "title": "MIT Solve: Canopy Nepal's Solution for Inclusive Learning",
+          "url": "https://solve.mit.edu/solutions/89298",
+          "image": "featured/7.png"
+        },
+        {
+          "id": "f8",
+          "title": "Kathmandu Post: How Canopy Nepal is Making a Difference",
+          "url": "https://kathmandupost.com/art-culture/2024/09/09/how-canopy-nepal-is-making-a-difference",
+          "image": "featured/8.png"
+        },
+        {
+          "id": "f9",
+          "title": "Canopy Nepal's Education Initiatives",
+          "url": "https://www.setopati.com/social/218455",
+          "image": "featured/9.png"
+        },
+        {
+          "id": "f4",
+          "title": "Guide Q&A: Mohit Rauniyar on Mentorship and Social Impact",
+          "url": "https://resolutionproject.org/guide-qa-with-mohit-rauniyar/",
+          "image": "featured/4.png"
+        },
+        {
+          "id": "f5",
+          "title": "World Economic Forum Feature on Mohit: Educating Communities",
+          "url": "https://www.weforum.org/stories/2023/06/mohit-rauniyar-educating-community-climate-change/",
+          "image": "featured/5.png"
+        },
+        {
+          "id": "f6",
+          "title": "Catalyst 2030 Feature",
+          "url": "https://catalyst2030.net/organisations/independent-mohit-rauniyar/",
+          "image": "featured/6.png"
+        },
+        {
+          "id": "f13",
+          "title": "Angirash Karki's Podcast in House of Legends",
+          "url": "https://www.youtube.com/watch?v=mk4YJGysW-M&t=32s",
+          "image": "featured/13.png"
+        },
+        {
+          "id": "f14",
+          "title": "International Literacy Association – Mohit Rauniyar Named 30 Under 30",
+          "url": "https://www.literacyworldwide.org/docs/default-source/communications/literacy-today/ila-2023-30-under-30.pdf",
+          "image": "featured/14.png"
+        }
+      ]
+    },
+    "getInvolved": {
+      "heroImage": "getinvolvedhero.png",
+      "title": "Get Involved",
+      "intro": "At Canopy Nepal, we believe everyone has something to give - whether it's time, skills, resources, or simply a belief in the power of education.\n\nHere's how you can be part of our mission to help every child stay in school, find their voice, and thrive.",
+      "ways": [
+        {
+          "id": "w1",
+          "title": "1. Donate",
+          "body": "Your support fuels scholarships, storytelling sessions, and teacher training. Big or small - every contribution helps us reach more students!",
+          "image": "gi1.jpg",
+          "imageSide": "right",
+          "flipImage": false,
+          "buttons": [
+            {
+              "id": "b1",
+              "label": "Donate Now",
+              "href": "/donate",
+              "newTab": true,
+              "popup": false
+            }
+          ]
+        },
+        {
+          "id": "w2",
+          "title": "2. Fundraise With Us",
+          "body": "Run a marathon, host a dinner, celebrate your birthday - turn any moment into impact. We'll support you every step of the way.",
+          "image": "gi2.png",
+          "imageSide": "left",
+          "flipImage": true,
+          "buttons": [
+            {
+              "id": "b2",
+              "label": "Host A Fundraiser",
+              "href": "https://form.jotform.com/251855341854058",
+              "newTab": false,
+              "popup": true
+            }
+          ]
+        },
+        {
+          "id": "w3",
+          "title": "3. Partner With Us",
+          "body": "We love teaming up with schools, businesses, universities, and community groups. Let's create something meaningful together.",
+          "image": "gi3.jpg",
+          "imageSide": "right",
+          "flipImage": false,
+          "buttons": [
+            {
+              "id": "b3",
+              "label": "Email Us",
+              "href": "https://mail.google.com/mail/?view=cm&to=info@canopynepal.org",
+              "newTab": true,
+              "popup": false
+            }
+          ]
+        },
+        {
+          "id": "w4",
+          "title": "4. Jobs/ Volunteer/ Intern",
+          "body": "Got skills? Passion? Curiosity? Join us in Nepal or remotely and help shape the future of education.",
+          "image": "gi4.jpg",
+          "imageSide": "left",
+          "flipImage": false,
+          "buttons": [
+            {
+              "id": "b4",
+              "label": "Join the Team",
+              "href": "#",
+              "newTab": false,
+              "popup": false
+            }
+          ]
+        },
+        {
+          "id": "w5",
+          "title": "5. Join Our Chapters",
+          "body": "If you're based in the U.S. or France, connect with our global community and help take Canopy further.",
+          "image": "gi5.png",
+          "imageSide": "right",
+          "flipImage": false,
+          "buttons": [
+            {
+              "id": "b5",
+              "label": "Canopy France",
+              "href": "/canopyfrance",
+              "newTab": true,
+              "popup": false
+            },
+            {
+              "id": "b6",
+              "label": "Canopy USA",
+              "href": "/canopyusa",
+              "newTab": true,
+              "popup": false
+            }
+          ]
+        }
+      ],
+      "helpTitle": "Still wondering how to help?",
+      "helpBody": "Reach out to us at",
+      "helpEmail": "info@canopynepal.org",
+      "helpClosing": "Because when you support Canopy, you're not just helping a child stay in school—you're helping them rewrite their future.",
+      "helpImage": "gi6.png"
+    },
+    "donate": {
+      "heroImage": "donatehero.png",
+      "headline": "Your gift helps students stay in school, grow with confidence, and dream without limits.",
+      "intro": "Every donation to Canopy Nepal directly supports students through scholarships, story-based learning, and long-term mentorship. Whether it's a one-time gift or a monthly commitment, your support helps break barriers and build futures.",
+      "supportsTitle": "What Your Donation Supports",
+      "tiers": [
+        {
+          "id": "t25",
+          "amount": "$25",
+          "description": "provides school supplies for one student",
+          "icon": "dicon1.png"
+        },
+        {
+          "id": "t50",
+          "amount": "$50",
+          "description": "covers one month of nutritious school meals and transport",
+          "icon": "dicon2.png"
+        },
+        {
+          "id": "t100",
+          "amount": "$100",
+          "description": "supports a CANSHIP scholar for one month",
+          "icon": "dicon3.png"
+        },
+        {
+          "id": "t250",
+          "amount": "$250",
+          "description": "funds a storytelling workshop for an entire classroom",
+          "icon": "dicon4.png"
+        },
+        {
+          "id": "t1000",
+          "amount": "$1,000",
+          "description": "covers a full year of support for a student, including scholarship, school mentorship, and workshops",
+          "icon": "dicon5.png"
+        }
+      ],
+      "button": "Donate Now",
+      "taxNote": "Secure and tax-deductible (in the U.S. through Canopy USA, a registered 501(c)(3) nonprofit)",
+      "whyTitle": "Why Give to Canopy?",
+      "whyImage": "donatebody.jpg",
+      "whyPoints": [
+        "We work directly with students, families, communities, and local governments",
+        "Our programs are designed to be long-term, inclusive, and measurable",
+        "Donations support education-focused programs in Nepal, with more than 80% directly going to the students",
+        "We keep you updated with real stories and real impact",
+        "We treat your donation like tea in a Nepali household: shared generously and used wisely"
+      ],
+      "bankTitle": "Prefer Bank Transfer or In-Kind Donation?",
+      "bank": [
+        {
+          "id": "bk1",
+          "label": "Account Number",
+          "value": "00116539370"
+        },
+        {
+          "id": "bk2",
+          "label": "Account Name",
+          "value": "CANOPY NEPAL"
+        },
+        {
+          "id": "bk3",
+          "label": "Bank Name",
+          "value": "SIDDHARTHA BANK LTD."
+        },
+        {
+          "id": "bk4",
+          "label": "SWIFT Code",
+          "value": "SIDDNPKA"
+        },
+        {
+          "id": "bk5",
+          "label": "Branch Name",
+          "value": "HATTISAR"
+        },
+        {
+          "id": "bk6",
+          "label": "City",
+          "value": "KATHMANDU"
+        },
+        {
+          "id": "bk7",
+          "label": "Country",
+          "value": "NEPAL"
+        }
+      ],
+      "thanks": "Thank you for believing in students who just need a chance to thrive.",
+      "thanksEmphasis": "Together, we're not just funding education—we're changing lives, one story at a time.",
+      "presetAmounts": [
+        25,
+        50,
+        100,
+        250,
+        500,
+        1000
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "intro": "Find answers to common questions about Canopy Nepal, our programs, and how you can get involved in our mission to reshape education.",
+      "categories": [
+        {
+          "id": "all",
+          "name": "All Questions",
+          "icon": "help"
+        },
+        {
+          "id": "general",
+          "name": "General",
+          "icon": "book"
+        },
+        {
+          "id": "donations",
+          "name": "Donations",
+          "icon": "heart"
+        },
+        {
+          "id": "scholarships",
+          "name": "Scholarships",
+          "icon": "award"
+        },
+        {
+          "id": "programs",
+          "name": "Programs",
+          "icon": "book"
+        },
+        {
+          "id": "volunteering",
+          "name": "Volunteering",
+          "icon": "users"
+        },
+        {
+          "id": "partnerships",
+          "name": "Partnerships",
+          "icon": "globe"
+        }
+      ],
+      "items": [
+        {
+          "id": "q1",
+          "category": "general",
+          "icon": "book",
+          "question": "What is Canopy Nepal and what do you do?",
+          "answer": "Canopy Nepal is a non-profit organization dedicated to improving access to quality education for underserved students across Nepal. We provide long-term scholarships and deliver story-based learning in public schools to reduce dropout rates and break cycles of poverty. By combining academic support with creativity, mentorship, and collaboration with local governments, we help students stay in school, build critical life skills, and shape their own futures."
+        },
+        {
+          "id": "q2",
+          "category": "donations",
+          "icon": "heart",
+          "question": "How can I donate to Canopy Nepal?",
+          "answer": "You can donate to Canopy Nepal through our secure online donation platform. We accept various payment methods including credit cards, PayPal, and bank transfers. Your donation directly supports our scholarship programs and educational initiatives. Visit our donate page for more information and to make a contribution."
+        },
+        {
+          "id": "q3",
+          "category": "scholarships",
+          "icon": "award",
+          "question": "How do you select students for scholarships?",
+          "answer": "Our scholarship selection process is based on several criteria including financial need, academic potential, and commitment to education. We work closely with local schools and communities to identify students who would benefit most from our support. The process includes interviews, family visits, and ongoing assessment to ensure we're supporting the right students."
+        },
+        {
+          "id": "q4",
+          "category": "programs",
+          "icon": "book",
+          "question": "What is the Katha Bunaun program?",
+          "answer": "Katha Bunaun is our innovative story-based learning program that helps students develop creativity, critical thinking, and communication skills. Through interactive storytelling sessions, students learn to express themselves, build confidence, and develop a love for learning. The program has shown remarkable results in improving student engagement and academic performance."
+        },
+        {
+          "id": "q5",
+          "category": "volunteering",
+          "icon": "users",
+          "question": "How can I volunteer with Canopy Nepal?",
+          "answer": "We welcome volunteers from all backgrounds! Whether you're interested in teaching, mentoring, administrative support, or fundraising, there are many ways to get involved. We have both local and international volunteer opportunities. Contact us through our website or email us directly to learn more about current volunteer positions."
+        },
+        {
+          "id": "q6",
+          "category": "general",
+          "icon": "globe",
+          "question": "Where does Canopy Nepal operate?",
+          "answer": "Canopy Nepal primarily operates in Nepal, with our main office located in Kathmandu. We work in various regions across the country, partnering with local schools and communities. We also have international chapters and partnerships to support our global mission of educational empowerment."
+        },
+        {
+          "id": "q7",
+          "category": "general",
+          "icon": "mail",
+          "question": "How can I stay updated with Canopy Nepal's work?",
+          "answer": "You can stay connected with us through our newsletter, social media channels, and website. We regularly share updates about our programs, student success stories, and upcoming events. Subscribe to our newsletter or follow us on social media to receive the latest news and impact stories."
+        },
+        {
+          "id": "q8",
+          "category": "donations",
+          "icon": "heart",
+          "question": "What percentage of donations goes directly to programs?",
+          "answer": "We are committed to transparency and efficiency. Approximately 85% of all donations go directly to our programs, including scholarships, educational materials, and program delivery. The remaining 15% covers essential administrative costs, fundraising, and organizational development to ensure sustainable impact."
+        },
+        {
+          "id": "q9",
+          "category": "scholarships",
+          "icon": "users",
+          "question": "Do you provide support beyond financial scholarships?",
+          "answer": "Yes! Our support goes far beyond financial assistance. We provide mentorship, academic guidance, life skills training, and emotional support to our students. Our holistic approach ensures that students have the tools, confidence, and support network they need to succeed both academically and personally."
+        },
+        {
+          "id": "q10",
+          "category": "partnerships",
+          "icon": "globe",
+          "question": "How can schools partner with Canopy Nepal?",
+          "answer": "We actively seek partnerships with schools that share our vision for quality education. If your school is interested in partnering with us, please reach out through our contact form or email us directly. We'll discuss potential collaboration opportunities and how we can work together to support students."
+        }
+      ],
+      "stillTitle": "Still Have Questions?",
+      "stillBody": "Can't find what you're looking for? We're here to help! Reach out to us and we'll get back to you as soon as possible.",
+      "contactLabel": "Contact Us",
+      "contactHref": "mailto:info@canopynepal.org",
+      "emailLabel": "Send Email",
+      "emailHref": "mailto:info@canopynepal.org"
+    }
+  }
+}

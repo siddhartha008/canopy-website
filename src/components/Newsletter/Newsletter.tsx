@@ -17,7 +17,10 @@ declare global {
   }
 }
 
+import { useSite } from '../../cms/ContentContext';
+
 const MailchimpNewsletter = () => {
+  const newsletter = useSite().home.newsletter;
   // Your actual Mailchimp values from the embedded form
   const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
   const MAILCHIMP_U = import.meta.env.VITE_MAILCHIMP_U; // Your unique account ID from the form action URL
@@ -109,11 +112,10 @@ const MailchimpNewsletter = () => {
         {/* Newsletter Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-red mb-4">
-            Join Our Community
+            {newsletter.title}
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Subscribe to our newsletter for updates on student stories, impact reports, 
-            and opportunities to support education in Nepal.
+            {newsletter.description}
           </p>
         </div>
 
@@ -167,7 +169,7 @@ const MailchimpNewsletter = () => {
                   </svg>
                   Subscribing
                 </span>
-              ) : "Subscribe"}
+              ) : newsletter.button}
             </button>
           </div>
           
@@ -184,7 +186,7 @@ const MailchimpNewsletter = () => {
           
           {/* Privacy Notice */}
           <div className="text-center text-sm text-gray-500 mt-6">
-            We respect your privacy. Your information will never be shared with third parties.
+            {newsletter.privacy}
           </div>
         </div>
         

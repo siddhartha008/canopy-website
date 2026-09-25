@@ -2,54 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 
 // NOTE: Replace these with the actual paths to your images.
-import donateHeroImage from '../../assets/donatehero.png'; // Placeholder for the top image of the smiling girl
-import whyGiveImage from '../../assets/donatebody.jpg';   // Placeholder for the image of the young boy
 import DonationModal from './DonationModal';
-import BookOpen from '../../assets/dicon1.png';
-import Utensils from '../../assets/dicon2.png';
-import GraduationCap from '../../assets/dicon3.png';
-import Users from '../../assets/dicon4.png';
-import Heart from '../../assets/dicon5.png';
-
-// Data for the donation tiers
-const donationTiers = [
-  {
-    amount: '$25',
-    description: 'provides school supplies for one student',
-    icon: BookOpen,
-  },
-  {
-    amount: '$50',
-    description: 'covers one month of nutritious school meals and transport',
-    icon: Utensils,
-  },
-  {
-    amount: '$100',
-    description: 'supports a CANSHIP scholar for one month',
-    icon: GraduationCap,
-  },
-  {
-    amount: '$250',
-    description: 'funds a storytelling workshop for an entire classroom',
-    icon: Users,
-  },
-  {
-    amount: '$1,000',
-    description: 'covers a full year of support for a student, including scholarship, school mentorship, and workshops',
-    icon: Heart,
-  },
-];
-
-// Data for the 'Why Give' section
-const whyGivePoints = [
-  'We work directly with students, families, communities, and local governments',
-  'Our programs are designed to be long-term, inclusive, and measurable',
-  'Donations support education-focused programs in Nepal, with more than 80% directly going to the students',
-  'We keep you updated with real stories and real impact',
-  'We treat your donation like tea in a Nepali household: shared generously and used wisely',
-];
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const Donate = () => {
+  const page = useSite().donate;
+  const donationTiers = page.tiers.map((tier) => ({ ...tier, icon: mediaUrl(tier.icon) }));
+  const whyGivePoints = page.whyPoints;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalPrefillAmount, setModalPrefillAmount] = useState<number | undefined>(undefined);
   const [hideCustomAmount, setHideCustomAmount] = useState(false);
@@ -85,7 +45,7 @@ const Donate = () => {
       {/* Hero Section */}
       <div className="relative h-[450px] overflow-hidden">
         <img
-          src={donateHeroImage}
+          src={mediaUrl(page.heroImage)}
           alt="Smiling student in Nepal"
           className="w-full h-full object-cover"
         />
@@ -98,17 +58,17 @@ const Donate = () => {
         {/* Introduction Text */}
         <div className="text-center max-w-4xl mx-auto" >
           <h2 className="text-2xl font-bold text-primary-blue mb-8">
-            Your gift helps students stay in school, grow with confidence, and dream without limits.
+            {page.headline}
           </h2>
           <p className="text-xl leading-relaxed">
-            Every donation to Canopy Nepal directly supports students through scholarships, story-based learning, and long-term mentorship. Whether it's a one-time gift or a monthly commitment, your support helps break barriers and build futures.
+            {page.intro}
           </p>
         </div>
 
         {/* What Your Donation Supports Section */}
         <div id="donation-supports" className="py-8">
           <h3 className="text-center text-3xl font-bold text-primary-blue mb-8">
-            What Your Donation Supports
+            {page.supportsTitle}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {donationTiers.map((tier) => (
@@ -138,11 +98,11 @@ const Donate = () => {
               onClick={handleDonateClick}
               className="bg-primary-blue text-white text-xl font-bold py-2 px-4 rounded-lg hover:bg-primary-cyan/80 transition-colors"
             >
-              Donate Now
+              {page.button}
             </button>
         </div>
         <p className="text-center text-lg text-gray-500 mb-8">
-          Secure and tax-deductible (in the U.S. through Canopy USA, a registered 501(c)(3) nonprofit)
+          {page.taxNote}
         </p>
         
 
@@ -150,7 +110,7 @@ const Donate = () => {
         <div className="relative left-1/2 right-1/2 ml-[-50vw] mr-[-50vw] w-screen">
           <div className="flex flex-col md:flex-row items-stretch h-full">
             <div className="w-full md:w-1/2 flex flex-col justify-center px-8 py-16 bg-white">
-              <h2 className="text-3xl font-bold text-primary-blue mb-4">Why Give to Canopy?</h2>
+              <h2 className="text-3xl font-bold text-primary-blue mb-4">{page.whyTitle}</h2>
               <ul className="list-disc  text-gray-700 space-y-4 text-xl">
                 {whyGivePoints.map((point, index) => (
                   <li key={index}>{point}</li>
@@ -159,7 +119,7 @@ const Donate = () => {
             </div>
             <div className="w-full md:w-1/2 h-[400px] md:h-auto">
               <img 
-                src={whyGiveImage} 
+                src={mediaUrl(page.whyImage)} 
                 alt="A young boy smiling" 
                 className="w-full h-full object-cover object-center mb-4"
               />
@@ -170,29 +130,15 @@ const Donate = () => {
 
         {/* Bank Transfer Section */}
         <div className="mt-8 mb-0 rounded-lg text-center">
-            <h2 className="text-3xl font-bold text-primary-blue mb-4">Prefer Bank Transfer or In-Kind Donation?</h2>
+            <h2 className="text-3xl font-bold text-primary-blue mb-4">{page.bankTitle}</h2>
             <div className="text-left inline-block max-w-md mx-auto">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-2 text-lg">
-                    <span className="font-semibold text-gray-800">Account Number:</span>
-                    <span className="text-gray-600">00116539370</span>
-                    
-                    <span className="font-semibold text-gray-800">Account Name:</span>
-                    <span className="text-gray-600">CANOPY NEPAL</span>
-
-                    <span className="font-semibold text-gray-800">Bank Name:</span>
-                    <span className="text-gray-600">SIDDHARTHA BANK LTD.</span>
-
-                    <span className="font-semibold text-gray-800">SWIFT Code:</span>
-                    <span className="text-gray-600">SIDDNPKA</span>
-
-                    <span className="font-semibold text-gray-800">Branch Name:</span>
-                    <span className="text-gray-600">HATTISAR</span>
-
-                    <span className="font-semibold text-gray-800">City:</span>
-                    <span className="text-gray-600">KATHMANDU</span>
-
-                    <span className="font-semibold text-gray-800">Country:</span>
-                    <span className="text-gray-600">NEPAL</span>
+                    {page.bank.map((row) => (
+                      <React.Fragment key={row.id}>
+                        <span className="font-semibold text-gray-800">{row.label}:</span>
+                        <span className="text-gray-600">{row.value}</span>
+                      </React.Fragment>
+                    ))}
                 </div>
             </div>
         </div>
@@ -202,8 +148,8 @@ const Donate = () => {
       {/* Footer Message */}
       <div className="bg-white mb-8">
         <div className="max-w-4xl mx-auto text-center px-4">
-            <p className="text-xl text-gray-700 mb-2">Thank you for believing in students who just need a chance to thrive.</p>
-            <p className="text-xl font-semibold text-gray-800">Together, we're not just funding education—we're changing lives, one story at a time.</p>
+            <p className="text-xl text-gray-700 mb-2">{page.thanks}</p>
+            <p className="text-xl font-semibold text-gray-800">{page.thanksEmphasis}</p>
         </div>
       </div>
 

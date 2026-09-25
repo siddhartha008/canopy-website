@@ -1,36 +1,11 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import icon1 from '../../assets/icons/1.svg';
-import icon2 from '../../assets/icons/2.svg';
-import icon3 from '../../assets/icons/3.svg';
-import icon4 from '../../assets/icons/4.svg';
-import icon5 from '../../assets/icons/5.svg';
-import icon6 from '../../assets/icons/6.svg';
-import icon7 from '../../assets/icons/7.svg';
-import icon8 from '../../assets/icons/8.svg';
-import icon9 from '../../assets/icons/9.svg';
-import icon10 from '../../assets/icons/10.svg';
-import icon11 from '../../assets/icons/11.svg';
-import icon12 from '../../assets/icons/12.svg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const FeaturedInSection = () => {
   const navigate = useNavigate();
-  
-  // Logo data
-  const logos = [
-    { src: icon1, alt: "Featured Organization 1" },
-    { src: icon2, alt: "Featured Organization 2" },
-    { src: icon3, alt: "Featured Organization 3" },
-    { src: icon4, alt: "Featured Organization 4" },
-    { src: icon5, alt: "Featured Organization 5" },
-    { src: icon6, alt: "Featured Organization 6" },
-    { src: icon7, alt: "Featured Organization 7" },
-    { src: icon8, alt: "Featured Organization 8" },
-    { src: icon9, alt: "Featured Organization 9" },
-    { src: icon10, alt: "Featured Organization 10" },
-    { src: icon11, alt: "Featured Organization 11" },
-    { src: icon12, alt: "Featured Organization 12" }
-  ];
+  const featured = useSite().home.featured;
+  const logos = featured.logos.map((logo) => ({ src: mediaUrl(logo.image), alt: logo.alt }));
 
   return (
     <section className="overflow-hidden mt-4 mb-4">
@@ -48,7 +23,7 @@ const FeaturedInSection = () => {
         {/* Content */}
         <div className="relative z-10">
           <h3 className="text-primary-orange text-3xl md:text-3xl lg:text-4xl font-bold tracking-wide">
-            Featured In
+            {featured.title}
           </h3>
         </div>
       </div>
@@ -98,9 +73,9 @@ const FeaturedInSection = () => {
       <div className="max-w-6xl mx-auto px-6 flex flex-col items-center text-center mb-4">
         <button 
           className="inline-flex items-center bg-primary-orange text-white px-4 py-2 text-lg rounded-lg font-bold hover:bg-primary-cyan transition-all duration-300 hover:shadow-lg"
-          onClick={() => navigate('/featured')}
+          onClick={() => navigate(featured.href)}
         >
-          Read More
+          {featured.button}
           <svg 
             className="w-5 h-5 ml-2" 
             xmlns="http://www.w3.org/2000/svg" 

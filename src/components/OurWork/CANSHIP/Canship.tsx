@@ -1,15 +1,13 @@
-import React from 'react';
-import heroImg from '../../../assets/canship.jpg';
-import canshipLifecycle from '../../../assets/canImpact.svg';
-import canshipBottom from '../../../assets/canshipBottom.jpg';
-import canshipImpact from '../../../assets/canshipImpact.png';
+import { useSite } from '../../../cms/ContentContext';
+import { mediaUrl } from '../../../cms/media';
 
 const CanopyScholarshipPage = () => {
+  const page = useSite().canship;
   return (
     <div className="min-h-screen bg-white mt-28">
       {/* Hero Image at the very top */}
       <img
-        src={heroImg}
+        src={mediaUrl(page.heroImage)}
         alt="Canopy Nepal Scholarship Hero"
         className="w-full h-[500px] object-cover mb-8"
       />
@@ -17,19 +15,12 @@ const CanopyScholarshipPage = () => {
       {/* Heading Section */}
       <div className="max-w-4xl mx-auto text-center mb-8">
         <h1 className="text-3xl md:text-5xl font-bold text-primary-blue mb-8">
-          Canopy Nepal Scholarship Program
+          {page.title}
         </h1>
         <div className='mt-4'>
-        <p className="text-gray-700 text-xl leading-relaxed mb-8">
-                CANSHIP, short for Canopy Scholarship Program, is our long-term commitment to supporting 
-                students through their entire educational journey.
-              </p>
-              <p className="text-gray-700 text-xl leading-relaxed">
-                At Canopy, we believe scholarships should do more than cover fees. That's why CANSHIP offers 
-                holistic support: school materials, nutritious meals, mentorship, psychosocial care, and hands-on 
-                learning opportunities. <span className="font-semibold text-primary-blue">It's a program built not just to help students stay in school, but to 
-                help them grow, lead, and thrive.</span>
-              </p>
+        {page.paragraphs.slice(0, 2).map((paragraph) => (
+          <p key={paragraph} className="text-gray-700 text-xl leading-relaxed mb-8">{paragraph}</p>
+        ))}
               </div>
       </div>
 
@@ -45,16 +36,9 @@ const CanopyScholarshipPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-12">
             <div className="w-full text-center">
-              <p className="text-gray-700 text-xl leading-relaxed mb-8">
-                With our long-term support and mentorship, CANSHIP helps break the cycle of poverty, 
-                empowering young people with the skills, confidence, and choices they need to shape their 
-                futures.
-              </p>
-              <p className=" text-xl leading-relaxed">
-                <span className='text-primary-blue font-semibold text-xl'>And it doesn't end at graduation.</span> Many of our scholars go on to pursue higher education, 
-                launch careers, and land jobs that allow them to support themselves and their families, creating 
-                real change in their lives and communities.
-              </p>
+              {page.paragraphs.slice(2).map((paragraph) => (
+                <p key={paragraph} className="text-gray-700 text-xl leading-relaxed mb-8">{paragraph}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -63,11 +47,11 @@ const CanopyScholarshipPage = () => {
       {/* Lifecycle Section - Single Image */}
       <div className="px-0 py-12 pb-0">
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue text-center">
-          Canopy Scholar Lifecycle
+          {page.lifecycleTitle}
         </h2>
         <div className="flex justify-center">
           <img 
-            src={canshipLifecycle}
+            src={mediaUrl(page.lifecycleImage)}
             alt="Canopy Scholar Lifecycle Flowchart"
             className="w-11/12 max-w-none h-auto mt-8 mb-8 mx-auto"
           />
@@ -79,43 +63,21 @@ const CanopyScholarshipPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-stretch gap-12">
             <div className="lg:w-1/2 flex flex-col justify-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue mb-8">Impact</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary-blue mb-8">{page.impactTitle}</h2>
               <ul className="space-y-6 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-primary-blue mr-3 mt-1">•</span>
-                  <div className="text-xl">
-                    <span className="font-semibold text-xl">Retention and Completion:</span> Scholars stay in school year after year, even when many of their peers drop out.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-blue mr-3 mt-1 text-xl">•</span>
-                  <div className="text-xl">
-                    <span className="font-semibold text-xl">Academic Progress:</span> Improved test scores, grade promotions, and graduation rates.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-blue mr-3 mt-1 text-xl">•</span>
-                  <div className="text-xl">
-                    <span className="font-semibold text-xl">Wellbeing:</span> Increased confidence, better mental health, improved attendance due to meals and psychosocial support.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-blue mr-3 mt-1 text-xl">•</span>
-                  <div className="text-xl">
-                    <span className="font-semibold text-xl">Skills Development:</span> Public speaking, critical thinking, digital literacy, storytelling, leadership, etc.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary-blue mr-3 mt-1 text-xl">•</span>
-                  <div className="text-xl">
-                    <span className="font-semibold text-xl">Post-Program Outcomes:</span> Scholars pursuing higher education, vocational training, or entering the job market with readiness.
-                  </div>
-                </li>
+                {page.points.map((point) => (
+                  <li key={point.id} className="flex items-start">
+                    <span className="text-primary-blue mr-3 mt-1">•</span>
+                    <div className="text-xl">
+                      <span className="font-semibold text-xl">{point.label}:</span> {point.text}
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="lg:w-1/2 flex justify-end items-stretch">
               <img 
-                src={canshipImpact}
+                src={mediaUrl(page.impactImage)}
                 alt="Student and mentor interaction"
                 className="rounded-lg h-auto object-cover"
                 style={{  }}
@@ -128,25 +90,17 @@ const CanopyScholarshipPage = () => {
       {/* Statistics Section */}
       <div className="bg-white px-6 py-12">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div>
-            <h3 className="text-xl md:text-2xl mb-2">
-              <span className='font-bold text-primary-blue'>100% employed</span> within one year of graduation
-            </h3>
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl mb-2">
-            <span className='font-bold text-primary-blue'>Avg 35% increase</span> in family income after student enters workforce
-            </h3>
-          </div>
-          <div>
-            <h3 className="text-xl md:text-2xl  mb-2">
-            <span className='font-bold text-primary-blue'>10 scholars</span> have joined Canopy as mentors for younger scholars
-            </h3>
-          </div>
+          {page.stats.map((stat) => (
+            <div key={stat.id}>
+              <h3 className="text-xl md:text-2xl mb-2">
+                <span className='font-bold text-primary-blue'>{stat.emphasis}</span> {stat.text}
+              </h3>
+            </div>
+          ))}
         </div>
       </div>
       <img
-        src={canshipBottom}
+        src={mediaUrl(page.bottomImage)}
         alt="CANSHIP Section Divider"
         className="w-full h-[500px] object-cover object-center"
         style={{ maxHeight: '500px' }}

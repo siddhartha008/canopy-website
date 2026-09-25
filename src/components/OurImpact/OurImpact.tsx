@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import MeetOurStudents from './MeetStudents/MeetStudents';
-import impactHero from '../../assets/impacthero.png';
 import WhereWeWork from './WhereWeWork/WhereWeWork';
 import Sustainable from './Sustainable/Sustainable';
 import Impact from '../Impact/Impact';
-import ecosystem from '../../assets/ecosystem.svg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 // --- Reusable Bar Chart Component (Final Polished Version) ---
 interface BarChartProps {
@@ -78,16 +78,8 @@ const BarChart: React.FC<BarChartProps> = ({ title, preValue, postValue, growth,
 
 
 const OurImpact: React.FC = () => {
-  // All chart data consolidated into one array
-  const allChartData = [
-    { title: "Creativity", preValue: 1.3, postValue: 3.5, growth: "59%" },
-    { title: "Self-expression", preValue: 1.1, postValue: 3.2, growth: "54%" },
-    { title: "Critical Thinking", preValue: 1, postValue: 3, growth: "50%" },
-    { title: "Attendance", preValue: 3, postValue: 3.9, growth: "45%" },
-    { title: "Academic Results", preValue: 1.8, postValue: 4.7, growth: "91%" },
-    { title: "Extracurricular Activities Participation", preValue: 2, postValue: 4, growth: "67%" },
-    { title: "Academic Support by Family", preValue: 2.7, postValue: 4.8, growth: "91%" },
-  ];
+  const page = useSite().impactPage;
+  const allChartData = page.charts;
 
   // Split data for the two rows
   const rowOneData = allChartData.slice(0, 4);
@@ -96,24 +88,7 @@ const OurImpact: React.FC = () => {
   const maxValue = Math.max(...allChartData.map(d => d.postValue), 5.0);
 
   // For styled stats cards, split headline and subtext
-  const impactStatsStyled = [
-    {
-      headline: '100% \nSCHOLARS',
-      subtext: "are employed after graduation"
-    },
-    {
-      headline: '54%\nINCREASE',
-      subtext: "in students' reading, writing, and critical thinking skills"
-    },
-    {
-      headline: '77%\nINCREASE',
-      subtext: "in school attendance after Canopy's support"
-    },
-    {
-      headline: '90% \nSCHOLARS',
-      subtext: "feel mentally stronger and less overwhelmed at school after Canopy's support"
-    },
-  ];
+  const impactStatsStyled = page.headlines;
 
   // Carousel state for small/medium screens
   const [currentChart, setCurrentChart] = useState(0);
@@ -128,17 +103,17 @@ const OurImpact: React.FC = () => {
     <section className="bg-white mt-28">
       <div className="relative h-[400px] w-full flex items-center justify-center text-white">
         <img
-          src={impactHero}
+          src={mediaUrl(page.heroImage)}
           alt="Students supported by Canopy Nepal"
           className="absolute inset-0 w-full h-[400px] object-cover"
         />
         <div className="absolute inset-0 "></div>
-        <h1 className="relative text-5xl sm:text-7xl font-bold z-10 ">Our Impact</h1>
+        <h1 className="relative text-5xl sm:text-7xl font-bold z-10 ">{page.title}</h1>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <p className="text-center  max-w-5xl mx-auto text-2xl leading-relaxed">
-          At Canopy Nepal, we measure impact not just in numbers, but in transformed lives, classrooms, and communities. From long-term scholarships to storytelling-powered learning, our programs help students stay in school, build essential life skills, and unlock opportunity.
+          {page.intro}
         </p>
 
         {/* Unified Charts Section with 4-3 layout */}
@@ -183,19 +158,19 @@ const OurImpact: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <div className="w-4 h-4 rounded-sm bg-primary-orange/20"></div>
-                <span className="text-sm text-gray-600 font-medium">Before Canopy</span>
+                <span className="text-sm text-gray-600 font-medium">{page.beforeLabel}</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-4 h-4 rounded-sm bg-secondary-cyan"></div>
-                <span className="text-sm text-gray-600 font-medium">After Canopy</span>
+                <span className="text-sm text-gray-600 font-medium">{page.afterLabel}</span>
               </div>
             </div>
           </div>
           <div className="flex justify-center mt-4">
-            <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
+            <span className="italic text-gray-500 text-base">{page.footnote}</span>
           </div>
           <div className="flex justify-center mt-1">
-            <span className="italic text-gray-500 text-base text-center max-w-5xl">Our percentage of possible growth is calculated through our meticulous monitoring and evaluation through interaction, observation, and long term impact. Our priority is not the score students get but rather the growth they achieve during our program.</span>
+            <span className="italic text-gray-500 text-base text-center max-w-5xl">{page.methodNote}</span>
           </div>
         </div>
 
@@ -218,7 +193,7 @@ const OurImpact: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center mt-4">
-          <span className="italic text-gray-500 text-base">*based on survey of 15,000+ students and 150+ scholars</span>
+          <span className="italic text-gray-500 text-base">{page.footnote}</span>
         </div>
 
 
@@ -228,12 +203,12 @@ const OurImpact: React.FC = () => {
 
         {/* Interactive Ecosystem SVG */}
         <div className="text-primary-blue text-3xl sm:text-4xl font-extrabold mb-4 whitespace-pre-line text-center">
-          Our Ecosystem
+          {page.ecosystemTitle}
         </div>
         <div className="flex justify-center w-full mt-8 mb-8">
           <div className="w-3/4 px-4 sm:px-6 lg:px-8">
             <img
-              src={ecosystem}
+              src={mediaUrl(page.ecosystemImage)}
               alt="Our Ecosystem"
               className="w-full h-auto"
             />

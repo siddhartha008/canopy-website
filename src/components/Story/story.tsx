@@ -1,15 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import oos from '../../assets/oos.png';
-import os2 from '../../assets/os2.jpg';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 const CanopyOurStory: React.FC = () => {
+  const story = useSite().story;
   return (
     <div className="bg-gray-50 text-gray-800 mt-28">
       {/* Top Image - Show on all screen sizes */}
       <div className="mb-0">
         <img
-         src={oos}
+         src={mediaUrl(story.topImage)}
           alt="Group of students with balloons"
           className="w-full h-auto object-contain block"
         />
@@ -136,42 +137,14 @@ const CanopyOurStory: React.FC = () => {
         <div className="relative z-10">
           {/* <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary-orange">Our Story</h2> */}
           <div className="space-y-4 text-xl leading-relaxed text-justify text-gray-700  max-w-4xl mx-auto">
-            <p className="font-bold text-2xl text-center text-primary-red">
-              Canopy Nepal didn't begin with a perfect plan. It began with frustration!
-            </p>
-            
-            <p>
-              Our founder, Mohit Rauniyar, grew up in a school system that didn't allow him to question,
-              create, or think critically. Classrooms were rigid and memorization was rewarded. Creativity
-              was treated like a distraction. That frustration stayed with him, not as resentment, but as fuel.
-            </p>
-            
-            <p>
-              In 2010, while working with the Nepal Children's Education Project (NCEP), Mohit saw firsthand
-              how deep the crisis went. Public schools were overcrowded, under-resourced, and often inaccessible
-              to the very children who needed them most. He began to understand the scale of the challenge, how
-              access was only half the battle.
-            </p>
-            
-            <p>
-              By 2012, he joined the Bloom Nepal School as a teacher, working to build a school where learning was
-              joyful and curiosity led the way. Those five years taught him something critical: even the best schools
-              couldn't fix the system alone. If Nepal's education system was to change, it had to be done from the
-              ground up and from the top down.
-            </p>
-            
-            <p>
-              So in 2015, Canopy Nepal was born, built on the belief that true educational equity means giving every
-              child not just a seat in the classroom, but a reason to stay. Canopy combined scholarships to increase
-              access with a bold idea: story-based learning that brings education to life and puts students at the
-              center of their narrative. Education platforms, NCEP and Bloom, where Mohit started his educator
-              journey from, are now some of Canopy's biggest partners.
-            </p>
-            
-            <p className="font-medium text-gray-800">
-              For Mohit, it was never just about fixing the system; it was about building the kind of education he
-              wished he had.
-            </p>
+            {story.paragraphs.map((paragraph) => (
+              <p
+                key={paragraph.id}
+                className={paragraph.style === 'lead' ? 'font-bold text-2xl text-center text-primary-red' : paragraph.style === 'emphasis' ? 'font-medium text-gray-800' : ''}
+              >
+                {paragraph.text}
+              </p>
+            ))}
           </div>
         </div>
       </div>
@@ -179,7 +152,7 @@ const CanopyOurStory: React.FC = () => {
       {/* Bottom Image */}
       <div>
         <img
-          src={os2}
+          src={mediaUrl(story.bottomImage)}
           alt="Mohit Rauniyar speaking"
           className="w-full h-[70vh] object-cover"
         />

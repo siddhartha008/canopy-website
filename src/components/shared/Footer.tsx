@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import { Instagram, Facebook, Linkedin, Youtube } from 'lucide-react';
+import { useSite } from '../../cms/ContentContext';
+import { mediaUrl } from '../../cms/media';
 
 // Extend the Window interface to allow window.callback
 declare global {
@@ -12,6 +13,8 @@ declare global {
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
+  const site = useSite();
+  const footer = site.footer;
   
   // Mailchimp configuration
   const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
@@ -118,9 +121,9 @@ const Footer: React.FC = () => {
           
           {/* Column 1: Logo and Mission */}
           <div className="lg:col-span-1 flex flex-col items-center text-center">
-            <img src={logo} alt="Canopy Nepal Logo" className="w-40 mb-2 mx-auto" />
+            <img src={mediaUrl(site.site.logo)} alt="Canopy Nepal Logo" className="w-40 mb-2 mx-auto" />
             <p className="text-base max-w-xs text-center mx-auto">
-              Canopy empowers marginalized students through scholarships and storytelling, ensuring access to quality education.
+              {footer.mission}
             </p>
           </div>
 
@@ -129,9 +132,9 @@ const Footer: React.FC = () => {
             <div className="text-center lg:text-left">
               <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Take Action</h3>
               <ul className="space-y-2 text-base text-center">
-                <li><a href="/donate" onClick={(e) => { e.preventDefault(); navigate('/donate'); }} className="hover:underline cursor-pointer">Donate Now</a></li>
-                <li><a href="/getinvolved" onClick={(e) => { e.preventDefault(); navigate('/getinvolved'); }} className="hover:underline cursor-pointer">Get Involved</a></li>
-                <li><a href="/meet-the-team" onClick={(e) => { e.preventDefault(); navigate('/meet-the-team'); }} className="hover:underline cursor-pointer">Join the Team</a></li>
+                {footer.takeAction.map((link) => (
+                  <li key={link.id}><a href={link.href} onClick={(e) => { e.preventDefault(); navigate(link.href); }} className="hover:underline cursor-pointer">{link.label}</a></li>
+                ))}
               </ul>
             </div>
             {/* Stay Updated - Hidden on md and sm, shown on lg+ */}
@@ -188,10 +191,9 @@ const Footer: React.FC = () => {
              <div className="text-left">
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Resources</h3>
                 <ul className="space-y-2 text-base text-center">
-                    <li><a href="/canopy-faq" onClick={(e) => { e.preventDefault(); navigate('/canopy-faq'); }} className="hover:underline cursor-pointer">FAQs</a></li>
-                    <li><a href="/publications?section=annual-report" onClick={(e) => { e.preventDefault(); navigate('/publications?section=annual-report'); }} className="hover:underline cursor-pointer">Annual Report</a></li>
-                    <li><a href="/featured" onClick={(e) => { e.preventDefault(); navigate('/featured'); }} className="hover:underline cursor-pointer">Features</a></li>
-                    <li><a href="/blogs" onClick={(e) => { e.preventDefault(); navigate('/blogs'); }} className="hover:underline cursor-pointer">Blogs</a></li>
+                    {footer.resources.map((link) => (
+                      <li key={link.id}><a href={link.href} onClick={(e) => { e.preventDefault(); navigate(link.href); }} className="hover:underline cursor-pointer">{link.label}</a></li>
+                    ))}
                 </ul>
              </div>
           </div>
@@ -202,17 +204,15 @@ const Footer: React.FC = () => {
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center">Our Office</h3>
                 <div className="text-base space-y-2 text-center">
                     <a
-                      href="https://www.google.com/maps/place/Canopy+Nepal/@27.7213195,85.3276936,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb18e14638255f:0x173205d784efa912!8m2!3d27.7213148!4d85.3302685!16s%2Fg%2F11f1nc4dhb?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D"
+                      href={footer.mapUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline text-primary-blue"
                     >
-                      Canopy Nepal<br />
-                      Thirbam Sadak, Baluwatar-04<br />
-                      Kathmandu 44600, Nepal
+                      {footer.officeLines.map((line) => <span key={line}>{line}<br /></span>)}
                     </a>
-                    <p>Contact Number: <a href="tel:+977-01-4541478" className="hover:underline text-primary-blue">+977-01-4541478</a></p>
-                    <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@canopynepal.org" target="_blank" rel="noopener noreferrer" className="hover:underline text-primary-blue">info@canopynepal.org</a></p>
+                    <p>{footer.phoneLabel} <a href={`tel:${footer.phone}`} className="hover:underline text-primary-blue">{footer.phone}</a></p>
+                    <p>{footer.emailLabel} <a href={`mailto:${footer.email}`} className="hover:underline text-primary-blue">{footer.email}</a></p>
                 </div>
             </div>
             {/* Stay Updated - Visible on md and sm, hidden on lg+ */}
@@ -265,16 +265,16 @@ const Footer: React.FC = () => {
             <div className="mt-8 text-left w-full">
                 <h3 className="font-bold text-base text-primary-orange mb-3 text-center lg:text-left">Follow Us</h3>
                 <div className="flex items-center gap-3 text-lg justify-center lg:justify-start">
-                    <a href="https://www.instagram.com/canopy_nepal/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href={footer.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Instagram size={20} />
                     </a>
-                    <a href="https://www.facebook.com/canopynepal" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href={footer.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Facebook size={20} />
                     </a>
-                    <a href="https://np.linkedin.com/company/canopynepal1" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href={footer.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Linkedin size={20} />
                     </a>
-                    <a href="https://www.youtube.com/channel/UC4jweDrtADma6nEnclqbb4w" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
+                    <a href={footer.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="bg-primary-orange p-2 rounded-md text-white hover:opacity-80 transition-opacity">
                         <Youtube size={20} />
                     </a>
                 </div>
@@ -284,7 +284,7 @@ const Footer: React.FC = () => {
         
         {/* Bottom Bar: Copyright */}
         <div className="text-center text-xl font-semibold text-primary-orange pt-6">
-          <p> © 2025 Canopy Nepal. All rights reserved.</p>
+          <p> {site.site.copyright}</p>
         </div>
       </div>
     </footer>

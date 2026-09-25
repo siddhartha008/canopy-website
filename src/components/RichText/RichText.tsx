@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useSite } from '../../cms/ContentContext';
 
 const RichText: React.FC = () => {
+  const { intro } = useSite().home;
   return (
     <div className="max-w-5xl mx-auto px-6 relative mb-16">
       {/* Animated storytelling elements */}
@@ -58,17 +60,16 @@ const RichText: React.FC = () => {
           >
             
             <p className="text-2xl text-gray-700">
-
-             In Nepal, 
-            <span className="text-4xl md:text-4xl font-black text-primary-red"> 73% </span>
-              <span className='font-bold text-primary-red'>of students drop out</span> before completing secondary school  due to cost and poor-quality education.
-              <span className="text-3xl md:text-3xl font-black text-primary-red">  Canopy Nepal is changing that. </span> 
+             {intro.beforePercent}{' '}
+            <span className="text-4xl md:text-4xl font-black text-primary-red"> {intro.percent} </span>
+              <span className='font-bold text-primary-red'>{intro.dropoutPhrase}</span> {intro.afterDropout}
+              <span className="text-3xl md:text-3xl font-black text-primary-red">  {intro.changing} </span>
               <br></br>
               <br></br>
-              Canopy Nepal empowers students to stay in school and thrive by combining scholarships with creative, story-based learning that builds confidence, critical thinking, and lifelong skills.
+              {intro.middle}
               <br></br>
               <br></br>
-              With Canopy, students don’t just stay in school.  <span className="text-4xl md:text-4xl font-black text-primary-red">100% </span> <span className='font-bold text-primary-red'> remain motivated, supported, and on track to graduate</span>, and with local governments adapting our curriculum, our impact is sustainable and systemic.
+              {intro.beforeHundred}  <span className="text-4xl md:text-4xl font-black text-primary-red">{intro.hundred} </span> <span className='font-bold text-primary-red'> {intro.afterHundred}</span>{intro.ending}
             </p>
             
           </motion.div>

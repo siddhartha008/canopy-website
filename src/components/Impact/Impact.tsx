@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Heart, BookOpen, Home, Users, Star, Award, DollarSignIcon, Group } from 'lucide-react';
+import { Heart, BookOpen, Home, Users, DollarSignIcon, Group } from 'lucide-react';
 import CountUp from '../shared/CountUp';
+import { useSite } from '../../cms/ContentContext';
 
 interface ImpactProps {
   variant?: 'home' | 'our-impact';
@@ -14,54 +15,17 @@ const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
     triggerOnce: true,
   });
 
-  const impactStats = [
-    
-    {
-      icon: Users,
-      title: 'Scholarships Awarded',
-      value: 785,
-      color: 'text-primary-cyan',
-      bgColor: 'bg-secondary-cyan',
-    },
-    {
-      icon: BookOpen,
-      value: 27000,
-      suffix: '+',
-      title: 'Students Worked With',
-      color: 'text-primary-blue',
-      bgColor: 'bg-secondary-blue',
-    },
-    {
-      icon: Home,
-      title: 'Schools Reached',
-      value: 251,
-      color: 'text-primary-orange',
-      bgColor: 'bg-secondary-orange',
-    },
-    {
-      icon: Heart,
-      title: 'Community Members Impacted',
-      value: 250000,
-      suffix: '+',
-      color: 'text-primary-red',
-      bgColor: 'bg-secondary-red',
-    },
-    {
-      icon: DollarSignIcon,
-      title: 'Funds Raised',
-      value: 1300000,
-      color: 'text-primary-orange',
-      bgColor: 'bg-secondary-orange',
-    },
-    {
-      icon: Group,
-      title: 'Local Government Adaptation',
-      value: 7,
-      color: 'text-primary-cyan',
-      bgColor: 'bg-secondary-cyan',
-    },
-  ];
-
+  const homeImpact = useSite().home.impact;
+  const iconMap: Record<string, typeof Users> = { users: Users, book: BookOpen, home: Home, heart: Heart, dollar: DollarSignIcon, group: Group };
+  const colors = ['text-primary-cyan', 'text-primary-blue', 'text-primary-orange', 'text-primary-red', 'text-primary-orange', 'text-primary-cyan'];
+  const backgrounds = ['bg-secondary-cyan', 'bg-secondary-blue', 'bg-secondary-orange', 'bg-secondary-red', 'bg-secondary-orange', 'bg-secondary-cyan'];
+  const impactStats = homeImpact.stats.map((stat, index) => ({
+    ...stat,
+    icon: iconMap[stat.icon] || Users,
+    color: colors[index % colors.length],
+    bgColor: backgrounds[index % backgrounds.length],
+    suffix: stat.suffix || undefined,
+  }));
   // Different styling based on variant
   const containerClass = variant === 'our-impact' ? 'bg-white' : 'bg-gray-50';
   const titleClass = variant === 'our-impact' ? 'text-primary-blue' : 'text-primary-red';
@@ -77,11 +41,10 @@ const Impact: React.FC<ImpactProps> = ({ variant = 'home' }) => {
           className="text-center mb-8"
         >
           <h2 className={`${variant === 'our-impact' ? 'text-3xl sm:text-4xl' : 'text-5xl'} font-extrabold ${titleClass} mb-4 pt-4`}>
-            Our Work in Numbers
+            {homeImpact.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Through our scholarship and storytelling programs, we're creating lasting change in the education space in Nepal. 
-
+          {homeImpact.intro}
           </p>
         </motion.div>
 

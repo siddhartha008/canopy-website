@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { ReactSVG } from 'react-svg';
 import nepalMap from '../../../assets/nepalmap.svg';
+import { useSite } from '../../../cms/ContentContext';
 
 // --- DATA ---
 interface DistrictInfo {
@@ -9,66 +10,14 @@ interface DistrictInfo {
   students: number | string; // string for "20,000"
 }
 
-// Data extracted from user request
-const districtData: DistrictInfo[] = [
-  { name: 'Bhaktapur', schools: 2, students: 60 },
-  { name: 'Dhading', schools: 4, students: 171 },
-  { name: 'Dhanusa', schools: 1, students: 50 },
-  { name: 'Gulmi', schools: 3, students: 150 },
-  { name: 'Jhapa', schools: 1, students: 20 },
-  { name: 'Kanchanpur', schools: 2, students: 2 },
-  { name: 'Kaski', schools: 4, students: 27 },
-  { name: 'Kathmandu', schools: 45, students: '20,000' },
-  { name: 'Khotang', schools: 3, students: 15 },
-  { name: 'Lalitpur', schools: 5, students: 200 },
-  { name: 'Makwanpur', schools: 3, students: 101 },
-  { name: 'Nawalpur', schools: 5, students: 25 },
-  { name: 'Nuwakot', schools: 1, students: 56 },
-  { name: 'Parbat', schools: 4, students: 27 },
-  { name: 'Sankhuwasabha', schools: 3, students: 150 },
-  // { name: 'Sindhupalchowk', schools: 5, students: 20 }, // Removed - shares SVG path with Dolakha
-  { name: 'Solukhumbu', schools: 8, students: 22 },
-  { name: 'Sunsari', schools: 1, students: 140 },
-];
-
-// Map district names to SVG path indices (Placeholder mapping)
-// Since the SVG paths don't have IDs, we map them by index (0-75).
-// The user will likely need to adjust these indices to match the visual map.
-// For now, we'll just map the first N paths to our data for demonstration.
-
-// District mapping (Sindhupalchowk removed due to SVG limitation - it shares path with Dolakha)
-const districtIndices: Record<string, number> = {
-  'Kathmandu': 48,
-  'Bhaktapur': 52,
-  'Lalitpur': 54,
-  'Dhading': 35,
-  'Dhanusa': 68,
-  'Gulmi': 1,
-  'Jhapa': 72,
-  'Kanchanpur': 17,
-  // 'Kaski': 28,
-  'Khotang': 58,
-  'Makwanpur': 53,
-  'Nawalpur': 46,
-  'Nuwakot': 41,
-  'Parbat': 31,
-  'Sankhuwasabha': 43,
-  // 'Sindhupalchowk': 38, // Removed - shares path with Dolakha in SVG
-  'Solukhumbu': 39,
-  'Sunsari': 71
-};
-
-const districtIndexMap: Record<number, DistrictInfo> = {};
-
-districtData.forEach((data) => {
-  const index = districtIndices[data.name];
-  if (index !== undefined) {
-    districtIndexMap[index] = data;
-  }
-});
-
-
 export default function WhereWeWork() {
+  const page = useSite().impactPage;
+  const districtIndexMap: Record<number, DistrictInfo> = {};
+  page.districts.forEach((data) => {
+    if (data.mapIndex != null) {
+      districtIndexMap[data.mapIndex] = { name: data.name, schools: data.schools, students: data.students };
+    }
+  });
   const [hoveredDistrict, setHoveredDistrict] = useState<DistrictInfo | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
@@ -145,10 +94,10 @@ export default function WhereWeWork() {
     <div className="hidden lg:block w-full py-0 bg-white">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-primary-blue mb-4">
-          Where We Work
+          {page.mapTitle}
         </h2>
         <p className="text-center text-gray-600 mb-2 max-w-2xl mx-auto">
-          Explore our impact across Nepal. Hover over the districts to see the number of schools and students we support.
+          {page.mapIntro}
         </p>
 
         <div
