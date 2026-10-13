@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T06:55:27.807Z",
+  "updatedAt": "2026-10-13T08:48:55.569Z",
   "content": {
     "site": {
       "logo": "logo.svg",
@@ -450,6 +450,42 @@
       "volunteerNote": "We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.",
       "members": [
         {
+          "id": "n8w6j487",
+          "name": "Serina Gautam",
+          "title": "Facilitator",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "/media/uploads/1791881312831.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/serina-gautam-7455b1300/ "
+        },
+        {
+          "id": "b7mpxwyo",
+          "name": "Bidushi Paudel",
+          "title": "Field Volunteer",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "/media/uploads/1791881109561.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "xiuy8xil",
+          "name": "Sanju Nagarkoti",
+          "title": "Field Volunteer",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "/media/uploads/1791880959760.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/sanju-nagarkoti-9529ba437/ "
+        },
+        {
+          "id": "nfizehns",
+          "name": "Srishma Aryal",
+          "title": "Field Volunteer",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "/media/uploads/1791880673226.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/srishma-aryal-125240306/3"
+        },
+        {
           "id": "1",
           "name": "Mohit Rauniyar",
           "title": "Founder",
@@ -496,7 +532,7 @@
         },
         {
           "id": "6",
-          "name": "Prinsha Katuwal",
+          "name": "Prinsha Katwal",
           "title": "Facilitator Officer",
           "category": "CORE TEAM",
           "image": "team/all/Prinsha.png",
