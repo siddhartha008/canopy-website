@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T08:49:51.252Z",
+  "updatedAt": "2026-10-16T05:16:51.614Z",
   "content": {
     "site": {
       "logo": "logo.svg",
@@ -450,40 +450,22 @@
       "volunteerNote": "We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.",
       "members": [
         {
-          "id": "n8w6j487",
-          "name": "Serina Gautam",
-          "title": "Facilitator",
-          "category": "FACILATORS AND FIELD VOLUNTEERS",
-          "image": "/media/uploads/1791881312831.png",
-          "description": "",
-          "linkedin": "https://www.linkedin.com/in/serina-gautam-7455b1300/ "
+          "id": "c0hp18mf",
+          "name": "Simran Sapkota",
+          "title": "Development Associate",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1792127685498.png",
+          "description": "Drives fundraising efforts by writing grant proposals, managing donor communications, organizing campaigns, and aligning program and finance teams to secure funding and report impact.",
+          "linkedin": "https://www.linkedin.com/in/simran-sapkota-0ba091227/ "
         },
         {
-          "id": "b7mpxwyo",
-          "name": "Bidushi Paudel",
-          "title": "Field Volunteer",
-          "category": "FACILATORS AND FIELD VOLUNTEERS",
-          "image": "/media/uploads/1791881109561.png",
-          "description": "",
-          "linkedin": ""
-        },
-        {
-          "id": "xiuy8xil",
-          "name": "Sanju Nagarkoti",
-          "title": "Field Volunteer",
-          "category": "FACILATORS AND FIELD VOLUNTEERS",
-          "image": "/media/uploads/1791880959760.png",
-          "description": "",
-          "linkedin": "https://www.linkedin.com/in/sanju-nagarkoti-9529ba437/ "
-        },
-        {
-          "id": "nfizehns",
-          "name": "Srishma Aryal",
-          "title": "Field Volunteer",
-          "category": "FACILATORS AND FIELD VOLUNTEERS",
-          "image": "/media/uploads/1791880673226.png",
-          "description": "",
-          "linkedin": "https://www.linkedin.com/in/srishma-aryal-125240306/3"
+          "id": "9zj9w6xu",
+          "name": "Jenisha Joshi",
+          "title": "Communication Associate",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1792127540102.png",
+          "description": "Leads Canopy's digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.",
+          "linkedin": "https://www.linkedin.com/in/jenisha-joshi-80505a364/?isSelfProfile=true"
         },
         {
           "id": "1",
@@ -532,7 +514,7 @@
         },
         {
           "id": "6",
-          "name": "Prinsha Katwal",
+          "name": "Prinsha Katuwal",
           "title": "Facilitator Officer",
           "category": "CORE TEAM",
           "image": "team/all/Prinsha.png",
