@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T06:49:30.022Z",
+  "updatedAt": "2026-11-04T08:17:48.682Z",
   "content": {
     "site": {
       "logo": "logo.svg",
@@ -449,6 +449,42 @@
       "facilitatorNote": "Facilitators and Field Volunteers run engaging storytelling sessions, mentor students, track progress, and provide on-the-ground support—ensuring students thrive both inside and outside the classroom.",
       "volunteerNote": "We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.",
       "members": [
+        {
+          "id": "9c5ij363",
+          "name": "",
+          "title": "",
+          "category": "CORE TEAM",
+          "image": "",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "g8fmklmn",
+          "name": "Bidushi Paudel",
+          "title": "FIELD VOLUNTEER",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1793780240762.png",
+          "description": "",
+          "linkedin": ""
+        },
+        {
+          "id": "ivomgd6y",
+          "name": "Sanju Nagarkoti",
+          "title": "FIELD VOLUNTEER",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1793780201197.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/sanju-nagarkoti-9529ba437/"
+        },
+        {
+          "id": "r45rbmi0",
+          "name": "Srishma Aryal",
+          "title": "FIELD VOLUNTEER",
+          "category": "FACILATORS AND FIELD VOLUNTEERS",
+          "image": "/media/uploads/1793780140101.png",
+          "description": "",
+          "linkedin": "https://www.linkedin.com/in/srishma-aryal-125240306/"
+        },
         {
           "id": "1",
           "name": "Mohit Rauniyar",
