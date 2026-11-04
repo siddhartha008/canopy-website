@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T05:16:51.614Z",
+  "updatedAt": "2026-11-04T06:42:09.904Z",
   "content": {
     "site": {
       "logo": "logo.svg",
@@ -449,24 +449,6 @@
       "facilitatorNote": "Facilitators and Field Volunteers run engaging storytelling sessions, mentor students, track progress, and provide on-the-ground support—ensuring students thrive both inside and outside the classroom.",
       "volunteerNote": "We are proud to present our volunteers who have joined us from different parts of the world and help increase our impact in Nepal.",
       "members": [
-        {
-          "id": "c0hp18mf",
-          "name": "Simran Sapkota",
-          "title": "Development Associate",
-          "category": "CORE TEAM",
-          "image": "/media/uploads/1792127685498.png",
-          "description": "Drives fundraising efforts by writing grant proposals, managing donor communications, organizing campaigns, and aligning program and finance teams to secure funding and report impact.",
-          "linkedin": "https://www.linkedin.com/in/simran-sapkota-0ba091227/ "
-        },
-        {
-          "id": "9zj9w6xu",
-          "name": "Jenisha Joshi",
-          "title": "Communication Associate",
-          "category": "CORE TEAM",
-          "image": "/media/uploads/1792127540102.png",
-          "description": "Leads Canopy's digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.",
-          "linkedin": "https://www.linkedin.com/in/jenisha-joshi-80505a364/?isSelfProfile=true"
-        },
         {
           "id": "1",
           "name": "Mohit Rauniyar",
