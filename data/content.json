@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T06:42:09.904Z",
+  "updatedAt": "2026-11-04T06:49:30.022Z",
   "content": {
     "site": {
       "logo": "logo.svg",
@@ -496,7 +496,7 @@
         },
         {
           "id": "6",
-          "name": "Prinsha Katuwal",
+          "name": "Prinsha Katwal",
           "title": "Facilitator Officer",
           "category": "CORE TEAM",
           "image": "team/all/Prinsha.png",
@@ -511,6 +511,24 @@
           "image": "team/all/Shreeya.png",
           "description": "Builds strong relationships with schools, conduct regular visits, coordinate events, monitor student well-being, and ensure timely feedback and collaboration with parents and teachers to support scholars holistically.",
           "linkedin": "https://www.linkedin.com/in/shreeya-aryal-01b6ba269"
+        },
+        {
+          "id": "oy379qis",
+          "name": "Simran Sapkota",
+          "title": "DEVELOPMENT ASSOCIATE",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1793774874886.png",
+          "description": "Drives fundraising efforts by writing grant proposals, managing donor communications, organizing campaigns, and aligning program and finance teams to secure funding and report impact.",
+          "linkedin": "https://www.linkedin.com/in/simran-sapkota-0ba091227/"
+        },
+        {
+          "id": "f220fzvq",
+          "name": "Jenisha Joshi",
+          "title": "COMMUNICATION ASSOCIATE",
+          "category": "CORE TEAM",
+          "image": "/media/uploads/1793774751356.png",
+          "description": "Leads Canopy's digital storytelling and branding, managing content creation, press outreach, and engagement strategies to increase visibility, share success stories, and build a strong online presence.",
+          "linkedin": "https://www.linkedin.com/in/jenisha-joshi-80505a364/"
         },
         {
           "id": "8",
